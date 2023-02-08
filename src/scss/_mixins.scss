@@ -1,0 +1,9 @@
+@mixin flexible($width) {
+  display: flex;
+  width: $width;
+}
+
+@mixin gridable($width) {
+  display: grid;
+  width: $width;
+}
