@@ -1,0 +1,21 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.header {
+  @include gridable(100%);
+  justify-items: center;
+  box-sizing: border-box;
+
+  &__container {
+    @include gridable(100%);
+    grid-template-columns: repeat(2, min-content);
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+    height: 100%;
+    box-sizing: border-box;
+    max-width: $max-width;
+    gap: 20px 0;
+    padding: 10px 20px;
+  }
+}

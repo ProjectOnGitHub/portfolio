@@ -1,0 +1,12 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.header__menu {
+  @include flexible(100%);
+  @include unmarkedList;
+  gap: 15px;
+  &-link {
+    @include defaultLink;
+    color: $color-main-text;
+  }
+}
