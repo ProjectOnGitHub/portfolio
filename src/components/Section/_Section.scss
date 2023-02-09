@@ -1,0 +1,9 @@
+@import '../../scss/_mixins';
+@import '../../scss/_variables';
+
+.section {
+  box-sizing: border-box;
+  max-width: $max-width;
+  padding-left: 20px;
+  padding-right: 20px;
+}
