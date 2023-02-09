@@ -1,0 +1,7 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.main {
+  @include gridable(100%);
+  justify-items: center;
+}
