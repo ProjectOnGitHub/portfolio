@@ -1,0 +1,48 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.profile {
+  @include gridable(100%);
+  grid-template-areas:
+    'title photo'
+    'subtitle photo'
+    'text photo';
+  justify-content: space-between;
+  justify-items: start;
+  gap: 10px 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  &__title {
+    grid-area: title;
+    align-self: end;
+    margin: 0;
+    font-size: 78px;
+    line-height: 1;
+  }
+  &__subtitle {
+    grid-area: subtitle;
+    margin: 0;
+    font-size: 28px;
+    line-height: 1;
+  }
+  &__text {
+    grid-area: text;
+  }
+  &__paragraph {
+    margin: 0;
+  }
+  &__figure {
+    @include gridable(100%);
+    grid-area: photo;
+    margin: 0;
+    background-color: $color-main-text;
+    overflow: visible;
+  }
+  &__photo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    //clip-path: polygon(70% 0, 100% 100%, 30% 100%, 0 0);
+    transform: translate(-10px, 10px);
+  }
+}
