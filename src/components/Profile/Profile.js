@@ -5,8 +5,10 @@ import myPhoto from '../../images/my-photo.jpeg';
 function Profile() {
   return (
     <>
-      <h1 className='profile__title'>Александр</h1>
-      <h2 className='profile__subtitle'>начинающий веб-разработчик</h2>
+      <div className="profile__info">
+        <h1 className='profile__title'>Александр</h1>
+        <h2 className='profile__subtitle'>начинающий веб-разработчик</h2>
+      </div>
       <article className='profile__text'>
         <p className='profile__paragraph'>
           Хочу развивать свои навыки, создавать интересные и полезные
