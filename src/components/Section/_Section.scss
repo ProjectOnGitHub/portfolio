@@ -2,8 +2,11 @@
 @import '../../scss/_variables';
 
 .section {
+  @include gridable(100%);
   box-sizing: border-box;
   max-width: $max-width;
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
