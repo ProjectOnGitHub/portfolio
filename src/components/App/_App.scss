@@ -12,5 +12,10 @@
   line-height: 1.21;
   font-family: 'Inter', Arial, sans-serif;
   font-style: normal;
+  color: $color-main-text;
   background-color: $color-bg-white;
+}
+
+html {
+  scroll-behavior: smooth;
 }
