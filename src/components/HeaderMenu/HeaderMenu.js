@@ -6,8 +6,13 @@ function HeaderMenu(props) {
   return (
     <ul className={`${props.name}__menu`}>
       <li className={`${props.name}__menu-item`}>
+        <Link to="#about" className={`${props.name}__menu-link`}>
+          About
+        </Link>
+      </li>
+      <li className={`${props.name}__menu-item`}>
         <Link to="#projects" className={`${props.name}__menu-link`}>
-          Projects
+          Portfolio
         </Link>
       </li>
       <li className={`${props.name}__menu-item`}>

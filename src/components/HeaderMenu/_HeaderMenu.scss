@@ -4,7 +4,12 @@
 .header__menu {
   @include flexible(100%);
   @include unmarkedList;
+  font-size: 16px;
   gap: 15px;
+  @media screen and (max-width: $smartphone) {
+    font-size: 14px;
+    gap: 10px;
+  }
   &-link {
     @include defaultLink;
     color: $color-main-text;
