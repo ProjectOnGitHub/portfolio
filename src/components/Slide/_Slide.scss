@@ -1,0 +1,41 @@
+@import '../../scss/_mixins';
+@import '../../scss/_variables';
+
+.slide {
+  flex-shrink: 0;
+  width: 100%;
+  transition: 0.5s ease;
+
+  &__figure {
+    @include gridable(100%);
+    margin: 0;
+  }
+  &__image {
+    width: 100%;
+    height: auto;
+    transform: scale(1);
+    transition: transform 1s ease;
+    object-fit: cover;
+    object-position: top;
+  }
+  &__text {
+    position: absolute;
+    align-self: flex-end;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 38px;
+    text-align: center;
+    color: $color-bg-white;
+    background-color: rgba($color-main-text, 0.2);
+    @media screen and (max-width: $tablet-small) {
+      padding: 5px;
+      font-size: 24px;
+    }
+    @media screen and (max-width: $smartphone) {
+      font-size: 18px;
+    }
+  }
+}

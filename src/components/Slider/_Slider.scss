@@ -39,23 +39,6 @@
   &__list {
     @include flexible(100%);
     @include unmarkedList;
-    &-item {
-      flex-shrink: 0;
-      width: 100%;
-      transition: 0.5s ease;
-    }
-  }
-  &__figure {
-    @include gridable(100%);
-    margin: 0;
-  }
-  &__image {
-    width: 100%;
-    height: auto;
-    transform: scale(1);
-    transition: transform 1s ease;
-    object-fit: cover;
-    object-position: top;
   }
 
   &__button {
