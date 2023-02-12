@@ -1,0 +1,115 @@
+@import '../../scss/_mixins';
+@import '../../scss/_variables';
+
+.slider {
+  @include gridable(100%);
+  position: relative;
+  justify-self: center;
+  max-width: calc($max-width - 40px);
+  height: 100%;
+  overflow: hidden;
+
+  &:hover .slider__image {
+    transform: scale(1.05);
+  }
+
+  &__dots {
+    @include flexible(100%);
+    @include unmarkedList;
+    position: absolute;
+    z-index: 10;
+    justify-content: center;
+    box-sizing: border-box;
+    top: 20px;
+    gap: 10px;
+  }
+  &__dot {
+    z-index: 10;
+    width: 15px;
+    height: 15px;
+    background-color: $color-bg-dot;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s ease;
+    @media screen and (max-width: $tablet-small) {
+      width: 10px;
+      height: 10px;
+    }
+  }
+  &__list {
+    @include flexible(100%);
+    @include unmarkedList;
+    &-item {
+      flex-shrink: 0;
+      width: 100%;
+      transition: 0.5s ease;
+    }
+  }
+  &__figure {
+    @include gridable(100%);
+    margin: 0;
+  }
+  &__image {
+    width: 100%;
+    height: auto;
+    transform: scale(1);
+    transition: transform 1s ease;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  &__button {
+    @include flexible(64px);
+    @include button();
+    position: absolute;
+    z-index: 10;
+    align-self: center;
+    height: 64px;
+    margin: 0 10px;
+    font-weight: 700;
+    font-size: 24px;
+    // color: $color-bg;
+    // background-color: rgba($color-bg-slider, 0.4);
+    border-radius: 50%;
+    @media screen and (max-width: $tablet-small) {
+      width: 48px;
+      height: 48px;
+      font-size: 18px;
+    }
+    &:hover {
+      // background-color: rgba($color-bg-slider, 0.7);
+    }
+    &_left {
+      justify-self: left;
+    }
+    &_right {
+      justify-self: right;
+    }
+  }
+  &__text {
+    position: absolute;
+    align-self: flex-end;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 38px;
+    text-align: center;
+    color: $color-bg-white;
+    background-color: rgba($color-main-text, 0.2);
+    @media screen and (max-width: $tablet-small) {
+      padding: 5px;
+      font-size: 24px;
+    }
+    @media screen and (max-width: $smartphone) {
+      font-size: 18px;
+    }
+  }
+  &__link {
+    @include defaultLink();
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
