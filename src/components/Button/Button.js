@@ -5,7 +5,8 @@ function Button(props) {
     <button
       type={props.type}
       aria-label={props.ariaLabel}
-      className={`${props.name}`}>
+      className={props.className}
+      name={props.name}>
       {props.children}
     </button>
   );
