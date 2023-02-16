@@ -31,18 +31,14 @@
   }
 
   &__button {
-    @include flexible(64px);
+    @include flexible(auto);
     @include button();
     position: absolute;
     z-index: 10;
     align-self: center;
-    height: 64px;
+    height: auto;
     margin: 0 10px;
-    font-weight: 700;
-    font-size: 24px;
-    // color: $color-bg;
-    // background-color: rgba($color-bg-slider, 0.4);
-    border-radius: 50%;
+    background-color: transparent;
     @media screen and (max-width: $tablet-small) {
       width: 48px;
       height: 48px;

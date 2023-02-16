@@ -1,5 +1,6 @@
 import { React, useState } from 'react';
 import { useSwipeable } from "react-swipeable";
+import Icon from '../Icon/Icon';
 import Button from '../Button/Button';
 import Slide from '../Slide/Slide';
 import SliderDot from '../SliderDot/SliderDot';
@@ -62,7 +63,7 @@ function Slider(props) {
             updateCount(count - 1);
           }}
         >
-          &larr;
+          <Icon name="arrow-left" />
         </Button>
         <Button
           name="slider-button-right"
@@ -73,7 +74,7 @@ function Slider(props) {
             updateCount(count + 1);
           }}
         >
-          &rarr;
+          <Icon name="arrow-right" />
         </Button>
       </div>
     </>
