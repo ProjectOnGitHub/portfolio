@@ -1,4 +1,5 @@
 import { React, useState } from 'react';
+import { useSwipeable } from "react-swipeable";
 import Button from '../Button/Button';
 import Slide from '../Slide/Slide';
 import SliderDot from '../SliderDot/SliderDot';
@@ -9,13 +10,11 @@ import './_Slider.scss';
 
 
 function Slider(props) {
-  // let [translate, setTranstlate] = useState(0);
   let [count, setCount] = useState(0);
-
-
-  // function clickDot(id) {
-  //   console.log(id);
-  // }
+  const handlers = useSwipeable({
+    onSwipedLeft: () => updateCount(count + 1),
+    onSwipedRight: () => updateCount(count - 1)
+  });
 
   function updateCount(newCount) {
     if (newCount < 0) {
@@ -25,21 +24,13 @@ function Slider(props) {
       newCount = 0
     }
     setCount(newCount);
-    console.log(newCount)
-    console.log(count)
   }
-
-
-  // function moveSlide(e) {
-  //   updateCount(e);
-  //   translate = count * 100;
-  //   setTranstlate(`${translate}`);
-  // }
-
 
   return (
     <>
-      <div className="slider">
+      <div
+        {...handlers}
+        className="slider">
         <ul className="slider__dots">
           {
             props.projects.map((item, i) => (
