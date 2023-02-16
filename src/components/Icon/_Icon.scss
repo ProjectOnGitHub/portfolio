@@ -1,0 +1,11 @@
+@import '../../scss/_mixins';
+@import '../../scss/_variables';
+
+.icon {
+  &__arrow-left,
+  &__arrow-right {
+    fill: $color-bg-white;
+    width: 50px;
+    height: 50px;
+  }
+}
