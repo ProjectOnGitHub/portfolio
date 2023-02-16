@@ -9,33 +9,32 @@ import './_Slider.scss';
 
 
 function Slider(props) {
-  let [translate, setTranstlate] = useState(0);
+  // let [translate, setTranstlate] = useState(0);
   let [count, setCount] = useState(0);
 
 
-  function clickDot(id) {
-    console.log(id);
+  // function clickDot(id) {
+  //   console.log(id);
+  // }
+
+  function updateCount(newCount) {
+    if (newCount < 0) {
+      newCount = props.projects.length - 1
+    }
+    if (newCount >= props.projects.length) {
+      newCount = 0
+    }
+    setCount(newCount);
+    console.log(newCount)
+    console.log(count)
   }
 
-  function calcCount(e) {
-    if (e.target.classList.contains('slider__button_left')) {
-      count <= 0
-        ? count = props.projects.length - 1
-        : --count;
-    }
-    if (e.target.classList.contains('slider__button_right')) {
-      count >= props.projects.length - 1
-        ? count = 0
-        : ++count;
-    }
-    setCount(count);
-  }
 
-  function moveSlide(e) {
-    calcCount(e);
-    translate = count * 100;
-    setTranstlate(`${translate}`);
-  }
+  // function moveSlide(e) {
+  //   updateCount(e);
+  //   translate = count * 100;
+  //   setTranstlate(`${translate}`);
+  // }
 
 
   return (
@@ -48,11 +47,13 @@ function Slider(props) {
                 key={item.id}
                 count={count}
                 index={i}
-                isClick={clickDot}
+                isClick={() => {
+                  updateCount(i);
+                }}
               />))
           }
         </ul>
-        <ul className="slider__list" style={{ transform: `translateX(${-translate}%)` }}>
+        <ul className="slider__list" style={{ transform: `translateX(${-count * 100}%)` }}>
           {
             props.projects.map((item) => (
               <Slide
@@ -66,7 +67,9 @@ function Slider(props) {
           className="slider__button slider__button_left"
           aria-label="Slide to left"
           type="button"
-          isClick={moveSlide}
+          isClick={() => {
+            updateCount(count - 1);
+          }}
         >
           &larr;
         </Button>
@@ -75,7 +78,9 @@ function Slider(props) {
           className="slider__button slider__button_right"
           aria-label="Slide to right"
           type="button"
-          isClick={moveSlide}
+          isClick={() => {
+            updateCount(count + 1);
+          }}
         >
           &rarr;
         </Button>
