@@ -4,6 +4,8 @@
 .portfolio {
   gap: 20px;
   justify-items: center;
+  padding-left: 0;
+  padding-right: 0;
   &__title {
     @include defaultSubtitle;
   }
@@ -15,8 +17,6 @@
     &-item {
       width: 100%;
     }
-  }
-  &__link {
   }
   &__figure {
     @include gridable(100%);
