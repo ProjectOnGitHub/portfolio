@@ -9,8 +9,8 @@
   cursor: pointer;
   transition: 0.5s ease;
   @media screen and (max-width: $tablet-small) {
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 5px;
   }
   &-button {
     @include button;
