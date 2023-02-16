@@ -6,7 +6,9 @@ function Button(props) {
       type={props.type}
       aria-label={props.ariaLabel}
       className={props.className}
-      name={props.name}>
+      name={props.name}
+      onClick={props.isClick}
+    >
       {props.children}
     </button>
   );

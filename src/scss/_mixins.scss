@@ -56,3 +56,14 @@
   line-height: 1;
   font-weight: 500;
 }
+
+@mixin button() {
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0;
+  border: none;
+  transform: scale(1);
+  cursor: pointer;
+  transition: 0.5s;
+}

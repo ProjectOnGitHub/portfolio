@@ -1,44 +1,63 @@
 import { React, useState } from 'react';
 import Button from '../Button/Button';
 import Slide from '../Slide/Slide';
+import SliderDot from '../SliderDot/SliderDot';
+
+
 import './_Slider.scss';
+
 
 
 function Slider(props) {
   let [translate, setTranstlate] = useState(0);
   let [count, setCount] = useState(0);
 
-  function handleClickSliderButtonLeft() {
-    const width = document.querySelector('.slider').offsetWidth;
-    const slides = document.querySelectorAll('.slide');
-    count <= 0 ? count = slides.length - 1 : --count;
+
+  function clickDot(id) {
+    console.log(id);
+  }
+
+  function calcCount(e) {
+    if (e.target.classList.contains('slider__button_left')) {
+      count <= 0
+        ? count = props.projects.length - 1
+        : --count;
+    }
+    if (e.target.classList.contains('slider__button_right')) {
+      count >= props.projects.length - 1
+        ? count = 0
+        : ++count;
+    }
     setCount(count);
-    translate = count * width;
+  }
+
+  function moveSlide(e) {
+    calcCount(e);
+    translate = count * 100;
     setTranstlate(`${translate}`);
   }
 
-  function handleClickSliderButtonRight() {
-    const width = document.querySelector('.slider').offsetWidth;
-    const slides = document.querySelectorAll('.slide');
-    count >= slides.length - 1 ? count = 0 : ++count;
-    setCount(count);
-    translate = count * width;
-    setTranstlate(`${translate}`);
-  }
 
   return (
     <>
       <div className="slider">
         <ul className="slider__dots">
-          <li className="slider__dot slider__dot_selected"></li>
-          <li className="slider__dot"></li>
-          <li className="slider__dot"></li>
-          <li className="slider__dot"></li>
+          {
+            props.projects.map((item, i) => (
+              <SliderDot
+                key={item.id}
+                count={count}
+                index={i}
+                isClick={clickDot}
+              />))
+          }
         </ul>
-        <ul className="slider__list" style={{ transform: `translateX(${-translate}px)` }}>
+        <ul className="slider__list" style={{ transform: `translateX(${-translate}%)` }}>
           {
             props.projects.map((item) => (
-              <Slide src={item.image} key={item.id}
+              <Slide
+                src={item.image}
+                key={item.id}
                 text={item.text} />))
           }
         </ul>
@@ -47,7 +66,7 @@ function Slider(props) {
           className="slider__button slider__button_left"
           aria-label="Slide to left"
           type="button"
-          isClick={handleClickSliderButtonLeft}
+          isClick={moveSlide}
         >
           &larr;
         </Button>
@@ -56,7 +75,7 @@ function Slider(props) {
           className="slider__button slider__button_right"
           aria-label="Slide to right"
           type="button"
-          isClick={handleClickSliderButtonRight}
+          isClick={moveSlide}
         >
           &rarr;
         </Button>

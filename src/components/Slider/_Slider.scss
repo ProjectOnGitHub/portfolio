@@ -23,19 +23,6 @@
     top: 20px;
     gap: 10px;
   }
-  &__dot {
-    z-index: 10;
-    width: 15px;
-    height: 15px;
-    background-color: $color-bg-dot;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: 0.5s ease;
-    @media screen and (max-width: $tablet-small) {
-      width: 10px;
-      height: 10px;
-    }
-  }
   &__list {
     @include flexible(100%);
     @include unmarkedList;
