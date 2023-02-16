@@ -11,7 +11,7 @@ function HeaderMenu(props) {
         </Link>
       </li>
       <li className={`${props.name}__menu-item`}>
-        <Link to="#projects" className={`${props.name}__menu-link`}>
+        <Link to="#portfolio" className={`${props.name}__menu-link`}>
           Portfolio
         </Link>
       </li>
