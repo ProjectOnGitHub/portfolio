@@ -1,4 +1,6 @@
 import React from 'react';
+import Icon from '../Icon/Icon';
+import { HashLink as Link } from 'react-router-hash-link';
 import './_Profile.scss';
 
 function Profile() {
@@ -16,6 +18,10 @@ function Profile() {
           людей к лучшему.
         </p>
       </article>
+      <Link to="#portfolio" className="profile__link">
+        <Icon name="arrow-down" />
+      </Link>
+
     </>
   );
 }

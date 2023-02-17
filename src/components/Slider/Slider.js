@@ -4,8 +4,6 @@ import Icon from '../Icon/Icon';
 import Button from '../Button/Button';
 import Slide from '../Slide/Slide';
 import SliderDot from '../SliderDot/SliderDot';
-
-
 import './_Slider.scss';
 
 

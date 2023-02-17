@@ -3,7 +3,6 @@
 
 .profile {
   @include gridable(100%);
-  gap: 20px;
   justify-content: center;
   justify-items: center;
   align-content: center;
@@ -12,32 +11,33 @@
   background-image: url('../../images/background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-
-  &::before {
-    content: '';
-    position: absolute;
-    height: 100vh;
-    width: 100%;
-    z-index: 5;
-    opacity: 0.5;
-    backdrop-filter: blur(25px);
-  }
+  gap: 20px;
   @media screen and (max-width: $tablet-large) {
     justify-content: center;
     justify-items: center;
   }
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.5;
+    backdrop-filter: blur(25px);
+  }
   &__info {
     @include gridable(100%);
-    justify-items: center;
     z-index: 10;
+    justify-items: center;
   }
   &__title {
-    color: $color-bg-white;
     align-self: end;
     margin: 0;
     font-weight: 400;
     font-size: 80px;
     line-height: 1;
+    color: $color-bg-white;
     @media screen and (max-width: $tablet-small) {
       font-size: 60px;
     }
@@ -46,11 +46,11 @@
     }
   }
   &__subtitle {
-    color: $color-bg-white;
     margin: 0;
     font-weight: 500;
     font-size: 27px;
     line-height: 1;
+    color: $color-bg-white;
     @media screen and (max-width: $tablet-small) {
       font-size: 21px;
     }
@@ -60,13 +60,13 @@
   }
   &__text {
     z-index: 10;
-    color: $color-bg-white;
+    box-sizing: border-box;
     width: 100%;
     max-width: 600px;
-    font-size: 16px;
-    box-sizing: border-box;
-    padding-left: 20px;
     padding-right: 20px;
+    padding-left: 20px;
+    font-size: 16px;
+    color: $color-bg-white;
     @media screen and (max-width: $smartphone) {
       font-size: 14px;
     }
@@ -75,18 +75,23 @@
   &__paragraph {
     margin: 0;
   }
-  &__figure {
-    @include gridable(100%);
-    max-width: 300px;
-    margin: 0;
-    background-color: $color-main-text;
-  }
-  &__photo {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    object-fit: contain;
-    //clip-path: polygon(70% 0, 100% 100%, 30% 100%, 0 0);
-    // transform: translate(-10px, 10px);
+  &__link {
+    @include flexible(100%);
+    position: absolute;
+    bottom: 15px;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    align-self: end;
+    width: 40px;
+    height: 40px;
+    border: 2px solid $color-bg-white;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    &:hover {
+      background-color: rgba($color-main-text, 0.4);
+    }
   }
 }
