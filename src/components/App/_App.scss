@@ -3,6 +3,9 @@
 
 .app {
   @include gridable(100%);
+  grid-template-areas:
+    'block'
+    'footer';
   grid-template-columns: 1fr;
   justify-items: center;
   align-content: space-between;

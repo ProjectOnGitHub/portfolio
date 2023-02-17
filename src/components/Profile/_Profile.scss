@@ -3,29 +3,39 @@
 
 .profile {
   @include gridable(100%);
-  grid-template-areas:
-    'info photo'
-    'text photo';
-  justify-content: space-between;
-  justify-items: start;
-  align-items: center;
-  gap: 10px 100px;
+  gap: 20px;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  height: 100vh;
+  padding: 0;
+  background-image: url('../../images/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    z-index: 5;
+    opacity: 0.5;
+    backdrop-filter: blur(25px);
+  }
   @media screen and (max-width: $tablet-large) {
-    grid-template-areas:
-      'photo'
-      'info'
-      'text';
     justify-content: center;
     justify-items: center;
-    gap: 30px 0;
   }
   &__info {
-    grid-area: info;
+    @include gridable(100%);
+    justify-items: center;
+    z-index: 10;
   }
   &__title {
+    color: $color-bg-white;
     align-self: end;
     margin: 0;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 80px;
     line-height: 1;
     @media screen and (max-width: $tablet-small) {
@@ -36,22 +46,27 @@
     }
   }
   &__subtitle {
+    color: $color-bg-white;
     margin: 0;
     font-weight: 500;
-    font-size: 30px;
+    font-size: 27px;
     line-height: 1;
     @media screen and (max-width: $tablet-small) {
-      font-size: 22px;
+      font-size: 21px;
     }
     @media screen and (max-width: $smartphone) {
-      font-size: 17px;
+      font-size: 15px;
     }
   }
   &__text {
-    grid-area: text;
+    z-index: 10;
+    color: $color-bg-white;
     width: 100%;
     max-width: 600px;
     font-size: 16px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
     @media screen and (max-width: $smartphone) {
       font-size: 14px;
     }
@@ -62,7 +77,6 @@
   }
   &__figure {
     @include gridable(100%);
-    grid-area: photo;
     max-width: 300px;
     margin: 0;
     background-color: $color-main-text;
