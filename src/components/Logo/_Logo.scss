@@ -10,6 +10,9 @@
   transition: 0.5s ease-in-out;
   color: $color-bg-white;
   z-index: 10;
+  &:hover {
+    opacity: 0.8;
+  }
   &__left-char {
     z-index: 10;
   }
