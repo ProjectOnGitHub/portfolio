@@ -13,7 +13,7 @@
     justify-content: center;
     flex-wrap: wrap;
     justify-items: center;
-    gap: 70px;
+    gap: 25px 70px;
   }
   &__title {
     @include defaultSubtitle(32px);

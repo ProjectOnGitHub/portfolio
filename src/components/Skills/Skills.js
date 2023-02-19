@@ -11,8 +11,12 @@ function Skills() {
         type="language"
       />
       <SkillsList
-        subtitle="Libraries & frameworks"
+        subtitle="Libraries & Frameworks"
         type="library"
+      />
+      <SkillsList
+        subtitle="Content Managment Systems"
+        type="cms"
       />
       <SkillsList
         subtitle="Tools"
