@@ -19,7 +19,7 @@ function Profile(props) {
         </p>
       </article>
       <Link to="#projects" className="profile__link">
-        <Icon name="arrow-down" />
+        <Icon name="arrow-down" className="profile" />
       </Link>
 
     </>
