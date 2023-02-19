@@ -34,7 +34,7 @@ const projects = [
     title: "Сайт приюта для животных",
     description: "Адаптивно свёрстан по макету из Figma. С помощью JS реализована пагинация списка животных и попап, который открывается при клике по фотографии животного.",
     stack: "React, HTML, SCSS",
-    url: "https://shelter.wbdv.ru",
+    url: "https://shelter.wbdv.ru/pages/main/",
     image: shelter,
   },
   {
