@@ -3,12 +3,12 @@ import Icon from '../Icon/Icon';
 import { HashLink as Link } from 'react-router-hash-link';
 import './_Profile.scss';
 
-function Profile() {
+function Profile(props) {
   return (
     <>
 
       <div className="profile__info">
-        <h1 className='profile__title'>Александр</h1>
+        <h1 className='profile__title'>{props.title}</h1>
         <h2 className='profile__subtitle'>начинающий веб-разработчик</h2>
       </div>
       <article className='profile__text'>

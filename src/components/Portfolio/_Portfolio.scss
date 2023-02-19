@@ -2,11 +2,6 @@
 @import '../../scss/variables';
 
 .portfolio {
-  gap: 40px;
-  justify-items: center;
-  padding-left: 20px;
-  padding-right: 20px;
-  max-width: $max-width;
   &__title {
     @include defaultSubtitle;
   }

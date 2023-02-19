@@ -7,11 +7,19 @@ function Main() {
   return (
     <main className='main'>
       <Section
-        name='profile'
+        className='profile'
         id="about">
-        <Profile />
+        <Profile
+          title="Александр"
+        />
       </Section>
-      <Section name="portfolio" id="portfolio"><Portfolio /></Section>
+      <Section
+        className="portfolio"
+        id="portfolio">
+        <Portfolio
+          title="Portfolio"
+        />
+      </Section>
     </main>
   );
 }

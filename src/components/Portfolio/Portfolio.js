@@ -3,10 +3,10 @@ import './_Portfolio.scss';
 import Project from "../Project/Project";
 import projects from '../../utils/projects';
 
-function Portfolio() {
+function Portfolio(props) {
   return (
     <>
-      <h2 className="portfolio__title">Portfolio</h2>
+      <h2 className="portfolio__title">{props.title}</h2>
       <ul className="portfolio__list">
         {
           projects.map((item) => (
