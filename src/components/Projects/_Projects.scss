@@ -1,0 +1,30 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.projects {
+  &__title {
+    @include defaultSubtitle;
+  }
+  &__list {
+    @include gridable(100%);
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    @include unmarkedList;
+    @media screen and (max-width: $smartphone) {
+      grid-template-columns: 1fr;
+    }
+    &-item {
+      width: 100%;
+    }
+  }
+  &__figure {
+    @include gridable(100%);
+    margin: 0;
+  }
+  &__image {
+    display: block;
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+  }
+}

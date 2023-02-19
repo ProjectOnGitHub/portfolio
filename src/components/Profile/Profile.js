@@ -18,7 +18,7 @@ function Profile(props) {
           людей к лучшему.
         </p>
       </article>
-      <Link to="#portfolio" className="profile__link">
+      <Link to="#projects" className="profile__link">
         <Icon name="arrow-down" />
       </Link>
 
