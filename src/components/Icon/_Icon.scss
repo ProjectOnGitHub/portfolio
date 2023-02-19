@@ -2,18 +2,15 @@
 @import '../../scss/_variables';
 
 .icon {
-  fill: $color-bg-white;
-  &__arrow {
-    &-left,
-    &-right {
-      width: 50px;
-      height: 50px;
-    }
-    &-down {
-      width: 25px;
-      height: 25px;
-      animation: moveArrowDown 2.5s infinite ease-in-out;
-    }
+  &__profile {
+    fill: $color-bg-white;
+    width: 25px;
+    height: 25px;
+    animation: moveArrowDown 2.5s infinite ease-in-out;
+  }
+  &__skill {
+    width: 150px;
+    height: 120px;
   }
 }
 
