@@ -43,6 +43,11 @@
     align-content: start;
     font-size: 16px;
     gap: 10px;
+    box-sizing: border-box;
+    @media screen and (max-width: $tablet-large) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
   &__paragraph {
     margin: 0;
@@ -54,5 +59,8 @@
     align-self: end;
     width: max-content;
     color: $color-main-text;
+    @media screen and (max-width: $tablet-large) {
+      padding-right: 20px;
+    }
   }
 }
