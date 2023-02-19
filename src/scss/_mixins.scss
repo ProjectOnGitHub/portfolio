@@ -28,7 +28,7 @@
     width: 0;
     height: 2px;
     background-color: $color-main-text;
-    transition: width 0.5s; /* Время эффекта */
+    transition: width 0.5s;
   }
 
   &:hover::after {
