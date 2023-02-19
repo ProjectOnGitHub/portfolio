@@ -8,7 +8,7 @@ function Skill({ name, title }) {
     <>
       <li className="skill">
         <Icon name={name} className="skill" />
-        <h3 className="skill__title">{title}</h3>
+        <h4 className="skill__title">{title}</h4>
       </li>
 
 

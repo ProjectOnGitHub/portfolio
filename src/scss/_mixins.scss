@@ -50,8 +50,8 @@
   font-weight: 700;
 }
 
-@mixin defaultSubtitle {
-  font-size: 32px;
+@mixin defaultSubtitle($font-size) {
+  font-size: $font-size;
   margin: 0;
   line-height: 1;
   font-weight: 500;

@@ -7,7 +7,7 @@
     padding-right: 0;
   }
   &__title {
-    @include defaultSubtitle;
+    @include defaultSubtitle(32px);
   }
   &__list {
     @include gridable(100%);

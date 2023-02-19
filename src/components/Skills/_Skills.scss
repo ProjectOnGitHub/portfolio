@@ -2,15 +2,7 @@
 @import '../../scss/variables';
 
 .skills {
-  &__list {
-    @include flexible(100%);
-    @include unmarkedList;
-    justify-content: center;
-    flex-wrap: wrap;
-    justify-items: center;
-    gap: 70px;
-  }
   &__title {
-    @include defaultSubtitle;
+    @include defaultSubtitle(32px);
   }
 }
