@@ -59,6 +59,12 @@ const skills = [
     type: "tool",
     title: "VS Code",
   },
+  {
+    id: 11,
+    name: "webpack",
+    type: "tool",
+    title: "Webpack",
+  },
 ]
 
 export default skills;
