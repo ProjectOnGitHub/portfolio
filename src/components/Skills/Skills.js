@@ -2,10 +2,10 @@ import React from 'react';
 import './_Skills.scss';
 import SkillsList from '../SkillsList/SkillsList';
 
-function Skills() {
+function Skills(props) {
   return (
     <>
-      <h2 className="skills__title">Skills</h2>
+      <h2 className="skills__title">{props.title}</h2>
       <SkillsList
         subtitle="Languages"
         type="language"
