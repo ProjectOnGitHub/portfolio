@@ -3,13 +3,13 @@
 
 .logo {
   @include flexible(100%);
+  z-index: 10;
   font-weight: 700;
   font-size: 34px;
-  -webkit-text-stroke: 1px $color-main-text;
+  color: $color-bg-white;
   text-decoration: none;
   transition: 0.5s ease-in-out;
-  color: $color-bg-white;
-  z-index: 10;
+  -webkit-text-stroke: 1px $color-main-text;
   &:hover {
     opacity: 0.8;
   }
@@ -17,7 +17,7 @@
     z-index: 10;
   }
   &__right-char {
-    transform: translateX(-0.5em);
     z-index: 5;
+    transform: translateX(-0.5em);
   }
 }

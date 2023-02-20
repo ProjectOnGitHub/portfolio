@@ -3,6 +3,6 @@
 
 .main {
   @include gridable(100%);
-  justify-items: center;
   grid-area: block;
+  justify-items: center;
 }

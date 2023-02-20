@@ -1,7 +1,6 @@
 import React from 'react';
-import Icon from '../Icon/Icon';
 import './_Skill.scss';
-
+import Icon from '../Icon/Icon';
 
 function Skill({ name, title }) {
   return (

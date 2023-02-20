@@ -3,17 +3,17 @@
 
 .projects {
   @media screen and (max-width: $tablet-large) {
-    padding-left: 0;
     padding-right: 0;
+    padding-left: 0;
   }
   &__title {
     @include defaultSubtitle(32px);
   }
   &__list {
     @include gridable(100%);
+    @include unmarkedList;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 40px;
-    @include unmarkedList;
     @media screen and (max-width: $tablet-large) {
       grid-template-columns: 1fr;
     }

@@ -1,10 +1,7 @@
 import React from 'react';
 import './_Slide.scss';
 
-
-
 function Slide(props) {
-
   return (
     <li className="slide">
       <figure className="slide__figure">

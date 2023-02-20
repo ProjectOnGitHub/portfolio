@@ -3,9 +3,9 @@
 
 .skill {
   @include gridable(100%);
-  gap: 20px;
   justify-items: center;
   max-width: 150px;
+  gap: 20px;
   &__title {
     @include defaultSubtitle(18px);
     text-align: center;

@@ -3,10 +3,10 @@
 
 .icon {
   &__profile {
-    fill: $color-bg-white;
     width: 25px;
     height: 25px;
     animation: moveArrowDown 2.5s infinite ease-in-out;
+    fill: $color-bg-white;
   }
   &__skill {
     width: 120px;

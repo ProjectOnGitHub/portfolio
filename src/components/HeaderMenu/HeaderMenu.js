@@ -1,10 +1,9 @@
 import { React, useState } from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
+import './_HeaderMenu.scss';
 import Button from '../Button/Button';
 import ListItem from '../ListItem/ListItem';
 import menu from '../../utils/menu';
-
-import './_HeaderMenu.scss';
-import { HashLink as Link } from 'react-router-hash-link';
 
 function HeaderMenu(props) {
 
@@ -14,7 +13,6 @@ function HeaderMenu(props) {
     isOpenMenu
       ? setIsOpenMenu(false) || (document.body.classList.remove("scroll-lock"))
       : setIsOpenMenu(true) || (document.body.classList.add("scroll-lock"));
-
   }
 
   return (

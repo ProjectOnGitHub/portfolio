@@ -1,9 +1,8 @@
 import React from 'react';
+import './_Contacts.scss';
 import Contact from '../Contact/Contact';
 import ListItem from '../ListItem/ListItem';
-import './_Contacts.scss';
 import contacts from '../../utils/contacts';
-
 
 function Contacts(props) {
   return (
@@ -22,7 +21,6 @@ function Contacts(props) {
           </ListItem>
         ))}
       </ul>
-
     </>
   );
 }

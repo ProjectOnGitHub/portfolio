@@ -5,6 +5,7 @@ import Profile from '../Profile/Profile';
 import Projects from '../Projects/Projects';
 import Contacts from '../Contacts/Contacts';
 import Skills from '../Skills/Skills';
+
 function Main() {
   return (
     <main className='main'>

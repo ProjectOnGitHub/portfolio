@@ -1,12 +1,11 @@
 import React from 'react';
-import Icon from '../Icon/Icon';
 import { HashLink as Link } from 'react-router-hash-link';
 import './_Profile.scss';
+import Icon from '../Icon/Icon';
 
 function Profile(props) {
   return (
     <>
-
       <div className="profile__info">
         <h1 className='profile__title'>{props.title}</h1>
         <h2 className='profile__subtitle'>начинающий веб-разработчик</h2>
@@ -21,7 +20,6 @@ function Profile(props) {
       <Link to="#projects" className="profile__link">
         <Icon name="arrow-down" className="profile" />
       </Link>
-
     </>
   );
 }

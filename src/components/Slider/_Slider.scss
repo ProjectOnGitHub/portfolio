@@ -17,10 +17,10 @@
     @include flexible(100%);
     @include unmarkedList;
     position: absolute;
+    top: 20px;
     z-index: 10;
     justify-content: center;
     box-sizing: border-box;
-    top: 20px;
     gap: 10px;
   }
   &__list {

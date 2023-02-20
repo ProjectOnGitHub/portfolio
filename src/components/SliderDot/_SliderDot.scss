@@ -1,5 +1,6 @@
 @import '../../scss/_mixins';
 @import '../../scss/_variables';
+
 .slider__dot {
   @include flexible(30px);
   z-index: 10;
