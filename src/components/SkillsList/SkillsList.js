@@ -1,6 +1,7 @@
 import React from 'react';
 import './_SkillsList.scss';
 import Skill from '../Skill/Skill';
+import ListItem from '../ListItem/ListItem';
 import skills from '../../utils/skills';
 
 function SkillsList(props) {
@@ -10,12 +11,16 @@ function SkillsList(props) {
       <ul className="skills__list">
         {skills.map((item) => (
           item.type === props.type
-            ? <Skill
-              name={item.name}
-              key={item.id}
-              title={item.title}
-              type={item.type}
-            />
+            ?
+            <ListItem
+              className="skill"
+              key={item.id}>
+              <Skill
+                name={item.name}
+                title={item.title}
+                type={item.type}
+              />
+            </ListItem>
             : ""))}
       </ul>
     </div>

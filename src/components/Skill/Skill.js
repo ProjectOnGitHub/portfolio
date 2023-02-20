@@ -6,10 +6,8 @@ import './_Skill.scss';
 function Skill({ name, title }) {
   return (
     <>
-      <li className="skill">
-        <Icon name={name} className="skill" />
-        <h4 className="skill__title">{title}</h4>
-      </li>
+      <Icon name={name} className="skill" />
+      <h4 className="skill__title">{title}</h4>
     </>
   );
 }
