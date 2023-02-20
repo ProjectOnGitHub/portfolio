@@ -15,10 +15,8 @@
     justify-items: center;
     gap: 25px 70px;
   }
-  &__title {
-    @include defaultSubtitle(32px);
-  }
   &__subtitle {
     @include defaultSubtitle(22px);
+    text-align: center;
   }
 }
