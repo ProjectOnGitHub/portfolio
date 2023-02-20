@@ -1,5 +1,8 @@
 import { React, useState } from 'react';
 import Button from '../Button/Button';
+import ListItem from '../ListItem/ListItem';
+import menu from '../../utils/menu';
+
 import './_HeaderMenu.scss';
 import { HashLink as Link } from 'react-router-hash-link';
 
@@ -29,28 +32,21 @@ function HeaderMenu(props) {
         className={isOpenMenu ? "overlay overlay_active" : "overlay"}
         onClick={toggleMenu}>
       </div>
-      <ul
-        className={isOpenMenu ? `${props.name}__menu ${props.name}__menu_opened` : `${props.name}__menu`}>
-        <li className={`${props.name}__menu-item`} onClick={toggleMenu}>
-          <Link to="#about" className={`${props.name}__menu-link`}>
-            About
-          </Link>
-        </li>
-        <li className={`${props.name}__menu-item`} onClick={toggleMenu}>
-          <Link to="#projects" className={`${props.name}__menu-link`}>
-            Projects
-          </Link>
-        </li>
-        <li className={`${props.name}__menu-item`} onClick={toggleMenu}>
-          <Link to="#skills" className={`${props.name}__menu-link`}>
-            Skills
-          </Link>
-        </li>
-        <li className={`${props.name}__menu-item`} onClick={toggleMenu}>
-          <Link to="#contacts" className={`${props.name}__menu-link`}>
-            Contacts
-          </Link>
-        </li>
+      <ul className={isOpenMenu ? `${props.name}__menu ${props.name}__menu_opened` : `${props.name}__menu`}>
+        {
+          menu.map((item) => (
+            <ListItem
+              className={`${props.name}__menu-item`}
+              key={item.id}>
+              <Link
+                to={`#${item.url}`}
+                className={`${props.name}__menu-link`}
+                onClick={toggleMenu}>
+                {item.anchor}
+              </Link>
+            </ListItem>
+          ))
+        }
       </ul>
     </>
   );
