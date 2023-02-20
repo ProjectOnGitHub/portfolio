@@ -2,6 +2,7 @@
 @import '../../scss/variables';
 
 .contacts {
+  padding-bottom: 70px;
   &__list {
     @include flexible(100%);
     @include unmarkedList;
