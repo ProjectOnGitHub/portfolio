@@ -1,6 +1,7 @@
 import React from 'react';
 import './_Projects.scss';
 import Project from "../Project/Project";
+import ListItem from '../ListItem/ListItem';
 import projects from '../../utils/projects';
 
 function Projects(props) {
@@ -10,14 +11,17 @@ function Projects(props) {
       <ul className="projects__list">
         {
           projects.map((item) => (
-            <Project
-              key={item.id}
-              title={item.title}
-              image={item.image}
-              description={item.description}
-              stack={item.stack}
-              url={item.url}
-            />))
+            <ListItem
+              className="project"
+              key={item.id}>
+              <Project
+                title={item.title}
+                image={item.image}
+                description={item.description}
+                stack={item.stack}
+                url={item.url}
+              />
+            </ListItem>))
         }
       </ul>
     </>
