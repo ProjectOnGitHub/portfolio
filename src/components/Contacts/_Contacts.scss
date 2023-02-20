@@ -1,0 +1,15 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.contacts {
+  &__list {
+    @include flexible(100%);
+    @include unmarkedList;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px 70px;
+  }
+  &__title {
+    @include defaultSubtitle(32px);
+  }
+}
