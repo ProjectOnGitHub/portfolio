@@ -8,5 +8,6 @@
   max-width: 150px;
   &__title {
     @include defaultSubtitle(18px);
+    text-align: center;
   }
 }

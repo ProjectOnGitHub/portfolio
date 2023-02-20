@@ -10,9 +10,6 @@ function Skill({ name, title }) {
         <Icon name={name} className="skill" />
         <h4 className="skill__title">{title}</h4>
       </li>
-
-
-
     </>
   );
 }
