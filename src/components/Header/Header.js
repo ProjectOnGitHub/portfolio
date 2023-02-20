@@ -8,9 +8,9 @@ function Header() {
   return (
     <header className='header'>
       <div className='header__container'>
-        <Logo name='logo' />
-        <Nav name='header'>
-          <HeaderMenu name='header' />
+        <Logo className='logo' />
+        <Nav className='header'>
+          <HeaderMenu className='header' />
         </Nav>
       </div>
     </header>

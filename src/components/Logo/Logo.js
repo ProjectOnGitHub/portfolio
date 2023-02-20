@@ -3,9 +3,9 @@ import './_Logo.scss';
 
 function Logo(props) {
   return (
-    <a href='/' className={`${props.name}`}>
-      <span className={`${props.name}__left-char`}>A</span>
-      <span className={`${props.name}__right-char`}>V</span>
+    <a href='/' className={`${props.className}`}>
+      <span className={`${props.className}__left-char`}>A</span>
+      <span className={`${props.className}__right-char`}>V</span>
     </a>
   );
 }

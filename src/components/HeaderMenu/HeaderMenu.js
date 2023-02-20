@@ -30,15 +30,15 @@ function HeaderMenu(props) {
         className={isOpenMenu ? "overlay overlay_active" : "overlay"}
         onClick={toggleMenu}>
       </div>
-      <ul className={isOpenMenu ? `${props.name}__menu ${props.name}__menu_opened` : `${props.name}__menu`}>
+      <ul className={isOpenMenu ? `${props.className}__menu ${props.className}__menu_opened` : `${props.className}__menu`}>
         {
           menu.map((item) => (
             <ListItem
-              className={`${props.name}__menu-item`}
+              className={`${props.className}__menu-item`}
               key={item.id}>
               <Link
                 to={`#${item.url}`}
-                className={`${props.name}__menu-link`}
+                className={`${props.className}__menu-link`}
                 onClick={toggleMenu}>
                 {item.anchor}
               </Link>
