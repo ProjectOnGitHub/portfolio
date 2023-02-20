@@ -3,19 +3,34 @@
 
 .header {
   @include gridable(100%);
+  grid-area: block;
   justify-items: center;
   box-sizing: border-box;
-  grid-area: block;
   height: $header-height;
   &__container {
     @include gridable(100%);
     grid-template-columns: repeat(2, min-content);
     justify-content: space-between;
     align-items: center;
-
     box-sizing: border-box;
     max-width: $max-width;
-    gap: 20px 0;
     padding: 10px 20px;
+    gap: 20px 0;
+  }
+  &__button {
+    display: none;
+    justify-items: right;
+    @media screen and (max-width: $tablet-small) {
+      @include flexible(32px);
+      @include button();
+      position: relative;
+      z-index: 20;
+      height: 32px;
+      padding: 0;
+      background-color: transparent;
+      background-size: contain;
+      border: none;
+      border-radius: 0;
+    }
   }
 }
