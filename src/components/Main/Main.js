@@ -3,6 +3,7 @@ import './_Main.scss';
 import Section from '../Section/Section';
 import Profile from '../Profile/Profile';
 import Projects from '../Projects/Projects';
+import Contacts from '../Contacts/Contacts';
 import Skills from '../Skills/Skills';
 function Main() {
   return (
@@ -25,7 +26,14 @@ function Main() {
         className="skills"
         id="skills">
         <Skills
-          title="skills"
+          title="Skills"
+        />
+      </Section>
+      <Section
+        className="contacts"
+        id="contacts">
+        <Contacts
+          title="Contacts"
         />
       </Section>
     </main>
