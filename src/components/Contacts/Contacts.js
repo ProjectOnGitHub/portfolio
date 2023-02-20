@@ -1,5 +1,6 @@
 import React from 'react';
 import Contact from '../Contact/Contact';
+import ListItem from '../ListItem/ListItem';
 import './_Contacts.scss';
 import contacts from '../../utils/contacts';
 
@@ -10,12 +11,15 @@ function Contacts(props) {
       <h2 className="contacts__title">{props.title}</h2>
       <ul className="contacts__list">
         {contacts.map((item) => (
-          <Contact
-            name={item.name}
-            key={item.id}
-            title={item.title}
-            url={item.url}
-          />
+          <ListItem
+            className="contact"
+            key={item.id}>
+            <Contact
+              name={item.name}
+              title={item.title}
+              url={item.url}
+            />
+          </ListItem>
         ))}
       </ul>
 
