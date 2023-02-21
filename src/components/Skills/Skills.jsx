@@ -1,6 +1,6 @@
 import React from 'react';
 import './_Skills.scss';
-import SkillsList from '../SkillsList/SkillsList';
+import SkillsList from '../SkillsList/SkillsList.jsx';
 
 function Skills(props) {
   return (

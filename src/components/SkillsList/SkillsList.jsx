@@ -1,7 +1,7 @@
 import React from 'react';
 import './_SkillsList.scss';
-import Skill from '../Skill/Skill';
-import ListItem from '../ListItem/ListItem';
+import Skill from '../Skill/Skill.jsx';
+import ListItem from '../ListItem/ListItem.jsx';
 import skills from '../../utils/skills';
 
 function SkillsList(props) {

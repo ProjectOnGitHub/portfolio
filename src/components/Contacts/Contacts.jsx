@@ -1,7 +1,7 @@
 import React from 'react';
 import './_Contacts.scss';
-import Contact from '../Contact/Contact';
-import ListItem from '../ListItem/ListItem';
+import Contact from '../Contact/Contact.jsx';
+import ListItem from '../ListItem/ListItem.jsx';
 import contacts from '../../utils/contacts';
 
 function Contacts(props) {

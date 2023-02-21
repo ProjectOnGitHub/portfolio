@@ -6,9 +6,9 @@ function Slide(props) {
     <li className="slide">
       <figure className="slide__figure">
         <img
-          src={props.src}
           alt={props.alt}
           className="slide__image"
+          src={props.src}
         />
         <figcaption className="slide__text">{props.text}</figcaption>
       </figure>

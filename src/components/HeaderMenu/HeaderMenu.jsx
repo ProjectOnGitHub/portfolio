@@ -1,17 +1,20 @@
 import { React, useState } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import './_HeaderMenu.scss';
-import Button from '../Button/Button';
-import ListItem from '../ListItem/ListItem';
+import Button from '../Button/Button.jsx';
+import ListItem from '../ListItem/ListItem.jsx';
 import menu from '../../utils/menu';
 
 function HeaderMenu(props) {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
 
   function toggleMenu() {
-    isOpenMenu
-      ? setIsOpenMenu(false) || document.body.classList.remove('scroll-lock')
-      : setIsOpenMenu(true) || document.body.classList.add('scroll-lock');
+    if (isOpenMenu) {
+      setIsOpenMenu(false);
+      document.body.classList.remove('scroll-lock');
+    }
+    setIsOpenMenu(true);
+    document.body.classList.add('scroll-lock');
   }
 
   return (

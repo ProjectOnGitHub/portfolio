@@ -1,8 +1,8 @@
 import React from 'react';
 import './_Header.scss';
-import Logo from '../Logo/Logo';
-import Nav from '../Nav/Nav';
-import HeaderMenu from '../HeaderMenu/HeaderMenu';
+import Logo from '../Logo/Logo.jsx';
+import Nav from '../Nav/Nav.jsx';
+import HeaderMenu from '../HeaderMenu/HeaderMenu.jsx';
 
 function Header() {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import './_Contact.scss';
-import Icon from '../Icon/Icon';
+import Icon from '../Icon/Icon.jsx';
 
 function Contact({ name, title, url }) {
   return (

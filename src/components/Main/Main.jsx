@@ -1,10 +1,10 @@
 import React from 'react';
 import './_Main.scss';
-import Section from '../Section/Section';
-import Profile from '../Profile/Profile';
-import Projects from '../Projects/Projects';
-import Contacts from '../Contacts/Contacts';
-import Skills from '../Skills/Skills';
+import Section from '../Section/Section.jsx';
+import Profile from '../Profile/Profile.jsx';
+import Projects from '../Projects/Projects.jsx';
+import Contacts from '../Contacts/Contacts.jsx';
+import Skills from '../Skills/Skills.jsx';
 
 function Main() {
   return (

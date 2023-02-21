@@ -1,27 +1,28 @@
 import { React, useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
-import SliderDot from '../SliderDot/SliderDot';
 import './_Slider.scss';
-import Icon from '../Icon/Icon';
-import Button from '../Button/Button';
-import Slide from '../Slide/Slide';
+import SliderDot from '../SliderDot/SliderDot.jsx';
+import Icon from '../Icon/Icon.jsx';
+import Button from '../Button/Button.jsx';
+import Slide from '../Slide/Slide.jsx';
 
 function Slider(props) {
-  let [count, setCount] = useState(0);
+  const [count, setCount] = useState(0);
+
+  function updateCount(newIndex) {
+    let index = newIndex;
+    if (index < 0) {
+      index = props.projects.length - 1;
+    }
+    if (index >= props.projects.length) {
+      index = 0;
+    }
+    setCount(index);
+  }
   const handlers = useSwipeable({
     onSwipedLeft: () => updateCount(count + 1),
     onSwipedRight: () => updateCount(count - 1),
   });
-
-  function updateCount(newCount) {
-    if (newCount < 0) {
-      newCount = props.projects.length - 1;
-    }
-    if (newCount >= props.projects.length) {
-      newCount = 0;
-    }
-    setCount(newCount);
-  }
 
   return (
     <>

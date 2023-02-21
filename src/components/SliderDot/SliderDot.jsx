@@ -1,6 +1,6 @@
 import React from 'react';
 import './_SliderDot.scss';
-import Button from '../Button/Button';
+import Button from '../Button/Button.jsx';
 
 function SliderDot(props) {
   return (

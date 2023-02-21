@@ -1,7 +1,7 @@
 import React from 'react';
 import './_Projects.scss';
-import Project from '../Project/Project';
-import ListItem from '../ListItem/ListItem';
+import Project from '../Project/Project.jsx';
+import ListItem from '../ListItem/ListItem.jsx';
 import projects from '../../utils/projects';
 
 function Projects(props) {
