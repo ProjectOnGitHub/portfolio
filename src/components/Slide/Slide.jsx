@@ -10,12 +10,9 @@ function Slide(props) {
           alt={props.alt}
           className="slide__image"
         />
-        <figcaption className="slide__text">
-          {props.text}
-        </figcaption>
+        <figcaption className="slide__text">{props.text}</figcaption>
       </figure>
     </li>
-
   );
 }
 

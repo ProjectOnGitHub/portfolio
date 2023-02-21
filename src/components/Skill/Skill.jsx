@@ -5,7 +5,10 @@ import Icon from '../Icon/Icon';
 function Skill({ name, title }) {
   return (
     <>
-      <Icon name={name} className="skill" />
+      <Icon
+        className="skill"
+        name={name}
+      />
       <h4 className="skill__title">{title}</h4>
     </>
   );

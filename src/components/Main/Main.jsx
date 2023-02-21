@@ -8,34 +8,30 @@ import Skills from '../Skills/Skills';
 
 function Main() {
   return (
-    <main className='main'>
+    <main className="main">
       <Section
-        className='profile'
-        id="about">
-        <Profile
-          title="Александр"
-        />
+        className="profile"
+        id="about"
+      >
+        <Profile title="Александр" />
       </Section>
       <Section
         className="projects"
-        id="projects">
-        <Projects
-          title="Projects"
-        />
+        id="projects"
+      >
+        <Projects title="Projects" />
       </Section>
       <Section
         className="skills"
-        id="skills">
-        <Skills
-          title="Skills"
-        />
+        id="skills"
+      >
+        <Skills title="Skills" />
       </Section>
       <Section
         className="contacts"
-        id="contacts">
-        <Contacts
-          title="Contacts"
-        />
+        id="contacts"
+      >
+        <Contacts title="Contacts" />
       </Section>
     </main>
   );

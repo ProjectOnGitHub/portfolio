@@ -5,7 +5,8 @@ module.exports = {
   },
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "prettier"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -19,6 +20,20 @@ module.exports = {
   ],
   "rules": {
     "react/prop-types": 0,
-    "react/jsx-max-props-per-line": [1, { "maximum": 2 }]
+    'react/jsx-first-prop-new-line': [1, 'multiline'],
+    'react/jsx-max-props-per-line': [1,
+      {
+        'maximum': 1
+      }
+    ],
+    "react/jsx-sort-props": [1, {
+      "callbacksLast": true,
+      "shorthandFirst": false,
+      "shorthandLast": true,
+      "multiline": "last",
+      "ignoreCase": false,
+      "noSortAlphabetically": false,
+      "reservedFirst": true,
+    }]
   }
 };

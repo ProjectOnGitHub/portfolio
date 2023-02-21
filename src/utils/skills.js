@@ -27,7 +27,7 @@ const skills = [
     id: 5,
     name: "react",
     type: "library",
-    title: "React.js",
+    title: "React",
   },
   {
     id: 6,
@@ -64,6 +64,12 @@ const skills = [
     name: "webpack",
     type: "tool",
     title: "Webpack",
+  },
+  {
+    id: 12,
+    name: "vue",
+    type: "library",
+    title: "Vue",
   },
 ]
 

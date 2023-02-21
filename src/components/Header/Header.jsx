@@ -6,11 +6,11 @@ import HeaderMenu from '../HeaderMenu/HeaderMenu';
 
 function Header() {
   return (
-    <header className='header'>
-      <div className='header__container'>
-        <Logo className='logo' />
-        <Nav className='header'>
-          <HeaderMenu className='header' />
+    <header className="header">
+      <div className="header__container">
+        <Logo className="logo" />
+        <Nav className="header">
+          <HeaderMenu className="header" />
         </Nav>
       </div>
     </header>

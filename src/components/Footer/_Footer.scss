@@ -2,5 +2,15 @@
 @import '../../scss/variables';
 
 .footer {
+  @include gridable(100%);
+  justify-content: center;
   grid-area: footer;
+  &__container {
+    @include gridable(100%);
+    justify-content: center;
+    max-width: $max-width;
+    padding: 20px 50px;
+  }
+  &__copyright {
+  }
 }

@@ -5,8 +5,16 @@ import Icon from '../Icon/Icon';
 function Contact({ name, title, url }) {
   return (
     <>
-      <Icon name={name} className="contact" />
-      <a href={url} className="contact__link">{title}</a>
+      <Icon
+        className="contact"
+        name={name}
+      />
+      <a
+        className="contact__link"
+        href={url}
+      >
+        {title}
+      </a>
     </>
   );
 }

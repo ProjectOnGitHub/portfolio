@@ -11,8 +11,9 @@ function Contacts(props) {
       <ul className="contacts__list">
         {contacts.map((item) => (
           <ListItem
+            key={item.id}
             className="contact"
-            key={item.id}>
+          >
             <Contact
               name={item.name}
               title={item.title}

@@ -3,10 +3,10 @@ import React from 'react';
 function Button(props) {
   return (
     <button
-      type={props.type}
       aria-label={props.ariaLabel}
       className={props.className}
       name={props.name}
+      type={props.type}
       onClick={props.isClick}
     >
       {props.children}
