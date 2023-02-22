@@ -10,14 +10,15 @@ function Profile(props) {
         <h1 className="profile__title">{props.title}</h1>
         <h2 className="profile__subtitle">начинающий веб-разработчик</h2>
       </div>
-      <article className="profile__text">
+      <div className="profile__text">
         <p className="profile__paragraph">
           Хочу развивать свои навыки, создавать интересные и полезные
           приложения. Стремлюсь менять свою жизнь и жизнь окружающих меня людей
           к лучшему.
         </p>
-      </article>
+      </div>
       <Link
+        aria-label="Go to next screen"
         className="profile__link"
         to="#projects"
       >
