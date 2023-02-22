@@ -71,6 +71,18 @@ const skills = [
     type: 'library',
     title: 'Vue',
   },
+  {
+    id: 13,
+    name: 'prettier',
+    type: 'tool',
+    title: 'Prettier',
+  },
+  {
+    id: 14,
+    name: 'eslint',
+    type: 'tool',
+    title: 'Eslint',
+  },
 ];
 
 export default skills;
