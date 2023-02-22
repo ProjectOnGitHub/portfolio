@@ -59,6 +59,9 @@
     width: max-content;
     font-size: 14px;
     color: $color-main-text;
+    &_img {
+      position: absolute;
+    }
     @media screen and (max-width: $tablet-large) {
       padding-right: 20px;
     }

@@ -8,30 +8,30 @@ import Skills from '../Skills/Skills.jsx';
 
 function Main() {
   return (
-    <main className="main">
+    <main className='main'>
       <Section
-        className="profile"
-        id="about"
+        className='profile'
+        id='about'
       >
-        <Profile title="Александр" />
+        <Profile title='Александр' />
       </Section>
       <Section
-        className="projects"
-        id="projects"
+        className='projects'
+        id='projects'
       >
-        <Projects title="Проекты" />
+        <Projects title='Проекты' />
       </Section>
       <Section
-        className="skills"
-        id="skills"
+        className='skills'
+        id='skills'
       >
-        <Skills title="Навыки" />
+        <Skills title='Навыки' />
       </Section>
       <Section
-        className="contacts"
-        id="contacts"
+        className='contacts'
+        id='contacts'
       >
-        <Contacts title="Контакты" />
+        <Contacts title='Контакты' />
       </Section>
     </main>
   );

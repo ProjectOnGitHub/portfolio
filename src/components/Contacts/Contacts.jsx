@@ -7,12 +7,12 @@ import contacts from '../../utils/contacts';
 function Contacts(props) {
   return (
     <>
-      <h2 className="contacts__title">{props.title}</h2>
-      <ul className="contacts__list">
+      <h2 className='contacts__title'>{props.title}</h2>
+      <ul className='contacts__list'>
         {contacts.map((item) => (
           <ListItem
             key={item.id}
-            className="contact"
+            className='contact'
           >
             <Contact
               name={item.name}

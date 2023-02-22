@@ -28,9 +28,9 @@ function Slider(props) {
     <>
       <div
         {...handlers}
-        className="slider"
+        className='slider'
       >
-        <ul className="slider__dots">
+        <ul className='slider__dots'>
           {props.projects.map((item, i) => (
             <SliderDot
               key={item.id}
@@ -43,7 +43,7 @@ function Slider(props) {
           ))}
         </ul>
         <ul
-          className="slider__list"
+          className='slider__list'
           style={{ transform: `translateX(${-count * 100}%)` }}
         >
           {props.projects.map((item) => (
@@ -55,26 +55,26 @@ function Slider(props) {
           ))}
         </ul>
         <Button
-          aria-label="Slide to left"
-          className="slider__button slider__button_left"
-          name="slider-button-left"
-          type="button"
+          aria-label='Slide to left'
+          className='slider__button slider__button_left'
+          name='slider-button-left'
+          type='button'
           isClick={() => {
             updateCount(count - 1);
           }}
         >
-          <Icon name="arrow-left" />
+          <Icon name='arrow-left' />
         </Button>
         <Button
-          aria-label="Slide to right"
-          className="slider__button slider__button_right"
-          name="slider-button-right"
-          type="button"
+          aria-label='Slide to right'
+          className='slider__button slider__button_right'
+          name='slider-button-right'
+          type='button'
           isClick={() => {
             updateCount(count + 1);
           }}
         >
-          <Icon name="arrow-right" />
+          <Icon name='arrow-right' />
         </Button>
       </div>
     </>

@@ -5,22 +5,22 @@ import SkillsList from '../SkillsList/SkillsList.jsx';
 function Skills(props) {
   return (
     <>
-      <h2 className="skills__title">{props.title}</h2>
+      <h2 className='skills__title'>{props.title}</h2>
       <SkillsList
-        subtitle="Языки"
-        type="language"
+        subtitle='Языки'
+        type='language'
       />
       <SkillsList
-        subtitle="Библиотеки и Фреймворки"
-        type="library"
+        subtitle='Библиотеки и Фреймворки'
+        type='library'
       />
       <SkillsList
-        subtitle="Системы управления содержимым"
-        type="cms"
+        subtitle='Системы управления содержимым'
+        type='cms'
       />
       <SkillsList
-        subtitle="Инструменты"
-        type="tool"
+        subtitle='Инструменты'
+        type='tool'
       />
     </>
   );

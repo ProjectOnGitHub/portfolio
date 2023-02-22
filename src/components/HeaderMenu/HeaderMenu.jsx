@@ -29,14 +29,14 @@ function HeaderMenu(props) {
   return (
     <>
       <Button
-        aria-label="Open mobile menu"
-        className="header__button"
+        aria-label='Open mobile menu'
+        className='header__button'
         isClick={toggleMenu}
-        name="header-button"
-        type="button"
+        name='header-button'
+        type='button'
       >
         <span className={isOpenMenu ? 'cross  cross_active' : 'cross'}>
-          <span className="cross__line"></span>
+          <span className='cross__line'></span>
         </span>
       </Button>
       <div

@@ -6,11 +6,11 @@ function Contact({ name, title, url }) {
   return (
     <>
       <Icon
-        className="contact"
+        className='contact'
         name={name}
       />
       <a
-        className="contact__link"
+        className='contact__link'
         href={url}
       >
         {title}

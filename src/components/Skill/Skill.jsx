@@ -6,10 +6,10 @@ function Skill({ name, title }) {
   return (
     <>
       <Icon
-        className="skill"
+        className='skill'
         name={name}
       />
-      <h4 className="skill__title">{title}</h4>
+      <h4 className='skill__title'>{title}</h4>
     </>
   );
 }

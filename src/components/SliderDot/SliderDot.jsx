@@ -4,12 +4,12 @@ import Button from '../Button/Button.jsx';
 
 function SliderDot(props) {
   return (
-    <li className="slider__dot">
+    <li className='slider__dot'>
       <Button
-        aria-label="Switch slide"
+        aria-label='Switch slide'
         isClick={props.isClick}
-        name="slider-dot-button"
-        type="button"
+        name='slider-dot-button'
+        type='button'
         className={`${
           props.index === props.count
             ? 'slider__dot-button slider__dot-button_active'
