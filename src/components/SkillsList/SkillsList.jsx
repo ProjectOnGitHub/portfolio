@@ -9,8 +9,7 @@ function SkillsList(props) {
     <div className={`skills__container skills__container_${props.type}`}>
       <h3 className="skills__subtitle">{props.subtitle}</h3>
       <ul className="skills__list">
-        {skills.map((item) =>
-          item.type === props.type ? (
+        {skills.map((item) => (item.type === props.type ? (
             <ListItem
               key={item.id}
               className="skill"
@@ -21,10 +20,9 @@ function SkillsList(props) {
                 type={item.type}
               />
             </ListItem>
-          ) : (
-            ''
-          )
-        )}
+        ) : (
+          ''
+        )))}
       </ul>
     </div>
   );
