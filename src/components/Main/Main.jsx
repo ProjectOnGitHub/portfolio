@@ -19,19 +19,19 @@ function Main() {
         className="projects"
         id="projects"
       >
-        <Projects title="Projects" />
+        <Projects title="Проекты" />
       </Section>
       <Section
         className="skills"
         id="skills"
       >
-        <Skills title="Skills" />
+        <Skills title="Навыки" />
       </Section>
       <Section
         className="contacts"
         id="contacts"
       >
-        <Contacts title="Contacts" />
+        <Contacts title="Контакты" />
       </Section>
     </main>
   );

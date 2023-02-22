@@ -7,19 +7,19 @@ function Skills(props) {
     <>
       <h2 className="skills__title">{props.title}</h2>
       <SkillsList
-        subtitle="Languages"
+        subtitle="Языки"
         type="language"
       />
       <SkillsList
-        subtitle="Libraries & Frameworks"
+        subtitle="Библиотеки и Фреймворки"
         type="library"
       />
       <SkillsList
-        subtitle="Content Managment Systems"
+        subtitle="Системы управления содержимым"
         type="cms"
       />
       <SkillsList
-        subtitle="Tools"
+        subtitle="Инструменты"
         type="tool"
       />
     </>

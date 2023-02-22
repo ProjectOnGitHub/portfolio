@@ -2,22 +2,22 @@ const menu = [
   {
     id: 1,
     url: 'about',
-    anchor: 'About',
+    anchor: 'Обо мне',
   },
   {
     id: 2,
     url: 'projects',
-    anchor: 'Projects',
+    anchor: 'Проекты',
   },
   {
     id: 3,
     url: 'skills',
-    anchor: 'Skills',
+    anchor: 'Навыки',
   },
   {
     id: 4,
     url: 'contacts',
-    anchor: 'Contacts',
+    anchor: 'Контакты',
   },
 ];
 export default menu;
