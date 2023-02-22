@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0b5286ca.css",
+    "main.js": "/static/js/main.fc37ac15.js",
+    "static/js/787.b54064ba.chunk.js": "/static/js/787.b54064ba.chunk.js",
+    "static/media/background.jpg": "/static/media/background.ce2558aa02d69972b332.jpg",
+    "static/media/shelter.jpg": "/static/media/shelter.f25aab67fcac203ee92d.jpg",
+    "static/media/kinoprorok.jpg": "/static/media/kinoprorok.1491d8be2192676a442d.jpg",
+    "static/media/Inter-Medium.woff": "/static/media/Inter-Medium.eec0ea57721daa33c7a2.woff",
+    "static/media/Inter-Black.woff": "/static/media/Inter-Black.16792010d318c2904562.woff",
+    "static/media/Inter-Regular.woff": "/static/media/Inter-Regular.fc49d131f795b4d48f26.woff",
+    "static/media/Inter-Medium.woff2": "/static/media/Inter-Medium.d0a58d956cf2f4cf078f.woff2",
+    "static/media/Inter-Black.woff2": "/static/media/Inter-Black.23eb804eb49e365fa2f1.woff2",
+    "static/media/portfolio-alexa.jpg": "/static/media/portfolio-alexa.a7d2fcaeb1c53246bdb0.jpg",
+    "static/media/Inter-Regular.woff2": "/static/media/Inter-Regular.2505c0d4b34ffca98f8f.woff2",
+    "static/media/company.jpg": "/static/media/company.f9014cf01dc87d78d3b8.jpg",
+    "static/media/club27.jpg": "/static/media/club27.b078a8ea50749f436ffe.jpg",
+    "static/media/sprite.svg": "/static/media/sprite.bbcb36d75e14b3b8019b88610200a3ac.svg",
+    "index.html": "/index.html",
+    "main.0b5286ca.css.map": "/static/css/main.0b5286ca.css.map",
+    "main.fc37ac15.js.map": "/static/js/main.fc37ac15.js.map",
+    "787.b54064ba.chunk.js.map": "/static/js/787.b54064ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0b5286ca.css",
+    "static/js/main.fc37ac15.js"
+  ]
+}
