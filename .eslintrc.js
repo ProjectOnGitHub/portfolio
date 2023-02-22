@@ -27,10 +27,6 @@ module.exports = {
       { maximum: 1, when: 'multiline' },
     ],
     'react/jsx-indent-props': [2, 2],
-    'react/jsx-closing-bracket-location': [
-      2,
-      'tag-aligned',
-    ],
     'react/jsx-sort-props': [1, {
       callbacksLast: true,
       shorthandFirst: false,
