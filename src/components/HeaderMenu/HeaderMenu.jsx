@@ -13,8 +13,17 @@ function HeaderMenu(props) {
       setIsOpenMenu(false);
       document.body.classList.remove('scroll-lock');
     }
-    setIsOpenMenu(true);
-    document.body.classList.add('scroll-lock');
+    if (!isOpenMenu) {
+      setIsOpenMenu(true);
+      document.body.classList.add('scroll-lock');
+    }
+  }
+
+  function closeMenu() {
+    if (isOpenMenu) {
+      setIsOpenMenu(false);
+      document.body.classList.remove('scroll-lock');
+    }
   }
 
   return (
@@ -49,7 +58,7 @@ function HeaderMenu(props) {
             <Link
               className={`${props.className}__menu-link`}
               to={`#${item.url}`}
-              onClick={toggleMenu}
+              onClick={closeMenu}
             >
               {item.anchor}
             </Link>
