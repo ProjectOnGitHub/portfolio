@@ -65,12 +65,12 @@ const skills = [
     type: 'tool',
     title: 'Webpack',
   },
-  {
-    id: 12,
-    name: 'vue',
-    type: 'library',
-    title: 'Vue',
-  },
+  // {
+  //   id: 12,
+  //   name: 'vue',
+  //   type: 'library',
+  //   title: 'Vue',
+  // },
   {
     id: 13,
     name: 'prettier',

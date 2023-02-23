@@ -16,7 +16,7 @@ const projects = [
   {
     id: 2,
     title: 'Лэндинг компании',
-    description: 'Лэндинг для компании по макету из Figma. Свёрстан по различные разрешения.',
+    description: 'Лэндинг для компании по макету из Figma. Свёрстан под различные разрешения.',
     stack: 'HTML, CSS, JavaScript, Webpack',
     url: 'https://company.wbdv.ru',
     image: company,

@@ -13,8 +13,7 @@ function Profile(props) {
       <div className='profile__text'>
         <p className='profile__paragraph'>
           Хочу развивать свои навыки, создавать интересные и полезные
-          приложения. Стремлюсь менять свою жизнь и жизнь окружающих меня людей
-          к лучшему.
+          приложения.
         </p>
       </div>
       <Link
