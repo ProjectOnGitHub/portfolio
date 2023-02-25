@@ -20,8 +20,7 @@ function Project(props) {
         className='project__link'
         href={props.url}
         rel='noreferrer'
-        target='_blank'
-      >
+        target='_blank'>
         Перейти
       </a>
     </>

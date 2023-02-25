@@ -33,33 +33,28 @@ function HeaderMenu(props) {
         className='header__button'
         isClick={toggleMenu}
         name='header-button'
-        type='button'
-      >
+        type='button'>
         <span className={isOpenMenu ? 'cross  cross_active' : 'cross'}>
           <span className='cross__line'></span>
         </span>
       </Button>
       <div
         className={isOpenMenu ? 'overlay overlay_active' : 'overlay'}
-        onClick={toggleMenu}
-      ></div>
+        onClick={toggleMenu}></div>
       <ul
         className={
           isOpenMenu
             ? `${props.className}__menu ${props.className}__menu_opened`
             : `${props.className}__menu`
-        }
-      >
+        }>
         {menu.map((item) => (
           <ListItem
             key={item.id}
-            className={`${props.className}__menu-item`}
-          >
+            className={`${props.className}__menu-item`}>
             <Link
               className={`${props.className}__menu-link`}
               to={`#${item.url}`}
-              onClick={closeMenu}
-            >
+              onClick={closeMenu}>
               {item.anchor}
             </Link>
           </ListItem>

@@ -11,8 +11,7 @@ function Contact({ name, title, url }) {
       />
       <a
         className='contact__link'
-        href={url}
-      >
+        href={url}>
         {title}
       </a>
     </>

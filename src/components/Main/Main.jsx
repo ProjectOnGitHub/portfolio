@@ -11,26 +11,22 @@ function Main() {
     <main className='main'>
       <Section
         className='profile'
-        id='about'
-      >
+        id='about'>
         <Profile title='Александр' />
       </Section>
       <Section
         className='projects'
-        id='projects'
-      >
+        id='projects'>
         <Projects title='Проекты' />
       </Section>
       <Section
         className='skills'
-        id='skills'
-      >
+        id='skills'>
         <Skills title='Навыки' />
       </Section>
       <Section
         className='contacts'
-        id='contacts'
-      >
+        id='contacts'>
         <Contacts title='Контакты' />
       </Section>
     </main>

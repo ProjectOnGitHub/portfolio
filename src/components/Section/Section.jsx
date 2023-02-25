@@ -5,8 +5,7 @@ function Section(props) {
   return (
     <section
       className={`section ${props.className}`}
-      id={`${props.id}`}
-    >
+      id={`${props.id}`}>
       {props.children}
     </section>
   );

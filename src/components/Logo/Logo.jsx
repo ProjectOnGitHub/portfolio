@@ -5,8 +5,7 @@ function Logo(props) {
   return (
     <a
       className={`${props.className}`}
-      href='/'
-    >
+      href='/'>
       <span className='logo__left-char'>A</span>
       <span className='logo__right-char'>V</span>
     </a>

@@ -12,8 +12,7 @@ function Projects(props) {
         {projects.map((item) => (
           <ListItem
             key={item.id}
-            className='project'
-          >
+            className='project'>
             <Project
               description={item.description}
               image={item.image}

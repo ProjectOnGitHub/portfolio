@@ -12,8 +12,7 @@ function SkillsList(props) {
         {skills.map((item) => (item.type === props.type ? (
             <ListItem
               key={item.id}
-              className='skill'
-            >
+              className='skill'>
               <Skill
                 name={item.name}
                 title={item.title}

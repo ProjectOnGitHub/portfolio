@@ -12,15 +12,13 @@ function Profile(props) {
       </div>
       <div className='profile__text'>
         <p className='profile__paragraph'>
-          Хочу развивать свои навыки, создавать интересные и полезные
-          приложения.
+          Хочу развивать свои навыки, создавать интересные и полезные приложения.
         </p>
       </div>
       <Link
         aria-label='Go to next screen'
         className='profile__link'
-        to='#projects'
-      >
+        to='#projects'>
         <Icon
           className='profile'
           name='arrow-down'
