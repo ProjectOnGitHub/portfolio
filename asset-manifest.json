@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.9571dd24.css",
-    "main.js": "/static/js/main.29781fdc.js",
+    "main.css": "/static/css/main.76ecb0ed.css",
+    "main.js": "/static/js/main.e2896458.js",
     "static/js/787.b54064ba.chunk.js": "/static/js/787.b54064ba.chunk.js",
     "static/media/background.jpg": "/static/media/background.ce2558aa02d69972b332.jpg",
     "static/media/shelter.jpg": "/static/media/shelter.f25aab67fcac203ee92d.jpg",
@@ -14,15 +14,15 @@
     "static/media/portfolio-alexa.jpg": "/static/media/portfolio-alexa.a7d2fcaeb1c53246bdb0.jpg",
     "static/media/Inter-Regular.woff2": "/static/media/Inter-Regular.2505c0d4b34ffca98f8f.woff2",
     "static/media/company.jpg": "/static/media/company.f9014cf01dc87d78d3b8.jpg",
-    "static/media/sprite.svg": "/static/media/sprite.8eca00ad4caefcaa8557c178a7e39583.svg",
+    "static/media/sprite.svg": "/static/media/sprite.a16b944f9a4f445ea9fdbcc8268deb73.svg",
     "static/media/club27.jpg": "/static/media/club27.b078a8ea50749f436ffe.jpg",
     "index.html": "/index.html",
-    "main.9571dd24.css.map": "/static/css/main.9571dd24.css.map",
-    "main.29781fdc.js.map": "/static/js/main.29781fdc.js.map",
+    "main.76ecb0ed.css.map": "/static/css/main.76ecb0ed.css.map",
+    "main.e2896458.js.map": "/static/js/main.e2896458.js.map",
     "787.b54064ba.chunk.js.map": "/static/js/787.b54064ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9571dd24.css",
-    "static/js/main.29781fdc.js"
+    "static/css/main.76ecb0ed.css",
+    "static/js/main.e2896458.js"
   ]
 }
