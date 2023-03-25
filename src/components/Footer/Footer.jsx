@@ -20,7 +20,10 @@ function Footer() {
     <footer className='footer'>
       <div className='footer__container'>
         <div className='footer__copyright'>{`© ${year}`}</div>
-        <Logo className='logo logo_small' />
+        <Logo
+          className='small'
+          name='my-logo'
+        />
       </div>
     </footer>
   );

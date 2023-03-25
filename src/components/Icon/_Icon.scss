@@ -20,6 +20,17 @@
     width: 20px;
     height: 20px;
   }
+  &__logo {
+    @include flexible(48px);
+    z-index: 10;
+    height: 48px;
+    fill: $color-bg-white;
+    stroke: $color-main-text;
+    &_small {
+      width: 24px;
+      height: 24px;
+    }
+  }
 }
 
 @keyframes moveArrowDown {

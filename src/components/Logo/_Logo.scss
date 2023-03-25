@@ -4,23 +4,17 @@
 .logo {
   @include flexible(100%);
   z-index: 10;
-  font-weight: 700;
-  font-size: 34px;
-  color: $color-bg-white;
-  text-decoration: none;
-  transition: 0.5s ease-in-out;
-  -webkit-text-stroke: 1px $color-main-text;
+
+  &_middle {
+    width: 28px;
+    height: 28px;
+    fill: $color-main-text;
+    stroke: $color-bg-white;
+  }
   &_small {
-    font-size: 16px;
-  }
-  &:hover {
-    opacity: 0.8;
-  }
-  &__left-char {
-    z-index: 10;
-  }
-  &__right-char {
-    z-index: 5;
-    transform: translateX(-0.5em);
+    width: 20px;
+    height: 24px;
+    fill: $color-bg-white;
+    stroke: $color-main-text;
   }
 }

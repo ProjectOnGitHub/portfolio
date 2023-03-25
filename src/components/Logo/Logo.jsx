@@ -1,14 +1,12 @@
 import React from 'react';
 import './_Logo.scss';
+import LogoIcon from '../../svg/sprite.svg';
 
-function Logo(props) {
+function Logo({ name, className }) {
   return (
-    <a
-      className={`${props.className}`}
-      href='/'>
-      <span className='logo__left-char'>A</span>
-      <span className='logo__right-char'>V</span>
-    </a>
+    <svg className={`logo logo_${className}`}>
+      <use xlinkHref={`${LogoIcon}#${name}-icon`} />
+    </svg>
   );
 }
 

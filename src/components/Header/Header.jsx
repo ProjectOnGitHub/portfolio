@@ -8,7 +8,14 @@ function Header() {
   return (
     <header className='header'>
       <div className='header__container'>
-        <Logo className='logo' />
+        <a
+          className='header__link'
+          href='/'>
+          <Logo
+            className='middle'
+            name='my-logo'
+          />
+        </a>
         <Nav className='header'>
           <HeaderMenu className='header' />
         </Nav>
