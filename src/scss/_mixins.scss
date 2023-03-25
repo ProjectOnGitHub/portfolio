@@ -30,7 +30,6 @@
     background-color: $color-main-text;
     transition: width 0.5s;
   }
-
   &:hover::after {
     content: '';
     width: 100%;
@@ -40,7 +39,7 @@
     bottom: -3px;
     height: 2px;
     background-color: $color-decorate-link;
-    transition: width 0.5s; /* Время эффекта */
+    transition: width 0.5s;
   }
 }
 

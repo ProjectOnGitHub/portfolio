@@ -2,6 +2,10 @@
 @import '../../scss/_variables';
 
 .icon {
+  &__project-link {
+    width: 15px;
+    height: 15px;
+  }
   &__profile {
     width: 25px;
     height: 25px;

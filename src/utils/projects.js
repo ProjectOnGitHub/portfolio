@@ -12,6 +12,7 @@ const projects = [
       'Проект на интересную для меня тему. Собственный дизайн. Вёрстка адаптирована под мобильные разрешения.',
     stack: 'React, HTML, SCSS',
     url: 'https://27club.wbdv.ru',
+    githubUrl: 'https://github.com/ProjectOnGitHub/27club',
     image: club27,
   },
   {
@@ -20,15 +21,17 @@ const projects = [
     description: 'Лэндинг для компании по макету из Figma. Свёрстан под различные разрешения.',
     stack: 'HTML, CSS, JavaScript, Webpack',
     url: 'https://company.wbdv.ru',
+    githubUrl: 'https://github.com/ProjectOnGitHub/company',
     image: company,
   },
   {
     id: 3,
     title: 'Лэндинг-портфолио для фотографа',
     description:
-      'Fортфолио по макету из Figma. С помощью JS реализована возможность менять тему со светлой на тёмную, переключать язык, фильтровать фото по временам года. Вёрстка адаптирована под мобильные разрешения.',
+      'Портфолио по макету из Figma. С помощью JS реализована возможность менять тему со светлой на тёмную, переключать язык, фильтровать фото по временам года. Вёрстка адаптирована под мобильные разрешения.',
     stack: 'HTML, SCSS, JavaScript',
     url: 'https://portfolio-alexa.wbdv.ru',
+    githubUrl: 'https://github.com/ProjectOnGitHub/portfolio-alexa',
     image: portfolioAlexa,
   },
   {
@@ -36,8 +39,9 @@ const projects = [
     title: 'Сайт приюта для животных',
     description:
       'Адаптивно свёрстан по макету из Figma. С помощью JS реализована пагинация списка животных и попап, который открывается при клике по фотографии животного.',
-    stack: 'React, HTML, SCSS',
+    stack: 'HTML, SCSS, JavaScript',
     url: 'https://shelter.wbdv.ru/pages/main/',
+    githubUrl: 'https://github.com/ProjectOnGitHub/shelter',
     image: shelter,
   },
   {
@@ -47,6 +51,7 @@ const projects = [
       'Собственный дизайн. Свёрстан адаптивно. Натяжка вёрстки на Wordpress с последующей доработкой функционала темы',
     stack: 'HTML, SCSS, Webpack, JavaScript, PHP',
     url: 'https://kinoprorok.ru',
+    githubUrl: '',
     image: kinoprorok,
   },
 ];

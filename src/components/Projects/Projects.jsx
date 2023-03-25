@@ -15,6 +15,7 @@ function Projects(props) {
             className='project'>
             <Project
               description={item.description}
+              githubUrl={item.githubUrl}
               image={item.image}
               stack={item.stack}
               title={item.title}

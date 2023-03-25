@@ -52,12 +52,32 @@
   &__paragraph {
     margin: 0;
   }
+  &__links {
+    @include unmarkedList;
+    @include gridable(100%);
+    grid-template-columns: repeat(2, max-content);
+    gap: 25px;
+    justify-content: center;
+    align-self: end;
+    &-item {
+      @include flexible(100%);
+      align-items: center;
+      gap: 10px;
+    }
+  }
   &__link {
     @include defaultLink;
-    justify-self: center;
-    align-self: end;
     width: max-content;
     font-size: 14px;
     color: $color-main-text;
+    &_image {
+      &::after {
+      }
+    }
+    &_image {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+    }
   }
 }
