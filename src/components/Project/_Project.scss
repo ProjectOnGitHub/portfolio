@@ -66,13 +66,12 @@
     }
   }
   &__link {
-    @include defaultLink;
     width: max-content;
     font-size: 14px;
     color: $color-main-text;
-    &_image {
-      &::after {
-      }
+    &_text {
+      @include defaultLink;
+      text-decoration: none;
     }
     &_image {
       position: absolute;

@@ -5,4 +5,12 @@
   &__title {
     @include defaultSubtitle(32px);
   }
+  &__text {
+    @include flexible(100%);
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__paragraph {
+    margin: 0;
+  }
 }

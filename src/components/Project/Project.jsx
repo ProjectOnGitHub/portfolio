@@ -29,7 +29,7 @@ function Project(props) {
             name='link'
           />
           <a
-            className='project__link'
+            className='project__link project__link_text'
             href={props.url}
             rel='noreferrer'
             target='_blank'>
@@ -43,7 +43,7 @@ function Project(props) {
               name='github'
             />
             <a
-              className='project__link'
+              className='project__link project__link_text'
               href={props.githubUrl}
               rel='noreferrer'
               target='_blank'>
