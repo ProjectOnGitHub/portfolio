@@ -65,12 +65,12 @@ const skills = [
     type: 'tool',
     title: 'Webpack',
   },
-  // {
-  //   id: 12,
-  //   name: 'vue',
-  //   type: 'library',
-  //   title: 'Vue',
-  // },
+  {
+    id: 12,
+    name: 'vue',
+    type: 'library',
+    title: 'Vue',
+  },
   {
     id: 13,
     name: 'prettier',
@@ -82,6 +82,12 @@ const skills = [
     name: 'eslint',
     type: 'tool',
     title: 'Eslint',
+  },
+  {
+    id: 15,
+    name: 'nuxt',
+    type: 'library',
+    title: 'Nuxt',
   },
 ];
 
