@@ -23,19 +23,24 @@ function Project(props) {
         <p className='project__paragraph'>{props.stack}</p>
       </div>
       <ul className='project__links'>
-        <li className='project__links-item'>
-          <Icon
-            className='project-link'
-            name='link'
-          />
-          <a
-            className='project__link project__link_text'
-            href={props.url}
-            rel='noreferrer'
-            target='_blank'>
-            Cайт
-          </a>
-        </li>
+        {props.url !== '' ? (
+          <li className='project__links-item'>
+            <Icon
+              className='project-link'
+              name='link'
+            />
+            <a
+              className='project__link project__link_text'
+              href={props.url}
+              rel='noreferrer'
+              target='_blank'>
+              Cайт
+            </a>
+          </li>
+        ) : (
+          ''
+        )}
+
         {props.githubUrl !== '' ? (
           <li className='project__links-item'>
             <Icon
