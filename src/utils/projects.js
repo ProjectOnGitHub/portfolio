@@ -3,6 +3,7 @@ import shelter from '../images/shelter.jpg';
 import company from '../images/company.jpg';
 import portfolioAlexa from '../images/portfolio-alexa.jpg';
 import kinoprorok from '../images/kinoprorok.jpg';
+import gamebase from '../images/gamebase.jpg';
 
 const projects = [
   {
@@ -48,11 +49,21 @@ const projects = [
     id: 5,
     title: 'Блог Кино про рок',
     description:
-      'Собственный дизайн. Свёрстан адаптивно. Натяжка вёрстки на Wordpress с последующей доработкой функционала темы',
+      'Собственный дизайн. Свёрстан адаптивно. Натяжка вёрстки на Wordpress с последующей доработкой функционала темы.',
     stack: 'HTML, SCSS, Webpack, JavaScript, PHP',
     url: 'https://kinoprorok.ru',
     githubUrl: '',
     image: kinoprorok,
+  },
+  {
+    id: 6,
+    title: 'GameBase',
+    description:
+      'Сайт со списком бесплатных игр. Данные по играм запрашиваются по API. Можно искать игры по названию.',
+    stack: 'Nuxt 2, HTML, SCSS',
+    url: '',
+    githubUrl: 'https://github.com/ProjectOnGitHub/gamebase',
+    image: gamebase,
   },
 ];
 
