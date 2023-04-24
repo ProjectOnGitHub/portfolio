@@ -14,7 +14,7 @@ function Project(props) {
         <figcaption className='project__title'>{props.title}</figcaption>
         <a
           className='project__link project__link_image'
-          href={props.url}
+          href={props.url ? props.url : props.githubUrl}
           rel='noreferrer'
           target='_blank'></a>
       </figure>
