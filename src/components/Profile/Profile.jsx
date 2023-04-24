@@ -8,12 +8,10 @@ function Profile(props) {
     <>
       <div className='profile__info'>
         <h1 className='profile__title'>{props.title}</h1>
-        <h2 className='profile__subtitle'>начинающий веб-разработчик</h2>
+        <h2 className='profile__subtitle'>Веб-разработчик</h2>
       </div>
       <div className='profile__text'>
-        <p className='profile__paragraph'>
-          Хочу развивать свои навыки, создавать интересные и полезные приложения.
-        </p>
+        <p className='profile__paragraph'>Ушёл из SEO в разработку</p>
       </div>
       <Link
         aria-label='Go to next screen'
