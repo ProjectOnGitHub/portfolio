@@ -1,8 +1,10 @@
-import { React, useState, useEffect } from 'react';
+import { React, useState, useEffect, useContext } from 'react';
 import Logo from '../Logo/Logo.jsx';
 import './_Footer.scss';
+import DarkThemeContext from '../../contexts/DarkThemeContext.jsx';
 
 function Footer() {
+  const { isDarkTheme } = useContext(DarkThemeContext);
   const [year, setYear] = useState();
 
   function addYear() {
@@ -17,7 +19,7 @@ function Footer() {
   });
 
   return (
-    <footer className='footer'>
+    <footer className={isDarkTheme ? 'footer footer_theme-dark' : 'footer'}>
       <div className='footer__container'>
         <div className='footer__copyright'>{`© ${year}`}</div>
         <Logo

@@ -29,6 +29,10 @@
     visibility: hidden;
     opacity: 0;
     transition: 0.5s ease;
+    &_theme-dark {
+      background-color: rgba($color-dark, 0.9);
+      color: $color-light;
+    }
   }
   &__image {
     display: block;
@@ -69,6 +73,9 @@
     width: max-content;
     font-size: 14px;
     color: $color-dark;
+    &_theme-dark {
+      color: $color-light;
+    }
     &_text {
       @include defaultLink;
       text-decoration: none;

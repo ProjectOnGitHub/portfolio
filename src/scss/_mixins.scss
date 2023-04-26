@@ -68,3 +68,8 @@
   cursor: pointer;
   transition: 0.5s;
 }
+
+@mixin darkTheme() {
+  color: $color-light;
+  background-color: $color-dark;
+}

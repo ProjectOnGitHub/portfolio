@@ -12,5 +12,8 @@
   &__link {
     @include defaultLink;
     color: $color-dark;
+    &_theme-dark {
+      color: $color-light;
+    }
   }
 }

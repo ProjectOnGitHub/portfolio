@@ -6,8 +6,8 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
-    'prettier',
     'airbnb-base',
+    'prettier',
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -36,5 +36,6 @@ module.exports = {
       noSortAlphabetically: false,
       reservedFirst: true,
     }],
+    'react/jsx-curly-newline': [2, { multiline: 'consistent', singleline: 'consistent' }],
   },
 };

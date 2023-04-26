@@ -6,6 +6,9 @@
   &__project-link {
     width: 15px;
     height: 15px;
+    &_theme-dark {
+      fill: $color-light;
+    }
   }
   &__profile {
     width: 25px;
@@ -20,6 +23,9 @@
   &__contact {
     width: 20px;
     height: 20px;
+    &_theme-dark {
+      fill: $color-light;
+    }
   }
   &__logo {
     @include flexible(48px);

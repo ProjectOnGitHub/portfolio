@@ -5,6 +5,9 @@
   @include gridable(100%);
   grid-area: footer;
   justify-content: center;
+  &_theme-dark {
+    @include darkTheme;
+  }
 
   &__container {
     @include flexible(100%);

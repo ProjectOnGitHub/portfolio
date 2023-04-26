@@ -1,17 +1,24 @@
-import React from 'react';
+import { React, useContext } from 'react';
 import './_Contact.scss';
 import Icon from '../Icon/Icon.jsx';
+import DarkThemeContext from '../../contexts/DarkThemeContext.jsx';
 
 function Contact({ name, title, url }) {
+  const { isDarkTheme } = useContext(DarkThemeContext);
+
   return (
     <>
       <Icon
-        className='contact'
+        className={isDarkTheme ? 'contact icon__contact_theme-dark' : 'contact'}
         name={name}
       />
       <a
-        className='contact__link'
-        href={url}>
+        href={url}
+        className={
+          isDarkTheme
+            ? 'contact__link contact__link_theme-dark'
+            : 'contact__link'
+        }>
         {title}
       </a>
     </>

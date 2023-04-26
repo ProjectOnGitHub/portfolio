@@ -1,8 +1,11 @@
-import React from 'react';
+import { React, useContext } from 'react';
 import Icon from '../Icon/Icon.jsx';
 import './_Project.scss';
+import DarkThemeContext from '../../contexts/DarkThemeContext.jsx';
 
 function Project(props) {
+  const { isDarkTheme } = useContext(DarkThemeContext);
+
   return (
     <>
       <figure className='project__figure'>
@@ -11,7 +14,14 @@ function Project(props) {
           className='project__image'
           src={props.image}
         />
-        <figcaption className='project__title'>{props.title}</figcaption>
+        <figcaption
+          className={
+            isDarkTheme
+              ? 'project__title project__title_theme-dark'
+              : 'project__title'
+          }>
+          {props.title}
+        </figcaption>
         <a
           className='project__link project__link_image'
           href={props.url ? props.url : props.githubUrl}
@@ -26,14 +36,22 @@ function Project(props) {
         {props.url !== '' ? (
           <li className='project__links-item'>
             <Icon
-              className='project-link'
               name='link'
+              className={
+                isDarkTheme
+                  ? 'project-link icon__project-link_theme-dark'
+                  : 'project-link'
+              }
             />
             <a
-              className='project__link project__link_text'
               href={props.url}
               rel='noreferrer'
-              target='_blank'>
+              target='_blank'
+              className={
+                isDarkTheme
+                  ? 'project__link project__link_text project__link_theme-dark'
+                  : 'project__link project__link_text'
+              }>
               Cайт
             </a>
           </li>
@@ -44,14 +62,22 @@ function Project(props) {
         {props.githubUrl !== '' ? (
           <li className='project__links-item'>
             <Icon
-              className='project-link'
               name='github'
+              className={
+                isDarkTheme
+                  ? 'project-link icon__project-link_theme-dark'
+                  : 'project-link'
+              }
             />
             <a
-              className='project__link project__link_text'
               href={props.githubUrl}
               rel='noreferrer'
-              target='_blank'>
+              target='_blank'
+              className={
+                isDarkTheme
+                  ? 'project__link project__link_text project__link_theme-dark'
+                  : 'project__link project__link_text'
+              }>
               GitHub
             </a>
           </li>

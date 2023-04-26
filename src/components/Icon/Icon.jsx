@@ -4,7 +4,7 @@ import Icons from '../../svg/sprite.svg';
 
 function Icon({ name, className }) {
   return (
-    <svg className={`icon icon__${className} icon__${className}_${name}`}>
+    <svg className={`icon icon__${className} `}>
       <use xlinkHref={`${Icons}#${name}-icon`} />
     </svg>
   );
