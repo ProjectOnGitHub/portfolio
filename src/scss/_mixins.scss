@@ -9,22 +9,22 @@
 }
 
 @mixin unmarkedList {
-  list-style-type: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 @mixin defaultLink {
-  cursor: pointer;
-  text-decoration: none;
-  transition: ease-in-out;
   position: relative;
+  text-decoration: none;
+  cursor: pointer;
+  transition: ease-in-out;
   &::after {
     content: '';
-    display: block;
     position: absolute;
     right: 0;
     bottom: -3px;
+    display: block;
     width: 0;
     height: 2px;
     background-color: $color-dark;
@@ -32,11 +32,11 @@
   }
   &:hover::after {
     content: '';
-    width: 100%;
-    display: block;
     position: absolute;
-    left: 0;
     bottom: -3px;
+    left: 0;
+    display: block;
+    width: 100%;
     height: 2px;
     background-color: $color-decorate-link;
     transition: width 0.5s;
@@ -45,15 +45,15 @@
 
 @mixin defaultTitle {
   margin: 0;
-  line-height: 1;
   font-weight: 700;
+  line-height: 1;
 }
 
 @mixin defaultSubtitle($font-size) {
-  font-size: $font-size;
   margin: 0;
-  line-height: 1;
   font-weight: 500;
+  font-size: $font-size;
+  line-height: 1;
 }
 
 @mixin button() {
@@ -61,6 +61,8 @@
   align-items: center;
   box-sizing: border-box;
   padding: 0;
+  background-color: transparent;
+  border: none;
   border: none;
   transform: scale(1);
   cursor: pointer;

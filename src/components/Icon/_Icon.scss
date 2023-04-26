@@ -33,10 +33,12 @@
     }
   }
   &__theme {
-    @include flexible(24px);
     z-index: 10;
-    fill: red;
+    width: 24px;
     height: 24px;
+    &_sun {
+      fill: $color-light;
+    }
   }
 }
 

@@ -8,7 +8,7 @@ function HeaderSwitcher() {
     <div className='header__switcher'>
       <Button
         aria-label='Toggle theme'
-        className='header__switcher-theme'
+        className='header__switcher-button'
         name='header-switcher-theme-button'
         type='button'>
         <Icon

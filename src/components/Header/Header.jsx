@@ -20,7 +20,7 @@ function Header() {
         <Nav className='header'>
           <HeaderMenu className='header' />
         </Nav>
-        <HeaderSwitcher></HeaderSwitcher>
+        <HeaderSwitcher />
       </div>
     </header>
   );

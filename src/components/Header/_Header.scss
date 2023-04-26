@@ -11,14 +11,19 @@
   &__container {
     @include gridable(100%);
     grid-template-columns: 1fr repeat(2, min-content);
+    grid-template-areas: 'logo-link nav theme';
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
     max-width: $max-width;
     padding: 10px 20px;
     gap: 20px;
+    @media screen and (max-width: $tablet-small) {
+      grid-template-areas: 'logo-link theme nav';
+    }
   }
   &__link {
+    grid-area: logo-link;
     z-index: 10;
     cursor: pointer;
     opacity: 1;

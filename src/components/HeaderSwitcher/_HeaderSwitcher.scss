@@ -3,6 +3,12 @@
 
 .header {
   &__switcher {
+    grid-area: theme;
     z-index: 10;
+    &-button {
+      @include button;
+      @include flexible(100%);
+      align-items: center;
+    }
   }
 }
