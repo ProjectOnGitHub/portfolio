@@ -6,14 +6,14 @@ import HeaderMenu from '../HeaderMenu/HeaderMenu.jsx';
 import HeaderSwitcher from '../HeaderSwitcher/HeaderSwitcher.jsx';
 
 function Header() {
-  const [isDarkTheme, setIsDarkTeme] = useState(false);
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
 
   function toggleTheme() {
     if (isDarkTheme) {
-      setIsDarkTeme(false);
+      setIsDarkTheme(false);
     }
     if (!isDarkTheme) {
-      setIsDarkTeme(true);
+      setIsDarkTheme(true);
     }
   }
 
