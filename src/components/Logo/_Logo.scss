@@ -8,13 +8,13 @@
   &_middle {
     width: 28px;
     height: 28px;
-    fill: $color-main-text;
-    stroke: $color-bg-white;
+    fill: $color-dark;
+    stroke: $color-light;
   }
   &_small {
     width: 20px;
     height: 24px;
-    fill: $color-bg-white;
-    stroke: $color-main-text;
+    fill: $color-light;
+    stroke: $color-dark;
   }
 }

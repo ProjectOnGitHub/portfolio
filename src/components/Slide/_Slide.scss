@@ -28,8 +28,8 @@
     font-weight: 400;
     font-size: 38px;
     text-align: center;
-    color: $color-bg-white;
-    background-color: rgba($color-main-text, 0.2);
+    color: $color-light;
+    background-color: rgba($color-dark, 0.2);
     @media screen and (max-width: $tablet-small) {
       padding: 5px;
       font-size: 24px;

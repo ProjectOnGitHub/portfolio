@@ -24,8 +24,8 @@
     height: 100%;
     font-size: 36px;
     text-align: center;
-    color: $color-main-text;
-    background-color: rgba($color-bg-white, 0.9);
+    color: $color-dark;
+    background-color: rgba($color-light, 0.9);
     visibility: hidden;
     opacity: 0;
     transition: 0.5s ease;
@@ -68,7 +68,7 @@
   &__link {
     width: max-content;
     font-size: 14px;
-    color: $color-main-text;
+    color: $color-dark;
     &_text {
       @include defaultLink;
       text-decoration: none;

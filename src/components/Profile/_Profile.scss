@@ -30,7 +30,7 @@
     font-weight: 400;
     font-size: 80px;
     line-height: 1;
-    color: $color-bg-white;
+    color: $color-light;
     @media screen and (max-width: $tablet-small) {
       font-size: 60px;
     }
@@ -43,7 +43,7 @@
     font-weight: 500;
     font-size: 27px;
     line-height: 1;
-    color: $color-bg-white;
+    color: $color-light;
     @media screen and (max-width: $tablet-small) {
       font-size: 21px;
     }
@@ -59,7 +59,7 @@
     padding-right: 20px;
     padding-left: 20px;
     font-size: 16px;
-    color: $color-bg-white;
+    color: $color-light;
     @media screen and (max-width: $smartphone) {
       font-size: 14px;
     }
@@ -80,12 +80,12 @@
     width: 40px;
     height: 40px;
     background-color: transparent;
-    border: 2px solid $color-bg-white;
+    border: 2px solid $color-light;
     border-radius: 50%;
     cursor: pointer;
     transition: 0.5s ease-in-out;
     &:hover {
-      background-color: rgba($color-main-text, 0.4);
+      background-color: rgba($color-dark, 0.4);
     }
   }
 }
