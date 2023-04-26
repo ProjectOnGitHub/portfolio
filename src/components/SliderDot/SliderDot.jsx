@@ -7,7 +7,6 @@ function SliderDot(props) {
     <li className='slider__dot'>
       <Button
         aria-label='Switch slide'
-        isClick={props.isClick}
         name='slider-dot-button'
         type='button'
         className={`${
@@ -15,6 +14,7 @@ function SliderDot(props) {
             ? 'slider__dot-button slider__dot-button_active'
             : 'slider__dot-button'
         }`}
+        onClick={props.onClick}
       />
     </li>
   );

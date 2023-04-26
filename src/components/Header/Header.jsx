@@ -32,8 +32,8 @@ function Header() {
           <HeaderMenu className='header' />
         </Nav>
         <HeaderSwitcher
-          isClick={toggleTheme}
           isDarkTheme={isDarkTheme}
+          onClick={toggleTheme}
         />
       </div>
     </header>

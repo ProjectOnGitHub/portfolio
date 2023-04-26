@@ -35,7 +35,7 @@ function Slider(props) {
               key={item.id}
               count={count}
               index={i}
-              isClick={() => {
+              onClick={() => {
                 updateCount(i);
               }}
             />
@@ -57,7 +57,7 @@ function Slider(props) {
           className='slider__button slider__button_left'
           name='slider-button-left'
           type='button'
-          isClick={() => {
+          onClick={() => {
             updateCount(count - 1);
           }}>
           <Icon name='arrow-left' />
@@ -67,7 +67,7 @@ function Slider(props) {
           className='slider__button slider__button_right'
           name='slider-button-right'
           type='button'
-          isClick={() => {
+          onClick={() => {
             updateCount(count + 1);
           }}>
           <Icon name='arrow-right' />
