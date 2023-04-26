@@ -9,7 +9,12 @@
   &__figure {
     @include gridable(100%);
     position: relative;
+    align-items: end;
     margin: 0;
+    overflow: hidden;
+    &:hover .project__image {
+      transform: scale(1.2);
+    }
     &:hover .project__title {
       visibility: visible;
       opacity: 1;
@@ -19,9 +24,10 @@
     @include flexible(100%);
     position: absolute;
     justify-content: center;
-    align-items: center;
+    box-sizing: border-box;
     width: 100%;
-    height: 100%;
+    height: auto;
+    padding: 10px;
     font-size: 36px;
     text-align: center;
     color: $color-dark;
@@ -30,8 +36,8 @@
     opacity: 0;
     transition: 0.5s ease;
     &_theme-dark {
-      background-color: rgba($color-dark, 0.9);
       color: $color-light;
+      background-color: rgba($color-dark, 0.9);
     }
   }
   &__image {
@@ -60,9 +66,9 @@
     @include unmarkedList;
     @include gridable(100%);
     grid-template-columns: repeat(2, max-content);
-    gap: 25px;
     justify-content: center;
     align-self: end;
+    gap: 25px;
     &-item {
       @include flexible(100%);
       align-items: center;
@@ -82,8 +88,8 @@
     }
     &_image {
       position: absolute;
-      height: 100%;
       width: 100%;
+      height: 100%;
     }
   }
 }
