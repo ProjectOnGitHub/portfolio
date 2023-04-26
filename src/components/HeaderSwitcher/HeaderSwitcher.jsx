@@ -3,17 +3,18 @@ import './_HeaderSwitcher.scss';
 import Button from '../Button/Button.jsx';
 import Icon from '../Icon/Icon.jsx';
 
-function HeaderSwitcher() {
+function HeaderSwitcher({ isDarkTheme, isClick }) {
   return (
     <div className='header__switcher'>
       <Button
         aria-label='Toggle theme'
         className='header__switcher-button'
+        isClick={isClick}
         name='header-switcher-theme-button'
         type='button'>
         <Icon
           className='theme'
-          name='sun'
+          name={isDarkTheme ? 'moon' : 'sun'}
         />
       </Button>
     </div>
