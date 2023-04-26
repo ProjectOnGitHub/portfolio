@@ -1,0 +1,8 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.header {
+  &__switcher {
+    z-index: 10;
+  }
+}

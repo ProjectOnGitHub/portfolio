@@ -3,25 +3,26 @@
 
 .header {
   @include gridable(100%);
+
   grid-area: block;
   justify-items: center;
   box-sizing: border-box;
   height: $header-height;
   &__container {
     @include gridable(100%);
-    grid-template-columns: repeat(2, min-content);
+    grid-template-columns: 1fr repeat(2, min-content);
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
     max-width: $max-width;
     padding: 10px 20px;
-    gap: 20px 0;
+    gap: 20px;
   }
   &__link {
     z-index: 10;
+    cursor: pointer;
     opacity: 1;
     transition: 0.5s ease-in-out;
-    cursor: pointer;
     &:hover {
       opacity: 0.5;
     }

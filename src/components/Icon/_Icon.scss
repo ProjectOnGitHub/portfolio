@@ -32,6 +32,12 @@
       height: 24px;
     }
   }
+  &__theme {
+    @include flexible(24px);
+    z-index: 10;
+    fill: red;
+    height: 24px;
+  }
 }
 
 @keyframes moveArrowDown {

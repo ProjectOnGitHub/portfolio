@@ -3,6 +3,7 @@ import './_Header.scss';
 import Logo from '../Logo/Logo.jsx';
 import Nav from '../Nav/Nav.jsx';
 import HeaderMenu from '../HeaderMenu/HeaderMenu.jsx';
+import HeaderSwitcher from '../HeaderSwitcher/HeaderSwitcher.jsx';
 
 function Header() {
   return (
@@ -19,6 +20,7 @@ function Header() {
         <Nav className='header'>
           <HeaderMenu className='header' />
         </Nav>
+        <HeaderSwitcher></HeaderSwitcher>
       </div>
     </header>
   );
