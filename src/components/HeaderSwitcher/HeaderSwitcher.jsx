@@ -6,6 +6,7 @@ import Icon from '../Icon/Icon.jsx';
 
 function HeaderSwitcher() {
   const { isDarkTheme, setIsDarkTheme } = useContext(DarkThemeContext);
+
   function toggleTheme() {
     if (isDarkTheme) {
       setIsDarkTheme(false);
@@ -13,7 +14,9 @@ function HeaderSwitcher() {
     if (!isDarkTheme) {
       setIsDarkTheme(true);
     }
+    localStorage.setItem('isDarkTheme', isDarkTheme);
   }
+
   return (
     <div className='header__switcher'>
       <Button

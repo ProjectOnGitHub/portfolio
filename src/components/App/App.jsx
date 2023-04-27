@@ -6,7 +6,9 @@ import Main from '../Main/Main.jsx';
 import Footer from '../Footer/Footer.jsx';
 
 function App() {
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [isDarkTheme, setIsDarkTheme] = useState(
+    localStorage.getItem('isDarkTheme') || false,
+  );
 
   return (
     <div className='app'>
