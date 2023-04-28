@@ -12,8 +12,7 @@
   transition: 0.5s ease-in-out;
   &_fixed {
     position: fixed;
-    height: $header-height-small;
-    background-color: rgba($color-dark, 0.8);
+    background-color: rgba($color-dark, 0.9);
   }
   &__container {
     @include gridable(100%);

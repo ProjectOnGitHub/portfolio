@@ -11,18 +11,15 @@ function HeaderMenu(props) {
   function toggleMenu() {
     if (isOpenMenu) {
       setIsOpenMenu(false);
-      document.body.classList.remove('scroll-lock');
     }
     if (!isOpenMenu) {
       setIsOpenMenu(true);
-      document.body.classList.add('scroll-lock');
     }
   }
 
   function closeMenu() {
     if (isOpenMenu) {
       setIsOpenMenu(false);
-      document.body.classList.remove('scroll-lock');
     }
   }
 
