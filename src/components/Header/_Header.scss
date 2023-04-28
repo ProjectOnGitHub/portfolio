@@ -3,11 +3,17 @@
 
 .header {
   @include gridable(100%);
-
   grid-area: block;
   justify-items: center;
   box-sizing: border-box;
   height: $header-height;
+  z-index: 15;
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+  &_fixed {
+    position: fixed;
+    background-color: rgba($color-dark, 0.8);
+  }
   &__container {
     @include gridable(100%);
     grid-template-columns: 1fr repeat(2, min-content);

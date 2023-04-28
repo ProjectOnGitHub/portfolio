@@ -1,11 +1,6 @@
 @import '../../scss/mixins';
 @import '../../scss/variables';
 
-html {
-  overflow-x: hidden;
-  margin-right: calc(-1 * (100vw - 100%));
-}
-
 .app {
   @include gridable(100%);
   grid-template-areas:
