@@ -27,7 +27,7 @@ function HeaderSwitcher() {
         onClick={toggleTheme}>
         <Icon
           className='theme'
-          name={isDarkTheme ? 'moon' : 'sun'}
+          name={isDarkTheme ? 'sun' : 'moon'}
         />
       </Button>
     </div>
