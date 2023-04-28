@@ -31,15 +31,17 @@
     transition: width 0.5s;
   }
   &:hover::after {
-    content: '';
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: $color-decorate-link;
-    transition: width 0.5s;
+    @media #{$mouse-device} {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: $color-decorate-link;
+      transition: width 0.5s;
+    }
   }
 }
 

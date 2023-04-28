@@ -36,7 +36,9 @@
     opacity: 1;
     transition: 0.5s ease-in-out;
     &:hover {
-      opacity: 0.5;
+      @media #{$mouse-device} {
+        opacity: 0.5;
+      }
     }
   }
   &__button {
