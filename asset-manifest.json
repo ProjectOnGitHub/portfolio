@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.96821ef7.css",
-    "main.js": "/static/js/main.c898c40a.js",
+    "main.css": "/static/css/main.471239b9.css",
+    "main.js": "/static/js/main.a4e05b9b.js",
     "static/js/787.b54064ba.chunk.js": "/static/js/787.b54064ba.chunk.js",
     "static/media/background.jpg": "/static/media/background.ce2558aa02d69972b332.jpg",
     "static/media/gamebase.jpg": "/static/media/gamebase.ffc48880c564b4f63191.jpg",
@@ -15,15 +15,15 @@
     "static/media/portfolio-alexa.jpg": "/static/media/portfolio-alexa.a7d2fcaeb1c53246bdb0.jpg",
     "static/media/Inter-Regular.woff2": "/static/media/Inter-Regular.2505c0d4b34ffca98f8f.woff2",
     "static/media/company.jpg": "/static/media/company.f9014cf01dc87d78d3b8.jpg",
-    "static/media/sprite.svg": "/static/media/sprite.b64054535b8880a39e61b1f3d8e49902.svg",
+    "static/media/sprite.svg": "/static/media/sprite.e4985d23d1788ccdbce93f0757c18b37.svg",
     "static/media/club27.jpg": "/static/media/club27.b078a8ea50749f436ffe.jpg",
     "index.html": "/index.html",
-    "main.96821ef7.css.map": "/static/css/main.96821ef7.css.map",
-    "main.c898c40a.js.map": "/static/js/main.c898c40a.js.map",
+    "main.471239b9.css.map": "/static/css/main.471239b9.css.map",
+    "main.a4e05b9b.js.map": "/static/js/main.a4e05b9b.js.map",
     "787.b54064ba.chunk.js.map": "/static/js/787.b54064ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.96821ef7.css",
-    "static/js/main.c898c40a.js"
+    "static/css/main.471239b9.css",
+    "static/js/main.a4e05b9b.js"
   ]
 }
