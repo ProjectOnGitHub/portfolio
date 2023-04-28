@@ -15,7 +15,7 @@ function Header() {
   }, []);
 
   return (
-    <header className={`header ${color ? 'header_fixed' : ''}`}>
+    <header className={`${color ? 'header header_fixed' : 'header'}`}>
       <div className='header__container'>
         <a
           className='header__link'

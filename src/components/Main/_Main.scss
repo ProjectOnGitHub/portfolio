@@ -5,7 +5,4 @@
   @include gridable(100%);
   grid-area: block;
   justify-items: center;
-  &_theme-dark {
-    @include darkTheme;
-  }
 }

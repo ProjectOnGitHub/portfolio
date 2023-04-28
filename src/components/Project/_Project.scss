@@ -34,7 +34,7 @@
     background-color: rgba($color-light, 0.9);
     visibility: hidden;
     opacity: 0;
-    transition: 0.5s ease;
+    transition: 0.5s ease-in-out;
     &_theme-dark {
       color: $color-light;
       background-color: rgba($color-dark, 0.9);
@@ -78,13 +78,15 @@
   &__link {
     width: max-content;
     font-size: 14px;
-    color: $color-dark;
-    &_theme-dark {
-      color: $color-light;
-    }
     &_text {
       @include defaultLink;
+      transition: 0.5s ease-in-out;
+      color: $color-dark;
+
       text-decoration: none;
+    }
+    &_theme-dark {
+      color: $color-light;
     }
     &_image {
       position: absolute;

@@ -11,7 +11,7 @@ function App() {
   );
 
   return (
-    <div className='app'>
+    <div className={isDarkTheme ? 'app app_theme-dark' : 'app'}>
       <DarkThemeContext.Provider value={{ isDarkTheme, setIsDarkTheme }}>
         <Header />
         <Main />
