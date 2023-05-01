@@ -30,7 +30,16 @@ function Project(props) {
       </figure>
       <div className='project__text'>
         <p className='project__paragraph'>{props.description}</p>
-        <p className='project__paragraph'>{props.stack}</p>
+
+        <ul className='project__list'>
+          {props.stack.map((item) => (
+            <li
+              key={item}
+              className='project__list-item'>
+              {item}
+            </li>
+          ))}
+        </ul>
       </div>
       <ul className='project__links'>
         {props.url !== '' ? (
