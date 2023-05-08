@@ -1,5 +1,6 @@
 import { React, useContext } from 'react';
 import Icon from '../Icon/Icon.jsx';
+import imagesMap from '../../utils/images';
 import './_Project.scss';
 import DarkThemeContext from '../../contexts/DarkThemeContext.jsx';
 
@@ -12,7 +13,7 @@ function Project(props) {
         <img
           alt={props.title}
           className='project__image'
-          src={props.image}
+          src={imagesMap[`./${[props.image]}`]}
         />
         <figcaption
           className={

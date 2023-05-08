@@ -1,10 +1,3 @@
-import club27 from '../images/club27.jpg';
-import shelter from '../images/shelter.jpg';
-import company from '../images/company.jpg';
-import portfolioAlexa from '../images/portfolio-alexa.jpg';
-import kinoprorok from '../images/kinoprorok.jpg';
-import gamebase from '../images/gamebase.jpg';
-
 const projects = [
   {
     id: 1,
@@ -14,7 +7,7 @@ const projects = [
     stack: ['React', 'HTML', 'SCSS'],
     url: 'https://27club.wbdv.ru',
     githubUrl: 'https://github.com/ProjectOnGitHub/27club',
-    image: club27,
+    image: 'club27.jpg',
   },
   {
     id: 2,
@@ -24,7 +17,7 @@ const projects = [
     stack: ['HTML', 'CSS', 'JavaScript', 'Webpack'],
     url: 'https://company.wbdv.ru',
     githubUrl: 'https://github.com/ProjectOnGitHub/company',
-    image: company,
+    image: 'company.jpg',
   },
   {
     id: 3,
@@ -34,7 +27,7 @@ const projects = [
     stack: ['HTML', 'SCSS', 'JavaScript'],
     url: 'https://portfolio-alexa.wbdv.ru',
     githubUrl: 'https://github.com/ProjectOnGitHub/portfolio-alexa',
-    image: portfolioAlexa,
+    image: 'portfolio-alexa.jpg',
   },
   {
     id: 4,
@@ -44,7 +37,7 @@ const projects = [
     stack: ['HTML', 'SCSS', 'JavaScript'],
     url: 'https://shelter.wbdv.ru/pages/main/',
     githubUrl: 'https://github.com/ProjectOnGitHub/shelter',
-    image: shelter,
+    image: 'shelter.jpg',
   },
   {
     id: 5,
@@ -54,7 +47,7 @@ const projects = [
     stack: ['HTML', 'SCSS', 'Webpack', 'JavaScript', 'PHP'],
     url: 'https://kinoprorok.ru',
     githubUrl: '',
-    image: kinoprorok,
+    image: 'kinoprorok.jpg',
   },
   {
     id: 6,
@@ -64,7 +57,7 @@ const projects = [
     stack: ['Nuxt 2', 'HTML', 'SCSS'],
     url: '',
     githubUrl: 'https://github.com/ProjectOnGitHub/gamebase',
-    image: gamebase,
+    image: 'gamebase.jpg',
   },
 ];
 
