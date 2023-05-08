@@ -8,13 +8,13 @@
   &__container {
     @include flexible(100%);
     align-items: center;
-    gap: 15px;
+    box-sizing: border-box;
     max-width: $max-width;
     padding: 20px 50px;
-    box-sizing: border-box;
+    gap: 15px;
   }
   &__copyright {
-    white-space: nowrap;
     font-size: 16px;
+    white-space: nowrap;
   }
 }

@@ -68,10 +68,10 @@
   }
   &__list {
     @include flexible(100%);
-    flex-wrap: wrap;
     @include unmarkedList;
-    gap: 7px 15px;
+    flex-wrap: wrap;
     font-size: 12px;
+    gap: 7px 15px;
   }
   &__links {
     @include unmarkedList;

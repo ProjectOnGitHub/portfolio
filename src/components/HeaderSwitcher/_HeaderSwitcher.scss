@@ -3,14 +3,14 @@
 
 .header {
   &__switcher {
-    grid-area: theme;
     z-index: 10;
+    grid-area: theme;
     &-button {
       @include button;
       @include flexible(100%);
       align-items: center;
-      transition: 0.5s ease-in-out;
       opacity: 1;
+      transition: 0.5s ease-in-out;
       &:hover {
         @media #{$mouse-device} {
           opacity: 0.8;

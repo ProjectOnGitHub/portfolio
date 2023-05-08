@@ -3,6 +3,6 @@
 
 .header__navigation {
   @include gridable(100%);
-  justify-content: end;
   grid-area: nav;
+  justify-content: end;
 }

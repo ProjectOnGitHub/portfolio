@@ -66,8 +66,8 @@
   }
 
   &__paragraph {
-    text-align: center;
     margin: 0;
+    text-align: center;
   }
   &__link {
     @include flexible(100%);
