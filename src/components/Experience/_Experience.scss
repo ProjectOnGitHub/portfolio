@@ -1,0 +1,53 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.experience {
+  &__list {
+    @include gridable(100%);
+    @include unmarkedList;
+    max-width: 800px;
+    gap: 20px;
+
+    &-item {
+      @include gridable(100%);
+      grid-template-areas:
+        'date subtitle'
+        'date name'
+        'date text';
+      grid-template-columns: 200px 1fr;
+      gap: 5px 30px;
+      @media screen and (max-width: $smartphone) {
+        grid-template-areas:
+          'date'
+          'subtitle'
+          'name'
+          'text';
+        grid-template-columns: 1fr;
+        justify-items: center;
+      }
+    }
+  }
+  &__title {
+    @include defaultSubtitle(32px);
+  }
+  &__subtitle {
+    @include defaultSubtitle(18px);
+    grid-area: subtitle;
+  }
+  &__date {
+    grid-area: date;
+    font-size: 12px;
+    text-align: right;
+    @media screen and (max-width: $smartphone) {
+      text-align: center;
+    }
+  }
+  &__name {
+    grid-area: name;
+    font-style: italic;
+  }
+  &__text {
+    grid-area: text;
+    line-height: 1;
+  }
+}

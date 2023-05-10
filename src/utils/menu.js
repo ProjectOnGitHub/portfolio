@@ -16,6 +16,11 @@ const menu = [
   },
   {
     id: 4,
+    url: 'experience',
+    anchor: 'Опыт',
+  },
+  {
+    id: 5,
     url: 'contacts',
     anchor: 'Контакты',
   },
