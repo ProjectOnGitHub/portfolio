@@ -13,7 +13,8 @@
   &_fixed {
     position: fixed;
     height: $header-height-small;
-    background-color: rgba($color-dark, 0.9);
+    background-color: rgba($color-dark, 0.7);
+    backdrop-filter: blur(5px);
   }
   &__container {
     @include gridable(100%);
