@@ -2,8 +2,9 @@
 @import '../../scss/variables';
 
 .contact {
-  @include flexible(max-content);
+  @include flexible(150px);
   justify-items: center;
+  flex-direction: column;
   align-items: center;
   gap: 20px;
   &__title {
