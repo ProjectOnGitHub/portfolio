@@ -23,6 +23,7 @@
     @include gridable(100%);
     z-index: 10;
     justify-items: center;
+    gap: 5px;
   }
   &__title {
     align-self: end;
