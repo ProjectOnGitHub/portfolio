@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a12a0679.css",
-    "main.js": "/static/js/main.0a3dac13.js",
+    "main.css": "/static/css/main.a7e1adf0.css",
+    "main.js": "/static/js/main.f6e88b1c.js",
     "static/js/787.b54064ba.chunk.js": "/static/js/787.b54064ba.chunk.js",
     "static/media/background.jpg": "/static/media/background.bc547e50a817a68b2d02.jpg",
     "static/media/shelter.jpg": "/static/media/shelter.f25aab67fcac203ee92d.jpg",
@@ -15,15 +15,16 @@
     "static/media/portfolio-alexa.jpg": "/static/media/portfolio-alexa.a7d2fcaeb1c53246bdb0.jpg",
     "static/media/Inter-Regular.woff2": "/static/media/Inter-Regular.2505c0d4b34ffca98f8f.woff2",
     "static/media/company.jpg": "/static/media/company.f9014cf01dc87d78d3b8.jpg",
-    "static/media/sprite.svg": "/static/media/sprite.e4985d23d1788ccdbce93f0757c18b37.svg",
+    "static/media/sprite.svg": "/static/media/sprite.cd062b35cbadd0b7108b948ea85f93da.svg",
     "static/media/club27.jpg": "/static/media/club27.b078a8ea50749f436ffe.jpg",
+    "static/media/my-photo.jpeg": "/static/media/my-photo.c6782c9ed42fbf863a54.jpeg",
     "index.html": "/index.html",
-    "main.a12a0679.css.map": "/static/css/main.a12a0679.css.map",
-    "main.0a3dac13.js.map": "/static/js/main.0a3dac13.js.map",
+    "main.a7e1adf0.css.map": "/static/css/main.a7e1adf0.css.map",
+    "main.f6e88b1c.js.map": "/static/js/main.f6e88b1c.js.map",
     "787.b54064ba.chunk.js.map": "/static/js/787.b54064ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a12a0679.css",
-    "static/js/main.0a3dac13.js"
+    "static/css/main.a7e1adf0.css",
+    "static/js/main.f6e88b1c.js"
   ]
 }
