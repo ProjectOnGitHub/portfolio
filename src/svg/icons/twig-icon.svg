@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="70mm"
+   height="70mm"
+   viewBox="0 0 70 70"
+   version="1.1"
+   id="svg5"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2">
+    <rect
+       x="242.48009"
+       y="350.60541"
+       width="298.62427"
+       height="258.91046"
+       id="rect5941" />
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-39.392647,-61.50182)">
+    <rect
+       style="fill:#bacf1f;fill-opacity:1;stroke-width:0.264583"
+       id="rect111"
+       width="70"
+       height="70"
+       x="39.392647"
+       y="61.50182" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-15.981867,-9.5415704)"
+       id="text5939"
+       style="font-size:90px;white-space:pre;shape-inside:url(#rect5941);shape-padding:0.0739338;fill:#ffffff;fill-opacity:1"><tspan
+         x="242.55469"
+         y="432.38898"
+         id="tspan6666"><tspan
+           style="font-family:Helvetica;-inkscape-font-specification:Helvetica"
+           id="tspan6664">Twig</tspan></tspan></text>
+  </g>
+</svg>

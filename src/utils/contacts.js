@@ -2,8 +2,8 @@ const contacts = [
   {
     id: 1,
     name: 'telegram',
-    title: '@avhlv',
-    url: 'https://t.me/avhlv',
+    title: '@a_vhlv',
+    url: 'https://t.me/a_vhlv',
   },
   {
     id: 2,

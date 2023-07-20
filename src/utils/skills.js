@@ -14,7 +14,7 @@ const skills = [
   {
     id: 3,
     name: 'scss',
-    type: 'language',
+    type: 'preprocessor',
     title: 'SASS (SCSS)',
   },
   {
@@ -54,12 +54,6 @@ const skills = [
     title: 'Figma',
   },
   {
-    id: 10,
-    name: 'vscode',
-    type: 'tool',
-    title: 'VS Code',
-  },
-  {
     id: 11,
     name: 'webpack',
     type: 'tool',
@@ -88,6 +82,24 @@ const skills = [
     name: 'nuxt',
     type: 'library',
     title: 'Nuxt',
+  },
+  {
+    id: 16,
+    name: 'stylus',
+    type: 'preprocessor',
+    title: 'Stylus',
+  },
+  {
+    id: 17,
+    name: 'twig',
+    type: 'preprocessor',
+    title: 'Twig',
+  },
+  {
+    id: 18,
+    name: 'jquery',
+    type: 'library',
+    title: 'JQuery',
   },
 ];
 
