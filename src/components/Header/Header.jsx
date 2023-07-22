@@ -19,7 +19,7 @@ function Header() {
       <div className='header__container'>
         <a
           className='header__link'
-          href='/'>
+          href='/#top'>
           <Logo
             className='middle'
             name='my-logo'
