@@ -7,6 +7,7 @@ function Skill({ name, title }) {
     <>
       <Icon
         className='skill'
+        modificator={name}
         name={name}
       />
       <h4 className='skill__title'>{title}</h4>

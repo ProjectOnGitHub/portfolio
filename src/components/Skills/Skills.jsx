@@ -18,7 +18,7 @@ function Skills(props) {
         <p className='skills__paragraph'>
           Базово знаю JavaScript: типы данных и методы работы с ними. Могу
           работать с DOM: создание, добавление, удаление элементов, отслеживание
-          событий и реагирование на них. Аналогично и с JQuery.
+          событий и реагирование на них. Аналогично и с jQuery.
         </p>
         <p className='skills__paragraph'>
           Есть опыт работы с React: хуки useState, useEffect, React Router,

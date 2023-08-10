@@ -99,7 +99,7 @@ const skills = [
     id: 18,
     name: 'jquery',
     type: 'library',
-    title: 'JQuery',
+    title: 'jQuery',
   },
 ];
 
