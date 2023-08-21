@@ -59,6 +59,16 @@ const projects = [
     githubUrl: 'https://github.com/ProjectOnGitHub/gamebase',
     image: 'gamebase.jpg',
   },
+  {
+    id: 1,
+    title: 'Сайт Предприятия 3826',
+    description:
+      'Шуточный сайт Предприятия 3826 из игры Atomic Heart. Вёрстка адаптирована под мобильные разрешения.',
+    stack: ['Vue 2', 'HTML', 'SCSS', 'Webpack'],
+    url: 'https://3826.wbdv.ru',
+    githubUrl: 'https://github.com/ProjectOnGitHub/3826',
+    image: '3826.jpg',
+  },
 ];
 
 export default projects;
