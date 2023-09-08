@@ -18,7 +18,15 @@ function Experience(props) {
               {` — `}
               <span className='experience__date-end'>{item.end}</span>
             </div>
-            <p className='experience__text'>{item.text}</p>
+            <div className='experience__text'>
+              {item.text.map((paragraph, i) => (
+                <p
+                  key={i}
+                  className='experience__paragraph'>
+                  {paragraph}
+                </p>
+              ))}
+            </div>
           </li>
         ))}
       </ul>

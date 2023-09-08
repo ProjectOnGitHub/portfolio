@@ -33,13 +33,15 @@ function Project(props) {
         <p className='project__paragraph'>{props.description}</p>
 
         <ul className='project__list'>
-          {props.stack.map((item) => (
-            <li
-              key={item}
-              className='project__list-item'>
-              {item}
-            </li>
-          ))}
+          {props.stack
+            .sort((a, b) => a.localeCompare(b))
+            .map((item) => (
+              <li
+                key={item}
+                className='project__list-item'>
+                {item}
+              </li>
+            ))}
         </ul>
       </div>
       <ul className='project__links'>

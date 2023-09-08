@@ -6,7 +6,7 @@
     @include gridable(100%);
     @include unmarkedList;
     max-width: 800px;
-    gap: 20px;
+    gap: 50px;
 
     &-item {
       @include gridable(100%);
@@ -47,7 +47,12 @@
     font-style: italic;
   }
   &__text {
+    @include gridable(100%);
+    gap: 8px;
     grid-area: text;
     line-height: 1.2;
+  }
+  &__paragraph {
+    margin: 0;
   }
 }
