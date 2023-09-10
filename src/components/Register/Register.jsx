@@ -16,20 +16,6 @@ function Register() {
         type='submit'
         url='login'>
         <label className='form__label'>
-          Логин
-          <input
-            autoComplete='on'
-            className='form__input'
-            id='name-input'
-            maxLength='30'
-            minLength='2'
-            name='name'
-            type='text'
-            value='Логин'
-            required
-          />
-        </label>
-        <label className='form__label'>
           E-mail
           <input
             autoComplete='on'
