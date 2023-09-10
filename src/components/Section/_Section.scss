@@ -4,6 +4,7 @@
 .section {
   @include gridable(100%);
   justify-items: center;
+  align-content: start;
   box-sizing: border-box;
   max-width: $max-width;
   padding-top: 75px;
