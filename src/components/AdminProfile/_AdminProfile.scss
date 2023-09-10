@@ -41,8 +41,8 @@
     cursor: pointer;
 
     &:not(.admin-profile__paragraph-text):focus {
-      cursor: text;
       outline: 1px solid $color-gray;
+      cursor: text;
     }
   }
 
@@ -59,6 +59,7 @@
     grid-area: text;
     flex-direction: column;
     gap: 8px;
+    align-items: center;
   }
 
   &__paragraph {
@@ -73,12 +74,12 @@
     }
 
     &-text {
-      width: 100%;
       align-self: center;
+      width: 100%;
 
       &:focus {
-        cursor: text;
         outline: none;
+        cursor: text;
       }
     }
   }
@@ -102,12 +103,22 @@
   }
   &__button {
     @include button(0px);
-    width: 16px;
-    height: 16px;
-    background-image: url('../../svg/icons/delete-icon.svg');
+
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    &_delete {
+      width: 12px;
+      height: 12px;
+      background-image: url('../../svg/icons/delete-icon.svg');
+    }
+
+    &_add {
+      width: 24px;
+      height: 24px;
+      background-image: url('../../svg/icons/add-icon.svg');
+    }
   }
 
   &__icon {

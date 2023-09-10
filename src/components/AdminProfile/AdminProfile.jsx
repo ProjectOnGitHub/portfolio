@@ -33,11 +33,18 @@ function AdminProfile(props) {
             </span>
             <Button
               aria-label='Delete button'
-              className='admin-profile__button'
+              className='admin-profile__button admin-profile__button_delete'
               name='button-text-delete'
               type='submit'
               onClick={props.onClick}></Button>
           </p>
+
+          <Button
+            aria-label='Delete button'
+            className='admin-profile__button admin-profile__button_add'
+            name='button-text-delete'
+            type='submit'
+            onClick={props.onClick}></Button>
         </div>
         <span className='admin-profile__description admin-profile__description_text'>
           Реактировать текст

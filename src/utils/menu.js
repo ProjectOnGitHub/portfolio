@@ -1,7 +1,7 @@
 const menu = [
   {
     id: 1,
-    url: 'about',
+    url: 'profile',
     anchor: 'Обо мне',
   },
   {

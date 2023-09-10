@@ -6,7 +6,7 @@ function MainAdmin() {
   return (
     <Section
       className='admin-profile'
-      id='admin-about'>
+      id='admin-profile'>
       <AdminProfile title='Редактирование профиля' />
     </Section>
   );

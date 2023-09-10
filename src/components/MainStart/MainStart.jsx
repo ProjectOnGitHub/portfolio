@@ -11,7 +11,7 @@ function MainStart() {
     <>
       <Section
         className='profile'
-        id='about'>
+        id='profile'>
         <Profile title='Александр' />
       </Section>
       <Section
