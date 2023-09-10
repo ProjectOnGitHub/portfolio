@@ -4,9 +4,119 @@
   &__title {
     @include defaultSubtitle(24px);
   }
-  [contenteditable='true']:focus {
-    outline: none; /* Убираем стандартную обводку при фокусе */
-    border-color: #0078d4; /* Цвет рамки при фокусе */
-    box-shadow: 0 0 5px rgba(0, 120, 212, 0.5); /* Тень при фокусе */
+
+  &__container {
+    @include gridable(100%);
+    grid-template-areas:
+      'description-name name'
+      'description-position position'
+      'description-text text';
+    grid-template-columns: max-content 1fr;
+    max-width: $middle-width;
+    gap: 20px 30px;
+  }
+
+  &__name,
+  &__position,
+  &__paragraph,
+  &__description {
+    margin: 0;
+    padding: 10px;
+  }
+
+  &__name,
+  &__position,
+  &__paragraph {
+    font-size: 14px;
+    color: $color-dark;
+    background-color: $color-bg-input;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+  }
+
+  &__name,
+  &__position,
+  &__paragraph-text {
+    cursor: pointer;
+
+    &:not(.admin-profile__paragraph-text):focus {
+      cursor: text;
+      outline: 1px solid $color-gray;
+    }
+  }
+
+  &__name {
+    grid-area: name;
+  }
+
+  &__position {
+    grid-area: position;
+  }
+
+  &__text {
+    @include flexible(100%);
+    grid-area: text;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__paragraph {
+    @include flexible(100%);
+    position: relative;
+    align-items: flex-start;
+    box-sizing: border-box;
+    gap: 4px;
+
+    &:has(.admin-profile__paragraph-text:focus) {
+      outline: 1px solid $color-gray;
+    }
+
+    &-text {
+      width: 100%;
+      align-self: center;
+
+      &:focus {
+        cursor: text;
+        outline: none;
+      }
+    }
+  }
+
+  &__description {
+    font-size: 12px;
+    text-align: right;
+    color: $color-gray;
+
+    &_name {
+      grid-area: description-name;
+    }
+
+    &_position {
+      grid-area: description-position;
+    }
+
+    &_text {
+      grid-area: description-text;
+    }
+  }
+  &__button {
+    @include button(0px);
+    width: 16px;
+    height: 16px;
+    background-image: url('../../svg/icons/delete-icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__icon {
+    display: block;
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    background-image: url('../../svg/icons/drag-dots-icon.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }

@@ -5,7 +5,7 @@
   &__list {
     @include gridable(100%);
     @include unmarkedList;
-    max-width: 800px;
+    max-width: $middle-width;
     gap: 50px;
 
     &-item {
