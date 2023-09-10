@@ -60,7 +60,7 @@ const projects = [
     image: 'gamebase.jpg',
   },
   {
-    id: 1,
+    id: 7,
     title: 'Сайт Предприятия 3826',
     description:
       'Шуточный сайт Предприятия 3826 из игры Atomic Heart. Вёрстка адаптирована под мобильные разрешения.',
