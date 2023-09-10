@@ -6,7 +6,7 @@
     z-index: 10;
     grid-area: theme;
     &-button {
-      @include button;
+      @include button(0px);
       @include flexible(100%);
       align-items: center;
       opacity: 1;

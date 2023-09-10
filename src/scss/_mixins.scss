@@ -19,6 +19,7 @@
   text-decoration: none;
   cursor: pointer;
   transition: ease-in-out;
+
   &::after {
     content: '';
     position: absolute;
@@ -58,11 +59,11 @@
   line-height: 1;
 }
 
-@mixin button() {
+@mixin button($padding) {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  padding: 0;
+  padding: $padding;
   background-color: transparent;
   border: none;
   border: none;

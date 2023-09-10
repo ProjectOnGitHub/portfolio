@@ -62,9 +62,10 @@
   &__button {
     display: none;
     justify-items: right;
+
     @media screen and (max-width: $tablet-small) {
       @include flexible(32px);
-      @include button();
+      @include button(0px);
       position: relative;
       z-index: 20;
       height: 32px;

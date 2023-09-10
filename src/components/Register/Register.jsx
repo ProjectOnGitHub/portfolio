@@ -1,54 +1,63 @@
 import React from 'react';
 import './_Register.scss';
-import Form from '../Form/Form.jsx';
+import SectionForm from '../SectionForm/SectionForm.jsx';
 
 function Register() {
   return (
     <>
-      <Form
+      <SectionForm
         ankor='Войти'
-        buttonText='Подтвердить'
+        aria-label='Register button'
+        buttonText='Зарегистрироваться'
+        className='form__button'
+        name='button-register'
         text='Уже зарегистрированы?'
-        title='Зарегистрироваться'
+        title='Регистрация'
+        type='submit'
         url='login'>
-        <label className='form__label'>Имя</label>
-        <input
-          autoComplete='on'
-          className='form__input'
-          id='name-input'
-          maxLength='30'
-          minLength='2'
-          name='name'
-          type='text'
-          value='Value'
-          required
-        />
-        <label className='form__label'>E-mail</label>
-        <input
-          autoComplete='on'
-          className='form__input'
-          id='email-input'
-          maxLength='40'
-          minLength='6'
-          name='email'
-          type='email'
-          value='Value'
-          required
-        />
-
-        <label className='form__label'>Пароль</label>
-        <input
-          autoComplete='current-password'
-          className='form__input'
-          id='password-input'
-          maxLength='16'
-          minLength='6'
-          name='password'
-          type='password'
-          value='Value'
-          required
-        />
-      </Form>
+        <label className='form__label'>
+          Логин
+          <input
+            autoComplete='on'
+            className='form__input'
+            id='name-input'
+            maxLength='30'
+            minLength='2'
+            name='name'
+            type='text'
+            value='Логин'
+            required
+          />
+        </label>
+        <label className='form__label'>
+          E-mail
+          <input
+            autoComplete='on'
+            className='form__input'
+            id='email-input'
+            maxLength='40'
+            minLength='6'
+            name='email'
+            type='email'
+            value='E-mail'
+            required
+          />
+        </label>
+        <label className='form__label'>
+          Пароль
+          <input
+            autoComplete='current-password'
+            className='form__input'
+            id='password-input'
+            maxLength='16'
+            minLength='6'
+            name='password'
+            type='password'
+            value='Пароль'
+            required
+          />
+        </label>
+      </SectionForm>
     </>
   );
 }
