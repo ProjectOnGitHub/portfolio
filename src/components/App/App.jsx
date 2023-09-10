@@ -7,6 +7,7 @@ import Footer from '../Footer/Footer.jsx';
 import Main from '../Main/Main.jsx';
 import MainStart from '../MainStart/MainStart.jsx';
 import MainAdmin from '../MainAdmin/MainAdmin.jsx';
+import Register from '../Register/Register.jsx';
 
 function App() {
   const [isDarkTheme, setIsDarkTheme] = useState(() => {
@@ -44,6 +45,11 @@ function App() {
               <MainAdmin />
             </Main>
             <Footer />
+          </Route>
+          <Route
+            path='/register'
+            exact>
+            <Register></Register>
           </Route>
         </Switch>
       </DarkThemeContext.Provider>

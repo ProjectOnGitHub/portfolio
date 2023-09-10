@@ -2,12 +2,11 @@ import { React } from 'react';
 import './_Form.scss';
 import { Link } from 'react-router-dom';
 
-function SectionForm(props) {
+function Form(props) {
   return (
     <form
       className='form__container'
       name={props.name}
-      noValidate
       onSubmit={props.handleSubmit}>
       <h1 className='form__title'>{props.title}</h1>
       <fieldset className='form__fieldset'>{props.children}</fieldset>
@@ -29,4 +28,4 @@ function SectionForm(props) {
   );
 }
 
-export default SectionForm;
+export default Form;
