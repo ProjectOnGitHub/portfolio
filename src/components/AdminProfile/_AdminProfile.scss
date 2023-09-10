@@ -31,7 +31,7 @@
     color: $color-dark;
     background-color: $color-bg-input;
     border: none;
-    border-radius: 8px;
+    border-radius: $borderRadiusDefault;
     outline: none;
   }
 
