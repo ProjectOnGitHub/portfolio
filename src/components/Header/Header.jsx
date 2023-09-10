@@ -5,9 +5,8 @@ import Nav from '../Nav/Nav.jsx';
 import HeaderMenu from '../HeaderMenu/HeaderMenu.jsx';
 import HeaderSwitcher from '../HeaderSwitcher/HeaderSwitcher.jsx';
 
-function Header({ isAdmin }) {
+function Header({ isAdminPath }) {
   const [color, setColor] = useState(false);
-  console.log(isAdmin);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -18,7 +17,7 @@ function Header({ isAdmin }) {
   return (
     <header
       className={`${color ? 'header header_fixed' : 'header'} ${
-        isAdmin ? 'header_background' : ''
+        isAdminPath ? 'header_theme-admin' : ''
       }`}>
       <div className='header__container'>
         <a
@@ -32,7 +31,7 @@ function Header({ isAdmin }) {
         <Nav className='header'>
           <HeaderMenu
             className='header'
-            isAdmin={isAdmin}
+            isAdminPath={isAdminPath}
           />
         </Nav>
         <HeaderSwitcher />

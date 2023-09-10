@@ -11,8 +11,9 @@
   opacity: 1;
   transition: 0.5s ease-in-out;
 
-  &_background {
+  &_theme-admin {
     background-color: rgba($color-dark, 0.7);
+    grid-area: header;
   }
 
   &_fixed {

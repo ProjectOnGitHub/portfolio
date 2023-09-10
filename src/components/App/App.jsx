@@ -13,22 +13,24 @@ function App() {
     const storedTheme = localStorage.getItem('isDarkTheme');
     return storedTheme ? JSON.parse(storedTheme) : false;
   });
-
-  const locationPath = useLocation().pathname;
-  console.log(locationPath);
+  const location = useLocation();
+  const isAdminPath = location.pathname.startsWith('/admin');
 
   useEffect(() => {
     localStorage.setItem('isDarkTheme', JSON.stringify(isDarkTheme));
   }, [isDarkTheme]);
 
   return (
-    <div className={isDarkTheme ? 'app app_theme-dark' : 'app'}>
+    <div
+      className={`${isDarkTheme ? 'app app_theme-dark' : 'app'} ${
+        isAdminPath ? 'app_theme-admin' : ''
+      }`}>
       <DarkThemeContext.Provider value={{ isDarkTheme, setIsDarkTheme }}>
         <Switch>
           <Route
             path='/'
             exact>
-            <Header isAdmin={false} />
+            <Header isAdminPath={isAdminPath} />
             <Main>
               <MainStart />
             </Main>
@@ -37,7 +39,7 @@ function App() {
           <Route
             path='/admin'
             exact>
-            <Header isAdmin={true} />
+            <Header isAdminPath={isAdminPath} />
             <Main>
               <MainAdmin />
             </Main>

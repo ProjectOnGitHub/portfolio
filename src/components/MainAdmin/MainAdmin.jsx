@@ -1,5 +1,4 @@
 import React from 'react';
-import './_MainAdmin.scss';
 
 function MainAdmin() {
   return <></>;

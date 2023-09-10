@@ -50,7 +50,7 @@ function HeaderMenu(props) {
             className={`${props.className}__menu-item`}>
             <Link
               className={`${props.className}__menu-link`}
-              to={props.isAdmin ? `admin/${item.url}` : `#${item.url}`}
+              to={props.isAdminPath ? `admin/${item.url}/` : `#${item.url}`}
               onClick={closeMenu}>
               {item.anchor}
             </Link>
