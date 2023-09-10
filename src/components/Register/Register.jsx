@@ -1,5 +1,4 @@
 import React from 'react';
-import './_Register.scss';
 import SectionForm from '../SectionForm/SectionForm.jsx';
 
 function Register() {
