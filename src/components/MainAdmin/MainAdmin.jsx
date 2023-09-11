@@ -1,14 +1,15 @@
 import React from 'react';
-import Section from '../Section/Section.jsx';
+import AdminSection from '../AdminSection/AdminSection.jsx';
 import AdminProfile from '../AdminProfile/AdminProfile.jsx';
 
 function MainAdmin() {
   return (
-    <Section
-      className='admin-profile'
-      id='admin-profile'>
-      <AdminProfile title='Редактирование профиля' />
-    </Section>
+    <AdminSection
+      className='profile'
+      modificator='position'
+      title='Редактирование профиля'>
+      <AdminProfile />
+    </AdminSection>
   );
 }
 

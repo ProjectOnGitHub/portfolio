@@ -1,0 +1,22 @@
+@import '../../scss/_mixins';
+@import '../../scss/_variables';
+
+.admin-section {
+  &__title {
+    @include defaultSubtitle(24px);
+  }
+
+  &__container {
+    @include gridable(100%);
+
+    &_position {
+      grid-template-areas:
+        'description-name name'
+        'description-position position'
+        'description-text text';
+      grid-template-columns: max-content 1fr;
+      max-width: $middle-width;
+      gap: 20px 30px;
+    }
+  }
+}

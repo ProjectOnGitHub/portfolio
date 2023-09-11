@@ -1,21 +1,6 @@
 @import '../../scss/mixins';
 @import '../../scss/variables';
 .admin-profile {
-  &__title {
-    @include defaultSubtitle(24px);
-  }
-
-  &__container {
-    @include gridable(100%);
-    grid-template-areas:
-      'description-name name'
-      'description-position position'
-      'description-text text';
-    grid-template-columns: max-content 1fr;
-    max-width: $middle-width;
-    gap: 20px 30px;
-  }
-
   &__name,
   &__position,
   &__paragraph,
