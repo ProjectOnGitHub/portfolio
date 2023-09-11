@@ -9,7 +9,7 @@
   &__container {
     @include gridable(100%);
 
-    &_position {
+    &_profile {
       grid-template-areas:
         'description-name name'
         'description-position position'

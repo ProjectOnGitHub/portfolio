@@ -10,7 +10,8 @@ function MainAdmin() {
         <Route path='/admin/profile'>
           <AdminSection
             className='profile'
-            modificator='position'
+            id='profile'
+            modificator='profile'
             title='Редактирование профиля'>
             <AdminProfile />
           </AdminSection>
@@ -18,21 +19,29 @@ function MainAdmin() {
         <Route path='/admin/projects'>
           <AdminSection
             className='projects'
+            id='projects'
+            modificator='projects'
             title='Редактирование списка проектов'></AdminSection>
         </Route>
         <Route path='/admin/skills'>
           <AdminSection
             className='skills'
+            id='skills'
+            modificator='skills'
             title='Редактирование навыков'></AdminSection>
         </Route>
         <Route path='/admin/experience'>
           <AdminSection
             className='experience'
+            id='experience'
+            modificator='experience'
             title='Редактирование опыта работы'></AdminSection>
         </Route>
         <Route path='/admin/contacts'>
           <AdminSection
             className='contacts'
+            id='contacts'
+            modificator='contacts'
             title='Редактирование контактов'></AdminSection>
         </Route>
       </Switch>

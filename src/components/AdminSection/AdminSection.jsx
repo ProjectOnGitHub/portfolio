@@ -6,7 +6,7 @@ function AdminSection(props) {
   return (
     <section
       className={`section admin-section admin-section__${props.className}`}
-      id={`admin-${props.className}`}>
+      id={`admin-${props.id}`}>
       <h1 className='admin-section__title'>{props.title}</h1>
       <div
         className={
