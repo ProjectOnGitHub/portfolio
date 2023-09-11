@@ -38,6 +38,20 @@ function AdminProjects(props) {
             </figure>
           </ListItem>
         ))}
+        <li className='admin-projects__list-item'>
+          {' '}
+          <Button
+            aria-label='Edit button'
+            className='admin-projects__button admin-projects__button_add'
+            name='button-edit'
+            type='submit'
+            onClick={props.onClick}>
+            <Icon
+              className='add'
+              name='add'
+            />
+          </Button>
+        </li>
       </ul>
     </>
   );
