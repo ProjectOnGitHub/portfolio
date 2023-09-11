@@ -28,24 +28,19 @@ function App() {
         isAdminPath ? 'app_theme-admin' : ''
       }`}>
       <DarkThemeContext.Provider value={{ isDarkTheme, setIsDarkTheme }}>
+        <Header isAdminPath={isAdminPath} />
         <Switch>
           <Route
             path='/'
             exact>
-            <Header isAdminPath={isAdminPath} />
             <Main>
               <MainStart />
             </Main>
-            <Footer />
           </Route>
-          <Route
-            path='/admin'
-            exact>
-            <Header isAdminPath={isAdminPath} />
+          <Route path='/admin'>
             <Main>
               <MainAdmin />
             </Main>
-            <Footer />
           </Route>
           <Route
             path='/register'
@@ -58,6 +53,7 @@ function App() {
             <Login />
           </Route>
         </Switch>
+        <Footer />
       </DarkThemeContext.Provider>
     </div>
   );
