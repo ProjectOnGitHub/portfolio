@@ -1,2 +1,59 @@
 @import '../../scss/mixins';
 @import '../../scss/variables';
+
+.admin-projects {
+  &__list {
+    @include gridable(100%);
+    @include unmarkedList;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px 18px;
+
+    &-item {
+      width: 100%;
+      max-height: 300px;
+    }
+  }
+
+  &__figure {
+    @include flexible(100%);
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    cursor: pointer;
+    gap: 8px;
+    transition: 0.5s ease-in-out;
+
+    &:hover .admin-projects__button_edit {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__caption {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  &__button {
+    @include button(0px);
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: $color-bg-input;
+    border-radius: $borderRadiusDefault;
+    top: 4px;
+    right: 4px;
+    visibility: hidden;
+    opacity: 0;
+  }
+}

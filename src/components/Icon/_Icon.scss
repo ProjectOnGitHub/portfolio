@@ -64,7 +64,8 @@
     }
   }
 
-  &__delete {
+  &__delete,
+  &__edit {
     z-index: 10;
     width: 12px;
     height: 12px;

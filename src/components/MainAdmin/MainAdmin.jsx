@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import AdminSection from '../AdminSection/AdminSection.jsx';
 import AdminProfile from '../AdminProfile/AdminProfile.jsx';
+import AdminProjects from '../AdminProjects/AdminProjects.jsx';
 
 function MainAdmin() {
   return (
@@ -21,7 +22,9 @@ function MainAdmin() {
             className='projects'
             id='projects'
             modificator='projects'
-            title='Редактирование списка проектов'></AdminSection>
+            title='Редактирование списка проектов'>
+            <AdminProjects />
+          </AdminSection>
         </Route>
         <Route path='/admin/skills'>
           <AdminSection
