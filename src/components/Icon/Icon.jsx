@@ -8,7 +8,7 @@ function Icon({ name, className, modificator }) {
     : `icon icon__${className}`;
 
   return (
-    <svg className={`icon icon__${svgClassName} `}>
+    <svg className={`${svgClassName} `}>
       <use xlinkHref={`${Icons}#${name}-icon`} />
     </svg>
   );

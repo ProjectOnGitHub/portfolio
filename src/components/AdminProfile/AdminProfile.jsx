@@ -1,8 +1,14 @@
-import React from 'react';
+import { React, useContext } from 'react';
 import Button from '../Button/Button.jsx';
+import Icon from '../Icon/Icon.jsx';
+
+import DarkThemeContext from '../../contexts/DarkThemeContext.jsx';
+
 import './_AdminProfile.scss';
 
 function AdminProfile(props) {
+  const { isDarkTheme } = useContext(DarkThemeContext);
+
   return (
     <>
       <h1 className='admin-profile__title'>{props.title}</h1>
@@ -36,15 +42,27 @@ function AdminProfile(props) {
               className='admin-profile__button admin-profile__button_delete'
               name='button-text-delete'
               type='submit'
-              onClick={props.onClick}></Button>
+              onClick={props.onClick}>
+              <Icon
+                name='delete'
+                className={
+                  isDarkTheme ? 'delete icon__delete_theme-dark' : 'delete'
+                }
+              />
+            </Button>
           </p>
-
           <Button
             aria-label='Delete button'
             className='admin-profile__button admin-profile__button_add'
             name='button-text-delete'
             type='submit'
-            onClick={props.onClick}></Button>
+            onClick={props.onClick}>
+            {' '}
+            <Icon
+              className={isDarkTheme ? 'add icon__add_theme-dark' : 'add'}
+              name='add'
+            />
+          </Button>
         </div>
         <span className='admin-profile__description admin-profile__description_text'>
           Реактировать текст

@@ -103,22 +103,6 @@
   }
   &__button {
     @include button(0px);
-
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
-    &_delete {
-      width: 12px;
-      height: 12px;
-      background-image: url('../../svg/icons/delete-icon.svg');
-    }
-
-    &_add {
-      width: 24px;
-      height: 24px;
-      background-image: url('../../svg/icons/add-icon.svg');
-    }
   }
 
   &__icon {
