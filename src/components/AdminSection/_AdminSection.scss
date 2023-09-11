@@ -19,4 +19,27 @@
       gap: 20px 30px;
     }
   }
+
+  &__buttons {
+    @include flexible(100%);
+    @include unmarkedList;
+    justify-content: center;
+    gap: 10px 30px;
+  }
+
+  &__button {
+    @include button(8px 12px);
+    border-radius: $borderRadiusDefault;
+    font-size: 12px;
+    font-weight: 500;
+    color: $color-light;
+
+    &_save {
+      background-color: $color-decorate-button-green;
+    }
+
+    &_reset {
+      background-color: $color-decorate-link;
+    }
+  }
 }
