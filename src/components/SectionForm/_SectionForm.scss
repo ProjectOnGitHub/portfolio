@@ -45,12 +45,7 @@
 
   &__button {
     @include button(10px);
-    width: 100%;
-    font-weight: 500;
-    font-size: 14px;
-    color: #fff;
-    background-color: $color-decorate-button-green;
-    border-radius: $borderRadiusDefault;
+    @include buttonColor(100%, $color-decorate-link);
   }
 
   &__description {

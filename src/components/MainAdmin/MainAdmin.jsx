@@ -3,12 +3,15 @@ import { Route, Switch } from 'react-router-dom';
 import AdminSection from '../AdminSection/AdminSection.jsx';
 import AdminProfile from '../AdminProfile/AdminProfile.jsx';
 import AdminProjects from '../AdminProjects/AdminProjects.jsx';
+import AdminProject from '../AdminProject/AdminProject.jsx';
 
 function MainAdmin() {
   return (
     <>
       <Switch>
-        <Route path='/admin/profile'>
+        <Route
+          path='/admin/profile'
+          exact>
           <AdminSection
             className='profile'
             id='profile'
@@ -17,7 +20,9 @@ function MainAdmin() {
             <AdminProfile />
           </AdminSection>
         </Route>
-        <Route path='/admin/projects'>
+        <Route
+          path='/admin/projects'
+          exact>
           <AdminSection
             className='projects'
             id='projects'
@@ -26,26 +31,43 @@ function MainAdmin() {
             <AdminProjects />
           </AdminSection>
         </Route>
-        <Route path='/admin/skills'>
+        <Route
+          path='/admin/skills'
+          exact>
           <AdminSection
             className='skills'
             id='skills'
             modificator='skills'
             title='Редактирование навыков'></AdminSection>
         </Route>
-        <Route path='/admin/experience'>
+        <Route
+          path='/admin/experience'
+          exact>
           <AdminSection
             className='experience'
             id='experience'
             modificator='experience'
             title='Редактирование опыта работы'></AdminSection>
         </Route>
-        <Route path='/admin/contacts'>
+        <Route
+          path='/admin/contacts'
+          exact>
           <AdminSection
             className='contacts'
             id='contacts'
             modificator='contacts'
             title='Редактирование контактов'></AdminSection>
+        </Route>
+        <Route
+          path='/admin/projects/project'
+          exact>
+          <AdminSection
+            className='project'
+            id='project'
+            modificator='project'
+            title='Редактирование проекта'>
+            <AdminProject></AdminProject>
+          </AdminSection>
         </Route>
       </Switch>
     </>

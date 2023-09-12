@@ -59,7 +59,8 @@
   line-height: 1;
 }
 
-@mixin button($padding) {
+@mixin button($padding: 0px) {
+  display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
@@ -69,6 +70,15 @@
   transform: scale(1);
   cursor: pointer;
   transition: 0.5s;
+}
+
+@mixin buttonColor($width: 100%, $bgColor: transparent) {
+  width: $width;
+  font-weight: 500;
+  font-size: 12px;
+  color: $color-light;
+  background-color: $bgColor;
+  border-radius: $borderRadiusDefault;
 }
 
 @mixin darkTheme() {
