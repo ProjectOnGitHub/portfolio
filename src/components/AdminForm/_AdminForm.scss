@@ -1,0 +1,109 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.admin-form {
+  @include flexible(100%);
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 12px;
+  color: $color-gray;
+  gap: 16px;
+
+  &__fieldset {
+    @include flexible(100%);
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    border: none;
+    gap: 12px;
+  }
+
+  &__dropzone {
+    @include flexible(100%);
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+    height: 100%;
+    max-height: 200px;
+    overflow: hidden;
+    border: 2px dashed $color-bg-dot;
+    border-radius: $borderRadiusDefault;
+    box-sizing: border-box;
+
+    &-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+
+  &__label {
+    @include flexible(100%);
+    flex-direction: column;
+    gap: 4px;
+
+    &_button {
+      @include button(8px 12px);
+      @include buttonColor(max-content, $color-decorate-button-green);
+      position: absolute;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    height: 46px;
+    padding: 0 15px;
+    font-weight: normal;
+    font-size: 14px;
+    color: $color-dark;
+    background-color: $color-bg-input;
+    border: none;
+    border-radius: $borderRadiusDefault;
+    outline: none;
+
+    &_hidden {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  &__textarea {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  &__button {
+    @include button(10px);
+    @include buttonColor();
+
+    &_tag {
+      background-color: $color-gray;
+      width: max-content;
+      gap: 8px;
+    }
+  }
+
+  &__text {
+    @include flexible(max-content);
+    gap: 8px;
+  }
+
+  &__link {
+    @include defaultLink;
+    width: max-content;
+    color: $color-decorate-link;
+    white-space: nowrap;
+  }
+
+  &__tags {
+    @include flexible(100%);
+    @include unmarkedList;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
