@@ -1,0 +1,13 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.admin-form {
+  &__input {
+    @include inputDefault;
+
+    &_hidden {
+      display: none;
+      visibility: hidden;
+    }
+  }
+}

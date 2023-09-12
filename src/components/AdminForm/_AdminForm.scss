@@ -54,25 +54,8 @@
     }
   }
 
-  &__input,
   &__textarea {
-    height: 46px;
-    padding: 0 15px;
-    font-weight: normal;
-    font-size: 14px;
-    color: $color-dark;
-    background-color: $color-bg-input;
-    border: none;
-    border-radius: $borderRadiusDefault;
-    outline: none;
-
-    &_hidden {
-      display: none;
-      visibility: hidden;
-    }
-  }
-
-  &__textarea {
+    @include inputDefault;
     padding-top: 15px;
     padding-bottom: 15px;
   }

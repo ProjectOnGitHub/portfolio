@@ -70,6 +70,10 @@
   transform: scale(1);
   cursor: pointer;
   transition: 0.5s;
+
+  &:focus {
+    outline: 1px solid $color-gray;
+  }
 }
 
 @mixin buttonColor($width: 100%, $bgColor: transparent) {
@@ -84,4 +88,20 @@
 @mixin darkTheme() {
   color: $color-light;
   background-color: $color-dark;
+}
+
+@mixin inputDefault {
+  height: 100%;
+  min-height: 46px;
+  padding: 0 15px;
+  font-weight: normal;
+  font-size: 14px;
+  color: $color-dark;
+  background-color: $color-bg-input;
+  border: none;
+  border-radius: $borderRadiusDefault;
+
+  &:focus {
+    outline: 1px solid $color-gray;
+  }
 }

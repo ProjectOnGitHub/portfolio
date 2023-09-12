@@ -1,6 +1,7 @@
 import { React } from 'react';
 import AdminForm from '../AdminForm/AdminForm.jsx';
 import imagesMap from '../../utils/images';
+import AdminFormInput from '../AdminFormInput/AdminFormInput.jsx';
 import Icon from '../Icon/Icon.jsx';
 import Button from '../Button/Button.jsx';
 
@@ -29,7 +30,7 @@ function AdminProject(props) {
         </div>
       </fieldset>
       <fieldset className='admin-form__fieldset'>
-        <input
+        <AdminFormInput
           className='admin-form__input'
           maxLength='16'
           minLength='6'
@@ -38,7 +39,7 @@ function AdminProject(props) {
           type='text'
           required
         />
-        <input
+        <AdminFormInput
           className='admin-form__input'
           maxLength='250'
           minLength='6'
@@ -46,7 +47,7 @@ function AdminProject(props) {
           placeholder='Ссылка на сайт'
           type='text'
         />
-        <input
+        <AdminFormInput
           className='admin-form__input'
           maxLength='250'
           minLength='6'
@@ -54,7 +55,7 @@ function AdminProject(props) {
           placeholder='Ссылка на GitHub'
           type='text'
         />
-        <input
+        <AdminFormInput
           className='admin-form__input'
           maxLength='250'
           minLength='6'
@@ -93,14 +94,13 @@ function AdminProject(props) {
             </Button>
           </li>
         </ul>
-
         <textarea
           className='admin-form__textarea'
           maxLength='250'
-          minLength='6'
+          minLength='80'
           name='text'
           placeholder='Добавить описание'
-          rows='10'
+          rows='4'
           required
         />
       </fieldset>
