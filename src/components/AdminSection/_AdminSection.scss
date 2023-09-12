@@ -18,6 +18,10 @@
       max-width: $middle-width;
       gap: 20px 30px;
     }
+
+    &_project {
+      max-width: $middle-width;
+    }
   }
 
   &__buttons {
@@ -28,11 +32,8 @@
   }
 
   &__button {
-    @include button(8px 12px);
-    border-radius: $borderRadiusDefault;
-    font-size: 12px;
-    font-weight: 500;
-    color: $color-light;
+    @include button(10px);
+    @include buttonColor();
 
     &_save {
       background-color: $color-decorate-button-green;
