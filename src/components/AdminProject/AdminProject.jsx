@@ -6,7 +6,7 @@ import AdminFormTextarea from '../AdminFormTextarea/AdminFormTextarea.jsx';
 import Icon from '../Icon/Icon.jsx';
 import Button from '../Button/Button.jsx';
 
-function AdminProject() {
+function AdminProject({ onClick }) {
   return (
     <AdminForm>
       <fieldset className='admin-form__fieldset'>
@@ -80,7 +80,7 @@ function AdminProject() {
               className='admin-form__button admin-form__button_tag'
               name='button-edit'
               type='submit'
-              onClick={props.onClick}>
+              onClick={onClick}>
               HTML{' '}
               <Icon
                 className='trash'
@@ -94,7 +94,7 @@ function AdminProject() {
               className='admin-form__button admin-form__button_tag'
               name='button-edit'
               type='submit'
-              onClick={props.onClick}>
+              onClick={onClick}>
               CSS
               <Icon
                 className='trash'
