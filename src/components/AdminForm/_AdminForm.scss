@@ -24,13 +24,11 @@
     position: relative;
     justify-content: center;
     align-items: center;
-    max-width: 300px;
+    box-sizing: border-box;
     height: 100%;
-    max-height: 200px;
     overflow: hidden;
     border: 2px dashed $color-bg-dot;
     border-radius: $borderRadiusDefault;
-    box-sizing: border-box;
 
     &-image {
       display: block;
@@ -59,10 +57,16 @@
     @include buttonColor();
 
     &_tag {
-      background-color: $color-gray;
       width: max-content;
+      background-color: $color-gray;
       gap: 8px;
     }
+  }
+
+  &__wrapper {
+    @include flexible(100%);
+    flex-direction: column;
+    gap: 4px;
   }
 
   &__text {

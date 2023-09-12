@@ -64,45 +64,47 @@ function AdminProject({ onClick }) {
           required={false}
           type='text'
         />
-        <AdminFormInput
-          className='admin-form__input'
-          maxLength='250'
-          minLength='6'
-          name='text'
-          placeholder='Добавить технологии'
-          required={true}
-          type='text'
-        />
-        <ul className='admin-form__tags'>
-          <li className='admin-form__tags-item'>
-            <Button
-              aria-label='Edit button'
-              className='admin-form__button admin-form__button_tag'
-              name='button-edit'
-              type='submit'
-              onClick={onClick}>
-              HTML{' '}
-              <Icon
-                className='trash'
-                name='trash'
-              />
-            </Button>
-          </li>
-          <li className='admin-form__tags-item'>
-            <Button
-              aria-label='Edit button'
-              className='admin-form__button admin-form__button_tag'
-              name='button-edit'
-              type='submit'
-              onClick={onClick}>
-              CSS
-              <Icon
-                className='trash'
-                name='trash'
-              />
-            </Button>
-          </li>
-        </ul>
+        <div className='admin-form__wrapper'>
+          <AdminFormInput
+            className='admin-form__input'
+            maxLength='250'
+            minLength='6'
+            name='text'
+            placeholder='Добавить технологии'
+            required={true}
+            type='text'
+          />
+          <ul className='admin-form__tags'>
+            <li className='admin-form__tags-item'>
+              <Button
+                aria-label='Edit button'
+                className='admin-form__button admin-form__button_tag'
+                name='button-edit'
+                type='submit'
+                onClick={onClick}>
+                HTML{' '}
+                <Icon
+                  className='trash'
+                  name='trash'
+                />
+              </Button>
+            </li>
+            <li className='admin-form__tags-item'>
+              <Button
+                aria-label='Edit button'
+                className='admin-form__button admin-form__button_tag'
+                name='button-edit'
+                type='submit'
+                onClick={onClick}>
+                CSS
+                <Icon
+                  className='trash'
+                  name='trash'
+                />
+              </Button>
+            </li>
+          </ul>
+        </div>
         <AdminFormTextarea
           className='admin-form__textarea'
           maxLength='250'
