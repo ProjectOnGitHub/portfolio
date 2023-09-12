@@ -7,7 +7,7 @@
     grid-area: theme;
     &-button {
       @include button(0px);
-      @include flexible(100%);
+      @include flexible();
       align-items: center;
       opacity: 1;
       transition: 0.5s ease-in-out;

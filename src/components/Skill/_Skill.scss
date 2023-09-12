@@ -2,7 +2,7 @@
 @import '../../scss/variables';
 
 .skill {
-  @include gridable(100%);
+  @include gridable();
   justify-items: center;
   max-width: 150px;
   gap: 20px;

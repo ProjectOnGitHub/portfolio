@@ -6,7 +6,7 @@
     @include defaultSubtitle(32px);
   }
   &__text {
-    @include flexible(100%);
+    @include flexible();
     flex-direction: column;
     max-width: $middle-width;
     gap: 10px;

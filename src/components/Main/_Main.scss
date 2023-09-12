@@ -2,7 +2,7 @@
 @import '../../scss/variables';
 
 .main {
-  @include gridable(100%);
+  @include gridable();
   grid-area: block;
   justify-items: center;
 }

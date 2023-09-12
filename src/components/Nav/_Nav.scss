@@ -2,7 +2,7 @@
 @import '../../scss/variables';
 
 .header__navigation {
-  @include gridable(100%);
+  @include gridable();
   grid-area: nav;
   justify-content: end;
 }

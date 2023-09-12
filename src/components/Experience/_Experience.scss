@@ -3,13 +3,13 @@
 
 .experience {
   &__list {
-    @include gridable(100%);
+    @include gridable();
     @include unmarkedList;
     max-width: $middle-width;
     gap: 50px;
 
     &-item {
-      @include gridable(100%);
+      @include gridable();
       grid-template-areas:
         'date subtitle'
         'date name'
@@ -47,7 +47,7 @@
     font-style: italic;
   }
   &__text {
-    @include gridable(100%);
+    @include gridable();
     gap: 8px;
     grid-area: text;
     line-height: 1.2;

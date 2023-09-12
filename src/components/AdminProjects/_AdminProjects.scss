@@ -3,7 +3,7 @@
 
 .admin-projects {
   &__list {
-    @include gridable(100%);
+    @include gridable();
     @include unmarkedList;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 24px 18px;
@@ -17,7 +17,7 @@
   }
 
   &__figure {
-    @include flexible(100%);
+    @include flexible();
     position: relative;
     flex-direction: column;
     align-items: center;

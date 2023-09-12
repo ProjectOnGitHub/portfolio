@@ -2,7 +2,7 @@
 @import '../../scss/variables';
 
 .logo {
-  @include flexible(100%);
+  @include flexible();
   z-index: 10;
 
   &_middle {

@@ -2,12 +2,12 @@
 @import '../../scss/variables';
 
 .project {
-  @include gridable(100%);
+  @include gridable();
   grid-template-rows: repeat(2, max-content) 1fr;
   align-content: start;
   gap: 20px;
   &__figure {
-    @include gridable(100%);
+    @include gridable();
     position: relative;
     align-items: end;
     margin: 0;
@@ -25,7 +25,7 @@
     }
   }
   &__title {
-    @include flexible(100%);
+    @include flexible();
     position: absolute;
     justify-content: center;
     box-sizing: border-box;
@@ -53,7 +53,7 @@
     object-position: top;
   }
   &__text {
-    @include gridable(100%);
+    @include gridable();
     align-content: start;
     box-sizing: border-box;
     font-size: 16px;
@@ -67,7 +67,7 @@
     margin: 0;
   }
   &__list {
-    @include flexible(100%);
+    @include flexible();
     @include unmarkedList;
     flex-wrap: wrap;
     font-size: 12px;
@@ -75,13 +75,13 @@
   }
   &__links {
     @include unmarkedList;
-    @include gridable(100%);
+    @include gridable();
     grid-template-columns: repeat(2, max-content);
     justify-content: center;
     align-self: end;
     gap: 25px;
     &-item {
-      @include flexible(100%);
+      @include flexible();
       align-items: center;
       gap: 10px;
     }

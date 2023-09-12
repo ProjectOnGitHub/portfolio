@@ -3,12 +3,12 @@
 
 .skills {
   &__container {
-    @include gridable(100%);
+    @include gridable();
     justify-items: center;
     gap: 25px;
   }
   &__list {
-    @include flexible(100%);
+    @include flexible();
     @include unmarkedList;
     justify-content: center;
     justify-items: center;

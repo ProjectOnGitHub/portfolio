@@ -7,7 +7,7 @@
   }
 
   &__container {
-    @include gridable(100%);
+    @include gridable();
 
     &_profile,
     &_project {
@@ -16,7 +16,7 @@
   }
 
   &__buttons {
-    @include flexible(100%);
+    @include flexible();
     @include unmarkedList;
     justify-content: center;
     gap: 10px 30px;

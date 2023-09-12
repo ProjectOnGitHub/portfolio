@@ -2,7 +2,7 @@
 @import '../../scss/_variables';
 
 .section {
-  @include gridable(100%);
+  @include gridable();
   justify-items: center;
   align-content: start;
   box-sizing: border-box;
@@ -14,7 +14,7 @@
   gap: 40px;
 
   &__form {
-    @include flexible(100%);
+    @include flexible();
     flex-direction: column;
     height: 100vh;
     justify-content: center;

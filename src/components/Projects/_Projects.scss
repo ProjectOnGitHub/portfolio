@@ -10,7 +10,7 @@
     @include defaultSubtitle(32px);
   }
   &__list {
-    @include gridable(100%);
+    @include gridable();
     @include unmarkedList;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 40px;

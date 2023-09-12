@@ -2,7 +2,7 @@
 @import '../../scss/variables';
 
 .header {
-  @include gridable(100%);
+  @include gridable();
   z-index: 15;
   grid-area: block;
   justify-items: center;
@@ -24,7 +24,7 @@
   }
 
   &__container {
-    @include gridable(100%);
+    @include gridable();
     grid-template-areas: 'logo-link nav theme';
     grid-template-columns: 1fr repeat(2, min-content);
     justify-content: space-between;

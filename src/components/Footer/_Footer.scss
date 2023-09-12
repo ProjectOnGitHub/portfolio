@@ -2,11 +2,11 @@
 @import '../../scss/variables';
 
 .footer {
-  @include gridable(100%);
+  @include gridable();
   grid-area: footer;
   justify-content: center;
   &__container {
-    @include flexible(100%);
+    @include flexible();
     align-items: center;
     box-sizing: border-box;
     max-width: $max-width;

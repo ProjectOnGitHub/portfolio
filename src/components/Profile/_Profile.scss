@@ -20,7 +20,7 @@
     backdrop-filter: blur(25px);
   }
   &__info {
-    @include gridable(100%);
+    @include gridable();
     z-index: 10;
     justify-items: center;
     gap: 5px;
@@ -71,7 +71,7 @@
     text-align: center;
   }
   &__link {
-    @include flexible(100%);
+    @include flexible();
     position: absolute;
     bottom: 15px;
     z-index: 10;
