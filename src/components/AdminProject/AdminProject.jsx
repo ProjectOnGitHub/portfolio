@@ -35,8 +35,17 @@ function AdminProject(props) {
           minLength='6'
           name='text'
           placeholder='Название проекта'
+          required={true}
           type='text'
-          required
+        />
+        <AdminFormInput
+          className='admin-form__input'
+          maxLength='16'
+          minLength='4'
+          name='text'
+          placeholder='URL проекта'
+          required={true}
+          type='text'
         />
         <AdminFormInput
           className='admin-form__input'
@@ -44,6 +53,7 @@ function AdminProject(props) {
           minLength='6'
           name='text'
           placeholder='Ссылка на сайт'
+          required={true}
           type='text'
         />
         <AdminFormInput
@@ -52,6 +62,7 @@ function AdminProject(props) {
           minLength='6'
           name='text'
           placeholder='Ссылка на GitHub'
+          required={false}
           type='text'
         />
         <AdminFormInput
@@ -60,8 +71,8 @@ function AdminProject(props) {
           minLength='6'
           name='text'
           placeholder='Добавить технологии'
+          required={true}
           type='text'
-          required
         />
         <ul className='admin-form__tags'>
           <li className='admin-form__tags-item'>
