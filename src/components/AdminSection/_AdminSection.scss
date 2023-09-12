@@ -9,16 +9,7 @@
   &__container {
     @include gridable(100%);
 
-    &_profile {
-      grid-template-areas:
-        'description-name name'
-        'description-position position'
-        'description-text text';
-      grid-template-columns: max-content 1fr;
-      max-width: $middle-width;
-      gap: 20px 30px;
-    }
-
+    &_profile,
     &_project {
       max-width: $middle-width;
     }

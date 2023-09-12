@@ -5,8 +5,6 @@ import AdminFormInput from '../AdminFormInput/AdminFormInput.jsx';
 import Icon from '../Icon/Icon.jsx';
 import Button from '../Button/Button.jsx';
 
-import './_AdminProject.scss';
-
 function AdminProject(props) {
   return (
     <AdminForm>
