@@ -54,12 +54,6 @@
     }
   }
 
-  &__textarea {
-    @include inputDefault;
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
-
   &__button {
     @include button(10px);
     @include buttonColor();

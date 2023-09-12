@@ -2,6 +2,7 @@ import { React } from 'react';
 import AdminForm from '../AdminForm/AdminForm.jsx';
 import imagesMap from '../../utils/images';
 import AdminFormInput from '../AdminFormInput/AdminFormInput.jsx';
+import AdminFormTextarea from '../AdminFormTextarea/AdminFormTextarea.jsx';
 import Icon from '../Icon/Icon.jsx';
 import Button from '../Button/Button.jsx';
 
@@ -92,14 +93,14 @@ function AdminProject(props) {
             </Button>
           </li>
         </ul>
-        <textarea
+        <AdminFormTextarea
           className='admin-form__textarea'
           maxLength='250'
           minLength='80'
           name='text'
           placeholder='Добавить описание'
+          required={true}
           rows='4'
-          required
         />
       </fieldset>
     </AdminForm>

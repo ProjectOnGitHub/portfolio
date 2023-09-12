@@ -1,0 +1,10 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.admin-form {
+  &__textarea {
+    @include inputDefault;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}

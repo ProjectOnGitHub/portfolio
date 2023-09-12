@@ -1,6 +1,7 @@
 import { React } from 'react';
 import AdminForm from '../AdminForm/AdminForm.jsx';
 import AdminFormInput from '../AdminFormInput/AdminFormInput.jsx';
+import AdminFormTextarea from '../AdminFormTextarea/AdminFormTextarea.jsx';
 
 function AdminProfile() {
   return (
@@ -23,6 +24,15 @@ function AdminProfile() {
           placeholder='Редактировать специальность'
           type='text'
           required
+        />
+        <AdminFormTextarea
+          className='admin-form__textarea'
+          maxLength='250'
+          minLength='80'
+          name='text'
+          placeholder='Добавить описание'
+          required={true}
+          rows='4'
         />
       </fieldset>
     </AdminForm>
