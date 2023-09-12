@@ -7,7 +7,7 @@ import Icon from '../Icon/Icon.jsx';
 
 import './_AdminProjects.scss';
 
-function AdminProjects(props) {
+function AdminProjects({ onClick }) {
   return (
     <>
       <ul className='admin-projects__list'>
@@ -29,7 +29,7 @@ function AdminProjects(props) {
                 className='admin-projects__button admin-projects__button_edit'
                 name='button-edit'
                 type='submit'
-                onClick={props.onClick}>
+                onClick={onClick}>
                 <Icon
                   className='edit'
                   name='edit'
@@ -45,7 +45,7 @@ function AdminProjects(props) {
             className='admin-projects__button admin-projects__button_add'
             name='button-edit'
             type='submit'
-            onClick={props.onClick}>
+            onClick={onClick}>
             <Icon
               className='add'
               name='add'

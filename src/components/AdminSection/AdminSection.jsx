@@ -2,19 +2,26 @@ import React from 'react';
 import './_AdminSection.scss';
 import Button from '../Button/Button.jsx';
 
-function AdminSection(props) {
+function AdminSection({
+  className,
+  id,
+  title,
+  modificator,
+  children,
+  onClick,
+}) {
   return (
     <section
-      className={`section admin-section admin-section__${props.className}`}
-      id={`admin-${props.id}`}>
-      <h1 className='admin-section__title'>{props.title}</h1>
+      className={`section admin-section admin-section__${className}`}
+      id={`admin-${id}`}>
+      <h1 className='admin-section__title'>{title}</h1>
       <div
         className={
-          props.modificator
-            ? `admin-section__container admin-section__container_${props.modificator}`
+          modificator
+            ? `admin-section__container admin-section__container_${modificator}`
             : `admin-section__container`
         }>
-        {props.children}
+        {children}
       </div>
       <ul className='admin-section__buttons'>
         <li className='admin-section__buttons-item'>
@@ -23,7 +30,7 @@ function AdminSection(props) {
             className='admin-section__button admin-section__button_reset'
             name='button-reset'
             type='submit'
-            onClick={props.onClick}>
+            onClick={onClick}>
             Сбросить изменения
           </Button>
         </li>
@@ -33,7 +40,7 @@ function AdminSection(props) {
             className='admin-section__button admin-section__button_save'
             name='button-save'
             type='submit'
-            onClick={props.onClick}>
+            onClick={onClick}>
             Сохранить изменения
           </Button>
         </li>

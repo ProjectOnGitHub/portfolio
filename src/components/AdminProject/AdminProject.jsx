@@ -6,7 +6,7 @@ import AdminFormTextarea from '../AdminFormTextarea/AdminFormTextarea.jsx';
 import Icon from '../Icon/Icon.jsx';
 import Button from '../Button/Button.jsx';
 
-function AdminProject(props) {
+function AdminProject() {
   return (
     <AdminForm>
       <fieldset className='admin-form__fieldset'>
@@ -16,7 +16,6 @@ function AdminProject(props) {
             <input
               accept='image/*'
               className='admin-form__input admin-form__input_hidden'
-              multiple='false'
               name='input-file'
               type='file'
             />

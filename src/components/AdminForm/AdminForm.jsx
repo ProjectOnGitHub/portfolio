@@ -1,13 +1,13 @@
 import { React } from 'react';
 import './_AdminForm.scss';
 
-function AdminForm(props) {
+function AdminForm({ name, handleSubmit, children }) {
   return (
     <form
       className='admin-form'
-      name={props.name}
-      onSubmit={props.handleSubmit}>
-      {props.children}
+      name={name}
+      onSubmit={handleSubmit}>
+      {children}
     </form>
   );
 }
