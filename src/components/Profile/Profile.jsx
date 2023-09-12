@@ -8,7 +8,9 @@ function Profile(props) {
     <>
       <div className='profile__info'>
         <h1 className='profile__title'>{props.title}</h1>
-        <h2 className='profile__subtitle'>HTML-верстальщик</h2>
+        <h2 className='profile__subtitle'>
+          HTML-верстальщик / Frontend-разработчик
+        </h2>
       </div>
       <div className='profile__text'>
         <p className='profile__paragraph'>Ушёл из SEO в разработку</p>
