@@ -1,0 +1,21 @@
+@import '../../scss/_mixins';
+@import '../../scss/_variables';
+
+.admin-skills {
+  &__list {
+    &-item {
+      @include flexible();
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+      width: 80px;
+      height: auto;
+    }
+
+    &-title {
+      text-align: center;
+      font-size: 12px;
+      color: $color-dark;
+    }
+  }
+}

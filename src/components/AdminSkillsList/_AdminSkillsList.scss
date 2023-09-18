@@ -1,0 +1,12 @@
+@import '../../scss/_mixins';
+@import '../../scss/_variables';
+
+.admin-skills {
+  &__list {
+    @include unmarkedList;
+    @include flexible();
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 48px 24px;
+  }
+}

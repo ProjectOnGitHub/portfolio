@@ -4,6 +4,7 @@ import AdminSection from '../AdminSection/AdminSection.jsx';
 import AdminProfile from '../AdminProfile/AdminProfile.jsx';
 import AdminProjects from '../AdminProjects/AdminProjects.jsx';
 import AdminProject from '../AdminProject/AdminProject.jsx';
+import AdminSkills from '../AdminSkills/AdminSkills.jsx';
 
 function MainAdmin() {
   return (
@@ -38,7 +39,9 @@ function MainAdmin() {
             className='skills'
             id='skills'
             modificator='skills'
-            title='Редактирование навыков'></AdminSection>
+            title='Редактирование навыков'>
+            <AdminSkills />
+          </AdminSection>
         </Route>
         <Route
           path='/admin/experience'
