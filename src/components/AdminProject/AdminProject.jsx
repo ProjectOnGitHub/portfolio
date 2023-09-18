@@ -10,6 +10,9 @@ function AdminProject({ onClick }) {
   return (
     <AdminForm>
       <fieldset className='admin-form__fieldset'>
+        <legend className='admin-form__legend'>
+          Добавить изображение к проекту
+        </legend>
         <div className='admin-form__dropzone'>
           <label className='admin-form__label admin-form__label_button'>
             Добавить изображение
@@ -39,6 +42,9 @@ function AdminProject({ onClick }) {
         </div>
       </fieldset>
       <fieldset className='admin-form__fieldset'>
+        <legend className='admin-form__legend'>
+          Редактировать данные проекта
+        </legend>
         <AdminFormInput
           className='admin-form__input'
           maxLength='16'

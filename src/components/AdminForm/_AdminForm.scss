@@ -105,4 +105,11 @@
     flex-wrap: wrap;
     gap: 8px;
   }
+
+  &__legend {
+    display: block;
+    padding: 12px 0;
+    font-size: 14px;
+    color: $color-gray;
+  }
 }
