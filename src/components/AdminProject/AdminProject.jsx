@@ -8,7 +8,7 @@ import Button from '../Button/Button.jsx';
 
 function AdminProject({ onClick }) {
   return (
-    <AdminForm>
+    <AdminForm modificator='middle'>
       <fieldset className='admin-form__fieldset'>
         <legend className='admin-form__legend'>
           Добавить изображение к проекту

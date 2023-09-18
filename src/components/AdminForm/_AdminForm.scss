@@ -10,6 +10,10 @@
   color: $color-gray;
   gap: 16px;
 
+  &_middle {
+    max-width: $middle-width;
+  }
+
   &__fieldset {
     @include flexible();
     flex-direction: column;

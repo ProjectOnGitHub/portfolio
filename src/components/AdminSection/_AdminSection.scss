@@ -6,13 +6,14 @@
     @include defaultSubtitle(24px);
   }
 
+  &__subtitle {
+    @include defaultSubtitle(20px);
+  }
+
   &__container {
     @include gridable();
-
-    &_profile,
-    &_project {
-      max-width: $middle-width;
-    }
+    justify-items: center;
+    gap: 25px;
   }
 
   &__buttons {

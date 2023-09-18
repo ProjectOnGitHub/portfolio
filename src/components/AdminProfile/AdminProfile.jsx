@@ -5,7 +5,7 @@ import AdminFormTextarea from '../AdminFormTextarea/AdminFormTextarea.jsx';
 
 function AdminProfile() {
   return (
-    <AdminForm>
+    <AdminForm modificator='middle'>
       <fieldset className='admin-form__fieldset'>
         <AdminFormInput
           className='admin-form__input'
