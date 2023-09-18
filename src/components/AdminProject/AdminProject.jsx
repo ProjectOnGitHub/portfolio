@@ -1,8 +1,8 @@
 import { React } from 'react';
 import AdminForm from '../AdminForm/AdminForm.jsx';
-import imagesMap from '../../utils/images';
 import AdminFormInput from '../AdminFormInput/AdminFormInput.jsx';
 import AdminFormTextarea from '../AdminFormTextarea/AdminFormTextarea.jsx';
+import AdminFormDropzone from '../AdminFormInput copy/AdminFormDropzone.jsx';
 import Icon from '../Icon/Icon.jsx';
 import Button from '../Button/Button.jsx';
 
@@ -13,21 +13,7 @@ function AdminProject({ onClick }) {
         <legend className='admin-form__legend'>
           Добавить изображение к проекту
         </legend>
-        <div className='admin-form__dropzone'>
-          <label className='admin-form__label admin-form__label_button'>
-            Добавить изображение
-            <input
-              accept='image/*'
-              className='admin-form__input admin-form__input_hidden'
-              name='input-file'
-              type='file'
-            />
-          </label>
-          <img
-            alt=''
-            className='admin-form__dropzone-image'
-            src={imagesMap[`./${['background.jpg']}`]}
-          />
+        <AdminFormDropzone className='AdminFormDropzone'>
           <Button
             aria-label='Delete image button'
             className='admin-form__button admin-form__button_delete-image'
@@ -39,7 +25,7 @@ function AdminProject({ onClick }) {
               name='trash'
             />
           </Button>
-        </div>
+        </AdminFormDropzone>
       </fieldset>
       <fieldset className='admin-form__fieldset'>
         <legend className='admin-form__legend'>

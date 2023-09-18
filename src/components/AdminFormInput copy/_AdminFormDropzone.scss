@@ -1,0 +1,25 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.admin-form {
+  &__dropzone {
+    @include flexible();
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 100%;
+    overflow: hidden;
+    border: 2px dashed $color-bg-dot;
+    border-radius: $borderRadiusDefault;
+
+    &-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+}
