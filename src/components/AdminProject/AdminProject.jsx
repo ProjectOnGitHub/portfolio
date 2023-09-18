@@ -25,6 +25,17 @@ function AdminProject({ onClick }) {
             className='admin-form__dropzone-image'
             src={imagesMap[`./${['background.jpg']}`]}
           />
+          <Button
+            aria-label='Delete image button'
+            className='admin-form__button admin-form__button_delete-image'
+            name='button-image-delete'
+            type='submit'
+            onClick={onClick}>
+            <Icon
+              className='delete icon__delete_image'
+              name='trash'
+            />
+          </Button>
         </div>
       </fieldset>
       <fieldset className='admin-form__fieldset'>
@@ -84,7 +95,7 @@ function AdminProject({ onClick }) {
                 onClick={onClick}>
                 HTML{' '}
                 <Icon
-                  className='trash'
+                  className='delete icon__delete_tag'
                   name='trash'
                 />
               </Button>
@@ -98,7 +109,7 @@ function AdminProject({ onClick }) {
                 onClick={onClick}>
                 CSS
                 <Icon
-                  className='trash'
+                  className='delete icon__delete_tag'
                   name='trash'
                 />
               </Button>
@@ -115,6 +126,14 @@ function AdminProject({ onClick }) {
           rows='4'
         />
       </fieldset>
+      <Button
+        aria-label='Delete project button'
+        className='admin-form__button admin-form__button_delete-project'
+        name='button-project-delete'
+        type='submit'
+        onClick={onClick}>
+        Удалить проект
+      </Button>
     </AdminForm>
   );
 }

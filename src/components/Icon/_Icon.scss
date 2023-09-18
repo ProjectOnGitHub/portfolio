@@ -65,15 +65,20 @@
   }
 
   &__delete,
-  &__edit,
-  &__trash {
+  &__edit {
     z-index: 10;
-    width: 12px;
-    height: 12px;
+    width: 16px;
+    height: 16px;
   }
 
-  &__trash {
-    fill: $color-light;
+  &__delete {
+    &_tag {
+      fill: $color-light;
+    }
+
+    &_image {
+      fill: $color-dark;
+    }
   }
 
   &__theme {

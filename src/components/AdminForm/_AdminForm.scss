@@ -53,13 +53,31 @@
   }
 
   &__button {
-    @include button(10px);
+    @include button();
     @include buttonColor();
 
     &_tag {
       width: max-content;
+      padding: 10px;
       background-color: $color-gray;
       gap: 8px;
+    }
+
+    &_delete-image {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      width: 24px;
+      height: 24px;
+      background-color: $color-bg-input;
+    }
+
+    &_delete-project {
+      @include defaultLink;
+      align-self: end;
+      max-width: max-content;
+      color: $color-decorate-link;
+      white-space: nowrap;
     }
   }
 
