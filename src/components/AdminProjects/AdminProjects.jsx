@@ -1,4 +1,5 @@
 import { React } from 'react';
+import { Link } from 'react-router-dom';
 import projects from '../../utils/projects';
 import ListItem from '../ListItem/ListItem.jsx';
 import imagesMap from '../../utils/images';
@@ -15,27 +16,31 @@ function AdminProjects({ onClick }) {
           <ListItem
             key={item.id}
             className='admin-projects__list-item'>
-            <figure className='admin-projects__figure'>
-              <img
-                alt={item.title}
-                className='admin-projects__image'
-                src={imagesMap[`./${[item.image]}`]}
-              />
-              <figcaption className='admin-projects__caption'>
-                {item.title}
-              </figcaption>
-              <Button
-                aria-label='Edit button'
-                className='admin-projects__button admin-projects__button_edit'
-                name='button-edit'
-                type='submit'
-                onClick={onClick}>
-                <Icon
-                  className='edit'
-                  name='edit'
+            <Link
+              className='admin-projects__link'
+              to='/admin/projects/project'>
+              <figure className='admin-projects__figure'>
+                <img
+                  alt={item.title}
+                  className='admin-projects__image'
+                  src={imagesMap[`./${[item.image]}`]}
                 />
-              </Button>
-            </figure>
+                <figcaption className='admin-projects__caption'>
+                  {item.title}
+                </figcaption>
+                <Button
+                  aria-label='Edit button'
+                  className='admin-projects__button admin-projects__button_edit'
+                  name='button-edit'
+                  type='submit'
+                  onClick={onClick}>
+                  <Icon
+                    className='edit'
+                    name='edit'
+                  />
+                </Button>
+              </figure>
+            </Link>
           </ListItem>
         ))}
         <li className='admin-projects__list-item'>

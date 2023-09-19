@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import AdminForm from '../AdminForm/AdminForm.jsx';
 import AdminFormTextarea from '../AdminFormTextarea/AdminFormTextarea.jsx';
 import Button from '../Button/Button.jsx';
@@ -41,12 +42,16 @@ function AdminSkills({ onClick }) {
             <ListItem
               key={item.id}
               className='admin-skills__list-item'>
-              <Icon
-                className='admin-skills'
-                modificator={item.name}
-                name={item.name}
-              />
-              <span className='admin-skills__list-title'>{item.title}</span>
+              <Link
+                className='admin-skills__link'
+                to='/admin/skills/skill'>
+                <Icon
+                  className='admin-skills'
+                  modificator={item.name}
+                  name={item.name}
+                />
+                <span className='admin-skills__list-title'>{item.title}</span>
+              </Link>
             </ListItem>
           ))}
           <li className='admin-skills__list-item'>

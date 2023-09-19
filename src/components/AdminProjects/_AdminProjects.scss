@@ -65,4 +65,9 @@
       height: 100%;
     }
   }
+
+  &__link {
+    color: $color-dark;
+    text-decoration: none;
+  }
 }

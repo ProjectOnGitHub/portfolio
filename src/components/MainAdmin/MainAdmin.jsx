@@ -72,6 +72,18 @@ function MainAdmin() {
             <AdminProject></AdminProject>
           </AdminSection>
         </Route>
+
+        <Route
+          path='/admin/skills/skill'
+          exact>
+          <AdminSection
+            className='skill'
+            id='skill'
+            modificator='skill'
+            title='Редактирование навыка'>
+            <AdminProject></AdminProject>
+          </AdminSection>
+        </Route>
       </Switch>
     </>
   );
