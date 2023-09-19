@@ -1,24 +1,16 @@
 import { React } from 'react';
 import './_AdminFormTextarea.scss';
 
-function AdminFormTextarea({
-  className,
-  maxLength,
-  minLength,
-  name,
-  placeholder,
-  required,
-  rows,
-}) {
+function AdminFormTextarea({ name, placeholder, required }) {
   return (
     <textarea
-      className={className}
-      maxLength={maxLength}
-      minLength={minLength}
-      name={name}
+      className='admin-form__textarea'
+      maxLength='400'
+      minLength='40'
+      name={`textarea-${name}`}
       placeholder={placeholder}
       required={required}
-      rows={rows}
+      rows='5'
     />
   );
 }

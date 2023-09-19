@@ -20,13 +20,9 @@ function AdminProfile() {
           type='text'
         />
         <AdminFormTextarea
-          className='admin-form__textarea'
-          maxLength='250'
-          minLength='80'
-          name='text'
+          name='description'
           placeholder='Добавить описание'
           required={true}
-          rows='4'
         />
       </fieldset>
     </AdminForm>

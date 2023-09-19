@@ -26,13 +26,9 @@ function AdminSkills({ onClick }) {
             Редактировать описание раздела Навыки
           </legend>
           <AdminFormTextarea
-            className='admin-form__textarea'
-            maxLength='250'
-            minLength='80'
-            name='text'
+            name='description'
             placeholder='Добавить описание'
             required={true}
-            rows='5'
           />
         </fieldset>
       </AdminForm>
