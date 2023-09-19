@@ -2,9 +2,7 @@ import { React, useState, useEffect } from 'react';
 import { Switch, Route, useLocation } from 'react-router-dom';
 import DarkThemeContext from '../../contexts/DarkThemeContext.jsx';
 import './_App.scss';
-import Header from '../Header/Header.jsx';
-import Footer from '../Footer/Footer.jsx';
-import Main from '../Main/Main.jsx';
+import Layout from '../Layout/Layout.jsx';
 import MainStart from '../MainStart/MainStart.jsx';
 import MainAdmin from '../MainAdmin/MainAdmin.jsx';
 import Register from '../Register/Register.jsx';
@@ -32,18 +30,14 @@ function App() {
           <Route
             path='/'
             exact>
-            <Header isAdminPath={isAdminPath} />
-            <Main>
+            <Layout isAdminPath={isAdminPath}>
               <MainStart />
-            </Main>
-            <Footer />
+            </Layout>
           </Route>
           <Route path='/admin'>
-            <Header isAdminPath={isAdminPath} />
-            <Main>
+            <Layout isAdminPath={isAdminPath}>
               <MainAdmin />
-            </Main>
-            <Footer />
+            </Layout>
           </Route>
           <Route
             path='/register'
