@@ -55,7 +55,7 @@
       background-color: $color-bg-input;
     }
 
-    &_delete-project {
+    &_delete-item {
       @include defaultLink;
       align-self: end;
       max-width: max-content;

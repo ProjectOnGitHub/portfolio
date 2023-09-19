@@ -1,32 +1,13 @@
 import { React } from 'react';
-import AdminForm from '../AdminForm/AdminForm.jsx';
+import AdminFormImage from '../AdminFormImage/AdminFormImage.jsx';
 import AdminFormInput from '../AdminFormInput/AdminFormInput.jsx';
 import AdminFormTextarea from '../AdminFormTextarea/AdminFormTextarea.jsx';
-import AdminFormDropzone from '../AdminFormInput copy/AdminFormDropzone.jsx';
 import Icon from '../Icon/Icon.jsx';
 import Button from '../Button/Button.jsx';
 
 function AdminProject({ onClick }) {
   return (
-    <AdminForm modificator='middle'>
-      <fieldset className='admin-form__fieldset'>
-        <legend className='admin-form__legend'>
-          Добавить изображение к проекту
-        </legend>
-        <AdminFormDropzone className='AdminFormDropzone'>
-          <Button
-            aria-label='Delete image button'
-            className='admin-form__button admin-form__button_delete-image'
-            name='button-image-delete'
-            type='submit'
-            onClick={onClick}>
-            <Icon
-              className='delete icon__delete_image'
-              name='trash'
-            />
-          </Button>
-        </AdminFormDropzone>
-      </fieldset>
+    <AdminFormImage>
       <fieldset className='admin-form__fieldset'>
         <legend className='admin-form__legend'>
           Редактировать данные проекта
@@ -98,15 +79,7 @@ function AdminProject({ onClick }) {
           required={true}
         />
       </fieldset>
-      <Button
-        aria-label='Delete project button'
-        className='admin-form__button admin-form__button_delete-project'
-        name='button-project-delete'
-        type='submit'
-        onClick={onClick}>
-        Удалить проект
-      </Button>
-    </AdminForm>
+    </AdminFormImage>
   );
 }
 
