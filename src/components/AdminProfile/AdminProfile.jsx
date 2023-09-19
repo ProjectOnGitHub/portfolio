@@ -8,22 +8,16 @@ function AdminProfile() {
     <AdminForm modificator='middle'>
       <fieldset className='admin-form__fieldset'>
         <AdminFormInput
-          className='admin-form__input'
-          maxLength='25'
-          minLength='2'
-          name='text'
+          name='name'
           placeholder='Редактировать имя'
+          required={true}
           type='text'
-          required
         />
         <AdminFormInput
-          className='admin-form__input'
-          maxLength='64'
-          minLength='8'
-          name='text'
+          name='spec'
           placeholder='Редактировать специальность'
+          required={true}
           type='text'
-          required
         />
         <AdminFormTextarea
           className='admin-form__textarea'

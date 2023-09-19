@@ -32,47 +32,31 @@ function AdminProject({ onClick }) {
           Редактировать данные проекта
         </legend>
         <AdminFormInput
-          className='admin-form__input'
-          maxLength='16'
-          minLength='6'
-          name='text'
+          name='name'
           placeholder='Название проекта'
           required={true}
           type='text'
         />
         <AdminFormInput
-          className='admin-form__input'
-          maxLength='16'
-          minLength='4'
-          name='text'
-          placeholder='URL проекта'
+          name='alias'
+          placeholder='Алиас проекта'
           required={true}
           type='text'
         />
         <AdminFormInput
-          className='admin-form__input'
-          maxLength='250'
-          minLength='6'
-          name='text'
+          name='site'
           placeholder='Ссылка на сайт'
-          required={true}
-          type='text'
+          required={false}
+          type='url'
         />
         <AdminFormInput
-          className='admin-form__input'
-          maxLength='250'
-          minLength='6'
-          name='text'
+          name='github'
           placeholder='Ссылка на GitHub'
           required={false}
-          type='text'
+          type='url'
         />
         <div className='admin-form__wrapper'>
           <AdminFormInput
-            className='admin-form__input'
-            maxLength='250'
-            minLength='6'
-            name='text'
             placeholder='Добавить технологии'
             required={true}
             type='text'

@@ -1,21 +1,13 @@
 import { React } from 'react';
 import './_AdminFormInput.scss';
 
-function AdminFormInput({
-  className,
-  maxLength,
-  minLength,
-  name,
-  placeholder,
-  required,
-  type,
-}) {
+function AdminFormInput({ placeholder, required, type, name }) {
   return (
     <input
-      className={className}
-      maxLength={maxLength}
-      minLength={minLength}
-      name={name}
+      className='admin-form__input'
+      maxLength='250'
+      minLength='2'
+      name={`input-${type}-${name}`}
       placeholder={placeholder}
       required={required}
       type={type}
