@@ -10,19 +10,16 @@ function AdminSection({
   children,
   onClick,
 }) {
+  const sectionContainerClass = modificator
+    ? `admin-section__container admin-section__container_${modificator}`
+    : `admin-section__container`;
+
   return (
     <section
       className={`section admin-section admin-section__${className}`}
       id={`admin-${id}`}>
       <h1 className='admin-section__title'>{title}</h1>
-      <div
-        className={
-          modificator
-            ? `admin-section__container admin-section__container_${modificator}`
-            : `admin-section__container`
-        }>
-        {children}
-      </div>
+      <div className={sectionContainerClass}>{children}</div>
       <ul className='admin-section__buttons'>
         <li className='admin-section__buttons-item'>
           <Button

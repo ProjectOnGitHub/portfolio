@@ -5,6 +5,7 @@ import AdminProfile from '../AdminProfile/AdminProfile.jsx';
 import AdminProjects from '../AdminProjects/AdminProjects.jsx';
 import AdminProject from '../AdminProject/AdminProject.jsx';
 import AdminSkills from '../AdminSkills/AdminSkills.jsx';
+import AdminSkill from '../AdminSkill/AdminSkill.jsx';
 
 function MainAdmin() {
   return (
@@ -81,7 +82,7 @@ function MainAdmin() {
             id='skill'
             modificator='skill'
             title='Редактирование навыка'>
-            <AdminProject></AdminProject>
+            <AdminSkill></AdminSkill>
           </AdminSection>
         </Route>
       </Switch>
