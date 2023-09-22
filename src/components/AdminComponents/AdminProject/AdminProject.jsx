@@ -2,7 +2,7 @@ import AdminFormImage from '../AdminFormImage/AdminFormImage.jsx';
 import AdminFormInput from '../AdminFormInput/AdminFormInput.jsx';
 import AdminFormTextarea from '../AdminFormTextarea/AdminFormTextarea.jsx';
 import Icon from '../../Icon/Icon.jsx';
-import Button from '../../Button/Button.jsx';
+import Button from '../../BaseComponents/Button/Button.jsx';
 
 function AdminProject({ onClick }) {
   return (

@@ -1,0 +1,20 @@
+@import '../../../scss/mixins';
+@import '../../../scss/variables';
+
+.logo {
+  @include flexible();
+  z-index: 10;
+
+  &_middle {
+    width: 28px;
+    height: 28px;
+    fill: $color-dark;
+    stroke: $color-light;
+  }
+  &_small {
+    width: 20px;
+    height: 24px;
+    fill: $color-light;
+    stroke: $color-dark;
+  }
+}

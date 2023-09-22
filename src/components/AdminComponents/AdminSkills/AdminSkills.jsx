@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import AdminForm from '../AdminForm/AdminForm.jsx';
 import AdminFormTextarea from '../AdminFormTextarea/AdminFormTextarea.jsx';
-import Button from '../../Button/Button.jsx';
+import Button from '../../BaseComponents/Button/Button.jsx';
 import Icon from '../../Icon/Icon.jsx';
 import ListItem from '../../ListItem/ListItem.jsx';
 import AdminSkillsList from '../AdminSkillsList/AdminSkillsList.jsx';

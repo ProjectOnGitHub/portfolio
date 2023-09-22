@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import projects from '../../../utils/projects';
 import ListItem from '../../ListItem/ListItem.jsx';
 import imagesMap from '../../../utils/images';
-import Button from '../../Button/Button.jsx';
+import Button from '../../BaseComponents/Button/Button.jsx';
 import Icon from '../../Icon/Icon.jsx';
 
 import './_AdminProjects.scss';

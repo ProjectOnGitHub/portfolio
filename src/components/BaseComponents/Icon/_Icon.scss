@@ -1,0 +1,107 @@
+@import '../../../scss/_mixins';
+@import '../../../scss/_variables';
+
+.icon {
+  &__project-link {
+    width: 16px;
+    height: 16px;
+    transition: 0.5s ease-in-out;
+
+    &_theme-dark {
+      fill: $color-light;
+    }
+  }
+
+  &__profile {
+    width: 24px;
+    height: 24px;
+    animation: moveArrowDown 2.5s infinite ease-in-out;
+    fill: $color-light;
+  }
+
+  &__skill {
+    width: 120px;
+    height: 120px;
+
+    &_jquery {
+      stroke: $color-light;
+      stroke-width: 5;
+    }
+  }
+
+  &__contact {
+    width: 48px;
+    height: 48px;
+    transition: 0.5s ease-in-out;
+    fill: $color-dark;
+
+    &_theme-dark {
+      fill: $color-light;
+    }
+  }
+
+  &__logo {
+    @include flexible(48px);
+    z-index: 10;
+    height: 48px;
+    fill: $color-light;
+    stroke: $color-dark;
+
+    &_small {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__add {
+    z-index: 10;
+    width: 24px;
+    height: 24px;
+    fill: $color-dark;
+
+    &_theme-dark {
+      fill: $color-light;
+    }
+  }
+
+  &__delete,
+  &__edit {
+    z-index: 10;
+    width: 16px;
+    height: 16px;
+  }
+
+  &__delete {
+    &_tag {
+      fill: $color-light;
+    }
+
+    &_image {
+      fill: $color-dark;
+    }
+  }
+
+  &__theme {
+    z-index: 10;
+    width: 24px;
+    height: 24px;
+    fill: $color-light;
+  }
+
+  &__admin-skills {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@keyframes moveArrowDown {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(7px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
