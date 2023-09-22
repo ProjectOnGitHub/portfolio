@@ -1,4 +1,3 @@
-import React from 'react';
 import './_Contacts.scss';
 import Contact from '../Contact/Contact.jsx';
 import ListItem from '../ListItem/ListItem.jsx';

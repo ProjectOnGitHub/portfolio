@@ -1,4 +1,3 @@
-import { React } from 'react';
 import AdminForm from '../AdminForm/AdminForm.jsx';
 import AdminFormDropzone from '../AdminFormDropzone/AdminFormDropzone.jsx';
 import Icon from '../Icon/Icon.jsx';

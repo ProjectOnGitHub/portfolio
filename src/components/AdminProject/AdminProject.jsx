@@ -1,4 +1,3 @@
-import { React } from 'react';
 import AdminFormImage from '../AdminFormImage/AdminFormImage.jsx';
 import AdminFormInput from '../AdminFormInput/AdminFormInput.jsx';
 import AdminFormTextarea from '../AdminFormTextarea/AdminFormTextarea.jsx';

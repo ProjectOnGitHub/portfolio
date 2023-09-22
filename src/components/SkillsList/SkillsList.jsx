@@ -1,4 +1,3 @@
-import React from 'react';
 import './_SkillsList.scss';
 import Skill from '../Skill/Skill.jsx';
 import ListItem from '../ListItem/ListItem.jsx';

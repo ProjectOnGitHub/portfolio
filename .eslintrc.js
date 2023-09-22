@@ -20,6 +20,8 @@ module.exports = {
     'react',
   ],
   rules: {
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off',
     'react/prop-types': 0,
     'react/jsx-first-prop-new-line': [2, 'multiline'],
     'react/jsx-max-props-per-line': [

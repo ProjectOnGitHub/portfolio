@@ -1,4 +1,3 @@
-import { React } from 'react';
 import imagesMap from '../../utils/images';
 import './_AdminFormDropzone.scss';
 

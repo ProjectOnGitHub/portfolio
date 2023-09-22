@@ -1,4 +1,3 @@
-import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import './_Profile.scss';
 import Icon from '../Icon/Icon.jsx';

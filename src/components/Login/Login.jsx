@@ -1,4 +1,3 @@
-import React from 'react';
 import SectionForm from '../SectionForm/SectionForm.jsx';
 
 function Login() {

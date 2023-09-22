@@ -1,4 +1,3 @@
-import React from 'react';
 import './_Section.scss';
 
 function Section(props) {

@@ -1,4 +1,3 @@
-import { React } from 'react';
 import './_AdminForm.scss';
 
 function AdminForm({ name, handleSubmit, children, modificator }) {

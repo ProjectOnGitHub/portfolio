@@ -1,4 +1,4 @@
-import { React, useContext } from 'react';
+import { useContext } from 'react';
 import './_HeaderSwitcher.scss';
 import DarkThemeContext from '../../contexts/DarkThemeContext.jsx';
 import Button from '../Button/Button.jsx';

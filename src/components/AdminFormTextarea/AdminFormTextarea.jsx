@@ -1,4 +1,3 @@
-import { React } from 'react';
 import './_AdminFormTextarea.scss';
 
 function AdminFormTextarea({ name, placeholder, required }) {

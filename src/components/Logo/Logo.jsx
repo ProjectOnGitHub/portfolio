@@ -1,4 +1,3 @@
-import React from 'react';
 import './_Logo.scss';
 import LogoIcon from '../../svg/sprite.svg';
 

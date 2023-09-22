@@ -1,4 +1,3 @@
-import React from 'react';
 import './_Slide.scss';
 
 function Slide(props) {

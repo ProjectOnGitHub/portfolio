@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import './_Slider.scss';
 import SliderDot from '../SliderDot/SliderDot.jsx';

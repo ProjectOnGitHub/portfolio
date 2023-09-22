@@ -1,4 +1,3 @@
-import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import AdminSection from '../AdminSection/AdminSection.jsx';
 import AdminProfile from '../AdminProfile/AdminProfile.jsx';

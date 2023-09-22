@@ -1,4 +1,3 @@
-import React from 'react';
 import experience from '../../utils/experience';
 import './_Experience.scss';
 

@@ -1,4 +1,3 @@
-import { React } from 'react';
 import AdminForm from '../AdminForm/AdminForm.jsx';
 import AdminFormInput from '../AdminFormInput/AdminFormInput.jsx';
 import AdminFormTextarea from '../AdminFormTextarea/AdminFormTextarea.jsx';

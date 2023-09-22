@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { useState } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import './_HeaderMenu.scss';
 import Button from '../Button/Button.jsx';

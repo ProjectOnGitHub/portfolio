@@ -1,4 +1,4 @@
-import { React, useContext } from 'react';
+import { useContext } from 'react';
 import './_Contact.scss';
 import Icon from '../Icon/Icon.jsx';
 import DarkThemeContext from '../../contexts/DarkThemeContext.jsx';

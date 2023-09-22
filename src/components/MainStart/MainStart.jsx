@@ -1,4 +1,3 @@
-import React from 'react';
 import Section from '../Section/Section.jsx';
 import Profile from '../Profile/Profile.jsx';
 import Projects from '../Projects/Projects.jsx';

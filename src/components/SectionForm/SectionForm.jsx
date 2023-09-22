@@ -1,4 +1,3 @@
-import { React } from 'react';
 import './_SectionForm.scss';
 import { Link } from 'react-router-dom';
 import Button from '../Button/Button.jsx';

@@ -1,4 +1,3 @@
-import React from 'react';
 import './_Skill.scss';
 import Icon from '../Icon/Icon.jsx';
 

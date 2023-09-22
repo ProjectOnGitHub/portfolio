@@ -1,4 +1,3 @@
-import { React } from 'react';
 import './_AdminFormInput.scss';
 
 function AdminFormInput({ placeholder, required, type, name }) {

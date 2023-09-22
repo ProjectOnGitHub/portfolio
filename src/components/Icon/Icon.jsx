@@ -1,4 +1,3 @@
-import React from 'react';
 import './_Icon.scss';
 import Icons from '../../svg/sprite.svg';
 

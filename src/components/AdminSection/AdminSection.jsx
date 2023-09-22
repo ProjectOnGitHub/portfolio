@@ -1,4 +1,3 @@
-import React from 'react';
 import './_AdminSection.scss';
 import Button from '../Button/Button.jsx';
 

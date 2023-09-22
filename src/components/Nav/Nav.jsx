@@ -1,4 +1,3 @@
-import React from 'react';
 import './_Nav.scss';
 
 function Nav(props) {

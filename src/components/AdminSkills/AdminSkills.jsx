@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import AdminForm from '../AdminForm/AdminForm.jsx';
 import AdminFormTextarea from '../AdminFormTextarea/AdminFormTextarea.jsx';
