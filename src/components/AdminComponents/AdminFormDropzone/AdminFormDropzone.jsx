@@ -1,4 +1,4 @@
-import imagesMap from '../../utils/images';
+import imagesMap from '../../../utils/images';
 import './_AdminFormDropzone.scss';
 
 function AdminFormDropzone({ children }) {

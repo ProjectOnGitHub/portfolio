@@ -4,7 +4,7 @@ import DarkThemeContext from '../../contexts/DarkThemeContext.jsx';
 import './_App.scss';
 import Layout from '../Layout/Layout.jsx';
 import MainStart from '../MainStart/MainStart.jsx';
-import MainAdmin from '../MainAdmin/MainAdmin.jsx';
+import AdminMain from '../AdminComponents/AdminMain/AdminMain.jsx';
 import Register from '../Register/Register.jsx';
 import Login from '../Login/Login.jsx';
 
@@ -36,7 +36,7 @@ function App() {
           </Route>
           <Route path='/admin'>
             <Layout isAdminPath={isAdminPath}>
-              <MainAdmin />
+              <AdminMain />
             </Layout>
           </Route>
           <Route

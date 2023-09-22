@@ -1,5 +1,5 @@
 import './_AdminSection.scss';
-import Button from '../Button/Button.jsx';
+import Button from '../../Button/Button.jsx';
 
 function AdminSection({
   className,
