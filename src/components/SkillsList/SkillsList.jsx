@@ -1,6 +1,6 @@
 import './_SkillsList.scss';
 import Skill from '../Skill/Skill.jsx';
-import ListItem from '../ListItem/ListItem.jsx';
+import ListItem from '../BaseComponents/ListItem/ListItem.jsx';
 import skills from '../../utils/skills';
 
 function SkillsList(props) {

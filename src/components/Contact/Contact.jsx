@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import './_Contact.scss';
-import Icon from '../Icon/Icon.jsx';
+import Icon from '../BaseComponents/Icon/Icon.jsx';
 import DarkThemeContext from '../../contexts/DarkThemeContext.jsx';
 
 function Contact({ name, title, url }) {

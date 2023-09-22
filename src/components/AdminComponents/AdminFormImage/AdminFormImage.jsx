@@ -1,6 +1,6 @@
 import AdminForm from '../AdminForm/AdminForm.jsx';
 import AdminFormDropzone from '../AdminFormDropzone/AdminFormDropzone.jsx';
-import Icon from '../../Icon/Icon.jsx';
+import Icon from '../../BaseComponents/Icon/Icon.jsx';
 import Button from '../../BaseComponents/Button/Button.jsx';
 
 function AdminFormImage({ onClick, children }) {

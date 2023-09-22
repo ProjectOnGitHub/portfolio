@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import Icon from '../Icon/Icon.jsx';
+import Icon from '../BaseComponents/Icon/Icon.jsx';
 import imagesMap from '../../utils/images';
 import './_Project.scss';
 import DarkThemeContext from '../../contexts/DarkThemeContext.jsx';

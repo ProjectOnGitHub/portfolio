@@ -1,8 +1,0 @@
-@import '../../scss/mixins';
-@import '../../scss/variables';
-
-.header__navigation {
-  @include gridable();
-  grid-area: nav;
-  justify-content: end;
-}

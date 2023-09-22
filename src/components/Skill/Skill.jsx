@@ -1,5 +1,5 @@
 import './_Skill.scss';
-import Icon from '../Icon/Icon.jsx';
+import Icon from '../BaseComponents/Icon/Icon.jsx';
 
 function Skill({ name, title }) {
   return (

@@ -1,6 +1,6 @@
 import './_Contacts.scss';
 import Contact from '../Contact/Contact.jsx';
-import ListItem from '../ListItem/ListItem.jsx';
+import ListItem from '../BaseComponents/ListItem/ListItem.jsx';
 import contacts from '../../utils/contacts';
 
 function Contacts(props) {
