@@ -17,12 +17,12 @@ function Footer() {
   });
 
   return (
-    <footer className='footer'>
-      <div className='footer__container'>
-        <div className='footer__copyright'>{`© ${year}`}</div>
+    <footer className="footer">
+      <div className="footer__container">
+        <div className="footer__copyright">{`© ${year}`}</div>
         <Logo
-          className='small'
-          name='my-logo'
+          className="small"
+          name="my-logo"
         />
       </div>
     </footer>

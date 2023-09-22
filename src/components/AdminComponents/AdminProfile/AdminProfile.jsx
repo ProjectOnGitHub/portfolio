@@ -4,23 +4,23 @@ import AdminFormTextarea from '../AdminFormTextarea/AdminFormTextarea.jsx';
 
 function AdminProfile() {
   return (
-    <AdminForm modificator='middle'>
-      <fieldset className='admin-form__fieldset'>
+    <AdminForm modificator="middle">
+      <fieldset className="admin-form__fieldset">
         <AdminFormInput
-          name='name'
-          placeholder='Редактировать имя'
+          name="name"
+          placeholder="Редактировать имя"
           required={true}
-          type='text'
+          type="text"
         />
         <AdminFormInput
-          name='spec'
-          placeholder='Редактировать специальность'
+          name="spec"
+          placeholder="Редактировать специальность"
           required={true}
-          type='text'
+          type="text"
         />
         <AdminFormTextarea
-          name='description'
-          placeholder='Добавить описание'
+          name="description"
+          placeholder="Добавить описание"
           required={true}
         />
       </fieldset>

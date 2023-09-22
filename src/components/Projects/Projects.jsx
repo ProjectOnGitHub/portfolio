@@ -6,12 +6,12 @@ import projects from '../../utils/projects';
 function Projects(props) {
   return (
     <>
-      <h2 className='projects__title'>{props.title}</h2>
-      <ul className='projects__list'>
+      <h2 className="projects__title">{props.title}</h2>
+      <ul className="projects__list">
         {projects.map((item) => (
           <ListItem
             key={item.id}
-            className='project'>
+            className="project">
             <Project
               description={item.description}
               githubUrl={item.githubUrl}

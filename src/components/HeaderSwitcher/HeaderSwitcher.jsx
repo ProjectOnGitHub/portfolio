@@ -17,15 +17,15 @@ function HeaderSwitcher() {
   }
 
   return (
-    <div className='header__switcher'>
+    <div className="header__switcher">
       <Button
-        aria-label='Toggle theme'
-        className='header__switcher-button'
-        name='header-switcher-theme-button'
-        type='button'
+        aria-label="Toggle theme"
+        className="header__switcher-button"
+        name="header-switcher-theme-button"
+        type="button"
         onClick={toggleTheme}>
         <Icon
-          className='theme'
+          className="theme"
           name={isDarkTheme ? 'sun' : 'moon'}
         />
       </Button>

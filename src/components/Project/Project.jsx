@@ -9,10 +9,10 @@ function Project(props) {
 
   return (
     <>
-      <figure className='project__figure'>
+      <figure className="project__figure">
         <img
           alt={props.title}
-          className='project__image'
+          className="project__image"
           src={imagesMap[`./${[props.image]}`]}
         />
         <figcaption
@@ -24,31 +24,31 @@ function Project(props) {
           {props.title}
         </figcaption>
         <a
-          className='project__link project__link_image'
+          className="project__link project__link_image"
           href={props.url ? props.url : props.githubUrl}
-          rel='noreferrer'
-          target='_blank'></a>
+          rel="noreferrer"
+          target="_blank"></a>
       </figure>
-      <div className='project__text'>
-        <p className='project__paragraph'>{props.description}</p>
+      <div className="project__text">
+        <p className="project__paragraph">{props.description}</p>
 
-        <ul className='project__list'>
+        <ul className="project__list">
           {props.stack
             .sort((a, b) => a.localeCompare(b))
             .map((item) => (
               <li
                 key={item}
-                className='project__list-item'>
+                className="project__list-item">
                 {item}
               </li>
             ))}
         </ul>
       </div>
-      <ul className='project__links'>
+      <ul className="project__links">
         {props.url !== '' ? (
-          <li className='project__links-item'>
+          <li className="project__links-item">
             <Icon
-              name='link'
+              name="link"
               className={
                 isDarkTheme
                   ? 'project-link icon__project-link_theme-dark'
@@ -57,8 +57,8 @@ function Project(props) {
             />
             <a
               href={props.url}
-              rel='noreferrer'
-              target='_blank'
+              rel="noreferrer"
+              target="_blank"
               className={
                 isDarkTheme
                   ? 'project__link project__link_text project__link_theme-dark'
@@ -72,9 +72,9 @@ function Project(props) {
         )}
 
         {props.githubUrl !== '' ? (
-          <li className='project__links-item'>
+          <li className="project__links-item">
             <Icon
-              name='github'
+              name="github"
               className={
                 isDarkTheme
                   ? 'project-link icon__project-link_theme-dark'
@@ -83,8 +83,8 @@ function Project(props) {
             />
             <a
               href={props.githubUrl}
-              rel='noreferrer'
-              target='_blank'
+              rel="noreferrer"
+              target="_blank"
               className={
                 isDarkTheme
                   ? 'project__link project__link_text project__link_theme-dark'

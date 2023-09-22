@@ -28,6 +28,7 @@ module.exports = {
       2,
       { maximum: 1, when: 'multiline' },
     ],
+    'jsx-quotes': ["error", "prefer-double"],
     'react/jsx-indent-props': [2, 2],
     'react/jsx-sort-props': [1, {
       callbacksLast: true,

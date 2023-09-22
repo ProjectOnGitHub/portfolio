@@ -20,14 +20,14 @@ function AdminSkills({ onClick }) {
 
   return (
     <>
-      <AdminForm modificator='middle'>
-        <fieldset className='admin-form__fieldset'>
-          <legend className='admin-form__legend'>
+      <AdminForm modificator="middle">
+        <fieldset className="admin-form__fieldset">
+          <legend className="admin-form__legend">
             Редактировать описание раздела Навыки
           </legend>
           <AdminFormTextarea
-            name='description'
-            placeholder='Добавить описание'
+            name="description"
+            placeholder="Добавить описание"
             required={true}
           />
         </fieldset>
@@ -40,29 +40,29 @@ function AdminSkills({ onClick }) {
           {groupedSkills[type].map((item) => (
             <ListItem
               key={item.id}
-              className='admin-skills__list-item'>
+              className="admin-skills__list-item">
               <Link
-                className='admin-skills__link'
-                to='/admin/skills/skill'>
+                className="admin-skills__link"
+                to="/admin/skills/skill">
                 <Icon
-                  className='admin-skills'
+                  className="admin-skills"
                   modificator={item.name}
                   name={item.name}
                 />
-                <span className='admin-skills__list-title'>{item.title}</span>
+                <span className="admin-skills__list-title">{item.title}</span>
               </Link>
             </ListItem>
           ))}
-          <li className='admin-skills__list-item'>
+          <li className="admin-skills__list-item">
             <Button
-              aria-label='Edit button'
-              className='admin-projects__button admin-projects__button_add'
-              name='button-edit'
-              type='submit'
+              aria-label="Edit button"
+              className="admin-projects__button admin-projects__button_add"
+              name="button-edit"
+              type="submit"
               onClick={onClick}>
               <Icon
-                className='add'
-                name='add'
+                className="add"
+                name="add"
               />
             </Button>
           </li>

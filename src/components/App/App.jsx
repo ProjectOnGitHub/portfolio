@@ -28,24 +28,24 @@ function App() {
       <DarkThemeContext.Provider value={{ isDarkTheme, setIsDarkTheme }}>
         <Switch>
           <Route
-            path='/'
+            path="/"
             exact>
             <Layout isAdminPath={isAdminPath}>
               <MainStart />
             </Layout>
           </Route>
-          <Route path='/admin'>
+          <Route path="/admin">
             <Layout isAdminPath={isAdminPath}>
               <AdminMain />
             </Layout>
           </Route>
           <Route
-            path='/register'
+            path="/register"
             exact>
             <Register></Register>
           </Route>
           <Route
-            path='/login'
+            path="/login"
             exact>
             <Login />
           </Route>

@@ -19,18 +19,18 @@ function Header({ isAdminPath }) {
       className={`${color ? 'header header_fixed' : 'header'} ${
         isAdminPath ? 'header_theme-admin' : ''
       }`}>
-      <div className='header__container'>
+      <div className="header__container">
         <a
-          className='header__link'
-          href='/#top'>
+          className="header__link"
+          href="/#top">
           <Logo
-            className='middle'
-            name='my-logo'
+            className="middle"
+            name="my-logo"
           />
         </a>
-        <Nav className='header'>
+        <Nav className="header">
           <HeaderMenu
-            className='header'
+            className="header"
             isAdminPath={isAdminPath}
           />
         </Nav>

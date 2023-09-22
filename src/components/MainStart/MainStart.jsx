@@ -9,29 +9,29 @@ function MainStart() {
   return (
     <>
       <Section
-        className='profile'
-        id='profile'>
-        <Profile title='Александр' />
+        className="profile"
+        id="profile">
+        <Profile title="Александр" />
       </Section>
       <Section
-        className='projects'
-        id='projects'>
-        <Projects title='Проекты' />
+        className="projects"
+        id="projects">
+        <Projects title="Проекты" />
       </Section>
       <Section
-        className='skills'
-        id='skills'>
-        <Skills title='Навыки' />
+        className="skills"
+        id="skills">
+        <Skills title="Навыки" />
       </Section>
       <Section
-        className='experience'
-        id='experience'>
-        <Experience title='Опыт работы' />
+        className="experience"
+        id="experience">
+        <Experience title="Опыт работы" />
       </Section>
       <Section
-        className='contacts'
-        id='contacts'>
-        <Contacts title='Контакты' />
+        className="contacts"
+        id="contacts">
+        <Contacts title="Контакты" />
       </Section>
     </>
   );
