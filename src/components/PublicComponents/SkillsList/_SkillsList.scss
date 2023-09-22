@@ -1,0 +1,24 @@
+@import '../../../scss/mixins';
+@import '../../../scss/variables';
+
+.skills {
+  &__container {
+    @include gridable();
+    justify-items: center;
+    gap: 25px;
+  }
+
+  &__list {
+    @include flexible();
+    @include unmarkedList;
+    justify-content: center;
+    justify-items: center;
+    flex-wrap: wrap;
+    gap: 25px 70px;
+  }
+
+  &__subtitle {
+    @include defaultSubtitle(22px);
+    text-align: center;
+  }
+}

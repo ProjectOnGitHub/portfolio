@@ -1,0 +1,19 @@
+@import '../../../scss/mixins';
+@import '../../../scss/variables';
+
+.skills {
+  &__title {
+    @include defaultSubtitle(32px);
+  }
+
+  &__text {
+    @include flexible();
+    flex-direction: column;
+    max-width: $middle-width;
+    gap: 10px;
+  }
+
+  &__paragraph {
+    margin: 0;
+  }
+}

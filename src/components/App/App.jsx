@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 import { Switch, Route, useLocation } from 'react-router-dom';
 import DarkThemeContext from '../../contexts/DarkThemeContext.jsx';
 import './_App.scss';
-import Layout from '../Layout/Layout.jsx';
-import MainStart from '../MainStart/MainStart.jsx';
+import Layout from '../PublicComponents/Layout/Layout.jsx';
+import MainStart from '../PublicComponents/MainStart/MainStart.jsx';
 import AdminMain from '../AdminComponents/AdminMain/AdminMain.jsx';
-import Register from '../Register/Register.jsx';
-import Login from '../Login/Login.jsx';
+import Register from '../PublicComponents/Register/Register.jsx';
+import Login from '../PublicComponents/Login/Login.jsx';
 
 function App() {
   const [isDarkTheme, setIsDarkTheme] = useState(() => {

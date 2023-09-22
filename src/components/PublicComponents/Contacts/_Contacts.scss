@@ -1,0 +1,16 @@
+@import '../../../scss/mixins';
+@import '../../../scss/variables';
+
+.contacts {
+  padding-bottom: 70px;
+  &__list {
+    @include flexible();
+    @include unmarkedList;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px 70px;
+  }
+  &__title {
+    @include defaultSubtitle(32px);
+  }
+}

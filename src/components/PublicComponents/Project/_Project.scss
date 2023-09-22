@@ -1,0 +1,122 @@
+@import '../../../scss/mixins';
+@import '../../../scss/variables';
+
+.project {
+  @include gridable();
+  grid-template-rows: repeat(2, max-content) 1fr;
+  align-content: start;
+  gap: 20px;
+
+  &__figure {
+    @include gridable();
+    position: relative;
+    align-items: end;
+    margin: 0;
+    overflow: hidden;
+
+    &:hover .project__image {
+      @media #{$mouse-device} {
+        transform: scale(1.2);
+      }
+    }
+
+    &:hover .project__title {
+      @media #{$mouse-device} {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__title {
+    @include flexible();
+    position: absolute;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    font-size: 36px;
+    text-align: center;
+    color: $color-dark;
+    background-color: rgba($color-light, 0.9);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+
+    &_theme-dark {
+      color: $color-light;
+      background-color: rgba($color-dark, 0.9);
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 1s ease;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  &__text {
+    @include gridable();
+    align-content: start;
+    box-sizing: border-box;
+    font-size: 16px;
+    gap: 10px;
+    @media screen and (max-width: $tablet-large) {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+  }
+
+  &__paragraph {
+    margin: 0;
+  }
+
+  &__list {
+    @include flexible();
+    @include unmarkedList;
+    flex-wrap: wrap;
+    font-size: 12px;
+    gap: 7px 15px;
+  }
+
+  &__links {
+    @include unmarkedList;
+    @include gridable();
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    align-self: end;
+    gap: 25px;
+
+    &-item {
+      @include flexible();
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+  &__link {
+    width: max-content;
+    font-size: 14px;
+
+    &_text {
+      @include defaultLink;
+      color: $color-dark;
+      text-decoration: none;
+      transition: 0.5s ease-in-out;
+    }
+
+    &_theme-dark {
+      color: $color-light;
+    }
+
+    &_image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

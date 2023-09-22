@@ -1,0 +1,8 @@
+@import '../../../scss/mixins';
+@import '../../../scss/variables';
+
+.main {
+  @include gridable();
+  grid-area: block;
+  justify-items: center;
+}

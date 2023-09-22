@@ -1,0 +1,27 @@
+@import '../../../scss/mixins';
+@import '../../../scss/variables';
+
+.header {
+  &__switcher {
+    z-index: 10;
+    grid-area: theme;
+
+    &-button {
+      @include button(0px);
+      @include flexible();
+      align-items: center;
+      opacity: 1;
+      transition: 0.5s ease-in-out;
+
+      &:hover {
+        @media #{$mouse-device} {
+          opacity: 0.8;
+        }
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

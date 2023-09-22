@@ -1,0 +1,14 @@
+@import '../../../scss/mixins';
+@import '../../../scss/variables';
+
+.skill {
+  @include gridable();
+  justify-items: center;
+  max-width: 150px;
+  gap: 20px;
+
+  &__title {
+    @include defaultSubtitle(18px);
+    text-align: center;
+  }
+}
