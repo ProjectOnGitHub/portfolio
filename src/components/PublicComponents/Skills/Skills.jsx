@@ -1,10 +1,10 @@
 import './_Skills.scss';
 import SkillsList from '../SkillsList/SkillsList.jsx';
 
-function Skills(props) {
+function Skills({ skills, title }) {
   return (
     <>
-      <h2 className="skills__title">{props.title}</h2>
+      <h2 className="skills__title">{title}</h2>
       <div className="skills__text">
         <p className="skills__paragraph">
           Могу кроссплатформенно, кроссбраузерно и адаптивно сверстать проекты
@@ -26,22 +26,27 @@ function Skills(props) {
         </p>
       </div>
       <SkillsList
+        skills={skills}
         subtitle="Языки"
         type="language"
       />
       <SkillsList
+        skills={skills}
         subtitle="Препроцессоры и Шаблонизаторы"
         type="preprocessor"
       />
       <SkillsList
+        skills={skills}
         subtitle="Библиотеки и Фреймворки"
         type="library"
       />
       <SkillsList
+        skills={skills}
         subtitle="Системы управления содержимым"
         type="cms"
       />
       <SkillsList
+        skills={skills}
         subtitle="Инструменты"
         type="tool"
       />

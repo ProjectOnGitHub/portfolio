@@ -5,10 +5,9 @@ import Button from '../../BaseComponents/Button/Button.jsx';
 import Icon from '../../BaseComponents/Icon/Icon.jsx';
 import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
 import AdminSkillsList from '../AdminSkillsList/AdminSkillsList.jsx';
-import skills from '../../../utils/skills';
 import './_AdminSkills.scss';
 
-function AdminSkills({ onClick }) {
+function AdminSkills({ onClick, skills }) {
   const groupedSkills = {};
 
   skills.forEach((skill) => {

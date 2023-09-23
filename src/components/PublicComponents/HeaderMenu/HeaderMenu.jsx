@@ -3,9 +3,8 @@ import { HashLink as Link } from 'react-router-hash-link';
 import './_HeaderMenu.scss';
 import Button from '../../BaseComponents/Button/Button.jsx';
 import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
-import menu from '../../../utils/menu';
 
-function HeaderMenu(props) {
+function HeaderMenu({ links, className, isAdminPath }) {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
 
   function toggleMenu() {
@@ -41,16 +40,16 @@ function HeaderMenu(props) {
       <ul
         className={
           isOpenMenu
-            ? `${props.className}__menu ${props.className}__menu_opened`
-            : `${props.className}__menu`
+            ? `${className}__menu ${className}__menu_opened`
+            : `${className}__menu`
         }>
-        {menu.map((item) => (
+        {links.map((item) => (
           <ListItem
             key={item.id}
-            className={`${props.className}__menu-item`}>
+            className={`${className}__menu-item`}>
             <Link
-              className={`${props.className}__menu-link`}
-              to={props.isAdminPath ? `/admin/${item.url}` : `#${item.url}`}
+              className={`${className}__menu-link`}
+              to={isAdminPath ? `/admin/${item.url}` : `#${item.url}`}
               onClick={closeMenu}>
               {item.anchor}
             </Link>

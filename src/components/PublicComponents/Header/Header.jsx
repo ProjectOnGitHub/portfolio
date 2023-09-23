@@ -5,7 +5,7 @@ import Nav from '../../BaseComponents/Nav/Nav.jsx';
 import HeaderMenu from '../HeaderMenu/HeaderMenu.jsx';
 import HeaderSwitcher from '../HeaderSwitcher/HeaderSwitcher.jsx';
 
-function Header({ isAdminPath }) {
+function Header({ isAdminPath, links }) {
   const [color, setColor] = useState(false);
 
   useEffect(() => {
@@ -32,6 +32,7 @@ function Header({ isAdminPath }) {
           <HeaderMenu
             className="header"
             isAdminPath={isAdminPath}
+            links={links}
           />
         </Nav>
         <HeaderSwitcher />
