@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import projects from '../../../utils/projects';
 import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
 import imagesMap from '../../../utils/images';
 import Button from '../../BaseComponents/Button/Button.jsx';
@@ -7,7 +6,7 @@ import Icon from '../../BaseComponents/Icon/Icon.jsx';
 
 import './_AdminProjects.scss';
 
-function AdminProjects({ onClick }) {
+function AdminProjects({ onClick, projects }) {
   return (
     <>
       <ul className="admin-projects__list">

@@ -1,12 +1,11 @@
 import './_Projects.scss';
 import Project from '../Project/Project.jsx';
 import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
-import projects from '../../../utils/projects';
 
-function Projects(props) {
+function Projects({ projects, title }) {
   return (
     <>
-      <h2 className="projects__title">{props.title}</h2>
+      <h2 className="projects__title">{title}</h2>
       <ul className="projects__list">
         {projects.map((item) => (
           <ListItem

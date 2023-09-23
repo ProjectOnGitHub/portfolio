@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Switch, Route, useLocation } from 'react-router-dom';
 import DarkThemeContext from '../../contexts/DarkThemeContext.jsx';
+import allProjects from '../../utils/projects';
 import './_App.scss';
 import Layout from '../PublicComponents/Layout/Layout.jsx';
 import MainStart from '../PublicComponents/MainStart/MainStart.jsx';
@@ -13,6 +14,8 @@ function App() {
     const storedTheme = localStorage.getItem('isDarkTheme');
     return storedTheme ? JSON.parse(storedTheme) : false;
   });
+  const [projects] = useState(allProjects);
+
   const location = useLocation();
   const isAdminPath = location.pathname.startsWith('/admin');
 
@@ -31,12 +34,12 @@ function App() {
             path="/"
             exact>
             <Layout isAdminPath={isAdminPath}>
-              <MainStart />
+              <MainStart projects={projects} />
             </Layout>
           </Route>
           <Route path="/admin">
             <Layout isAdminPath={isAdminPath}>
-              <AdminMain />
+              <AdminMain projects={projects} />
             </Layout>
           </Route>
           <Route
