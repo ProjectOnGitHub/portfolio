@@ -72,6 +72,7 @@ function App() {
               isAdminPath={isAdminPath}
               links={links}>
               <AdminMain
+                experience={experience}
                 projects={projects}
                 skillsByType={skillsByType}
               />
