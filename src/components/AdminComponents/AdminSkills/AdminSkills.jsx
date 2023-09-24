@@ -12,9 +12,13 @@ function AdminSkills({ onClick, skills }) {
 
   skills.forEach((skill) => {
     if (!groupedSkills[skill.type]) {
-      groupedSkills[skill.type] = [];
+      groupedSkills[skill.type] = {
+        type: skill.type,
+        sectionTitle: skill.sectionTitle,
+        skills: [],
+      };
     }
-    groupedSkills[skill.type].push(skill);
+    groupedSkills[skill.type].skills.push(skill);
   });
 
   return (
@@ -32,11 +36,11 @@ function AdminSkills({ onClick, skills }) {
         </fieldset>
       </AdminForm>
 
-      {Object.keys(groupedSkills).map((type) => (
+      {Object.values(groupedSkills).map((group) => (
         <AdminSkillsList
-          key={type}
-          title={type}>
-          {groupedSkills[type].map((item) => (
+          key={group.type}
+          title={group.sectionTitle}>
+          {group.skills.map((item) => (
             <ListItem
               key={item.id}
               className="admin-skills__list-item">
