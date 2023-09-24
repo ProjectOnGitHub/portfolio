@@ -1,8 +1,9 @@
 import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
 import ExperienceItem from '../../PublicComponents/ExperienceItem/ExperienceItem.jsx';
 import List from '../../BaseComponents/List/List.jsx';
+import AdminSectionButtonsLocal from '../AdminSectionButtonsLocal/AdminSectionButtonsLocal.jsx';
 
-function AdminExperience({ experience, className }) {
+function AdminExperience({ experience, className, onClick }) {
   const reversedExperience = [...experience].reverse();
 
   return (
@@ -22,6 +23,7 @@ function AdminExperience({ experience, className }) {
               text={item.text}
               title={item.title}
             />
+            <AdminSectionButtonsLocal onClick={onClick} />
           </ListItem>
         ))}
       </List>

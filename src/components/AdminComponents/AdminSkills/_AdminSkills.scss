@@ -8,11 +8,12 @@
     color: $color-dark;
   }
 
-  &__link {
+  &__list-item {
+    position: relative;
     @include flexible();
     flex-direction: column;
     align-items: center;
-    width: 80px;
+    max-width: max-content;
     height: auto;
     color: $color-dark;
     text-decoration: none;

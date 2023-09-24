@@ -57,6 +57,7 @@
       height: 24px;
       background-color: $color-bg-input;
       border-radius: $borderRadiusDefault;
+      border: 1px solid $color-bg-dot;
     }
   }
 
@@ -73,16 +74,14 @@
     &-item {
       @include gridable();
       gap: 5px;
-
-      &:hover {
-        opacity: 0.5;
-      }
+      position: relative;
     }
   }
 
   &__date {
     font-size: 12px;
   }
+
   &__text {
     @include gridable(100%);
     gap: 8px;
