@@ -35,4 +35,32 @@
       background-color: $color-decorate-link;
     }
   }
+
+  &__list {
+    @include unmarkedList;
+    @include flexible();
+
+    &_experience {
+      max-width: $middle-width;
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    &-item {
+      @include gridable();
+      gap: 5px;
+    }
+  }
+
+  &__date {
+    font-size: 12px;
+  }
+  &__text {
+    @include gridable(100%);
+    gap: 8px;
+  }
+
+  &__paragraph {
+    margin: 0;
+  }
 }

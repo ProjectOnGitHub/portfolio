@@ -54,7 +54,7 @@ function MainAdmin({ projects, skillsByType, experience }) {
             modificator="experience"
             title="Редактирование опыта работы">
             <AdminExperience
-              className="admin-experience"
+              className="admin-section"
               experience={experience}
             />
           </AdminSection>

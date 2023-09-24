@@ -1,13 +1,15 @@
 import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
 import ExperienceItem from '../../PublicComponents/ExperienceItem/ExperienceItem.jsx';
-import './_AdminExperience.scss';
+import List from '../../BaseComponents/List/List.jsx';
 
 function AdminExperience({ experience, className }) {
   const reversedExperience = [...experience].reverse();
 
   return (
     <>
-      <ul className={`${className}__list`}>
+      <List
+        className={`${className}__list`}
+        modificator="experience">
         {[...reversedExperience].map((item) => (
           <ListItem
             key={item.id}
@@ -22,7 +24,7 @@ function AdminExperience({ experience, className }) {
             />
           </ListItem>
         ))}
-      </ul>
+      </List>
     </>
   );
 }

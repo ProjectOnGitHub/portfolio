@@ -1,7 +1,7 @@
 function List({ className, children, modificator }) {
   const classes = modificator
-    ? `${className}__list ${className}__list_${modificator}`
-    : `${className}__list`;
+    ? `${className} ${className}_${modificator}`
+    : `${className}`;
 
   return <ul className={classes}>{children}</ul>;
 }

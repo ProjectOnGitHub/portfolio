@@ -15,7 +15,7 @@ function AdminSection({
 
   return (
     <section
-      className={`section admin-section admin-section__${className}`}
+      className={`section admin-section admin-${className}`}
       id={`admin-${id}`}>
       <h1 className="admin-section__title">{title}</h1>
       <div className={sectionContainerClass}>{children}</div>
