@@ -20,6 +20,7 @@ function App() {
   const [projects] = useState(allProjects);
   const [skills] = useState(allSkills);
   const [links] = useState(allLinks);
+  const [skillsByType, setSkillsByType] = useState({});
 
   const location = useLocation();
   const isAdminPath = location.pathname.startsWith('/admin');
@@ -27,6 +28,22 @@ function App() {
   useEffect(() => {
     localStorage.setItem('isDarkTheme', JSON.stringify(isDarkTheme));
   }, [isDarkTheme]);
+
+  useEffect(() => {
+    const updateSkills = {};
+    skills.forEach((skill) => {
+      if (!updateSkills[skill.type]) {
+        updateSkills[skill.type] = {
+          type: skill.type,
+          sectionTitle: skill.sectionTitle,
+          skills: [],
+        };
+      }
+      updateSkills[skill.type].skills.push(skill);
+    });
+
+    setSkillsByType(updateSkills);
+  }, []);
 
   return (
     <div
@@ -43,7 +60,7 @@ function App() {
               links={links}>
               <MainStart
                 projects={projects}
-                skills={skills}
+                skillsByType={skillsByType}
               />
             </Layout>
           </Route>
@@ -53,7 +70,7 @@ function App() {
               links={links}>
               <AdminMain
                 projects={projects}
-                skills={skills}
+                skillsByType={skillsByType}
               />
             </Layout>
           </Route>

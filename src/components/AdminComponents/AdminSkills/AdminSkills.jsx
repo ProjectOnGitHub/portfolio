@@ -7,20 +7,7 @@ import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
 import AdminSkillsList from '../AdminSkillsList/AdminSkillsList.jsx';
 import './_AdminSkills.scss';
 
-function AdminSkills({ onClick, skills }) {
-  const groupedSkills = {};
-
-  skills.forEach((skill) => {
-    if (!groupedSkills[skill.type]) {
-      groupedSkills[skill.type] = {
-        type: skill.type,
-        sectionTitle: skill.sectionTitle,
-        skills: [],
-      };
-    }
-    groupedSkills[skill.type].skills.push(skill);
-  });
-
+function AdminSkills({ onClick, skillsByType }) {
   return (
     <>
       <AdminForm modificator="middle">
@@ -36,7 +23,7 @@ function AdminSkills({ onClick, skills }) {
         </fieldset>
       </AdminForm>
 
-      {Object.values(groupedSkills).map((group) => (
+      {Object.values(skillsByType).map((group) => (
         <AdminSkillsList
           key={group.type}
           title={group.sectionTitle}>

@@ -1,27 +1,10 @@
 import './_SkillsList.scss';
-import Skill from '../Skill/Skill.jsx';
-import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
 
-function SkillsList({ skills, type, subtitle }) {
+function SkillsList({ children, type, title }) {
   return (
     <div className={`skills__container skills__container_${type}`}>
-      <h3 className="skills__subtitle">{subtitle}</h3>
-      <ul className="skills__list">
-        {skills.map(
-          (item) =>
-            item.type === type && (
-              <ListItem
-                key={item.id}
-                className="skill">
-                <Skill
-                  name={item.name}
-                  title={item.title}
-                  type={item.type}
-                />
-              </ListItem>
-            ),
-        )}
-      </ul>
+      <h3 className="skills__subtitle">{title}</h3>
+      <ul className="skills__list">{children}</ul>
     </div>
   );
 }

@@ -5,7 +5,7 @@ import Contacts from '../Contacts/Contacts.jsx';
 import Skills from '../Skills/Skills.jsx';
 import Experience from '../Experience/Experience.jsx';
 
-function MainStart({ projects, skills }) {
+function MainStart({ projects, skillsByType }) {
   return (
     <>
       <Section
@@ -23,9 +23,10 @@ function MainStart({ projects, skills }) {
       </Section>
       <Section
         className="skills"
-        id="skills">
+        id="skills"
+        title="Навыки">
         <Skills
-          skills={skills}
+          skillsByType={skillsByType}
           title="Навыки"
         />
       </Section>

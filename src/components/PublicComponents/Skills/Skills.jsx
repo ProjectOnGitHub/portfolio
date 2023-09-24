@@ -1,7 +1,9 @@
 import './_Skills.scss';
 import SkillsList from '../SkillsList/SkillsList.jsx';
+import Skill from '../Skill/Skill.jsx';
+import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
 
-function Skills({ skills, title }) {
+function Skills({ title, skillsByType }) {
   return (
     <>
       <h2 className="skills__title">{title}</h2>
@@ -25,31 +27,24 @@ function Skills({ skills, title }) {
           есть опыт работы как с Vue.js, так и с Nuxt.js.
         </p>
       </div>
-      <SkillsList
-        skills={skills}
-        subtitle="Языки"
-        type="language"
-      />
-      <SkillsList
-        skills={skills}
-        subtitle="Препроцессоры и Шаблонизаторы"
-        type="preprocessor"
-      />
-      <SkillsList
-        skills={skills}
-        subtitle="Библиотеки и Фреймворки"
-        type="library"
-      />
-      <SkillsList
-        skills={skills}
-        subtitle="Системы управления содержимым"
-        type="cms"
-      />
-      <SkillsList
-        skills={skills}
-        subtitle="Инструменты"
-        type="tool"
-      />
+
+      {Object.values(skillsByType).map((group) => (
+        <SkillsList
+          key={group.type}
+          title={group.sectionTitle}>
+          {group.skills.map((item) => (
+            <ListItem
+              key={item.id}
+              className="skill">
+              <Skill
+                name={item.name}
+                title={item.title}
+                type={item.type}
+              />
+            </ListItem>
+          ))}
+        </SkillsList>
+      ))}
     </>
   );
 }
