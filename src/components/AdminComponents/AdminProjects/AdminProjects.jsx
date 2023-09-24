@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import imagesMap from '../../../utils/images';
 import List from '../../BaseComponents/List/List.jsx';
 import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
@@ -12,27 +11,24 @@ function AdminProjects({ onClick, projects }) {
   return (
     <>
       <List
-        className="admin-projects__list"
+        className="admin-section__list"
         modificator="projects">
         {projects.map((item) => (
           <ListItem
             key={item.id}
-            className="admin-projects__list-item">
-            <Link
-              className="admin-projects__link"
-              to="/admin/projects/project">
-              <figure className="admin-projects__figure">
-                <img
-                  alt={item.title}
-                  className="admin-projects__image"
-                  src={imagesMap[`./${[item.image]}`]}
-                />
-                <figcaption className="admin-projects__caption">
-                  {item.title}
-                </figcaption>
-                <AdminSectionButtonsLocal onClick={onClick} />
-              </figure>
-            </Link>
+            className="admin-section__list-item"
+            modificator="projects">
+            <figure className="admin-projects__figure">
+              <img
+                alt={item.title}
+                className="admin-projects__image"
+                src={imagesMap[`./${[item.image]}`]}
+              />
+              <figcaption className="admin-projects__caption">
+                {item.title}
+              </figcaption>
+              <AdminSectionButtonsLocal onClick={onClick} />
+            </figure>
           </ListItem>
         ))}
         <li className="admin-projects__list-item">
