@@ -1,12 +1,13 @@
 import './_Projects.scss';
 import Project from '../Project/Project.jsx';
+import List from '../../BaseComponents/List/List.jsx';
 import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
 
 function Projects({ projects, title }) {
   return (
     <>
       <h2 className="projects__title">{title}</h2>
-      <ul className="projects__list">
+      <List className="projects__list">
         {projects.map((item) => (
           <ListItem
             key={item.id}
@@ -21,7 +22,7 @@ function Projects({ projects, title }) {
             />
           </ListItem>
         ))}
-      </ul>
+      </List>
     </>
   );
 }

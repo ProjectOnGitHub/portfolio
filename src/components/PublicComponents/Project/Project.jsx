@@ -1,5 +1,7 @@
 import { useContext } from 'react';
 import Icon from '../../BaseComponents/Icon/Icon.jsx';
+import List from '../../BaseComponents/List/List.jsx';
+import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
 import imagesMap from '../../../utils/images';
 import './_Project.scss';
 import DarkThemeContext from '../../../contexts/DarkThemeContext.jsx';
@@ -32,21 +34,21 @@ function Project(props) {
       <div className="project__text">
         <p className="project__paragraph">{props.description}</p>
 
-        <ul className="project__list">
+        <List className="project__list">
           {props.stack
             .sort((a, b) => a.localeCompare(b))
             .map((item) => (
-              <li
+              <ListItem
                 key={item}
                 className="project__list-item">
                 {item}
-              </li>
+              </ListItem>
             ))}
-        </ul>
+        </List>
       </div>
-      <ul className="project__links">
+      <List className="project__links">
         {props.url && (
-          <li className="project__links-item">
+          <ListItem className="project__links-item">
             <Icon
               name="link"
               className={
@@ -66,10 +68,10 @@ function Project(props) {
               }>
               Cайт
             </a>
-          </li>
+          </ListItem>
         )}
         {props.githubUrl && (
-          <li className="project__links-item">
+          <ListItem className="project__links-item">
             <Icon
               name="github"
               className={
@@ -89,9 +91,9 @@ function Project(props) {
               }>
               GitHub
             </a>
-          </li>
+          </ListItem>
         )}
-      </ul>
+      </List>
     </>
   );
 }

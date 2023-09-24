@@ -1,4 +1,6 @@
 import './_AdminSection.scss';
+import List from '../../BaseComponents/List/List.jsx';
+import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
 import Button from '../../BaseComponents/Button/Button.jsx';
 
 function AdminSection({
@@ -19,8 +21,8 @@ function AdminSection({
       id={`admin-${id}`}>
       <h1 className="admin-section__title">{title}</h1>
       <div className={sectionContainerClass}>{children}</div>
-      <ul className="admin-section__buttons">
-        <li className="admin-section__buttons-item">
+      <List className="admin-section__buttons">
+        <ListItem className="admin-section__buttons-item">
           <Button
             aria-label="Reset button"
             className="admin-section__button admin-section__button_reset"
@@ -29,8 +31,8 @@ function AdminSection({
             onClick={onClick}>
             Сбросить изменения
           </Button>
-        </li>
-        <li className="admin-section__buttons-item">
+        </ListItem>
+        <ListItem className="admin-section__buttons-item">
           <Button
             aria-label="Save button"
             className="admin-section__button admin-section__button_save"
@@ -39,8 +41,8 @@ function AdminSection({
             onClick={onClick}>
             Сохранить изменения
           </Button>
-        </li>
-      </ul>
+        </ListItem>
+      </List>
     </section>
   );
 }

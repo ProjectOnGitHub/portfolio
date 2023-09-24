@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import './_HeaderMenu.scss';
 import Button from '../../BaseComponents/Button/Button.jsx';
+import List from '../../BaseComponents/List/List.jsx';
 import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
 
 function HeaderMenu({ links, className, isAdminPath }) {
@@ -37,7 +38,7 @@ function HeaderMenu({ links, className, isAdminPath }) {
       <div
         className={isOpenMenu ? 'overlay overlay_active' : 'overlay'}
         onClick={toggleMenu}></div>
-      <ul
+      <List
         className={
           isOpenMenu
             ? `${className}__menu ${className}__menu_opened`
@@ -55,7 +56,7 @@ function HeaderMenu({ links, className, isAdminPath }) {
             </Link>
           </ListItem>
         ))}
-      </ul>
+      </List>
     </>
   );
 }

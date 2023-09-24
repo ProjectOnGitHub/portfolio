@@ -1,4 +1,5 @@
 import './_Experience.scss';
+import List from '../../BaseComponents/List/List.jsx';
 import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
 import ExperienceItem from '../ExperienceItem/ExperienceItem.jsx';
 
@@ -7,7 +8,7 @@ function Experience({ title, experience }) {
   return (
     <>
       <h2 className="experience__title">{title}</h2>
-      <ul className="experience__list">
+      <List className="experience__list">
         {[...reversedExperience].map((item) => (
           <ListItem
             key={item.id}
@@ -22,7 +23,7 @@ function Experience({ title, experience }) {
             />
           </ListItem>
         ))}
-      </ul>
+      </List>
     </>
   );
 }

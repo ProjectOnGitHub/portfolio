@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
-import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
 import imagesMap from '../../../utils/images';
+import List from '../../BaseComponents/List/List.jsx';
+import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
 import Button from '../../BaseComponents/Button/Button.jsx';
 import Icon from '../../BaseComponents/Icon/Icon.jsx';
 
@@ -9,7 +10,7 @@ import './_AdminProjects.scss';
 function AdminProjects({ onClick, projects }) {
   return (
     <>
-      <ul className="admin-projects__list">
+      <List className="admin-projects__list">
         {projects.map((item) => (
           <ListItem
             key={item.id}
@@ -55,7 +56,7 @@ function AdminProjects({ onClick, projects }) {
             />
           </Button>
         </li>
-      </ul>
+      </List>
     </>
   );
 }

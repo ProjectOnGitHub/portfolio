@@ -1,6 +1,8 @@
 import AdminFormImage from '../AdminFormImage/AdminFormImage.jsx';
 import AdminFormInput from '../AdminFormInput/AdminFormInput.jsx';
 import AdminFormTextarea from '../AdminFormTextarea/AdminFormTextarea.jsx';
+import List from '../../BaseComponents/List/List.jsx';
+import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
 import Icon from '../../BaseComponents/Icon/Icon.jsx';
 import Button from '../../BaseComponents/Button/Button.jsx';
 
@@ -41,8 +43,8 @@ function AdminProject({ onClick }) {
             required={true}
             type="text"
           />
-          <ul className="admin-form__tags">
-            <li className="admin-form__tags-item">
+          <List className="admin-form__tags">
+            <ListItem className="admin-form__tags-item">
               <Button
                 aria-label="Edit button"
                 className="admin-form__button admin-form__button_tag"
@@ -55,7 +57,7 @@ function AdminProject({ onClick }) {
                   name="trash"
                 />
               </Button>
-            </li>
+            </ListItem>
             <li className="admin-form__tags-item">
               <Button
                 aria-label="Edit button"
@@ -70,7 +72,7 @@ function AdminProject({ onClick }) {
                 />
               </Button>
             </li>
-          </ul>
+          </List>
         </div>
         <AdminFormTextarea
           name="description"
