@@ -5,7 +5,7 @@ import DarkThemeContext from '../../../contexts/DarkThemeContext.jsx';
 function Contact({ className, name, title, url }) {
   const { isDarkTheme } = useContext(DarkThemeContext);
   const classNameIcon = isDarkTheme
-    ? `${className}__list-item icon__${className}_theme-dark`
+    ? `${className} icon__${className}_theme-dark`
     : `${className}`;
 
   const classNameLink = isDarkTheme
