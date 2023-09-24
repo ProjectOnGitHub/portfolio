@@ -17,22 +17,46 @@
   }
 
   &__buttons {
-    @include flexible();
+    @include flexible(max-content);
     @include unmarkedList;
-    justify-content: center;
-    gap: 10px 30px;
+
+    &_global {
+      justify-content: center;
+      gap: 10px 30px;
+    }
+
+    &_local {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      gap: 8px;
+    }
   }
 
   &__button {
-    @include button(10px);
-    @include buttonColor();
+    @include button();
+
+    &_save,
+    &_reset {
+      @include buttonColor();
+      padding: 10px;
+    }
 
     &_save {
       background-color: $color-decorate-button-green;
     }
 
     &_reset {
+      @include buttonColor();
       background-color: $color-decorate-link;
+    }
+
+    &_edit,
+    &_delete {
+      width: 24px;
+      height: 24px;
+      background-color: $color-bg-input;
+      border-radius: $borderRadiusDefault;
     }
   }
 
@@ -41,14 +65,18 @@
     @include flexible();
 
     &_experience {
-      max-width: $middle-width;
       flex-direction: column;
+      max-width: $middle-width;
       gap: 50px;
     }
 
     &-item {
       @include gridable();
       gap: 5px;
+
+      &:hover {
+        opacity: 0.5;
+      }
     }
   }
 
