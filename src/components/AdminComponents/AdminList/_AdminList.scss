@@ -1,0 +1,22 @@
+@import '../../../scss/_mixins';
+@import '../../../scss/_variables';
+
+.admin-section {
+  &__list {
+    @include unmarkedList;
+    @include flexible();
+
+    &_experience {
+      flex-direction: column;
+      max-width: $middle-width;
+      gap: 50px;
+    }
+
+    &_projects {
+      @include gridable();
+      @include unmarkedList;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px 18px;
+    }
+  }
+}

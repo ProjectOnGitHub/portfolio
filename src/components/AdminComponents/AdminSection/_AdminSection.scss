@@ -61,37 +61,6 @@
     }
   }
 
-  &__list {
-    @include unmarkedList;
-    @include flexible();
-
-    &_experience {
-      flex-direction: column;
-      max-width: $middle-width;
-      gap: 50px;
-    }
-
-    &_projects {
-      @include gridable();
-      @include unmarkedList;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px 18px;
-    }
-
-    &-item {
-      @include gridable();
-      gap: 5px;
-      position: relative;
-
-      &_projects {
-        width: 100%;
-        overflow: hidden;
-        border: 1px solid $color-bg-dot;
-        border-radius: $borderRadiusDefault;
-      }
-    }
-  }
-
   &__date {
     font-size: 12px;
   }

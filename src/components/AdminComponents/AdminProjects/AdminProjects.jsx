@@ -1,6 +1,6 @@
 import imagesMap from '../../../utils/images';
-import List from '../../BaseComponents/List/List.jsx';
-import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
+import AdminList from '../AdminList/AdminList.jsx';
+import AdminListItem from '../AdminListItem/AdminListItem.jsx';
 import Button from '../../BaseComponents/Button/Button.jsx';
 import Icon from '../../BaseComponents/Icon/Icon.jsx';
 import AdminSectionButtonsLocal from '../AdminSectionButtonsLocal/AdminSectionButtonsLocal.jsx';
@@ -10,13 +10,10 @@ import './_AdminProjects.scss';
 function AdminProjects({ onClick, projects }) {
   return (
     <>
-      <List
-        className="admin-section__list"
-        modificator="projects">
+      <AdminList modificator="projects">
         {projects.map((item) => (
-          <ListItem
+          <AdminListItem
             key={item.id}
-            className="admin-section__list-item"
             modificator="projects">
             <figure className="admin-projects__figure">
               <img
@@ -29,7 +26,7 @@ function AdminProjects({ onClick, projects }) {
               </figcaption>
               <AdminSectionButtonsLocal onClick={onClick} />
             </figure>
-          </ListItem>
+          </AdminListItem>
         ))}
         <li className="admin-projects__list-item">
           {' '}
@@ -45,7 +42,7 @@ function AdminProjects({ onClick, projects }) {
             />
           </Button>
         </li>
-      </List>
+      </AdminList>
     </>
   );
 }

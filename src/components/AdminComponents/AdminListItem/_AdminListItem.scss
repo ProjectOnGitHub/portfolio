@@ -1,0 +1,19 @@
+@import '../../../scss/_mixins';
+@import '../../../scss/_variables';
+
+.admin-section {
+  &__list {
+    &-item {
+      @include gridable();
+      gap: 5px;
+      position: relative;
+
+      &_projects {
+        width: 100%;
+        overflow: hidden;
+        border: 1px solid $color-bg-dot;
+        border-radius: $borderRadiusDefault;
+      }
+    }
+  }
+}
