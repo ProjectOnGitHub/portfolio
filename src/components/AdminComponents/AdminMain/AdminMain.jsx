@@ -5,10 +5,11 @@ import AdminProjects from '../AdminProjects/AdminProjects.jsx';
 import AdminProject from '../AdminProject/AdminProject.jsx';
 import AdminSkills from '../AdminSkills/AdminSkills.jsx';
 import AdminSkill from '../AdminSkill/AdminSkill.jsx';
+import AdminContacts from '../AdminContacts/AdminContacts.jsx';
 import AdminExperience from '../AdminExperience/AdminExperience.jsx';
 import AdminExperienceItem from '../AdminExperienceItem/AdminExperienceItem.jsx';
 
-function MainAdmin({ projects, skillsByType, experience }) {
+function MainAdmin({ projects, skillsByType, experience, contacts }) {
   return (
     <>
       <Switch>
@@ -66,8 +67,12 @@ function MainAdmin({ projects, skillsByType, experience }) {
             className="contacts"
             id="contacts"
             modificator="contacts"
-            title="Редактирование контактов"
-          />
+            title="Редактирование контактов">
+            <AdminContacts
+              className="admin-section"
+              contacts={contacts}
+            />
+          </AdminSection>
         </Route>
         <Route
           path="/admin/projects/project"

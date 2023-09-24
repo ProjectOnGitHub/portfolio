@@ -1,11 +1,14 @@
-import './_AdminSkillsList.scss';
-import List from '../../BaseComponents/List/List.jsx';
+import AdminList from '../AdminList/AdminList.jsx';
 
 function AdminSkillsList({ children, title }) {
   return (
     <>
       <h2 className="admin-section__subtitle">{title}</h2>
-      <List className="admin-skills__list">{children}</List>
+      <AdminList
+        className="admin-skills__list"
+        modificator="skills">
+        {children}
+      </AdminList>
     </>
   );
 }

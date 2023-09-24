@@ -4,10 +4,12 @@
 .admin-section {
   &__title {
     @include defaultSubtitle(24px);
+    text-align: center;
   }
 
   &__subtitle {
     @include defaultSubtitle(20px);
+    text-align: center;
   }
 
   &__container {
@@ -26,9 +28,7 @@
     }
 
     &_local {
-      position: absolute;
-      top: 8px;
-      right: 8px;
+      flex-direction: column;
       gap: 8px;
     }
   }
@@ -72,5 +72,19 @@
 
   &__paragraph {
     margin: 0;
+  }
+
+  &__wrapper {
+    @include flexible();
+
+    &_experience,
+    &_contacts {
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    &_contacts {
+      align-items: center;
+    }
   }
 }

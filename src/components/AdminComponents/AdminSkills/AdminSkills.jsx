@@ -2,8 +2,8 @@ import AdminForm from '../AdminForm/AdminForm.jsx';
 import AdminFormTextarea from '../AdminFormTextarea/AdminFormTextarea.jsx';
 import Button from '../../BaseComponents/Button/Button.jsx';
 import Icon from '../../BaseComponents/Icon/Icon.jsx';
-import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
 import AdminSkillsList from '../AdminSkillsList/AdminSkillsList.jsx';
+import AdminListItem from '../AdminListItem/AdminListItem.jsx';
 import AdminSectionButtonsLocal from '../AdminSectionButtonsLocal/AdminSectionButtonsLocal.jsx';
 import Skill from '../../PublicComponents/Skill/Skill.jsx';
 import './_AdminSkills.scss';
@@ -29,17 +29,17 @@ function AdminSkills({ onClick, skillsByType }) {
           key={group.type}
           title={group.sectionTitle}>
           {group.skills.map((item) => (
-            <ListItem
+            <AdminListItem
               key={item.id}
-              className="admin-skills__list-item">
+              className="admin-skills__list-item"
+              modificator="skills">
               <Skill
                 className="admin-skills"
                 modificator={item.name}
                 name={item.name}
-                title={item.title}
               />
               <AdminSectionButtonsLocal onClick={onClick} />
-            </ListItem>
+            </AdminListItem>
           ))}
           <li className="admin-skills__list-item">
             <Button

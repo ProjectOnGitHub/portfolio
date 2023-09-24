@@ -4,15 +4,18 @@
 .admin-section {
   &__list {
     &-item {
-      @include gridable();
+      @include flexible();
       gap: 5px;
-      position: relative;
+      justify-content: space-between;
 
-      &_projects {
-        width: 100%;
-        overflow: hidden;
-        border: 1px solid $color-bg-dot;
-        border-radius: $borderRadiusDefault;
+      &_skills {
+        justify-items: center;
+        max-width: 150px;
+      }
+
+      &_contacts {
+        justify-items: center;
+        max-width: 150px;
       }
     }
   }

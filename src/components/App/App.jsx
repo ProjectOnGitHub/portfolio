@@ -5,6 +5,7 @@ import allProjects from '../../utils/projects';
 import allSkills from '../../utils/skills';
 import allLinks from '../../utils/menu';
 import allExperience from '../../utils/experience';
+import allContacts from '../../utils/contacts';
 
 import './_App.scss';
 import AdminMain from '../AdminComponents/AdminMain/AdminMain.jsx';
@@ -23,6 +24,7 @@ function App() {
   const [links] = useState(allLinks);
   const [skillsByType, setSkillsByType] = useState({});
   const [experience] = useState(allExperience);
+  const [contacts] = useState(allContacts);
 
   const location = useLocation();
   const isAdminPath = location.pathname.startsWith('/admin');
@@ -61,6 +63,7 @@ function App() {
               isAdminPath={isAdminPath}
               links={links}>
               <MainStart
+                contacts={contacts}
                 experience={experience}
                 projects={projects}
                 skillsByType={skillsByType}
@@ -72,6 +75,7 @@ function App() {
               isAdminPath={isAdminPath}
               links={links}>
               <AdminMain
+                contacts={contacts}
                 experience={experience}
                 projects={projects}
                 skillsByType={skillsByType}

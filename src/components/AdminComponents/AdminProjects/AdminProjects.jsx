@@ -24,8 +24,8 @@ function AdminProjects({ onClick, projects }) {
               <figcaption className="admin-projects__caption">
                 {item.title}
               </figcaption>
-              <AdminSectionButtonsLocal onClick={onClick} />
             </figure>
+            <AdminSectionButtonsLocal onClick={onClick} />
           </AdminListItem>
         ))}
         <li className="admin-projects__list-item">

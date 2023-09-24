@@ -18,5 +18,14 @@
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 24px 18px;
     }
+
+    &_skills,
+    &_contacts {
+      justify-content: center;
+      justify-items: center;
+      flex-wrap: wrap;
+      max-width: $middle-width;
+      gap: 24px 16px;
+    }
   }
 }

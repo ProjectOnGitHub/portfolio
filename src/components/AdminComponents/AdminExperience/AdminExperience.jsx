@@ -8,19 +8,20 @@ function AdminExperience({ experience, className, onClick }) {
 
   return (
     <>
-      <AdminList
-        className={`${className}__list`}
-        modificator="experience">
+      <AdminList modificator="experience">
         {[...reversedExperience].map((item) => (
           <AdminListItem key={item.id}>
-            <ExperienceItem
-              className={className}
-              end={item.end}
-              name={item.name}
-              start={item.start}
-              text={item.text}
-              title={item.title}
-            />
+            <div
+              className={`${className}__wrapper ${className}__wrapper_experience`}>
+              <ExperienceItem
+                className={className}
+                end={item.end}
+                name={item.name}
+                start={item.start}
+                text={item.text}
+                title={item.title}
+              />
+            </div>
             <AdminSectionButtonsLocal onClick={onClick} />
           </AdminListItem>
         ))}

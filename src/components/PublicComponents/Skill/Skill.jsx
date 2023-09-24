@@ -8,7 +8,7 @@ function Skill({ className, name, title }) {
         modificator={name}
         name={name}
       />
-      <span className={`${className}__title`}>{title}</span>
+      {title && <span className={`${className}__title`}>{title}</span>}
     </>
   );
 }

@@ -2,17 +2,15 @@
 @import '../../../scss/_variables';
 
 .admin-projects {
-  &__list {
-    &-item {
-    }
-  }
-
   &__figure {
     @include flexible();
     position: relative;
     flex-direction: column;
     align-items: center;
     margin: 0;
+    overflow: hidden;
+    border: 1px solid $color-bg-dot;
+    border-radius: $borderRadiusDefault;
     cursor: pointer;
     transition: 0.5s ease-in-out;
   }
