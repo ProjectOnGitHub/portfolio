@@ -6,6 +6,7 @@ import AdminProject from '../AdminProject/AdminProject.jsx';
 import AdminSkills from '../AdminSkills/AdminSkills.jsx';
 import AdminSkill from '../AdminSkill/AdminSkill.jsx';
 import AdminExperience from '../AdminExperience/AdminExperience.jsx';
+import AdminExperienceItem from '../AdminExperienceItem/AdminExperienceItem.jsx';
 
 function MainAdmin({ projects, skillsByType, experience }) {
   return (
@@ -89,6 +90,17 @@ function MainAdmin({ projects, skillsByType, experience }) {
             modificator="skill"
             title="Редактирование навыка">
             <AdminSkill />
+          </AdminSection>
+        </Route>
+        <Route
+          path="/admin/experience/item"
+          exact>
+          <AdminSection
+            className="experience"
+            id="experience"
+            modificator="experience"
+            title="Редактирование опыта работы">
+            <AdminExperienceItem />
           </AdminSection>
         </Route>
       </Switch>
