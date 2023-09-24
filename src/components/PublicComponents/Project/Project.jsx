@@ -45,7 +45,7 @@ function Project(props) {
         </ul>
       </div>
       <ul className="project__links">
-        {props.url !== '' ? (
+        {props.url && (
           <li className="project__links-item">
             <Icon
               name="link"
@@ -67,11 +67,8 @@ function Project(props) {
               Cайт
             </a>
           </li>
-        ) : (
-          ''
         )}
-
-        {props.githubUrl !== '' ? (
+        {props.githubUrl && (
           <li className="project__links-item">
             <Icon
               name="github"
@@ -93,8 +90,6 @@ function Project(props) {
               GitHub
             </a>
           </li>
-        ) : (
-          ''
         )}
       </ul>
     </>
