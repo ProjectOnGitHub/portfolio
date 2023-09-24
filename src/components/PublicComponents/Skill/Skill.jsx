@@ -1,15 +1,14 @@
-import './_Skill.scss';
 import Icon from '../../BaseComponents/Icon/Icon.jsx';
 
-function Skill({ name, title }) {
+function Skill({ className, name, title }) {
   return (
     <>
       <Icon
-        className="skill"
+        className={className}
         modificator={name}
         name={name}
       />
-      <h4 className="skill__title">{title}</h4>
+      <span className={`${className}__title`}>{title}</span>
     </>
   );
 }

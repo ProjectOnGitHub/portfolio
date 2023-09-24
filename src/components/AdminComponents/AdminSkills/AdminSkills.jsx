@@ -5,6 +5,7 @@ import Button from '../../BaseComponents/Button/Button.jsx';
 import Icon from '../../BaseComponents/Icon/Icon.jsx';
 import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
 import AdminSkillsList from '../AdminSkillsList/AdminSkillsList.jsx';
+import Skill from '../../PublicComponents/Skill/Skill.jsx';
 import './_AdminSkills.scss';
 
 function AdminSkills({ onClick, skillsByType }) {
@@ -34,12 +35,12 @@ function AdminSkills({ onClick, skillsByType }) {
               <Link
                 className="admin-skills__link"
                 to="/admin/skills/skill">
-                <Icon
+                <Skill
                   className="admin-skills"
                   modificator={item.name}
                   name={item.name}
+                  title={item.title}
                 />
-                <span className="admin-skills__list-title">{item.title}</span>
               </Link>
             </ListItem>
           ))}

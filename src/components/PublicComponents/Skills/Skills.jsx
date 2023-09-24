@@ -37,6 +37,7 @@ function Skills({ title, skillsByType }) {
               key={item.id}
               className="skill">
               <Skill
+                className="skill"
                 name={item.name}
                 title={item.title}
                 type={item.type}
