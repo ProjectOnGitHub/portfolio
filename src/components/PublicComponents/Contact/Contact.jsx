@@ -3,22 +3,25 @@ import './_Contact.scss';
 import Icon from '../../BaseComponents/Icon/Icon.jsx';
 import DarkThemeContext from '../../../contexts/DarkThemeContext.jsx';
 
-function Contact({ name, title, url }) {
+function Contact({ className, name, title, url }) {
   const { isDarkTheme } = useContext(DarkThemeContext);
+  const classNameIcon = isDarkTheme
+    ? `${className}__list-item icon__${className}_theme-dark`
+    : `${className}`;
+
+  const classNameLink = isDarkTheme
+    ? `${className}__link ${className}__link_theme-dark`
+    : `${className}__link`;
 
   return (
     <>
       <Icon
-        className={isDarkTheme ? 'contact icon__contact_theme-dark' : 'contact'}
+        className={classNameIcon}
         name={name}
       />
       <a
-        href={url}
-        className={
-          isDarkTheme
-            ? 'contact__link contact__link_theme-dark'
-            : 'contact__link'
-        }>
+        className={classNameLink}
+        href={url}>
         {title}
       </a>
     </>

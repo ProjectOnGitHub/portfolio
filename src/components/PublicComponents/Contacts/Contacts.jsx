@@ -13,6 +13,7 @@ function Contacts(props) {
             key={item.id}
             className="contact">
             <Contact
+              className="contact"
               name={item.name}
               title={item.title}
               url={item.url}
