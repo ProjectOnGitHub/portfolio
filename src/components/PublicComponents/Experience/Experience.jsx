@@ -1,13 +1,15 @@
-import experience from '../../../utils/experience';
 import './_Experience.scss';
+import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
 
-function Experience(props) {
+function Experience({ title, experience }) {
+  const reversedExperience = [...experience].reverse();
+
   return (
     <>
-      <h2 className="experience__title">{props.title}</h2>
+      <h2 className="experience__title">{title}</h2>
       <ul className="experience__list">
-        {[...experience].reverse().map((item) => (
-          <li
+        {[...reversedExperience].map((item) => (
+          <ListItem
             key={item.id}
             className="experience__list-item">
             <h3 className="experience__subtitle">{item.title}</h3>
@@ -26,7 +28,7 @@ function Experience(props) {
                 </p>
               ))}
             </div>
-          </li>
+          </ListItem>
         ))}
       </ul>
     </>

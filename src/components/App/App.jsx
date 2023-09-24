@@ -4,6 +4,7 @@ import DarkThemeContext from '../../contexts/DarkThemeContext.jsx';
 import allProjects from '../../utils/projects';
 import allSkills from '../../utils/skills';
 import allLinks from '../../utils/menu';
+import allExperience from '../../utils/experience';
 
 import './_App.scss';
 import AdminMain from '../AdminComponents/AdminMain/AdminMain.jsx';
@@ -21,6 +22,7 @@ function App() {
   const [skills] = useState(allSkills);
   const [links] = useState(allLinks);
   const [skillsByType, setSkillsByType] = useState({});
+  const [experience] = useState(allExperience);
 
   const location = useLocation();
   const isAdminPath = location.pathname.startsWith('/admin');
@@ -59,6 +61,7 @@ function App() {
               isAdminPath={isAdminPath}
               links={links}>
               <MainStart
+                experience={experience}
                 projects={projects}
                 skillsByType={skillsByType}
               />
