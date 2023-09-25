@@ -34,11 +34,14 @@
   }
 
   &__button {
+    @include flexible();
     @include button();
 
     &_save,
-    &_reset {
+    &_reset,
+    &_add {
       @include buttonColor();
+      max-width: max-content;
       padding: 10px;
     }
 
@@ -47,8 +50,13 @@
     }
 
     &_reset {
-      @include buttonColor();
       background-color: $color-decorate-link;
+    }
+
+    &_add {
+      color: $color-dark;
+      border: 1px solid $color-bg-dot;
+      border-radius: $borderRadiusDefault;
     }
 
     &_edit,
@@ -56,8 +64,8 @@
       width: 24px;
       height: 24px;
       background-color: $color-bg-input;
-      border-radius: $borderRadiusDefault;
       border: 1px solid $color-bg-dot;
+      border-radius: $borderRadiusDefault;
     }
   }
 

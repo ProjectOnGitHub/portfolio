@@ -1,5 +1,6 @@
 import ExperienceItem from '../../PublicComponents/ExperienceItem/ExperienceItem.jsx';
 import AdminSectionButtonsLocal from '../AdminSectionButtonsLocal/AdminSectionButtonsLocal.jsx';
+import AdminSectionButtonAdd from '../AdminSectionButtonsAdd/AdminSectionButtonAdd.jsx';
 import AdminList from '../AdminList/AdminList.jsx';
 import AdminListItem from '../AdminListItem/AdminListItem.jsx';
 
@@ -26,6 +27,7 @@ function AdminExperience({ experience, className, onClick }) {
           </AdminListItem>
         ))}
       </AdminList>
+      <AdminSectionButtonAdd>Добавить опыт работы</AdminSectionButtonAdd>
     </>
   );
 }

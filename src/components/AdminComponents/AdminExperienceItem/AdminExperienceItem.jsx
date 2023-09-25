@@ -1,6 +1,7 @@
 import AdminForm from '../AdminForm/AdminForm.jsx';
 import AdminFormInput from '../AdminFormInput/AdminFormInput.jsx';
 import AdminFormTextarea from '../AdminFormTextarea/AdminFormTextarea.jsx';
+import AdminSectionButtonAdd from '../AdminSectionButtonsAdd/AdminSectionButtonAdd.jsx';
 
 function AdminExperienceItem() {
   return (
@@ -39,6 +40,7 @@ function AdminExperienceItem() {
           placeholder="Добавить описание"
           required={true}
         />
+        <AdminSectionButtonAdd>Добавить описание</AdminSectionButtonAdd>
       </fieldset>
     </AdminForm>
   );
