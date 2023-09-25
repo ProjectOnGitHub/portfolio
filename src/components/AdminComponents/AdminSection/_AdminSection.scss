@@ -39,7 +39,8 @@
 
     &_save,
     &_reset,
-    &_add {
+    &_add,
+    &_delete-item {
       @include buttonColor();
       max-width: max-content;
       padding: 10px;
@@ -53,10 +54,16 @@
       background-color: $color-decorate-link;
     }
 
+    &_delete-item {
+      color: $color-decorate-link;
+      background-color: $color-bg-input;
+      border: 1px solid $color-bg-dot;
+    }
+
     &_add {
       color: $color-dark;
+      background-color: $color-bg-input;
       border: 1px solid $color-bg-dot;
-      border-radius: $borderRadiusDefault;
     }
 
     &_edit,

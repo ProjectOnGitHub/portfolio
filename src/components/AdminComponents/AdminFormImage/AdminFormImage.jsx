@@ -23,14 +23,6 @@ function AdminFormImage({ onClick, children }) {
         </AdminFormDropzone>
       </fieldset>
       {children}
-      <Button
-        aria-label="Delete item button"
-        className="admin-form__button admin-form__button_delete-item"
-        name="button-delete-item"
-        type="submit"
-        onClick={onClick}>
-        Удалить
-      </Button>
     </AdminForm>
   );
 }

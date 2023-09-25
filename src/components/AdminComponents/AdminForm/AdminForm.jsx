@@ -1,4 +1,5 @@
 import './_AdminForm.scss';
+import AdminSectionButtonDeleteItem from '../AdminSectionButtonsDeleteItem/AdminSectionButtonDeleteItem.jsx';
 
 function AdminForm({ name, handleSubmit, children, modificator }) {
   const classes = modificator
@@ -6,12 +7,15 @@ function AdminForm({ name, handleSubmit, children, modificator }) {
     : `admin-form`;
 
   return (
-    <form
-      className={classes}
-      name={name}
-      onSubmit={handleSubmit}>
-      {children}
-    </form>
+    <>
+      <form
+        className={classes}
+        name={name}
+        onSubmit={handleSubmit}>
+        {children}
+      </form>
+      <AdminSectionButtonDeleteItem>Удалить</AdminSectionButtonDeleteItem>
+    </>
   );
 }
 
