@@ -8,6 +8,7 @@ const projects = [
     url: 'https://27club.wbdv.ru',
     githubUrl: 'https://github.com/ProjectOnGitHub/27club',
     image: 'club27.jpg',
+    name: 'club27',
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ const projects = [
     url: 'https://company.wbdv.ru',
     githubUrl: 'https://github.com/ProjectOnGitHub/company',
     image: 'company.jpg',
+    name: 'company',
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ const projects = [
     url: 'https://portfolio-alexa.wbdv.ru',
     githubUrl: 'https://github.com/ProjectOnGitHub/portfolio-alexa',
     image: 'portfolio-alexa.jpg',
+    name: 'alexa',
   },
   {
     id: 4,
@@ -38,6 +41,7 @@ const projects = [
     url: 'https://shelter.wbdv.ru/pages/main/',
     githubUrl: 'https://github.com/ProjectOnGitHub/shelter',
     image: 'shelter.jpg',
+    name: 'shelter',
   },
   {
     id: 5,
@@ -48,6 +52,7 @@ const projects = [
     url: 'https://kinoprorok.ru',
     githubUrl: '',
     image: 'kinoprorok.jpg',
+    name: 'kinoprorok',
   },
   {
     id: 6,
@@ -58,6 +63,7 @@ const projects = [
     url: '',
     githubUrl: 'https://github.com/ProjectOnGitHub/gamebase',
     image: 'gamebase.jpg',
+    name: 'gamebase',
   },
   {
     id: 7,
@@ -68,6 +74,7 @@ const projects = [
     url: 'https://3826.wbdv.ru',
     githubUrl: 'https://github.com/ProjectOnGitHub/3826',
     image: '3826.jpg',
+    name: '3826',
   },
 ];
 

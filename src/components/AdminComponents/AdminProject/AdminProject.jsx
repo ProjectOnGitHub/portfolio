@@ -6,7 +6,7 @@ import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
 import Icon from '../../BaseComponents/Icon/Icon.jsx';
 import Button from '../../BaseComponents/Button/Button.jsx';
 
-function AdminProject({ onClick }) {
+function AdminProject({ onClick, project }) {
   return (
     <AdminFormImage>
       <fieldset className="admin-form__fieldset">
@@ -18,24 +18,28 @@ function AdminProject({ onClick }) {
           placeholder="Название проекта"
           required={true}
           type="text"
+          value={project.title}
         />
         <AdminFormInput
           name="alias"
           placeholder="Алиас проекта"
           required={true}
           type="text"
+          value={project.name}
         />
         <AdminFormInput
           name="site"
           placeholder="Ссылка на сайт"
           required={false}
           type="url"
+          value={project.url}
         />
         <AdminFormInput
           name="github"
           placeholder="Ссылка на GitHub"
           required={false}
           type="url"
+          value={project.githubUrl}
         />
         <div className="admin-form__wrapper">
           <AdminFormInput
@@ -44,40 +48,31 @@ function AdminProject({ onClick }) {
             type="text"
           />
           <List className="admin-form__tags">
-            <ListItem className="admin-form__tags-item">
-              <Button
-                aria-label="Edit button"
-                className="admin-form__button admin-form__button_tag"
-                name="button-edit"
-                type="submit"
-                onClick={onClick}>
-                HTML{' '}
-                <Icon
-                  className="delete icon__delete_tag"
-                  name="trash"
-                />
-              </Button>
-            </ListItem>
-            <li className="admin-form__tags-item">
-              <Button
-                aria-label="Edit button"
-                className="admin-form__button admin-form__button_tag"
-                name="button-edit"
-                type="submit"
-                onClick={onClick}>
-                CSS
-                <Icon
-                  className="delete icon__delete_tag"
-                  name="trash"
-                />
-              </Button>
-            </li>
+            {project.stack.map((stack) => (
+              <ListItem
+                key={stack}
+                className="admin-form__tags-item">
+                <Button
+                  aria-label="Edit button"
+                  className="admin-form__button admin-form__button_tag"
+                  name="button-edit"
+                  type="submit"
+                  onClick={onClick}>
+                  {stack}
+                  <Icon
+                    className="delete icon__delete_tag"
+                    name="trash"
+                  />
+                </Button>
+              </ListItem>
+            ))}
           </List>
         </div>
         <AdminFormTextarea
           name="description"
           placeholder="Добавить описание"
           required={true}
+          value={project.description}
         />
       </fieldset>
     </AdminFormImage>

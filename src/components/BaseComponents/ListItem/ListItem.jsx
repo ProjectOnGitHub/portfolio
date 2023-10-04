@@ -1,6 +1,6 @@
-function ListItem({ className, children, modificator }) {
-  const classes = modificator
-    ? `${className} ${className}_${modificator}`
+function ListItem({ className, children, modifier }) {
+  const classes = modifier
+    ? `${className} ${className}_${modifier}`
     : `${className}`;
 
   return <li className={classes}>{children}</li>;

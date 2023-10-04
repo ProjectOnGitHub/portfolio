@@ -18,6 +18,11 @@
     gap: 25px;
   }
 
+  &__link {
+    text-decoration: none;
+    color: inherit;
+  }
+
   &__buttons {
     @include flexible(max-content);
     @include unmarkedList;

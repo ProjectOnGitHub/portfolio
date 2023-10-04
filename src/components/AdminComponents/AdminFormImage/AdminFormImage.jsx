@@ -5,7 +5,7 @@ import Button from '../../BaseComponents/Button/Button.jsx';
 
 function AdminFormImage({ onClick, children }) {
   return (
-    <AdminForm modificator="middle">
+    <AdminForm modifier="middle">
       <fieldset className="admin-form__fieldset">
         <legend className="admin-form__legend">Добавить изображение</legend>
         <AdminFormDropzone className="AdminFormDropzone">

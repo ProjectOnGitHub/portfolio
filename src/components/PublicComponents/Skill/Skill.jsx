@@ -5,7 +5,7 @@ function Skill({ className, name, title }) {
     <>
       <Icon
         className={className}
-        modificator={name}
+        modifier={name}
         name={name}
       />
       {title && <span className={`${className}__title`}>{title}</span>}

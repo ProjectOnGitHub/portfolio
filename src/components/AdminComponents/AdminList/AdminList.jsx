@@ -1,11 +1,11 @@
 import List from '../../BaseComponents/List/List.jsx';
 import './_AdminList.scss';
 
-function AdminList({ modificator, children }) {
+function AdminList({ modifier, children }) {
   return (
     <List
       className="admin-section__list"
-      modificator={modificator}>
+      modifier={modifier}>
       {children}
     </List>
   );

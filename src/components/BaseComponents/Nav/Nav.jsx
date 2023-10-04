@@ -1,8 +1,8 @@
 import './_Nav.scss';
 
-function Nav(props) {
+function Nav({className, children}) {
   return (
-    <nav className={`${props.className}__navigation`}>{props.children}</nav>
+    <nav className={`${className}__navigation`}>{children}</nav>
   );
 }
 

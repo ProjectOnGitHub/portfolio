@@ -4,24 +4,28 @@ import AdminList from '../AdminList/AdminList.jsx';
 import AdminListItem from '../AdminListItem/AdminListItem.jsx';
 import Contact from '../../PublicComponents/Contact/Contact.jsx';
 
-function AdminContacts({ onClick, contacts, className }) {
+function AdminContacts({ contacts, className, deleteItem, editItem }) {
   return (
     <>
-      <AdminList modificator="contacts">
-        {contacts.map((item) => (
+      <AdminList modifier="contacts">
+        {contacts.map((contact) => (
           <AdminListItem
-            key={item.id}
-            modificator="contacts">
+            key={contact.id}
+            modifier="contacts">
             <div
               className={`${className}__wrapper ${className}__wrapper_contacts`}>
               <Contact
                 className="contact"
-                name={item.name}
-                title={item.title}
-                url={item.url}
+                name={contact.name}
+                title={contact.title}
+                url={contact.url}
               />
             </div>
-            <AdminSectionButtonsLocal onClick={onClick} />
+            <AdminSectionButtonsLocal
+              deleteItem={deleteItem}
+              editItem={editItem}
+              item={contact}
+            />
           </AdminListItem>
         ))}
       </AdminList>

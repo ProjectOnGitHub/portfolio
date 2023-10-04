@@ -6,7 +6,7 @@ function AdminSectionButtonsGlobal({ onClick }) {
   return (
     <List
       className="admin-section__buttons"
-      modificator="global">
+      modifier="global">
       <ListItem className="admin-section__buttons-item">
         <Button
           aria-label="Reset button"

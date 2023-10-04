@@ -1,9 +1,9 @@
 import './_Icon.scss';
 import Icons from '../../../svg/sprite.svg';
 
-function Icon({ name, className, modificator }) {
-  const svgClassName = modificator
-    ? `icon icon__${className} icon__${className}_${modificator}`
+function Icon({ name, className, modifier }) {
+  const svgClassName = modifier
+    ? `icon icon__${className} icon__${className}_${modifier}`
     : `icon icon__${className}`;
 
   return (

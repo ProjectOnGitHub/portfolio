@@ -4,26 +4,30 @@ import AdminSectionButtonAdd from '../AdminSectionButtonsAdd/AdminSectionButtonA
 import AdminList from '../AdminList/AdminList.jsx';
 import AdminListItem from '../AdminListItem/AdminListItem.jsx';
 
-function AdminExperience({ experience, className, onClick }) {
+function AdminExperience({ experience, className, deleteItem, editItem }) {
   const reversedExperience = [...experience].reverse();
 
   return (
     <>
-      <AdminList modificator="experience">
-        {[...reversedExperience].map((item) => (
-          <AdminListItem key={item.id}>
+      <AdminList modifier="experience">
+        {[...reversedExperience].map((exp) => (
+          <AdminListItem key={exp.id}>
             <div
               className={`${className}__wrapper ${className}__wrapper_experience`}>
               <ExperienceItem
                 className={className}
-                end={item.end}
-                name={item.name}
-                start={item.start}
-                text={item.text}
-                title={item.title}
+                end={exp.end}
+                name={exp.name}
+                start={exp.start}
+                text={exp.text}
+                title={exp.title}
               />
             </div>
-            <AdminSectionButtonsLocal onClick={onClick} />
+            <AdminSectionButtonsLocal
+              deleteItem={deleteItem}
+              editItem={editItem}
+              item={exp}
+            />
           </AdminListItem>
         ))}
       </AdminList>

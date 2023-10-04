@@ -2,17 +2,15 @@ import { HashLink as Link } from 'react-router-hash-link';
 import './_Profile.scss';
 import Icon from '../../BaseComponents/Icon/Icon.jsx';
 
-function Profile(props) {
+function Profile({ name, position, description }) {
   return (
     <>
       <div className="profile__info">
-        <h1 className="profile__title">{props.title}</h1>
-        <h2 className="profile__subtitle">
-          HTML-верстальщик / Frontend-разработчик
-        </h2>
+        <h1 className="profile__title">{name}</h1>
+        <h2 className="profile__subtitle">{position}</h2>
       </div>
       <div className="profile__text">
-        <p className="profile__paragraph">Ушёл из SEO в разработку</p>
+        <p className="profile__paragraph">{description}</p>
       </div>
       <Link
         aria-label="Go to next screen"

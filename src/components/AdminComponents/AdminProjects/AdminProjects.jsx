@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import imagesMap from '../../../utils/images';
 import AdminList from '../AdminList/AdminList.jsx';
 import AdminListItem from '../AdminListItem/AdminListItem.jsx';
@@ -6,25 +7,36 @@ import AdminSectionButtonsLocal from '../AdminSectionButtonsLocal/AdminSectionBu
 
 import './_AdminProjects.scss';
 
-function AdminProjects({ onClick, projects }) {
+function AdminProjects({ projects, deleteItem, editItem, setProjects }) {
   return (
     <>
-      <AdminList modificator="projects">
-        {projects.map((item) => (
+      <AdminList modifier="projects">
+        {projects.map((project) => (
           <AdminListItem
-            key={item.id}
-            modificator="projects">
-            <figure className="admin-projects__figure">
-              <img
-                alt={item.title}
-                className="admin-projects__image"
-                src={imagesMap[`./${[item.image]}`]}
-              />
-              <figcaption className="admin-projects__caption">
-                {item.title}
-              </figcaption>
-            </figure>
-            <AdminSectionButtonsLocal onClick={onClick} />
+            key={project.id}
+            modifier="projects">
+            <Link
+              key={project.id}
+              className="admin-section__link"
+              to={`/admin/projects/${project.name}`}>
+              <figure className="admin-projects__figure">
+                <img
+                  alt={project.title}
+                  className="admin-projects__image"
+                  src={imagesMap[`./${[project.image]}`]}
+                />
+                <figcaption className="admin-projects__caption">
+                  {project.title}
+                </figcaption>
+              </figure>
+            </Link>
+            <AdminSectionButtonsLocal
+              currentArray={projects}
+              deleteItem={deleteItem}
+              editItem={editItem}
+              item={project}
+              setArray={setProjects}
+            />
           </AdminListItem>
         ))}
       </AdminList>

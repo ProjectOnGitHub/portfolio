@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import AdminForm from '../AdminForm/AdminForm.jsx';
 import AdminFormTextarea from '../AdminFormTextarea/AdminFormTextarea.jsx';
 import AdminSectionButtonAdd from '../AdminSectionButtonsAdd/AdminSectionButtonAdd.jsx';
@@ -7,42 +8,50 @@ import AdminSectionButtonsLocal from '../AdminSectionButtonsLocal/AdminSectionBu
 import Skill from '../../PublicComponents/Skill/Skill.jsx';
 import './_AdminSkills.scss';
 
-function AdminSkills({ onClick, skillsByType }) {
+function AdminSkills({ skillsByType, editItem, deleteItem, skillsText }) {
   return (
     <>
-      <AdminForm modificator="middle">
+      <AdminForm modifier="middle">
         <fieldset className="admin-form__fieldset">
           <legend className="admin-form__legend">
             Редактировать описание раздела Навыки
           </legend>
-          <AdminFormTextarea
-            name="description"
-            placeholder="Добавить описание"
-            required={true}
-          />
+          {skillsText.map((item) => (
+            <AdminFormTextarea
+              key={item.id}
+              name="description"
+              placeholder="Добавить описание"
+              required={true}
+              value={item.text}
+            />
+          ))}
         </fieldset>
       </AdminForm>
 
       {Object.values(skillsByType).map((group) => (
-        <>
+        <Fragment key={group.type}>
           <AdminSkillsList
             key={group.type}
             title={group.sectionTitle}>
-            {group.skills.map((item) => (
+            {group.skills.map((skill) => (
               <AdminListItem
-                key={item.id}
-                modificator="skills">
+                key={skill.id}
+                modifier="skills">
                 <Skill
                   className="admin-skills"
-                  modificator={item.name}
-                  name={item.name}
+                  modifier={skill.name}
+                  name={skill.name}
                 />
-                <AdminSectionButtonsLocal onClick={onClick} />
+                <AdminSectionButtonsLocal
+                  deleteItem={deleteItem}
+                  editItem={editItem}
+                  item={skill}
+                />
               </AdminListItem>
             ))}
           </AdminSkillsList>
           <AdminSectionButtonAdd>Добавить навык</AdminSectionButtonAdd>
-        </>
+        </Fragment>
       ))}
     </>
   );

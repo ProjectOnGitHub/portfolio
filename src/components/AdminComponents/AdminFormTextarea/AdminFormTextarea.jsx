@@ -1,6 +1,6 @@
 import './_AdminFormTextarea.scss';
 
-function AdminFormTextarea({ name, placeholder, required }) {
+function AdminFormTextarea({ name, placeholder, required, value }) {
   return (
     <textarea
       className="admin-form__textarea"
@@ -10,6 +10,7 @@ function AdminFormTextarea({ name, placeholder, required }) {
       placeholder={placeholder}
       required={required}
       rows="5"
+      value={value}
     />
   );
 }

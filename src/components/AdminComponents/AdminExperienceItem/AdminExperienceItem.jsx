@@ -5,7 +5,7 @@ import AdminSectionButtonAdd from '../AdminSectionButtonsAdd/AdminSectionButtonA
 
 function AdminExperienceItem() {
   return (
-    <AdminForm modificator="middle">
+    <AdminForm modifier="middle">
       <fieldset className="admin-form__fieldset">
         <legend className="admin-form__legend">
           Редактировать опыт работы

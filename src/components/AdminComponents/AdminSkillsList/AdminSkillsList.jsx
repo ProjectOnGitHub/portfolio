@@ -6,7 +6,7 @@ function AdminSkillsList({ children, title }) {
       <h2 className="admin-section__subtitle">{title}</h2>
       <AdminList
         className="admin-skills__list"
-        modificator="skills">
+        modifier="skills">
         {children}
       </AdminList>
     </>

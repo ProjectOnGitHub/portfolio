@@ -1,12 +1,12 @@
-function Button(props) {
+function Button({ ariaLabel, className, name, type, onClick, children }) {
   return (
     <button
-      aria-label={props.ariaLabel}
-      className={props.className}
-      name={props.name}
-      type={props.type}
-      onClick={props.onClick}>
-      {props.children}
+      aria-label={ariaLabel}
+      className={className}
+      name={name}
+      type={type}
+      onClick={onClick}>
+      {children}
     </button>
   );
 }

@@ -2,10 +2,14 @@ import { useState, useEffect } from 'react';
 import { Switch, Route, useLocation } from 'react-router-dom';
 import DarkThemeContext from '../../contexts/DarkThemeContext.jsx';
 import allProjects from '../../utils/projects';
-import allSkills from '../../utils/skills';
+import {
+  skillsText as allSkillsText,
+  skills as allSkills,
+} from '../../utils/skills';
 import allLinks from '../../utils/menu';
 import allExperience from '../../utils/experience';
 import allContacts from '../../utils/contacts';
+import about from '../../utils/profile';
 
 import './_App.scss';
 import AdminMain from '../AdminComponents/AdminMain/AdminMain.jsx';
@@ -19,8 +23,12 @@ function App() {
     const storedTheme = localStorage.getItem('isDarkTheme');
     return storedTheme ? JSON.parse(storedTheme) : false;
   });
-  const [projects] = useState(allProjects);
+
+  const [profile] = useState(about);
+  const [projects, setProjects] = useState(allProjects);
   const [skills] = useState(allSkills);
+  const [skillsText] = useState(allSkillsText);
+
   const [links] = useState(allLinks);
   const [skillsByType, setSkillsByType] = useState({});
   const [experience] = useState(allExperience);
@@ -45,7 +53,6 @@ function App() {
       }
       updateSkills[skill.type].skills.push(skill);
     });
-
     setSkillsByType(updateSkills);
   }, []);
 
@@ -65,8 +72,10 @@ function App() {
               <MainStart
                 contacts={contacts}
                 experience={experience}
+                profile={profile}
                 projects={projects}
                 skillsByType={skillsByType}
+                skillsText={skillsText}
               />
             </Layout>
           </Route>
@@ -77,8 +86,12 @@ function App() {
               <AdminMain
                 contacts={contacts}
                 experience={experience}
+                links={links}
+                profile={profile}
                 projects={projects}
+                setProjects={setProjects}
                 skillsByType={skillsByType}
+                skillsText={skillsText}
               />
             </Layout>
           </Route>

@@ -5,12 +5,12 @@ function AdminSection({
   className,
   id,
   title,
-  modificator,
+  modifier,
   children,
   onClick,
 }) {
-  const sectionContainerClass = modificator
-    ? `admin-section__container admin-section__container_${modificator}`
+  const sectionContainerClass = modifier
+    ? `admin-section__container admin-section__container_${modifier}`
     : `admin-section__container`;
 
   return (
