@@ -19,6 +19,7 @@ function MainAdmin({
   profile,
   skillsText,
   setExperience,
+  setContacts,
 }) {
   function deleteItem(array, currentItem, setState) {
     const updatedArray = array.filter((item) => item !== currentItem);
@@ -110,6 +111,7 @@ function MainAdmin({
               contacts={contacts}
               deleteItem={deleteItem}
               editItem={editItem}
+              setContacts={setContacts}
             />
           </AdminSection>
         </Route>

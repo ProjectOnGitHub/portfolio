@@ -4,7 +4,13 @@ import AdminList from '../AdminList/AdminList.jsx';
 import AdminListItem from '../AdminListItem/AdminListItem.jsx';
 import Contact from '../../PublicComponents/Contact/Contact.jsx';
 
-function AdminContacts({ contacts, className, deleteItem, editItem }) {
+function AdminContacts({
+  contacts,
+  className,
+  deleteItem,
+  editItem,
+  setContacts,
+}) {
   return (
     <>
       <AdminList modifier="contacts">
@@ -22,9 +28,11 @@ function AdminContacts({ contacts, className, deleteItem, editItem }) {
               />
             </div>
             <AdminSectionButtonsLocal
+              currentArray={contacts}
               deleteItem={deleteItem}
               editItem={editItem}
               item={contact}
+              setArray={setContacts}
             />
           </AdminListItem>
         ))}

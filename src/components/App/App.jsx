@@ -32,7 +32,7 @@ function App() {
   const [links] = useState(allLinks);
   const [skillsByType, setSkillsByType] = useState({});
   const [experience, setExperience] = useState(allExperience);
-  const [contacts] = useState(allContacts);
+  const [contacts, setContacts] = useState(allContacts);
 
   const location = useLocation();
   const isAdminPath = location.pathname.startsWith('/admin');
@@ -89,6 +89,7 @@ function App() {
                 links={links}
                 profile={profile}
                 projects={projects}
+                setContacts={setContacts}
                 setExperience={setExperience}
                 setProjects={setProjects}
                 skillsByType={skillsByType}
