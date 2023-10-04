@@ -31,7 +31,7 @@ function App() {
 
   const [links] = useState(allLinks);
   const [skillsByType, setSkillsByType] = useState({});
-  const [experience] = useState(allExperience);
+  const [experience, setExperience] = useState(allExperience);
   const [contacts] = useState(allContacts);
 
   const location = useLocation();
@@ -89,6 +89,7 @@ function App() {
                 links={links}
                 profile={profile}
                 projects={projects}
+                setExperience={setExperience}
                 setProjects={setProjects}
                 skillsByType={skillsByType}
                 skillsText={skillsText}
