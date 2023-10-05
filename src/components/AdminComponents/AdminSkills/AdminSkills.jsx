@@ -36,6 +36,7 @@ function AdminSkills({
                   currentArray={skillsText}
                   deleteItem={deleteItem}
                   editItem={editItem}
+                  isEditHide={true}
                   item={item}
                   setArray={setSkillsText}
                 />
