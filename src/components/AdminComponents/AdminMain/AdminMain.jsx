@@ -1,14 +1,14 @@
 import { Route, Switch } from 'react-router-dom';
-import AdminSection from '../AdminSection/AdminSection.jsx';
-import AdminProfile from '../AdminProfile/AdminProfile.jsx';
-import AdminProjects from '../AdminProjects/AdminProjects.jsx';
-import AdminProject from '../AdminProject/AdminProject.jsx';
-import AdminSkills from '../AdminSkills/AdminSkills.jsx';
-import AdminSkill from '../AdminSkill/AdminSkill.jsx';
+import AdminContact from '../AdminContact/AdminContact.jsx';
+import AdminContacts from '../AdminContacts/AdminContacts.jsx';
 import AdminExperience from '../AdminExperience/AdminExperience.jsx';
 import AdminExperienceItem from '../AdminExperienceItem/AdminExperienceItem.jsx';
-import AdminContacts from '../AdminContacts/AdminContacts.jsx';
-import AdminContact from '../AdminContact/AdminContact.jsx';
+import AdminProfile from '../AdminProfile/AdminProfile.jsx';
+import AdminProject from '../AdminProject/AdminProject.jsx';
+import AdminProjects from '../AdminProjects/AdminProjects.jsx';
+import AdminSection from '../AdminSection/AdminSection.jsx';
+import AdminSkill from '../AdminSkill/AdminSkill.jsx';
+import AdminSkills from '../AdminSkills/AdminSkills.jsx';
 
 function MainAdmin({
   projects,
@@ -20,6 +20,7 @@ function MainAdmin({
   skillsText,
   setExperience,
   setContacts,
+  setSkillsText,
 }) {
   function deleteItem(array, currentItem, setState) {
     const updatedArray = array.filter((item) => item !== currentItem);
@@ -76,6 +77,7 @@ function MainAdmin({
             <AdminSkills
               deleteItem={deleteItem}
               editItem={editItem}
+              setSkillsText={setSkillsText}
               skillsByType={skillsByType}
               skillsText={skillsText}
             />

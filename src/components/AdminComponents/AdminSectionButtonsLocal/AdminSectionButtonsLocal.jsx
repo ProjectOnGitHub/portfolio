@@ -1,7 +1,7 @@
-import List from '../../BaseComponents/List/List.jsx';
-import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
 import Button from '../../BaseComponents/Button/Button.jsx';
 import Icon from '../../BaseComponents/Icon/Icon.jsx';
+import List from '../../BaseComponents/List/List.jsx';
+import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
 
 function AdminSectionButtonsLocal({
   currentArray,

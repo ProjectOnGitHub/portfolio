@@ -1,22 +1,21 @@
-import { useState, useEffect } from 'react';
-import { Switch, Route, useLocation } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Route, Switch, useLocation } from 'react-router-dom';
 import DarkThemeContext from '../../contexts/DarkThemeContext.jsx';
+import allContacts from '../../utils/contacts';
+import allExperience from '../../utils/experience';
+import allLinks from '../../utils/menu';
+import about from '../../utils/profile';
 import allProjects from '../../utils/projects';
 import {
-  skillsText as allSkillsText,
   skills as allSkills,
+  skillsText as allSkillsText,
 } from '../../utils/skills';
-import allLinks from '../../utils/menu';
-import allExperience from '../../utils/experience';
-import allContacts from '../../utils/contacts';
-import about from '../../utils/profile';
-
-import './_App.scss';
 import AdminMain from '../AdminComponents/AdminMain/AdminMain.jsx';
 import Layout from '../PublicComponents/Layout/Layout.jsx';
 import Login from '../PublicComponents/Login/Login.jsx';
 import MainStart from '../PublicComponents/MainStart/MainStart.jsx';
 import Register from '../PublicComponents/Register/Register.jsx';
+import './_App.scss';
 
 function App() {
   const [isDarkTheme, setIsDarkTheme] = useState(() => {
@@ -27,8 +26,7 @@ function App() {
   const [profile] = useState(about);
   const [projects, setProjects] = useState(allProjects);
   const [skills] = useState(allSkills);
-  const [skillsText] = useState(allSkillsText);
-
+  const [skillsText, setSkillsText] = useState(allSkillsText);
   const [links] = useState(allLinks);
   const [skillsByType, setSkillsByType] = useState({});
   const [experience, setExperience] = useState(allExperience);
@@ -92,6 +90,7 @@ function App() {
                 setContacts={setContacts}
                 setExperience={setExperience}
                 setProjects={setProjects}
+                setSkillsText={setSkillsText}
                 skillsByType={skillsByType}
                 skillsText={skillsText}
               />
