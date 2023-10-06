@@ -34,7 +34,8 @@ function AdminProjects({ projects, deleteItem, editItem, setProjects }) {
               currentArray={projects}
               deleteItem={deleteItem}
               editItem={editItem}
-              item={project}
+              endpoint="projects"
+              itemId={project.id}
               setArray={setProjects}
             />
           </AdminListItem>

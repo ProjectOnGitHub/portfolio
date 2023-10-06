@@ -4,20 +4,21 @@ import List from '../../BaseComponents/List/List.jsx';
 import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
 
 function AdminSectionButtonsLocal({
+  endpoint,
   currentArray,
   deleteItem,
-  item,
+  itemId,
   editItem,
   setArray,
   isDeleteHide,
   isEditHide,
 }) {
-  function handleClickDeleteButton() {
-    deleteItem(currentArray, item, setArray);
+  function onClickDeleteButton() {
+    deleteItem(endpoint, itemId, currentArray, setArray);
   }
 
   function handleClickEditButton() {
-    editItem(item);
+    editItem(itemId);
   }
   return (
     <List
@@ -45,7 +46,7 @@ function AdminSectionButtonsLocal({
             className="admin-section__button admin-section__button_delete"
             name="button-delete"
             type="submit"
-            onClick={handleClickDeleteButton}>
+            onClick={onClickDeleteButton}>
             <Icon
               className="trash"
               name="trash"

@@ -21,12 +21,8 @@ function MainAdmin({
   setExperience,
   setContacts,
   setSkillsText,
+  handleDeleteItem,
 }) {
-  function deleteItem(array, currentItem, setState) {
-    const updatedArray = array.filter((item) => item !== currentItem);
-    setState(updatedArray);
-  }
-
   function editItem(item) {
     console.log('edit Element');
     console.log(item);
@@ -59,7 +55,7 @@ function MainAdmin({
             modifier="projects"
             title="Редактирование списка проектов">
             <AdminProjects
-              deleteItem={deleteItem}
+              deleteItem={handleDeleteItem}
               editItem={editItem}
               projects={projects}
               setProjects={setProjects}
@@ -75,7 +71,7 @@ function MainAdmin({
             modifier="skills"
             title="Редактирование навыков">
             <AdminSkills
-              deleteItem={deleteItem}
+              deleteItem={handleDeleteItem}
               editItem={editItem}
               setSkillsText={setSkillsText}
               skillsByType={skillsByType}
@@ -93,7 +89,7 @@ function MainAdmin({
             title="Редактирование опыта работы">
             <AdminExperience
               className="admin-section"
-              deleteItem={deleteItem}
+              deleteItem={handleDeleteItem}
               editItem={editItem}
               experience={experience}
               setExperience={setExperience}
@@ -111,7 +107,7 @@ function MainAdmin({
             <AdminContacts
               className="admin-section"
               contacts={contacts}
-              deleteItem={deleteItem}
+              deleteItem={handleDeleteItem}
               editItem={editItem}
               setContacts={setContacts}
             />

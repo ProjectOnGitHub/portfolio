@@ -6,7 +6,6 @@ import Layout from '../PublicComponents/Layout/Layout.jsx';
 import Login from '../PublicComponents/Login/Login.jsx';
 import MainStart from '../PublicComponents/MainStart/MainStart.jsx';
 import Register from '../PublicComponents/Register/Register.jsx';
-
 import * as api from '../../utils/api';
 import './_App.scss';
 
@@ -77,6 +76,17 @@ function App() {
       ),
     [],
   );
+
+  function handleDeleteItem(endpoint, itemId, array, setState) {
+    api.deleteItem(endpoint, itemId).then(() => {
+      const newArr = array.filter((item) => item.id !== itemId);
+      const question = window.confirm('Хотите удалить элемент?');
+      if (question) {
+        setState(newArr);
+      }
+    });
+  }
+
   return (
     <div
       className={`${isDarkTheme ? 'app app_theme-dark' : 'app'} ${
@@ -107,6 +117,7 @@ function App() {
               <AdminMain
                 contacts={contacts}
                 experience={experience}
+                handleDeleteItem={handleDeleteItem}
                 links={links}
                 profile={profile}
                 projects={projects}
