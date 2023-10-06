@@ -1,20 +1,13 @@
 import { useEffect, useState } from 'react';
 import { Route, Switch, useLocation } from 'react-router-dom';
 import DarkThemeContext from '../../contexts/DarkThemeContext.jsx';
-import allContacts from '../../utils/contacts';
-import allExperience from '../../utils/experience';
-import allLinks from '../../utils/menu';
-import about from '../../utils/profile';
-import allProjects from '../../utils/projects';
-import {
-  skills as allSkills,
-  skillsText as allSkillsText,
-} from '../../utils/skills';
 import AdminMain from '../AdminComponents/AdminMain/AdminMain.jsx';
 import Layout from '../PublicComponents/Layout/Layout.jsx';
 import Login from '../PublicComponents/Login/Login.jsx';
 import MainStart from '../PublicComponents/MainStart/MainStart.jsx';
 import Register from '../PublicComponents/Register/Register.jsx';
+
+import * as api from '../../utils/api';
 import './_App.scss';
 
 function App() {
@@ -22,15 +15,14 @@ function App() {
     const storedTheme = localStorage.getItem('isDarkTheme');
     return storedTheme ? JSON.parse(storedTheme) : false;
   });
-
-  const [profile] = useState(about);
-  const [projects, setProjects] = useState(allProjects);
-  const [skills] = useState(allSkills);
-  const [skillsText, setSkillsText] = useState(allSkillsText);
-  const [links] = useState(allLinks);
+  const [profile, setProfile] = useState([]);
+  const [projects, setProjects] = useState([]);
+  const [skills, setSkills] = useState([]);
+  const [skillsText, setSkillsText] = useState([]);
+  const [links, setLinks] = useState([]);
   const [skillsByType, setSkillsByType] = useState({});
-  const [experience, setExperience] = useState(allExperience);
-  const [contacts, setContacts] = useState(allContacts);
+  const [experience, setExperience] = useState([]);
+  const [contacts, setContacts] = useState([]);
 
   const location = useLocation();
   const isAdminPath = location.pathname.startsWith('/admin');
@@ -54,6 +46,37 @@ function App() {
     setSkillsByType(updateSkills);
   }, []);
 
+  useEffect(
+    () =>
+      Promise.all([
+        api.getProfileInfo(),
+        api.getProjects(),
+        api.getMenu(),
+        api.getSkillsText(),
+        api.getSkills(),
+        api.getExperience(),
+        api.getContacts(),
+      ]).then(
+        ([
+          profileInfo,
+          allProjects,
+          allLinks,
+          skillsInfo,
+          allSkills,
+          allExperience,
+          allContacts,
+        ]) => {
+          setProfile(...profileInfo);
+          setProjects(allProjects);
+          setLinks(allLinks);
+          setSkillsText(skillsInfo);
+          setSkills(...allSkills);
+          setExperience(allExperience);
+          setContacts(allContacts);
+        },
+      ),
+    [],
+  );
   return (
     <div
       className={`${isDarkTheme ? 'app app_theme-dark' : 'app'} ${
