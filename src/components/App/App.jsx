@@ -150,7 +150,9 @@ function App() {
                 setContacts={setContacts}
                 setExperience={setExperience}
                 setProjects={setProjects}
+                setSkills={setSkills}
                 setSkillsText={setSkillsText}
+                skills={skills}
                 skillsByType={skillsByType}
                 skillsText={skillsText}
               />

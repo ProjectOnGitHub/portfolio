@@ -9,7 +9,16 @@ import AdminSectionButtonsLocal from '../AdminSectionButtonsLocal/AdminSectionBu
 import AdminSkillsList from '../AdminSkillsList/AdminSkillsList.jsx';
 import './_AdminSkills.scss';
 
-function AdminSkills({ skillsByType, editItem, skillsText }) {
+function AdminSkills({
+  skillsByType,
+  editItem,
+  skillsText,
+  setSkillsText,
+  skills,
+  setSkills,
+  openPopup,
+  saveSelectedItemData,
+}) {
   return (
     <>
       <AdminForm modifier="middle">
@@ -28,8 +37,12 @@ function AdminSkills({ skillsByType, editItem, skillsText }) {
                 />
                 <AdminSectionButtonsLocal
                   currentArray={skillsText}
+                  endpoint="skillsText"
                   isEditHide={true}
-                  item={item}
+                  itemId={item.id}
+                  openPopup={openPopup}
+                  saveSelectedItemData={saveSelectedItemData}
+                  setState={setSkillsText}
                 />
               </AdminListItem>
             ))}
@@ -52,8 +65,13 @@ function AdminSkills({ skillsByType, editItem, skillsText }) {
                   name={skill.name}
                 />
                 <AdminSectionButtonsLocal
+                  currentArray={skills}
                   editItem={editItem}
-                  item={skill}
+                  endpoint="skills"
+                  itemId={skill.id}
+                  openPopup={openPopup}
+                  saveSelectedItemData={saveSelectedItemData}
+                  setState={setSkills}
                 />
               </AdminListItem>
             ))}

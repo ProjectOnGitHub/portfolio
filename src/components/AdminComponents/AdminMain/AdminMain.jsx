@@ -13,12 +13,15 @@ import AdminSkills from '../AdminSkills/AdminSkills.jsx';
 function MainAdmin({
   projects,
   skillsByType,
+  skills,
   experience,
   profile,
   contacts,
   setProjects,
   setExperience,
   setContacts,
+  setSkills,
+  setSkillsText,
   skillsText,
   openPopup,
   saveSelectedItemData,
@@ -66,6 +69,11 @@ function MainAdmin({
             modifier="skills"
             title="Редактирование навыков">
             <AdminSkills
+              openPopup={openPopup}
+              saveSelectedItemData={saveSelectedItemData}
+              setSkills={setSkills}
+              setSkillsText={setSkillsText}
+              skills={skills}
               skillsByType={skillsByType}
               skillsText={skillsText}
             />
