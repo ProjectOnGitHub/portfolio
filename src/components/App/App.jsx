@@ -145,10 +145,7 @@ function App() {
                 openPopup={openPopup}
                 profile={profile}
                 projects={projects}
-                removeItem={removeItem}
                 saveSelectedItemData={saveSelectedItemData}
-                setContacts={setContacts}
-                setExperience={setExperience}
                 setProjects={setProjects}
                 setSkillsText={setSkillsText}
                 skillsByType={skillsByType}

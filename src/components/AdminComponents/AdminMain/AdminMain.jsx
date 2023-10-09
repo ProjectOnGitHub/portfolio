@@ -18,10 +18,6 @@ function MainAdmin({
   setProjects,
   profile,
   skillsText,
-  setExperience,
-  setContacts,
-  setSkillsText,
-  handleDeleteItem,
   openPopup,
   saveSelectedItemData,
 }) {
@@ -68,8 +64,6 @@ function MainAdmin({
             modifier="skills"
             title="Редактирование навыков">
             <AdminSkills
-              deleteItem={handleDeleteItem}
-              setSkillsText={setSkillsText}
               skillsByType={skillsByType}
               skillsText={skillsText}
             />
@@ -85,9 +79,7 @@ function MainAdmin({
             title="Редактирование опыта работы">
             <AdminExperience
               className="admin-section"
-              deleteItem={handleDeleteItem}
               experience={experience}
-              setExperience={setExperience}
             />
           </AdminSection>
         </Route>
@@ -102,8 +94,6 @@ function MainAdmin({
             <AdminContacts
               className="admin-section"
               contacts={contacts}
-              deleteItem={handleDeleteItem}
-              setContacts={setContacts}
             />
           </AdminSection>
         </Route>

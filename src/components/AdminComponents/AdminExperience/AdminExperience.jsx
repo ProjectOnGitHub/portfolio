@@ -4,13 +4,7 @@ import AdminListItem from '../AdminListItem/AdminListItem.jsx';
 import AdminSectionButtonAdd from '../AdminSectionButtonsAdd/AdminSectionButtonAdd.jsx';
 import AdminSectionButtonsLocal from '../AdminSectionButtonsLocal/AdminSectionButtonsLocal.jsx';
 
-function AdminExperience({
-  experience,
-  className,
-  deleteItem,
-  editItem,
-  setExperience,
-}) {
+function AdminExperience({ experience, className }) {
   const reversedExperience = [...experience].reverse();
 
   return (
@@ -31,10 +25,7 @@ function AdminExperience({
             </div>
             <AdminSectionButtonsLocal
               currentArray={experience}
-              deleteItem={deleteItem}
-              editItem={editItem}
               item={exp}
-              setArray={setExperience}
             />
           </AdminListItem>
         ))}
