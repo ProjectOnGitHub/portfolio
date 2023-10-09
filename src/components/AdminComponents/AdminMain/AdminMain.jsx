@@ -16,6 +16,7 @@ function MainAdmin({
   experience,
   contacts,
   setProjects,
+  setExperience,
   profile,
   skillsText,
   openPopup,
@@ -80,6 +81,9 @@ function MainAdmin({
             <AdminExperience
               className="admin-section"
               experience={experience}
+              openPopup={openPopup}
+              saveSelectedItemData={saveSelectedItemData}
+              setExperience={setExperience}
             />
           </AdminSection>
         </Route>

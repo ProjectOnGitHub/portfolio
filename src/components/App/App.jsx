@@ -146,6 +146,7 @@ function App() {
                 profile={profile}
                 projects={projects}
                 saveSelectedItemData={saveSelectedItemData}
+                setExperience={setExperience}
                 setProjects={setProjects}
                 setSkillsText={setSkillsText}
                 skillsByType={skillsByType}

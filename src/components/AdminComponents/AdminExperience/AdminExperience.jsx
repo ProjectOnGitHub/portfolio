@@ -4,9 +4,14 @@ import AdminListItem from '../AdminListItem/AdminListItem.jsx';
 import AdminSectionButtonAdd from '../AdminSectionButtonsAdd/AdminSectionButtonAdd.jsx';
 import AdminSectionButtonsLocal from '../AdminSectionButtonsLocal/AdminSectionButtonsLocal.jsx';
 
-function AdminExperience({ experience, className }) {
+function AdminExperience({
+  experience,
+  className,
+  setExperience,
+  openPopup,
+  saveSelectedItemData,
+}) {
   const reversedExperience = [...experience].reverse();
-
   return (
     <>
       <AdminList modifier="experience">
@@ -25,7 +30,11 @@ function AdminExperience({ experience, className }) {
             </div>
             <AdminSectionButtonsLocal
               currentArray={experience}
-              item={exp}
+              endpoint="experience"
+              itemId={exp.id}
+              openPopup={openPopup}
+              saveSelectedItemData={saveSelectedItemData}
+              setState={setExperience}
             />
           </AdminListItem>
         ))}
