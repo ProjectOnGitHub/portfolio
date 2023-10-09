@@ -57,7 +57,7 @@ function App() {
           setProjects(allProjects);
           setLinks(allLinks);
           setSkillsText(skillsInfo);
-          setSkills(...allSkills);
+          setSkills(allSkills);
           setExperience(allExperience);
           setContacts(allContacts);
         },
@@ -78,7 +78,7 @@ function App() {
       updateSkills[skill.type].skills.push(skill);
     });
     setSkillsByType(updateSkills);
-  }, []);
+  }, [skills]);
 
   function openPopup() {
     setPopupIsOpen(true);
