@@ -7,6 +7,7 @@ import Experience from '../Experience/Experience.jsx';
 
 function MainStart({
   projects,
+  contacts,
   skillsByType,
   experience,
   profile,
@@ -52,7 +53,10 @@ function MainStart({
       <Section
         className="contacts"
         id="contacts">
-        <Contacts title="Контакты" />
+        <Contacts
+          contacts={contacts}
+          title="Контакты"
+        />
       </Section>
     </>
   );

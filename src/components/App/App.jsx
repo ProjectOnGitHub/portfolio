@@ -92,6 +92,7 @@ function App() {
   }
 
   function removeItem(currentItem) {
+    console.log(currentItem);
     const { endpoint, itemId, currentArray, setState } = currentItem;
     api.deleteItem(endpoint, itemId).then(() => {
       const newArr = currentArray.filter((item) => item.id !== itemId);
@@ -146,6 +147,7 @@ function App() {
                 profile={profile}
                 projects={projects}
                 saveSelectedItemData={saveSelectedItemData}
+                setContacts={setContacts}
                 setExperience={setExperience}
                 setProjects={setProjects}
                 setSkillsText={setSkillsText}

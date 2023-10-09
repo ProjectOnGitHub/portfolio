@@ -2,12 +2,11 @@ import './_Contacts.scss';
 import Contact from '../Contact/Contact.jsx';
 import List from '../../BaseComponents/List/List.jsx';
 import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
-import contacts from '../../../utils/contacts';
 
-function Contacts(props) {
+function Contacts({ contacts, title }) {
   return (
     <>
-      <h2 className="contacts__title">{props.title}</h2>
+      <h2 className="contacts__title">{title}</h2>
       <List className="contacts__list">
         {contacts.map((item) => (
           <ListItem

@@ -14,10 +14,11 @@ function MainAdmin({
   projects,
   skillsByType,
   experience,
+  profile,
   contacts,
   setProjects,
   setExperience,
-  profile,
+  setContacts,
   skillsText,
   openPopup,
   saveSelectedItemData,
@@ -98,6 +99,9 @@ function MainAdmin({
             <AdminContacts
               className="admin-section"
               contacts={contacts}
+              openPopup={openPopup}
+              saveSelectedItemData={saveSelectedItemData}
+              setContacts={setContacts}
             />
           </AdminSection>
         </Route>
