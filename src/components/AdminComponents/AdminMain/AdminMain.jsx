@@ -22,12 +22,9 @@ function MainAdmin({
   setContacts,
   setSkillsText,
   handleDeleteItem,
+  openPopup,
+  saveSelectedItemData,
 }) {
-  function editItem(item) {
-    console.log('edit Element');
-    console.log(item);
-  }
-
   return (
     <>
       <Switch>
@@ -55,9 +52,9 @@ function MainAdmin({
             modifier="projects"
             title="Редактирование списка проектов">
             <AdminProjects
-              deleteItem={handleDeleteItem}
-              editItem={editItem}
+              openPopup={openPopup}
               projects={projects}
+              saveSelectedItemData={saveSelectedItemData}
               setProjects={setProjects}
             />
           </AdminSection>
@@ -72,7 +69,6 @@ function MainAdmin({
             title="Редактирование навыков">
             <AdminSkills
               deleteItem={handleDeleteItem}
-              editItem={editItem}
               setSkillsText={setSkillsText}
               skillsByType={skillsByType}
               skillsText={skillsText}
@@ -90,7 +86,6 @@ function MainAdmin({
             <AdminExperience
               className="admin-section"
               deleteItem={handleDeleteItem}
-              editItem={editItem}
               experience={experience}
               setExperience={setExperience}
             />
@@ -108,7 +103,6 @@ function MainAdmin({
               className="admin-section"
               contacts={contacts}
               deleteItem={handleDeleteItem}
-              editItem={editItem}
               setContacts={setContacts}
             />
           </AdminSection>

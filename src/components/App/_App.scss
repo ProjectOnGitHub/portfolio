@@ -2,6 +2,7 @@
 @import '../../scss/variables';
 
 .app {
+  position: relative;
   @include gridable();
   grid-template-areas:
     'block'

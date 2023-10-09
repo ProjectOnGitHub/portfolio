@@ -6,6 +6,7 @@ import Layout from '../PublicComponents/Layout/Layout.jsx';
 import Login from '../PublicComponents/Login/Login.jsx';
 import MainStart from '../PublicComponents/MainStart/MainStart.jsx';
 import Register from '../PublicComponents/Register/Register.jsx';
+import Popup from '../BaseComponents/Popup/Popup.jsx';
 import * as api from '../../utils/api';
 import './_App.scss';
 
@@ -14,6 +15,7 @@ function App() {
     const storedTheme = localStorage.getItem('isDarkTheme');
     return storedTheme ? JSON.parse(storedTheme) : false;
   });
+  const [selectedItem, setSelectedItem] = useState({});
   const [profile, setProfile] = useState([]);
   const [projects, setProjects] = useState([]);
   const [skills, setSkills] = useState([]);
@@ -22,6 +24,7 @@ function App() {
   const [skillsByType, setSkillsByType] = useState({});
   const [experience, setExperience] = useState([]);
   const [contacts, setContacts] = useState([]);
+  const [popupIsOpen, setPopupIsOpen] = useState(false);
 
   const location = useLocation();
   const isAdminPath = location.pathname.startsWith('/admin');
@@ -29,21 +32,6 @@ function App() {
   useEffect(() => {
     localStorage.setItem('isDarkTheme', JSON.stringify(isDarkTheme));
   }, [isDarkTheme]);
-
-  useEffect(() => {
-    const updateSkills = {};
-    skills.forEach((skill) => {
-      if (!updateSkills[skill.type]) {
-        updateSkills[skill.type] = {
-          type: skill.type,
-          sectionTitle: skill.sectionTitle,
-          skills: [],
-        };
-      }
-      updateSkills[skill.type].skills.push(skill);
-    });
-    setSkillsByType(updateSkills);
-  }, []);
 
   useEffect(
     () =>
@@ -77,14 +65,45 @@ function App() {
     [],
   );
 
-  function handleDeleteItem(endpoint, itemId, array, setState) {
-    api.deleteItem(endpoint, itemId).then(() => {
-      const newArr = array.filter((item) => item.id !== itemId);
-      const question = window.confirm('Хотите удалить элемент?');
-      if (question) {
-        setState(newArr);
+  useEffect(() => {
+    const updateSkills = {};
+    skills.forEach((skill) => {
+      if (!updateSkills[skill.type]) {
+        updateSkills[skill.type] = {
+          type: skill.type,
+          sectionTitle: skill.sectionTitle,
+          skills: [],
+        };
       }
+      updateSkills[skill.type].skills.push(skill);
     });
+    setSkillsByType(updateSkills);
+  }, []);
+
+  function openPopup() {
+    setPopupIsOpen(true);
+  }
+  function closePopup() {
+    setPopupIsOpen(false);
+  }
+
+  function saveSelectedItemData(data) {
+    setSelectedItem(data);
+  }
+
+  function removeItem(currentItem) {
+    const { endpoint, itemId, currentArray, setState } = currentItem;
+    api.deleteItem(endpoint, itemId).then(() => {
+      const newArr = currentArray.filter((item) => item.id !== itemId);
+      setState(newArr);
+    });
+  }
+
+  function confirmDeleteItem(state) {
+    if (state) {
+      removeItem(selectedItem);
+    }
+    closePopup();
   }
 
   return (
@@ -114,13 +133,20 @@ function App() {
             <Layout
               isAdminPath={isAdminPath}
               links={links}>
+              <Popup
+                confirmDeleteItem={confirmDeleteItem}
+                popupIsOpen={popupIsOpen}
+                removeItem={removeItem}
+              />
               <AdminMain
                 contacts={contacts}
                 experience={experience}
-                handleDeleteItem={handleDeleteItem}
                 links={links}
+                openPopup={openPopup}
                 profile={profile}
                 projects={projects}
+                removeItem={removeItem}
+                saveSelectedItemData={saveSelectedItemData}
                 setContacts={setContacts}
                 setExperience={setExperience}
                 setProjects={setProjects}

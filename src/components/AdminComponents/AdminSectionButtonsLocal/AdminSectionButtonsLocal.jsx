@@ -6,20 +6,28 @@ import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
 function AdminSectionButtonsLocal({
   endpoint,
   currentArray,
-  deleteItem,
   itemId,
-  editItem,
-  setArray,
+  setState,
   isDeleteHide,
   isEditHide,
+  openPopup,
+  saveSelectedItemData,
 }) {
-  function onClickDeleteButton() {
-    deleteItem(endpoint, itemId, currentArray, setArray);
+  function handleClickDeleteButton() {
+    openPopup();
+    const itemData = {
+      endpoint,
+      itemId,
+      currentArray,
+      setState,
+    };
+    saveSelectedItemData(itemData);
   }
 
   function handleClickEditButton() {
-    editItem(itemId);
+    console.log('Click to edit button');
   }
+
   return (
     <List
       className="admin-section__buttons"
@@ -46,7 +54,7 @@ function AdminSectionButtonsLocal({
             className="admin-section__button admin-section__button_delete"
             name="button-delete"
             type="submit"
-            onClick={onClickDeleteButton}>
+            onClick={handleClickDeleteButton}>
             <Icon
               className="trash"
               name="trash"

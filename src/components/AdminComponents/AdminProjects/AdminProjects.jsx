@@ -7,7 +7,12 @@ import AdminSectionButtonsLocal from '../AdminSectionButtonsLocal/AdminSectionBu
 
 import './_AdminProjects.scss';
 
-function AdminProjects({ projects, deleteItem, editItem, setProjects }) {
+function AdminProjects({
+  projects,
+  setProjects,
+  openPopup,
+  saveSelectedItemData,
+}) {
   return (
     <>
       <AdminList modifier="projects">
@@ -32,11 +37,11 @@ function AdminProjects({ projects, deleteItem, editItem, setProjects }) {
             </Link>
             <AdminSectionButtonsLocal
               currentArray={projects}
-              deleteItem={deleteItem}
-              editItem={editItem}
               endpoint="projects"
               itemId={project.id}
-              setArray={setProjects}
+              openPopup={openPopup}
+              saveSelectedItemData={saveSelectedItemData}
+              setState={setProjects}
             />
           </AdminListItem>
         ))}

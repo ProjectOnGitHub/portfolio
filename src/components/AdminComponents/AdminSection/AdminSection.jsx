@@ -1,14 +1,6 @@
 import './_AdminSection.scss';
-import AdminSectionButtonsGlobal from '../AdminSectionButtonsGlobal/AdminSectionButtonsGlobal.jsx';
 
-function AdminSection({
-  className,
-  id,
-  title,
-  modifier,
-  children,
-  onClick,
-}) {
+function AdminSection({ className, id, title, modifier, children }) {
   const sectionContainerClass = modifier
     ? `admin-section__container admin-section__container_${modifier}`
     : `admin-section__container`;
@@ -19,7 +11,6 @@ function AdminSection({
       id={`admin-${id}`}>
       <h1 className="admin-section__title">{title}</h1>
       <div className={sectionContainerClass}>{children}</div>
-      <AdminSectionButtonsGlobal onClick={onClick} />
     </section>
   );
 }
