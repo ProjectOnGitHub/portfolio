@@ -93,6 +93,12 @@
     width: 100px;
     height: 100px;
   }
+
+  &__drag-dots {
+    width: 24px;
+    height: 24px;
+    stroke: $color-gray;
+  }
 }
 
 @keyframes moveArrowDown {

@@ -5,8 +5,8 @@
   &__list {
     &-item {
       @include flexible();
-      gap: 5px;
       justify-content: space-between;
+      gap: 5px;
 
       &_skills {
         justify-items: center;
@@ -19,10 +19,13 @@
       }
 
       &_pages {
+        @include gridable();
+        grid-template-columns: repeat(2, max-content) 1fr;
+        align-items: center;
         box-sizing: border-box;
-        border-radius: $borderRadiusDefault;
         padding: 8px 4px;
-        border: 1px solid $color-gray;
+        border: 1px solid rgba($color-gray, 0.2);
+        border-radius: $borderRadiusDefault;
       }
     }
   }
