@@ -3,7 +3,7 @@ import ListItem from '../ListItem/ListItem.jsx';
 import Button from '../Button/Button.jsx';
 import './_Popup.scss';
 
-function Popup({ name, confirmDeleteItem, popupIsOpen }) {
+function Popup({ confirmDeleteItem, popupIsOpen }) {
   function handleClickSaveButton() {
     confirmDeleteItem(true);
   }
@@ -13,8 +13,7 @@ function Popup({ name, confirmDeleteItem, popupIsOpen }) {
   }
 
   return (
-    <section
-      className={`popup popup_type-${name} ${popupIsOpen && 'popup_opened'}`}>
+    <section className={`popup ${popupIsOpen && 'popup_opened'}`}>
       <div className="popup__container">
         <h1 className="admin-section__title">
           Вы действительно хотите удалить элемент?

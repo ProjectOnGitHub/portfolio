@@ -47,6 +47,7 @@ function AdminSkills({
               </AdminListItem>
             ))}
           </AdminList>
+          <AdminSectionButtonAdd>Добавить описание</AdminSectionButtonAdd>
         </fieldset>
       </AdminForm>
 

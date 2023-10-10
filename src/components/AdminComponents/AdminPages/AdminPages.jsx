@@ -21,7 +21,10 @@ function AdminPages({ pages }) {
               to={`/admin/${link.url}`}>
               {link.anchor}
             </Link>
-            <Switcher isEnabled={link.isEnabled} />
+            <Switcher
+              isEnabled={link.isEnabled}
+              modifier="pages"
+            />
           </AdminListItem>
         ))}
       </AdminList>

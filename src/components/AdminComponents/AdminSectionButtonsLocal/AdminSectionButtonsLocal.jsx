@@ -35,7 +35,7 @@ function AdminSectionButtonsLocal({
       {!isEditHide && (
         <ListItem className="admin-section__buttons-item">
           <Button
-            aria-label="Edit button"
+            ariaLabel="Редактировать"
             className="admin-section__button admin-section__button_edit"
             name="button-edit"
             type="submit"
@@ -50,7 +50,7 @@ function AdminSectionButtonsLocal({
       {!isDeleteHide && (
         <ListItem className="admin-section__buttons-item">
           <Button
-            aria-label="Edit button"
+            ariaLabel="Удалить"
             className="admin-section__button admin-section__button_delete"
             name="button-delete"
             type="submit"
