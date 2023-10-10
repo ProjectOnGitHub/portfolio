@@ -82,3 +82,17 @@ export function deleteItem(endpoint, itemId) {
     },
   }).then(getResponse);
 }
+
+export function changePageVisibility(id, isEnabled) {
+  return fetch(`${API_URL}/pages/${id}`, {
+    method: 'PATCH',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+    credentials: 'include',
+    body: JSON.stringify({
+      isEnabled,
+    }),
+  }).then(getResponse);
+}

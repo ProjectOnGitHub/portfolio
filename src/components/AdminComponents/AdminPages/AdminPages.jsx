@@ -4,13 +4,13 @@ import AdminListItem from '../AdminListItem/AdminListItem.jsx';
 import Icon from '../../BaseComponents/Icon/Icon.jsx';
 import Switcher from '../../BaseComponents/Switcher/Switcher.jsx';
 
-function AdminPages({ pages }) {
+function AdminPages({ pages, togglePageVisibility }) {
   return (
     <>
       <AdminList modifier="pages">
-        {pages.map((link) => (
+        {pages.map((page) => (
           <AdminListItem
-            key={link.id}
+            key={page.id}
             modifier="pages">
             <Icon
               className="drag-dots"
@@ -18,12 +18,14 @@ function AdminPages({ pages }) {
             />
             <Link
               className="admin-section__link"
-              to={`/admin/${link.url}`}>
-              {link.anchor}
+              to={`/admin/${page.url}`}>
+              {page.anchor}
             </Link>
             <Switcher
-              isEnabled={link.isEnabled}
+              isEnabled={page.isEnabled}
+              item={page}
               modifier="pages"
+              toggleVisibility={togglePageVisibility}
             />
           </AdminListItem>
         ))}

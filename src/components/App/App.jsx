@@ -106,6 +106,17 @@ function App() {
     closePopup();
   }
 
+  function togglePageVisibility({ id, isEnabled }) {
+    api.changePageVisibility(id, !isEnabled).then((updatedPage) => {
+      const updatedPages = [...pages];
+      const pageIndex = updatedPages.findIndex((page) => page.id === id);
+      if (pageIndex !== -1) {
+        updatedPages[pageIndex].isEnabled = updatedPage.isEnabled;
+        setPages(updatedPages);
+      }
+    });
+  }
+
   return (
     <div
       className={`${isDarkTheme ? 'app app_theme-dark' : 'app'} ${
@@ -155,6 +166,7 @@ function App() {
                 skills={skills}
                 skillsByType={skillsByType}
                 skillsText={skillsText}
+                togglePageVisibility={togglePageVisibility}
               />
             </Layout>
           </Route>

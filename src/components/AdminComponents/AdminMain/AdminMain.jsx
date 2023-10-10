@@ -20,13 +20,14 @@ function MainAdmin({
   skills,
   skillsByType,
   skillsText,
-  setExperience,
   setContacts,
+  setExperience,
   setProjects,
   setSkills,
   setSkillsText,
   openPopup,
   saveSelectedItemData,
+  togglePageVisibility,
 }) {
   return (
     <>
@@ -42,6 +43,7 @@ function MainAdmin({
             <AdminPages
               className="pages"
               pages={pages}
+              togglePageVisibility={togglePageVisibility}
             />
           </AdminSection>
         </Route>
