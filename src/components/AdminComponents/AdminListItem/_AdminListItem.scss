@@ -17,6 +17,13 @@
         justify-items: center;
         max-width: 150px;
       }
+
+      &_pages {
+        box-sizing: border-box;
+        border-radius: $borderRadiusDefault;
+        padding: 8px 4px;
+        border: 1px solid $color-gray;
+      }
     }
   }
 }

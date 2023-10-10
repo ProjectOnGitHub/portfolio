@@ -20,7 +20,7 @@ function App() {
   const [projects, setProjects] = useState([]);
   const [skills, setSkills] = useState([]);
   const [skillsText, setSkillsText] = useState([]);
-  const [links, setLinks] = useState([]);
+  const [pages, setPages] = useState([]);
   const [skillsByType, setSkillsByType] = useState({});
   const [experience, setExperience] = useState([]);
   const [contacts, setContacts] = useState([]);
@@ -38,7 +38,7 @@ function App() {
       Promise.all([
         api.getProfileInfo(),
         api.getProjects(),
-        api.getMenu(),
+        api.getPages(),
         api.getSkillsText(),
         api.getSkills(),
         api.getExperience(),
@@ -47,7 +47,7 @@ function App() {
         ([
           profileInfo,
           allProjects,
-          allLinks,
+          allPages,
           skillsInfo,
           allSkills,
           allExperience,
@@ -55,7 +55,7 @@ function App() {
         ]) => {
           setProfile(...profileInfo);
           setProjects(allProjects);
-          setLinks(allLinks);
+          setPages(allPages);
           setSkillsText(skillsInfo);
           setSkills(allSkills);
           setExperience(allExperience);
@@ -92,7 +92,6 @@ function App() {
   }
 
   function removeItem(currentItem) {
-    console.log(currentItem);
     const { endpoint, itemId, currentArray, setState } = currentItem;
     api.deleteItem(endpoint, itemId).then(() => {
       const newArr = currentArray.filter((item) => item.id !== itemId);
@@ -119,7 +118,7 @@ function App() {
             exact>
             <Layout
               isAdminPath={isAdminPath}
-              links={links}>
+              pages={pages}>
               <MainStart
                 contacts={contacts}
                 experience={experience}
@@ -133,7 +132,7 @@ function App() {
           <Route path="/admin">
             <Layout
               isAdminPath={isAdminPath}
-              links={links}>
+              pages={pages}>
               <Popup
                 confirmDeleteItem={confirmDeleteItem}
                 popupIsOpen={popupIsOpen}
@@ -142,8 +141,8 @@ function App() {
               <AdminMain
                 contacts={contacts}
                 experience={experience}
-                links={links}
                 openPopup={openPopup}
+                pages={pages}
                 profile={profile}
                 projects={projects}
                 saveSelectedItemData={saveSelectedItemData}

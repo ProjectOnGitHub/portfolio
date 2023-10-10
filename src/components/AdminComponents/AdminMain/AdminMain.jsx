@@ -3,6 +3,7 @@ import AdminContact from '../AdminContact/AdminContact.jsx';
 import AdminContacts from '../AdminContacts/AdminContacts.jsx';
 import AdminExperience from '../AdminExperience/AdminExperience.jsx';
 import AdminExperienceItem from '../AdminExperienceItem/AdminExperienceItem.jsx';
+import AdminPages from '../AdminPages/AdminPages.jsx';
 import AdminProfile from '../AdminProfile/AdminProfile.jsx';
 import AdminProject from '../AdminProject/AdminProject.jsx';
 import AdminProjects from '../AdminProjects/AdminProjects.jsx';
@@ -11,24 +12,39 @@ import AdminSkill from '../AdminSkill/AdminSkill.jsx';
 import AdminSkills from '../AdminSkills/AdminSkills.jsx';
 
 function MainAdmin({
-  projects,
-  skillsByType,
-  skills,
-  experience,
-  profile,
   contacts,
-  setProjects,
+  experience,
+  pages,
+  profile,
+  projects,
+  skills,
+  skillsByType,
+  skillsText,
   setExperience,
   setContacts,
+  setProjects,
   setSkills,
   setSkillsText,
-  skillsText,
   openPopup,
   saveSelectedItemData,
 }) {
   return (
     <>
       <Switch>
+        <Route
+          path="/admin"
+          exact>
+          <AdminSection
+            className="pages"
+            id="pages"
+            modifier="pages"
+            title="Редактирование списка страниц">
+            <AdminPages
+              className="pages"
+              pages={pages}
+            />
+          </AdminSection>
+        </Route>
         <Route
           path="/admin/profile"
           exact>

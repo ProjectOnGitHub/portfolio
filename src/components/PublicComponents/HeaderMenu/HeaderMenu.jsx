@@ -5,7 +5,7 @@ import Button from '../../BaseComponents/Button/Button.jsx';
 import List from '../../BaseComponents/List/List.jsx';
 import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
 
-function HeaderMenu({ links, className, isAdminPath }) {
+function HeaderMenu({ pages, className, isAdminPath }) {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
 
   function toggleMenu() {
@@ -44,15 +44,22 @@ function HeaderMenu({ links, className, isAdminPath }) {
             ? `${className}__menu ${className}__menu_opened`
             : `${className}__menu`
         }>
-        {links.map((item) => (
+        {isAdminPath && (
+          <Link
+            className={`${className}__menu-link`}
+            to="/admin">
+            Страницы
+          </Link>
+        )}
+        {pages.map((link) => (
           <ListItem
-            key={item.id}
+            key={link.id}
             className={`${className}__menu-item`}>
             <Link
               className={`${className}__menu-link`}
-              to={isAdminPath ? `/admin/${item.url}` : `#${item.url}`}
+              to={isAdminPath ? `/admin/${link.url}` : `#${link.url}`}
               onClick={closeMenu}>
-              {item.anchor}
+              {link.anchor}
             </Link>
           </ListItem>
         ))}

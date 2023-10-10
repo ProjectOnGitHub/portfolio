@@ -23,8 +23,8 @@ export function getProjects() {
   }).then(getResponse);
 }
 
-export function getMenu() {
-  return fetch(`${API_URL}/menu`, {
+export function getPages() {
+  return fetch(`${API_URL}/pages`, {
     method: 'GET',
     headers: {
       Accept: 'application/json',
