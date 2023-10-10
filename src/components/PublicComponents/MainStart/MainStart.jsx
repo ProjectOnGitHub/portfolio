@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import Section from '../Section/Section.jsx';
 import Profile from '../Profile/Profile.jsx';
 import Projects from '../Projects/Projects.jsx';
@@ -6,58 +7,59 @@ import Skills from '../Skills/Skills.jsx';
 import Experience from '../Experience/Experience.jsx';
 
 function MainStart({
-  projects,
   contacts,
-  skillsByType,
   experience,
+  pages,
   profile,
+  projects,
+  skillsByType,
   skillsText,
 }) {
   return (
     <>
-      <Section
-        className="profile"
-        id="profile">
-        <Profile
-          description={profile.description}
-          name={profile.name}
-          position={profile.position}
-        />
-      </Section>
-      <Section
-        className="projects"
-        id="projects">
-        <Projects
-          projects={projects}
-          title="Проекты"
-        />
-      </Section>
-      <Section
-        className="skills"
-        id="skills"
-        title="Навыки">
-        <Skills
-          skillsByType={skillsByType}
-          skillsText={skillsText}
-          title="Навыки"
-        />
-      </Section>
-      <Section
-        className="experience"
-        id="experience">
-        <Experience
-          experience={experience}
-          title="Опыт работы"
-        />
-      </Section>
-      <Section
-        className="contacts"
-        id="contacts">
-        <Contacts
-          contacts={contacts}
-          title="Контакты"
-        />
-      </Section>
+      {pages.map((page) => (
+        <Fragment key={page.id}>
+          {page.isEnabled && (
+            <Section
+              key={page.id}
+              className={page.url}
+              id={page.url}>
+              {page.url === 'profile' && (
+                <Profile
+                  description={profile.description}
+                  name={profile.name}
+                  position={profile.position}
+                />
+              )}
+              {page.url === 'projects' && (
+                <Projects
+                  projects={projects}
+                  title="Проекты"
+                />
+              )}
+              {page.url === 'skills' && (
+                <Skills
+                  skillsByType={skillsByType}
+                  skillsText={skillsText}
+                  title="Навыки"
+                />
+              )}
+              {page.url === 'experience' && (
+                <Experience
+                  experience={experience}
+                  title="Опыт работы"
+                />
+              )}
+              {page.url === 'contacts' && (
+                <Contacts
+                  contacts={contacts}
+                  title="Контакты"
+                />
+              )}
+            </Section>
+          )}
+        </Fragment>
+      ))}
     </>
   );
 }

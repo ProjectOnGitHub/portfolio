@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import AdminList from '../AdminList/AdminList.jsx';
 import AdminListItem from '../AdminListItem/AdminListItem.jsx';
 import Icon from '../../BaseComponents/Icon/Icon.jsx';
+import Switcher from '../../BaseComponents/Switcher/Switcher.jsx';
 
 function AdminPages({ pages }) {
   return (
@@ -20,6 +21,7 @@ function AdminPages({ pages }) {
               to={`/admin/${link.url}`}>
               {link.anchor}
             </Link>
+            <Switcher isEnabled={link.isEnabled} />
           </AdminListItem>
         ))}
       </AdminList>

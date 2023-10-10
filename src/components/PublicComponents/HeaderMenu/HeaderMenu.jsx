@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import './_HeaderMenu.scss';
 import Button from '../../BaseComponents/Button/Button.jsx';
@@ -52,16 +52,28 @@ function HeaderMenu({ pages, className, isAdminPath }) {
           </Link>
         )}
         {pages.map((link) => (
-          <ListItem
-            key={link.id}
-            className={`${className}__menu-item`}>
-            <Link
-              className={`${className}__menu-link`}
-              to={isAdminPath ? `/admin/${link.url}` : `#${link.url}`}
-              onClick={closeMenu}>
-              {link.anchor}
-            </Link>
-          </ListItem>
+          <Fragment key={link.id}>
+            {!isAdminPath && link.isEnabled && (
+              <ListItem className={`${className}__menu-item`}>
+                <Link
+                  className={`${className}__menu-link`}
+                  to={`#${link.url}`}
+                  onClick={closeMenu}>
+                  {link.anchor}
+                </Link>
+              </ListItem>
+            )}
+            {isAdminPath && (
+              <ListItem className={`${className}__menu-item`}>
+                <Link
+                  className={`${className}__menu-link`}
+                  to={`/admin/${link.url}`}
+                  onClick={closeMenu}>
+                  {link.anchor}
+                </Link>
+              </ListItem>
+            )}
+          </Fragment>
         ))}
       </List>
     </>

@@ -122,6 +122,7 @@ function App() {
               <MainStart
                 contacts={contacts}
                 experience={experience}
+                pages={pages}
                 profile={profile}
                 projects={projects}
                 skillsByType={skillsByType}
