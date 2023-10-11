@@ -87,7 +87,6 @@ function App() {
   }
   function closePopup() {
     setPopupIsOpen(false);
-    setPopupTitle('');
   }
 
   function saveSelectedItemData(data) {
