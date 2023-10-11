@@ -2,7 +2,7 @@ import ExperienceItem from '../../PublicComponents/ExperienceItem/ExperienceItem
 import AdminList from '../AdminList/AdminList.jsx';
 import AdminListItem from '../AdminListItem/AdminListItem.jsx';
 import AdminSectionButtonAdd from '../AdminSectionButtonsAdd/AdminSectionButtonAdd.jsx';
-import AdminSectionButtonsLocal from '../AdminSectionButtonsLocal/AdminSectionButtonsLocal.jsx';
+import AdminSectionButtonsChoice from '../AdminSectionButtonsChoice/AdminSectionButtonsChoice.jsx';
 
 function AdminExperience({
   experience,
@@ -28,7 +28,7 @@ function AdminExperience({
                 title={exp.title}
               />
             </div>
-            <AdminSectionButtonsLocal
+            <AdminSectionButtonsChoice
               currentArray={experience}
               endpoint="experience"
               itemId={exp.id}

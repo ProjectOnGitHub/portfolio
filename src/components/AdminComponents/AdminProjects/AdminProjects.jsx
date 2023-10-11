@@ -3,7 +3,7 @@ import imagesMap from '../../../utils/images';
 import AdminList from '../AdminList/AdminList.jsx';
 import AdminListItem from '../AdminListItem/AdminListItem.jsx';
 import AdminSectionButtonAdd from '../AdminSectionButtonsAdd/AdminSectionButtonAdd.jsx';
-import AdminSectionButtonsLocal from '../AdminSectionButtonsLocal/AdminSectionButtonsLocal.jsx';
+import AdminSectionButtonsChoice from '../AdminSectionButtonsChoice/AdminSectionButtonsChoice.jsx';
 
 import './_AdminProjects.scss';
 
@@ -35,7 +35,7 @@ function AdminProjects({
                 </figcaption>
               </figure>
             </Link>
-            <AdminSectionButtonsLocal
+            <AdminSectionButtonsChoice
               currentArray={projects}
               endpoint="projects"
               itemId={project.id}

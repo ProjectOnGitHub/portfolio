@@ -5,7 +5,7 @@ import AdminFormTextarea from '../AdminFormTextarea/AdminFormTextarea.jsx';
 import AdminList from '../AdminList/AdminList.jsx';
 import AdminListItem from '../AdminListItem/AdminListItem.jsx';
 import AdminSectionButtonAdd from '../AdminSectionButtonsAdd/AdminSectionButtonAdd.jsx';
-import AdminSectionButtonsLocal from '../AdminSectionButtonsLocal/AdminSectionButtonsLocal.jsx';
+import AdminSectionButtonsChoice from '../AdminSectionButtonsChoice/AdminSectionButtonsChoice.jsx';
 import AdminSkillsList from '../AdminSkillsList/AdminSkillsList.jsx';
 import './_AdminSkills.scss';
 
@@ -35,7 +35,7 @@ function AdminSkills({
                   required={true}
                   value={item.text}
                 />
-                <AdminSectionButtonsLocal
+                <AdminSectionButtonsChoice
                   currentArray={skillsText}
                   endpoint="skillsText"
                   isEditHide={true}
@@ -65,7 +65,7 @@ function AdminSkills({
                   modifier={skill.name}
                   name={skill.name}
                 />
-                <AdminSectionButtonsLocal
+                <AdminSectionButtonsChoice
                   currentArray={skills}
                   editItem={editItem}
                   endpoint="skills"

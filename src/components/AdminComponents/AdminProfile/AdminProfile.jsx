@@ -1,6 +1,7 @@
 import AdminForm from '../AdminForm/AdminForm.jsx';
 import AdminFormInput from '../AdminFormInput/AdminFormInput.jsx';
 import AdminFormTextarea from '../AdminFormTextarea/AdminFormTextarea.jsx';
+import AdminSectionButtonAdd from '../AdminSectionButtonsAdd/AdminSectionButtonAdd.jsx';
 
 function AdminProfile({ name, position, description }) {
   return (
@@ -27,6 +28,7 @@ function AdminProfile({ name, position, description }) {
           value={description}
         />
       </fieldset>
+      <AdminSectionButtonAdd>Сохранить изменения</AdminSectionButtonAdd>
     </AdminForm>
   );
 }

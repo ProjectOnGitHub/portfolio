@@ -3,7 +3,7 @@ import Icon from '../../BaseComponents/Icon/Icon.jsx';
 import List from '../../BaseComponents/List/List.jsx';
 import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
 
-function AdminSectionButtonsLocal({
+function AdminSectionButtonsChoice({
   endpoint,
   currentArray,
   itemId,
@@ -66,4 +66,4 @@ function AdminSectionButtonsLocal({
   );
 }
 
-export default AdminSectionButtonsLocal;
+export default AdminSectionButtonsChoice;
