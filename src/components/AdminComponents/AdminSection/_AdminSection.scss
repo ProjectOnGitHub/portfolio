@@ -23,21 +23,6 @@
     color: inherit;
   }
 
-  &__buttons {
-    @include flexible(max-content);
-    @include unmarkedList;
-
-    &_global {
-      justify-content: center;
-      gap: 10px 30px;
-    }
-
-    &_local {
-      flex-direction: column;
-      gap: 8px;
-    }
-  }
-
   &__button {
     @include flexible();
     @include button();

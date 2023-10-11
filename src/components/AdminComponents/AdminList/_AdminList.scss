@@ -28,5 +28,12 @@
       max-width: $middle-width;
       gap: 24px 16px;
     }
+
+    &_buttons-icon {
+      @include flexible(max-content);
+      @include unmarkedList;
+      flex-direction: column;
+      gap: 8px;
+    }
   }
 }

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import imagesMap from '../../../utils/images';
 import AdminList from '../AdminList/AdminList.jsx';
 import AdminListItem from '../AdminListItem/AdminListItem.jsx';
-import AdminSectionButtonsChoice from '../AdminSectionButtonsChoice/AdminSectionButtonsChoice.jsx';
+import AdminSectionButtonsAction from '../AdminSectionButtonsAction/AdminSectionButtonsAction.jsx';
 
 import './_AdminProjects.scss';
 
@@ -34,7 +34,7 @@ function AdminProjects({
                 </figcaption>
               </figure>
             </Link>
-            <AdminSectionButtonsChoice
+            <AdminSectionButtonsAction
               currentArray={projects}
               endpoint="projects"
               itemId={project.id}

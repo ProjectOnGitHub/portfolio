@@ -1,4 +1,4 @@
-import AdminSectionButtonsChoice from '../AdminSectionButtonsChoice/AdminSectionButtonsChoice.jsx';
+import AdminSectionButtonsAction from '../AdminSectionButtonsAction/AdminSectionButtonsAction.jsx';
 import AdminList from '../AdminList/AdminList.jsx';
 import AdminListItem from '../AdminListItem/AdminListItem.jsx';
 import Contact from '../../PublicComponents/Contact/Contact.jsx';
@@ -26,7 +26,7 @@ function AdminContacts({
                 url={contact.url}
               />
             </div>
-            <AdminSectionButtonsChoice
+            <AdminSectionButtonsAction
               currentArray={contacts}
               endpoint="contacts"
               itemId={contact.id}

@@ -1,9 +1,9 @@
 import Icon from '../../BaseComponents/Icon/Icon.jsx';
-import List from '../../BaseComponents/List/List.jsx';
-import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
+import AdminList from '../AdminList/AdminList.jsx';
+import AdminListItem from '../AdminListItem/AdminListItem.jsx';
 import AdminSectionButton from '../AdminSectionButton/AdminSectionButton.jsx';
 
-function AdminSectionButtonsChoice({
+function AdminSectionButtonsAction({
   endpoint,
   currentArray,
   itemId,
@@ -29,26 +29,23 @@ function AdminSectionButtonsChoice({
   }
 
   return (
-    <List
-      className="admin-section__buttons"
-      modifier="local">
+    <AdminList modifier="buttons-icon">
       {!isEditHide && (
-        <ListItem className="admin-section__buttons-item">
+        <AdminListItem modifier="buttons-icon">
           <AdminSectionButton
             ariaLabel="Редактировать"
             modifier="edit"
             name="edit"
-            type="button"
             onClick={handleClickEditButton}>
             <Icon
               className="edit"
               name="edit"
             />
           </AdminSectionButton>
-        </ListItem>
+        </AdminListItem>
       )}
       {!isDeleteHide && (
-        <ListItem className="admin-section__buttons-item">
+        <AdminListItem modifier="buttons-icon">
           <AdminSectionButton
             ariaLabel="Удалить"
             modifier="delete"
@@ -59,10 +56,10 @@ function AdminSectionButtonsChoice({
               name="trash"
             />
           </AdminSectionButton>
-        </ListItem>
+        </AdminListItem>
       )}
-    </List>
+    </AdminList>
   );
 }
 
-export default AdminSectionButtonsChoice;
+export default AdminSectionButtonsAction;
