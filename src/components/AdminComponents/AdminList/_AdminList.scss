@@ -29,11 +29,15 @@
       gap: 24px 16px;
     }
 
-    &_buttons-icon {
-      @include flexible(max-content);
-      @include unmarkedList;
+    &_buttons-action {
+      width: max-content;
       flex-direction: column;
       gap: 8px;
+    }
+    &_buttons-choice {
+      justify-content: center;
+      width: max-content;
+      gap: 32px;
     }
   }
 }

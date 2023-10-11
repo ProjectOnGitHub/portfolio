@@ -29,9 +29,9 @@ function AdminSectionButtonsAction({
   }
 
   return (
-    <AdminList modifier="buttons-icon">
+    <AdminList modifier="buttons-action">
       {!isEditHide && (
-        <AdminListItem modifier="buttons-icon">
+        <AdminListItem modifier="buttons-action">
           <AdminSectionButton
             ariaLabel="Редактировать"
             modifier="edit"
@@ -45,7 +45,7 @@ function AdminSectionButtonsAction({
         </AdminListItem>
       )}
       {!isDeleteHide && (
-        <AdminListItem modifier="buttons-icon">
+        <AdminListItem modifier="buttons-action">
           <AdminSectionButton
             ariaLabel="Удалить"
             modifier="delete"

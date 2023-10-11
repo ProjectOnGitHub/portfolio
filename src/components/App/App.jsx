@@ -6,7 +6,6 @@ import Layout from '../PublicComponents/Layout/Layout.jsx';
 import Login from '../PublicComponents/Login/Login.jsx';
 import MainStart from '../PublicComponents/MainStart/MainStart.jsx';
 import Register from '../PublicComponents/Register/Register.jsx';
-import Popup from '../BaseComponents/Popup/Popup.jsx';
 import * as api from '../../utils/api';
 import './_App.scss';
 
@@ -145,16 +144,13 @@ function App() {
             <Layout
               isAdminPath={isAdminPath}
               pages={pages}>
-              <Popup
-                confirmDeleteItem={confirmDeleteItem}
-                popupIsOpen={popupIsOpen}
-                removeItem={removeItem}
-              />
               <AdminMain
+                confirmDeleteItem={confirmDeleteItem}
                 contacts={contacts}
                 experience={experience}
                 openPopup={openPopup}
                 pages={pages}
+                popupIsOpen={popupIsOpen}
                 profile={profile}
                 projects={projects}
                 saveSelectedItemData={saveSelectedItemData}
