@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import imagesMap from '../../../utils/images';
 import AdminList from '../AdminList/AdminList.jsx';
 import AdminListItem from '../AdminListItem/AdminListItem.jsx';
-import AdminSectionButtonAdd from '../AdminSectionButtonsAdd/AdminSectionButtonAdd.jsx';
 import AdminSectionButtonsChoice from '../AdminSectionButtonsChoice/AdminSectionButtonsChoice.jsx';
 
 import './_AdminProjects.scss';
@@ -46,7 +45,6 @@ function AdminProjects({
           </AdminListItem>
         ))}
       </AdminList>
-      <AdminSectionButtonAdd>Добавить проект</AdminSectionButtonAdd>
     </>
   );
 }

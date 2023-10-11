@@ -1,5 +1,4 @@
 import AdminSectionButtonsChoice from '../AdminSectionButtonsChoice/AdminSectionButtonsChoice.jsx';
-import AdminSectionButtonAdd from '../AdminSectionButtonsAdd/AdminSectionButtonAdd.jsx';
 import AdminList from '../AdminList/AdminList.jsx';
 import AdminListItem from '../AdminListItem/AdminListItem.jsx';
 import Contact from '../../PublicComponents/Contact/Contact.jsx';
@@ -38,7 +37,6 @@ function AdminContacts({
           </AdminListItem>
         ))}
       </AdminList>
-      <AdminSectionButtonAdd>Добавить контакт</AdminSectionButtonAdd>
     </>
   );
 }

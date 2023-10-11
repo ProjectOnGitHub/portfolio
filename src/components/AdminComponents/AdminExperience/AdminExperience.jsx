@@ -1,7 +1,6 @@
 import ExperienceItem from '../../PublicComponents/ExperienceItem/ExperienceItem.jsx';
 import AdminList from '../AdminList/AdminList.jsx';
 import AdminListItem from '../AdminListItem/AdminListItem.jsx';
-import AdminSectionButtonAdd from '../AdminSectionButtonsAdd/AdminSectionButtonAdd.jsx';
 import AdminSectionButtonsChoice from '../AdminSectionButtonsChoice/AdminSectionButtonsChoice.jsx';
 
 function AdminExperience({
@@ -39,7 +38,6 @@ function AdminExperience({
           </AdminListItem>
         ))}
       </AdminList>
-      <AdminSectionButtonAdd>Добавить опыт работы</AdminSectionButtonAdd>
     </>
   );
 }

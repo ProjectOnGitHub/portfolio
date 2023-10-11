@@ -4,7 +4,6 @@ import AdminForm from '../AdminForm/AdminForm.jsx';
 import AdminFormTextarea from '../AdminFormTextarea/AdminFormTextarea.jsx';
 import AdminList from '../AdminList/AdminList.jsx';
 import AdminListItem from '../AdminListItem/AdminListItem.jsx';
-import AdminSectionButtonAdd from '../AdminSectionButtonsAdd/AdminSectionButtonAdd.jsx';
 import AdminSectionButtonsChoice from '../AdminSectionButtonsChoice/AdminSectionButtonsChoice.jsx';
 import AdminSkillsList from '../AdminSkillsList/AdminSkillsList.jsx';
 import './_AdminSkills.scss';
@@ -47,7 +46,6 @@ function AdminSkills({
               </AdminListItem>
             ))}
           </AdminList>
-          <AdminSectionButtonAdd>Добавить описание</AdminSectionButtonAdd>
         </fieldset>
       </AdminForm>
 
@@ -77,7 +75,6 @@ function AdminSkills({
               </AdminListItem>
             ))}
           </AdminSkillsList>
-          <AdminSectionButtonAdd>Добавить навык</AdminSectionButtonAdd>
         </Fragment>
       ))}
     </>
