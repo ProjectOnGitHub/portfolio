@@ -135,7 +135,7 @@ function MainAdmin({
         {projects.map((project) => (
           <Route
             key={project.id}
-            path={`/admin/projects/${project.name}`}
+            path="/admin/projects/:id"
             exact>
             <AdminSection
               className="project"
@@ -147,7 +147,7 @@ function MainAdmin({
           </Route>
         ))}
         <Route
-          path="/admin/skills/skill"
+          path="/admin/skills/:id"
           exact>
           <AdminSection
             className="skill"
@@ -158,7 +158,7 @@ function MainAdmin({
           </AdminSection>
         </Route>
         <Route
-          path="/admin/experience/item"
+          path="/admin/experience/:id"
           exact>
           <AdminSection
             className="experience"
@@ -169,7 +169,7 @@ function MainAdmin({
           </AdminSection>
         </Route>
         <Route
-          path="/admin/contacts/contact"
+          path="/admin/contacts/:id"
           exact>
           <AdminSection
             className="contact"

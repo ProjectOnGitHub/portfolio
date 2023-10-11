@@ -96,3 +96,13 @@ export function changePageVisibility(id, isEnabled) {
     }),
   }).then(getResponse);
 }
+
+export function getItemInfo(endpoint, itemId) {
+  return fetch(`${API_URL}/${endpoint}/${itemId}`, {
+    method: 'GET',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+  }).then(getResponse);
+}

@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import imagesMap from '../../../utils/images';
 import AdminList from '../AdminList/AdminList.jsx';
 import AdminListItem from '../AdminListItem/AdminListItem.jsx';
@@ -19,21 +18,17 @@ function AdminProjects({
           <AdminListItem
             key={project.id}
             modifier="projects">
-            <Link
-              key={project.id}
-              className="admin-section__link"
-              to={`/admin/projects/${project.name}`}>
-              <figure className="admin-projects__figure">
-                <img
-                  alt={project.title}
-                  className="admin-projects__image"
-                  src={imagesMap[`./${[project.image]}`]}
-                />
-                <figcaption className="admin-projects__caption">
-                  {project.title}
-                </figcaption>
-              </figure>
-            </Link>
+            <figure className="admin-projects__figure">
+              <img
+                alt={project.title}
+                className="admin-projects__image"
+                src={imagesMap[`./${[project.image]}`]}
+              />
+              <figcaption className="admin-projects__caption">
+                {project.title}
+              </figcaption>
+            </figure>
+
             <AdminSectionButtonsAction
               currentArray={projects}
               endpoint="projects"
