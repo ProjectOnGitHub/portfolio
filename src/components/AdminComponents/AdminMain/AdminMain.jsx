@@ -10,8 +10,6 @@ import AdminProjects from '../AdminProjects/AdminProjects.jsx';
 import AdminSection from '../AdminSection/AdminSection.jsx';
 import AdminSkill from '../AdminSkill/AdminSkill.jsx';
 import AdminSkills from '../AdminSkills/AdminSkills.jsx';
-import Popup from '../../BaseComponents/Popup/Popup.jsx';
-import AdminPopupDeleteItem from '../AdminPopupDeleteItem/AdminPopupDeleteItem.jsx';
 
 function MainAdmin({
   contacts,
@@ -27,11 +25,9 @@ function MainAdmin({
   setProjects,
   setSkills,
   setSkillsText,
-  confirmDeleteItem,
   openPopup,
   saveSelectedItemData,
   togglePageVisibility,
-  popupIsOpen,
 }) {
   return (
     <>
@@ -62,6 +58,7 @@ function MainAdmin({
             <AdminProfile
               description={profile.description}
               name={profile.name}
+              openPopup={openPopup}
               position={profile.position}
             />
           </AdminSection>
@@ -183,12 +180,6 @@ function MainAdmin({
           </AdminSection>
         </Route>
       </Switch>
-      <Popup popupIsOpen={popupIsOpen}>
-        <AdminPopupDeleteItem
-          confirmDeleteItem={confirmDeleteItem}
-          title="Удалить элемент?"
-        />
-      </Popup>
     </>
   );
 }

@@ -14,7 +14,8 @@ function AdminSectionButtonsAction({
   saveSelectedItemData,
 }) {
   function handleClickDeleteButton() {
-    openPopup();
+    const title = 'Удалить элемент?';
+    openPopup(title);
     const itemData = {
       endpoint,
       itemId,

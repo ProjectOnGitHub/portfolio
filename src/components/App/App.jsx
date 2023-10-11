@@ -6,6 +6,7 @@ import Layout from '../PublicComponents/Layout/Layout.jsx';
 import Login from '../PublicComponents/Login/Login.jsx';
 import MainStart from '../PublicComponents/MainStart/MainStart.jsx';
 import Register from '../PublicComponents/Register/Register.jsx';
+import Popup from '../BaseComponents/Popup/Popup.jsx';
 import * as api from '../../utils/api';
 import './_App.scss';
 
@@ -24,6 +25,7 @@ function App() {
   const [experience, setExperience] = useState([]);
   const [contacts, setContacts] = useState([]);
   const [popupIsOpen, setPopupIsOpen] = useState(false);
+  const [popupTitle, setPopupTitle] = useState('');
 
   const location = useLocation();
   const isAdminPath = location.pathname.startsWith('/admin');
@@ -79,11 +81,13 @@ function App() {
     setSkillsByType(updateSkills);
   }, [skills]);
 
-  function openPopup() {
+  function openPopup(currentTitle) {
     setPopupIsOpen(true);
+    setPopupTitle(currentTitle);
   }
   function closePopup() {
     setPopupIsOpen(false);
+    setPopupTitle('');
   }
 
   function saveSelectedItemData(data) {
@@ -163,6 +167,11 @@ function App() {
                 skillsByType={skillsByType}
                 skillsText={skillsText}
                 togglePageVisibility={togglePageVisibility}
+              />
+              <Popup
+                confirmAction={confirmDeleteItem}
+                popupIsOpen={popupIsOpen}
+                title={popupTitle}
               />
             </Layout>
           </Route>

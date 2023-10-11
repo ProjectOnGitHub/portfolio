@@ -3,7 +3,12 @@ import AdminFormInput from '../AdminFormInput/AdminFormInput.jsx';
 import AdminFormTextarea from '../AdminFormTextarea/AdminFormTextarea.jsx';
 import AdminSectionButton from '../AdminSectionButton/AdminSectionButton.jsx';
 
-function AdminProfile({ name, position, description }) {
+function AdminProfile({ name, position, description, openPopup }) {
+  function handleClickSaveButton() {
+    const title = 'Сохранить изменения?';
+    openPopup(title);
+  }
+
   return (
     <AdminForm modifier="middle">
       <fieldset className="admin-form__fieldset">
@@ -31,7 +36,8 @@ function AdminProfile({ name, position, description }) {
       <AdminSectionButton
         modifier="save"
         name="save"
-        type="button">
+        type="button"
+        onClick={handleClickSaveButton}>
         Сохранить
       </AdminSectionButton>
     </AdminForm>
