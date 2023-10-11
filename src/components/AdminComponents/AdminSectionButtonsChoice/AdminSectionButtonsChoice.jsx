@@ -1,7 +1,7 @@
-import Button from '../../BaseComponents/Button/Button.jsx';
 import Icon from '../../BaseComponents/Icon/Icon.jsx';
 import List from '../../BaseComponents/List/List.jsx';
 import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
+import AdminSectionButton from '../AdminSectionButton/AdminSectionButton.jsx';
 
 function AdminSectionButtonsChoice({
   endpoint,
@@ -34,32 +34,31 @@ function AdminSectionButtonsChoice({
       modifier="local">
       {!isEditHide && (
         <ListItem className="admin-section__buttons-item">
-          <Button
+          <AdminSectionButton
             ariaLabel="Редактировать"
-            className="admin-section__button admin-section__button_edit"
-            name="button-edit"
-            type="submit"
+            modifier="edit"
+            name="edit"
+            type="button"
             onClick={handleClickEditButton}>
             <Icon
               className="edit"
               name="edit"
             />
-          </Button>
+          </AdminSectionButton>
         </ListItem>
       )}
       {!isDeleteHide && (
         <ListItem className="admin-section__buttons-item">
-          <Button
+          <AdminSectionButton
             ariaLabel="Удалить"
-            className="admin-section__button admin-section__button_delete"
-            name="button-delete"
-            type="submit"
+            modifier="delete"
+            name="delete"
             onClick={handleClickDeleteButton}>
             <Icon
               className="trash"
               name="trash"
             />
-          </Button>
+          </AdminSectionButton>
         </ListItem>
       )}
     </List>
