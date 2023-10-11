@@ -2,6 +2,7 @@ import AdminSectionButtonsAction from '../AdminSectionButtonsAction/AdminSection
 import AdminList from '../AdminList/AdminList.jsx';
 import AdminListItem from '../AdminListItem/AdminListItem.jsx';
 import Contact from '../../PublicComponents/Contact/Contact.jsx';
+import AdminSection from '../AdminSection/AdminSection.jsx';
 
 function AdminContacts({
   contacts,
@@ -11,7 +12,11 @@ function AdminContacts({
   saveSelectedItemData,
 }) {
   return (
-    <>
+    <AdminSection
+      className="contacts"
+      id="contacts"
+      modifier="contacts"
+      title="Редактирование контактов">
       <AdminList modifier="contacts">
         {contacts.map((contact) => (
           <AdminListItem
@@ -37,7 +42,7 @@ function AdminContacts({
           </AdminListItem>
         ))}
       </AdminList>
-    </>
+    </AdminSection>
   );
 }
 

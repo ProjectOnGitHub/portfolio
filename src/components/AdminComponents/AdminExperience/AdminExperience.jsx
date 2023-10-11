@@ -2,6 +2,7 @@ import ExperienceItem from '../../PublicComponents/ExperienceItem/ExperienceItem
 import AdminList from '../AdminList/AdminList.jsx';
 import AdminListItem from '../AdminListItem/AdminListItem.jsx';
 import AdminSectionButtonsAction from '../AdminSectionButtonsAction/AdminSectionButtonsAction.jsx';
+import AdminSection from '../AdminSection/AdminSection.jsx';
 
 function AdminExperience({
   experience,
@@ -12,7 +13,11 @@ function AdminExperience({
 }) {
   const reversedExperience = [...experience].reverse();
   return (
-    <>
+    <AdminSection
+      className="experience"
+      id="experience"
+      modifier="experience"
+      title="Редактирование опыта работы">
       <AdminList modifier="experience">
         {[...reversedExperience].map((exp) => (
           <AdminListItem key={exp.id}>
@@ -38,7 +43,7 @@ function AdminExperience({
           </AdminListItem>
         ))}
       </AdminList>
-    </>
+    </AdminSection>
   );
 }
 

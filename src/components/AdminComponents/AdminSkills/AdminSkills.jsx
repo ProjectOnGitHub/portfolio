@@ -6,6 +6,7 @@ import AdminList from '../AdminList/AdminList.jsx';
 import AdminListItem from '../AdminListItem/AdminListItem.jsx';
 import AdminSectionButtonsAction from '../AdminSectionButtonsAction/AdminSectionButtonsAction.jsx';
 import AdminSkillsList from '../AdminSkillsList/AdminSkillsList.jsx';
+import AdminSection from '../AdminSection/AdminSection.jsx';
 import './_AdminSkills.scss';
 
 function AdminSkills({
@@ -19,7 +20,11 @@ function AdminSkills({
   saveSelectedItemData,
 }) {
   return (
-    <>
+    <AdminSection
+      className="skills"
+      id="skills"
+      modifier="skills"
+      title="Редактирование навыков">
       <AdminForm modifier="middle">
         <fieldset className="admin-form__fieldset">
           <legend className="admin-form__legend">
@@ -77,7 +82,7 @@ function AdminSkills({
           </AdminSkillsList>
         </Fragment>
       ))}
-    </>
+    </AdminSection>
   );
 }
 

@@ -2,6 +2,7 @@ import imagesMap from '../../../utils/images';
 import AdminList from '../AdminList/AdminList.jsx';
 import AdminListItem from '../AdminListItem/AdminListItem.jsx';
 import AdminSectionButtonsAction from '../AdminSectionButtonsAction/AdminSectionButtonsAction.jsx';
+import AdminSection from '../AdminSection/AdminSection.jsx';
 
 import './_AdminProjects.scss';
 
@@ -12,7 +13,11 @@ function AdminProjects({
   saveSelectedItemData,
 }) {
   return (
-    <>
+    <AdminSection
+      className="projects"
+      id="projects"
+      modifier="projects"
+      title="Редактирование списка проектов">
       <AdminList modifier="projects">
         {projects.map((project) => (
           <AdminListItem
@@ -40,7 +45,7 @@ function AdminProjects({
           </AdminListItem>
         ))}
       </AdminList>
-    </>
+    </AdminSection>
   );
 }
 

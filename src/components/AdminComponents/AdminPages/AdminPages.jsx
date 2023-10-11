@@ -3,10 +3,15 @@ import AdminList from '../AdminList/AdminList.jsx';
 import AdminListItem from '../AdminListItem/AdminListItem.jsx';
 import Icon from '../../BaseComponents/Icon/Icon.jsx';
 import Switcher from '../../BaseComponents/Switcher/Switcher.jsx';
+import AdminSection from '../AdminSection/AdminSection.jsx';
 
 function AdminPages({ pages, togglePageVisibility }) {
   return (
-    <>
+    <AdminSection
+      className="pages"
+      id="pages"
+      modifier="pages"
+      title="Редактирование списка страниц">
       <AdminList modifier="pages">
         {pages.map((page) => (
           <AdminListItem
@@ -30,7 +35,7 @@ function AdminPages({ pages, togglePageVisibility }) {
           </AdminListItem>
         ))}
       </AdminList>
-    </>
+    </AdminSection>
   );
 }
 
