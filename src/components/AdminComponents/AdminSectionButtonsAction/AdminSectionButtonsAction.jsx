@@ -1,4 +1,4 @@
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Icon from '../../BaseComponents/Icon/Icon.jsx';
 import AdminList from '../AdminList/AdminList.jsx';
 import AdminListItem from '../AdminListItem/AdminListItem.jsx';
@@ -14,7 +14,7 @@ function AdminSectionButtonsAction({
   openPopup,
   saveSelectedItemData,
 }) {
-  const router = useHistory();
+  const navigate = useNavigate();
 
   function handleClickDeleteButton() {
     const title = 'Удалить элемент?';
@@ -29,9 +29,7 @@ function AdminSectionButtonsAction({
   }
 
   function handleClickEditButton() {
-    console.log(router);
-
-    return router.push(`${endpoint}/${itemId}`);
+    return navigate(`${itemId}`);
   }
 
   return (

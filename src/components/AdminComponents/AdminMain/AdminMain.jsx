@@ -1,4 +1,4 @@
-import { Route, Switch } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import AdminContact from '../AdminContact/AdminContact.jsx';
 import AdminContacts from '../AdminContacts/AdminContacts.jsx';
 import AdminExperience from '../AdminExperience/AdminExperience.jsx';
@@ -29,40 +29,45 @@ function MainAdmin({
   togglePageVisibility,
 }) {
   return (
-    <>
-      <Switch>
-        <Route
-          path="/admin"
-          exact>
+    <Routes>
+      <Route
+        path="/"
+        element={
           <AdminPages
             className="pages"
             pages={pages}
             togglePageVisibility={togglePageVisibility}
           />
-        </Route>
-        <Route
-          path="/admin/profile"
-          exact>
+        }
+        exact
+      />
+      <Route
+        path="profile"
+        element={
           <AdminProfile
             description={profile.description}
             name={profile.name}
             openPopup={openPopup}
             position={profile.position}
           />
-        </Route>
-        <Route
-          path="/admin/projects"
-          exact>
+        }
+        exact
+      />
+      <Route
+        path="projects"
+        element={
           <AdminProjects
             openPopup={openPopup}
             projects={projects}
             saveSelectedItemData={saveSelectedItemData}
             setProjects={setProjects}
           />
-        </Route>
-        <Route
-          path="/admin/skills"
-          exact>
+        }
+        exact
+      />
+      <Route
+        path="skills"
+        element={
           <AdminSkills
             openPopup={openPopup}
             saveSelectedItemData={saveSelectedItemData}
@@ -72,10 +77,12 @@ function MainAdmin({
             skillsByType={skillsByType}
             skillsText={skillsText}
           />
-        </Route>
-        <Route
-          path="/admin/experience"
-          exact>
+        }
+        exact
+      />
+      <Route
+        path="experience"
+        element={
           <AdminExperience
             className="admin-section"
             experience={experience}
@@ -83,10 +90,12 @@ function MainAdmin({
             saveSelectedItemData={saveSelectedItemData}
             setExperience={setExperience}
           />
-        </Route>
-        <Route
-          path="/admin/contacts"
-          exact>
+        }
+        exact
+      />
+      <Route
+        path="contacts"
+        element={
           <AdminContacts
             className="admin-section"
             contacts={contacts}
@@ -94,32 +103,33 @@ function MainAdmin({
             saveSelectedItemData={saveSelectedItemData}
             setContacts={setContacts}
           />
-        </Route>
-        {projects.map((project) => (
-          <Route
-            key={project.id}
-            path="/admin/projects/:id"
-            exact>
-            <AdminProject project={project} />
-          </Route>
-        ))}
+        }
+        exact
+      />
+      {projects.map((project) => (
         <Route
-          path="/admin/skills/:id"
-          exact>
-          <AdminSkill />
-        </Route>
-        <Route
-          path="/admin/experience/:id"
-          exact>
-          <AdminExperienceItem />
-        </Route>
-        <Route
-          path="/admin/contacts/:id"
-          exact>
-          <AdminContact />
-        </Route>
-      </Switch>
-    </>
+          key={project.id}
+          element={<AdminProject project={project} />}
+          path="projects/:id"
+          exact
+        />
+      ))}
+      <Route
+        element={<AdminSkill />}
+        path="skills/:id"
+        exact
+      />
+      <Route
+        element={<AdminExperienceItem />}
+        path="experience/:id"
+        exact
+      />
+      <Route
+        element={<AdminContact />}
+        path="contacts/:id"
+        exact
+      />
+    </Routes>
   );
 }
 

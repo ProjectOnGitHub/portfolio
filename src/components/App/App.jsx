@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Route, Switch, useLocation } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import DarkThemeContext from '../../contexts/DarkThemeContext.jsx';
 import AdminMain from '../AdminComponents/AdminMain/AdminMain.jsx';
 import Layout from '../PublicComponents/Layout/Layout.jsx';
@@ -34,9 +34,17 @@ function App() {
     localStorage.setItem('isDarkTheme', JSON.stringify(isDarkTheme));
   }, [isDarkTheme]);
 
-  useEffect(
-    () =>
-      Promise.all([
+  useEffect(() => {
+    async function fetchData() {
+      const [
+        profileInfo,
+        allProjects,
+        allPages,
+        skillsInfo,
+        allSkills,
+        allExperience,
+        allContacts,
+      ] = await Promise.all([
         api.getProfileInfo(),
         api.getProjects(),
         api.getPages(),
@@ -44,27 +52,19 @@ function App() {
         api.getSkills(),
         api.getExperience(),
         api.getContacts(),
-      ]).then(
-        ([
-          profileInfo,
-          allProjects,
-          allPages,
-          skillsInfo,
-          allSkills,
-          allExperience,
-          allContacts,
-        ]) => {
-          setProfile(...profileInfo);
-          setProjects(allProjects);
-          setPages(allPages);
-          setSkillsText(skillsInfo);
-          setSkills(allSkills);
-          setExperience(allExperience);
-          setContacts(allContacts);
-        },
-      ),
-    [],
-  );
+      ]);
+
+      setProfile(...profileInfo);
+      setProjects(allProjects);
+      setPages(allPages);
+      setSkillsText(skillsInfo);
+      setSkills(allSkills);
+      setExperience(allExperience);
+      setContacts(allContacts);
+    }
+
+    fetchData();
+  }, []);
 
   useEffect(() => {
     const updateSkills = {};
@@ -125,66 +125,70 @@ function App() {
         isAdminPath ? 'app_theme-admin' : ''
       }`}>
       <DarkThemeContext.Provider value={{ isDarkTheme, setIsDarkTheme }}>
-        <Switch>
+        <Routes>
           <Route
             path="/"
-            exact>
-            <Layout
-              isAdminPath={isAdminPath}
-              pages={pages}>
-              <MainStart
-                contacts={contacts}
-                experience={experience}
-                pages={pages}
-                profile={profile}
-                projects={projects}
-                skillsByType={skillsByType}
-                skillsText={skillsText}
-              />
-            </Layout>
-          </Route>
-          <Route path="/admin">
-            <Layout
-              isAdminPath={isAdminPath}
-              pages={pages}>
-              <AdminMain
-                confirmDeleteItem={confirmDeleteItem}
-                contacts={contacts}
-                experience={experience}
-                openPopup={openPopup}
-                pages={pages}
-                popupIsOpen={popupIsOpen}
-                profile={profile}
-                projects={projects}
-                saveSelectedItemData={saveSelectedItemData}
-                setContacts={setContacts}
-                setExperience={setExperience}
-                setProjects={setProjects}
-                setSkills={setSkills}
-                setSkillsText={setSkillsText}
-                skills={skills}
-                skillsByType={skillsByType}
-                skillsText={skillsText}
-                togglePageVisibility={togglePageVisibility}
-              />
-              <Popup
-                confirmAction={confirmDeleteItem}
-                popupIsOpen={popupIsOpen}
-                title={popupTitle}
-              />
-            </Layout>
-          </Route>
+            element={
+              <Layout
+                isAdminPath={isAdminPath}
+                pages={pages}>
+                <MainStart
+                  contacts={contacts}
+                  experience={experience}
+                  pages={pages}
+                  profile={profile}
+                  projects={projects}
+                  skillsByType={skillsByType}
+                  skillsText={skillsText}
+                />
+              </Layout>
+            }
+          />
           <Route
+            path="/admin/*"
+            element={
+              <Layout
+                isAdminPath={isAdminPath}
+                pages={pages}>
+                <AdminMain
+                  confirmDeleteItem={confirmDeleteItem}
+                  contacts={contacts}
+                  experience={experience}
+                  openPopup={openPopup}
+                  pages={pages}
+                  popupIsOpen={popupIsOpen}
+                  profile={profile}
+                  projects={projects}
+                  saveSelectedItemData={saveSelectedItemData}
+                  setContacts={setContacts}
+                  setExperience={setExperience}
+                  setProjects={setProjects}
+                  setSkills={setSkills}
+                  setSkillsText={setSkillsText}
+                  skills={skills}
+                  skillsByType={skillsByType}
+                  skillsText={skillsText}
+                  togglePageVisibility={togglePageVisibility}
+                />
+                <Popup
+                  confirmAction={confirmDeleteItem}
+                  popupIsOpen={popupIsOpen}
+                  title={popupTitle}
+                />
+              </Layout>
+            }
+          />
+          <Route
+            element={<Register />}
             path="/register"
-            exact>
-            <Register></Register>
-          </Route>
+            exact
+          />
           <Route
+            element={<Login />}
             path="/login"
-            exact>
-            <Login />
-          </Route>
-        </Switch>
+            exact
+          />
+        </Routes>
       </DarkThemeContext.Provider>
     </div>
   );

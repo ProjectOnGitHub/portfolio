@@ -20,6 +20,7 @@ module.exports = {
     'react',
   ],
   rules: {
+    'import/no-unresolved': 'error',
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 0,
