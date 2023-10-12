@@ -1,11 +1,11 @@
-import AdminFormImage from '../AdminFormImage/AdminFormImage.jsx';
-import AdminFormInput from '../AdminFormInput/AdminFormInput.jsx';
-import AdminFormTextarea from '../AdminFormTextarea/AdminFormTextarea.jsx';
-import List from '../../BaseComponents/List/List.jsx';
-import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
-import Icon from '../../BaseComponents/Icon/Icon.jsx';
-import Button from '../../BaseComponents/Button/Button.jsx';
-import AdminSection from '../AdminSection/AdminSection.jsx';
+import AdminFormImage from '../../components/AdminComponents/AdminFormImage/AdminFormImage.jsx';
+import AdminFormInput from '../../components/AdminComponents/AdminFormInput/AdminFormInput.jsx';
+import AdminFormTextarea from '../../components/AdminComponents/AdminFormTextarea/AdminFormTextarea.jsx';
+import List from '../../components/BaseComponents/List/List.jsx';
+import ListItem from '../../components/BaseComponents/ListItem/ListItem.jsx';
+import Icon from '../../components/BaseComponents/Icon/Icon.jsx';
+import Button from '../../components/BaseComponents/Button/Button.jsx';
+import AdminSection from '../../components/AdminComponents/AdminSection/AdminSection.jsx';
 
 function AdminProject({ onClick, project }) {
   return (

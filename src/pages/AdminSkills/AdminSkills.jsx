@@ -1,12 +1,12 @@
 import { Fragment } from 'react';
-import Skill from '../../PublicComponents/Skill/Skill.jsx';
-import AdminForm from '../AdminForm/AdminForm.jsx';
-import AdminFormTextarea from '../AdminFormTextarea/AdminFormTextarea.jsx';
-import AdminList from '../AdminList/AdminList.jsx';
-import AdminListItem from '../AdminListItem/AdminListItem.jsx';
-import AdminSectionButtonsAction from '../AdminSectionButtonsAction/AdminSectionButtonsAction.jsx';
-import AdminSkillsList from '../AdminSkillsList/AdminSkillsList.jsx';
-import AdminSection from '../AdminSection/AdminSection.jsx';
+import Skill from '../../components/PublicComponents/Skill/Skill.jsx';
+import AdminForm from '../../components/AdminComponents/AdminForm/AdminForm.jsx';
+import AdminFormTextarea from '../../components/AdminComponents/AdminFormTextarea/AdminFormTextarea.jsx';
+import AdminList from '../../components/AdminComponents/AdminList/AdminList.jsx';
+import AdminListItem from '../../components/AdminComponents/AdminListItem/AdminListItem.jsx';
+import AdminSectionButtonsAction from '../../components/AdminComponents/AdminSectionButtonsAction/AdminSectionButtonsAction.jsx';
+import AdminSkillsList from '../../components/AdminComponents/AdminSkillsList/AdminSkillsList.jsx';
+import AdminSection from '../../components/AdminComponents/AdminSection/AdminSection.jsx';
 import './_AdminSkills.scss';
 
 function AdminSkills({

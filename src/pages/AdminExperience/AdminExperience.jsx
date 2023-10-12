@@ -1,8 +1,8 @@
-import ExperienceItem from '../../PublicComponents/ExperienceItem/ExperienceItem.jsx';
-import AdminList from '../AdminList/AdminList.jsx';
-import AdminListItem from '../AdminListItem/AdminListItem.jsx';
-import AdminSectionButtonsAction from '../AdminSectionButtonsAction/AdminSectionButtonsAction.jsx';
-import AdminSection from '../AdminSection/AdminSection.jsx';
+import ExperienceItem from '../../components/PublicComponents/ExperienceItem/ExperienceItem.jsx';
+import AdminList from '../../components/AdminComponents/AdminList/AdminList.jsx';
+import AdminListItem from '../../components/AdminComponents/AdminListItem/AdminListItem.jsx';
+import AdminSectionButtonsAction from '../../components/AdminComponents/AdminSectionButtonsAction/AdminSectionButtonsAction.jsx';
+import AdminSection from '../../components/AdminComponents/AdminSection/AdminSection.jsx';
 
 function AdminExperience({
   experience,

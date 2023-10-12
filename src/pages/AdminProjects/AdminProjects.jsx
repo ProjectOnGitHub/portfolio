@@ -1,8 +1,8 @@
-import imagesMap from '../../../utils/images';
-import AdminList from '../AdminList/AdminList.jsx';
-import AdminListItem from '../AdminListItem/AdminListItem.jsx';
-import AdminSectionButtonsAction from '../AdminSectionButtonsAction/AdminSectionButtonsAction.jsx';
-import AdminSection from '../AdminSection/AdminSection.jsx';
+import imagesMap from '../../utils/images';
+import AdminList from '../../components/AdminComponents/AdminList/AdminList.jsx';
+import AdminListItem from '../../components/AdminComponents/AdminListItem/AdminListItem.jsx';
+import AdminSectionButtonsAction from '../../components/AdminComponents/AdminSectionButtonsAction/AdminSectionButtonsAction.jsx';
+import AdminSection from '../../components/AdminComponents/AdminSection/AdminSection.jsx';
 
 import './_AdminProjects.scss';
 
