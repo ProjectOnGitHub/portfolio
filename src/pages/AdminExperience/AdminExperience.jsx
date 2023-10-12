@@ -6,7 +6,6 @@ import AdminSection from '../../components/AdminComponents/AdminSection/AdminSec
 
 function AdminExperience({
   experience,
-  className,
   setExperience,
   openPopup,
   saveSelectedItemData,
@@ -21,10 +20,9 @@ function AdminExperience({
       <AdminList modifier="experience">
         {[...reversedExperience].map((exp) => (
           <AdminListItem key={exp.id}>
-            <div
-              className={`${className}__wrapper ${className}__wrapper_experience`}>
+            <div className="admin-section__wrapper admin-section__wrapper_experience">
               <ExperienceItem
-                className={className}
+                className="admin-section"
                 end={exp.end}
                 name={exp.name}
                 start={exp.start}

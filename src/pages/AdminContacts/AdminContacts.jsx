@@ -6,7 +6,6 @@ import AdminSection from '../../components/AdminComponents/AdminSection/AdminSec
 
 function AdminContacts({
   contacts,
-  className,
   setContacts,
   openPopup,
   saveSelectedItemData,
@@ -22,8 +21,7 @@ function AdminContacts({
           <AdminListItem
             key={contact.id}
             modifier="contacts">
-            <div
-              className={`${className}__wrapper ${className}__wrapper_contacts`}>
+            <div className="admin-section__wrapper admin-section__wrapper_contacts">
               <Contact
                 className="contact"
                 name={contact.name}

@@ -1,6 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
 import AdminContact from '../../../pages/AdminContact/AdminContact.jsx';
-
 import AdminContacts from '../../../pages/AdminContacts/AdminContacts.jsx';
 import AdminExperience from '../../../pages/AdminExperience/AdminExperience.jsx';
 import AdminExperienceItem from '../AdminExperienceItem/AdminExperienceItem.jsx';
@@ -35,7 +34,6 @@ function MainAdmin({
         path="/"
         element={
           <AdminPages
-            className="pages"
             pages={pages}
             togglePageVisibility={togglePageVisibility}
           />
@@ -85,7 +83,6 @@ function MainAdmin({
         path="experience"
         element={
           <AdminExperience
-            className="admin-section"
             experience={experience}
             openPopup={openPopup}
             saveSelectedItemData={saveSelectedItemData}
@@ -98,7 +95,6 @@ function MainAdmin({
         path="contacts"
         element={
           <AdminContacts
-            className="admin-section"
             contacts={contacts}
             openPopup={openPopup}
             saveSelectedItemData={saveSelectedItemData}
