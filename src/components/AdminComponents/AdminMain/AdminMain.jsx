@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import AdminContact from '../../../pages/AdminContact/AdminContact.jsx';
 import AdminContacts from '../../../pages/AdminContacts/AdminContacts.jsx';
 import AdminExperience from '../../../pages/AdminExperience/AdminExperience.jsx';
-import AdminExperienceItem from '../AdminExperienceItem/AdminExperienceItem.jsx';
+import AdminExperienceItem from '../../../pages/AdminExperienceItem/AdminExperienceItem.jsx';
 import AdminPages from '../../../pages/AdminPages/AdminPages.jsx';
 import AdminProfile from '../../../pages/AdminProfile/AdminProfile.jsx';
 import AdminProject from '../../../pages/AdminProject/AdminProject.jsx';
