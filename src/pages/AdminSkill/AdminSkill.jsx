@@ -7,17 +7,17 @@ import AdminSection from '../../components/AdminComponents/AdminSection/AdminSec
 
 function AdminSkill() {
   const { id } = useParams();
-  const [skill, setSkill] = useState({});
+  const [item, setItem] = useState({});
   useEffect(() => {
-    getItemInfo('skills', id).then((newSkill) => setSkill(newSkill));
-  }, [skill]);
+    getItemInfo('skills', id).then((newItem) => setItem(newItem));
+  }, [item]);
 
   return (
     <AdminSection
       className="skill"
       id="skill"
       modifier="skill"
-      title={`Редактирование навыка ${skill.title}`}>
+      title={`Редактирование навыка ${item.title}`}>
       <AdminFormImage>
         <fieldset className="admin-form__fieldset">
           <legend className="admin-form__legend">Редактировать навык</legend>
@@ -26,21 +26,21 @@ function AdminSkill() {
             placeholder="Название навыка"
             required={true}
             type="text"
-            value={skill.title}
+            value={item.title}
           />
           <AdminFormInput
             name="type"
             placeholder="Тип навыка"
             required={true}
             type="text"
-            value={skill.type}
+            value={item.type}
           />
           <AdminFormInput
             name="name"
             placeholder="Название иконки навыка"
             required={true}
             type="text"
-            value={skill.name}
+            value={item.name}
           />
         </fieldset>
       </AdminFormImage>

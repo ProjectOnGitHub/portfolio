@@ -103,14 +103,12 @@ function MainAdmin({
         }
         exact
       />
-      {projects.map((project) => (
-        <Route
-          key={project.id}
-          element={<AdminProject project={project} />}
-          path="projects/:id"
-          exact
-        />
-      ))}
+      <Route
+        element={<AdminProject />}
+        path="projects/:id"
+        exact
+      />
+
       <Route
         element={<AdminSkill />}
         path="skills/:id"

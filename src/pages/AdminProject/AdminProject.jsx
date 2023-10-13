@@ -1,3 +1,6 @@
+import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { getItemInfo } from '../../utils/api';
 import AdminFormImage from '../../components/AdminComponents/AdminFormImage/AdminFormImage.jsx';
 import AdminFormInput from '../../components/AdminComponents/AdminFormInput/AdminFormInput.jsx';
 import AdminFormTextarea from '../../components/AdminComponents/AdminFormTextarea/AdminFormTextarea.jsx';
@@ -7,13 +10,19 @@ import Icon from '../../components/BaseComponents/Icon/Icon.jsx';
 import Button from '../../components/BaseComponents/Button/Button.jsx';
 import AdminSection from '../../components/AdminComponents/AdminSection/AdminSection.jsx';
 
-function AdminProject({ onClick, project }) {
+function AdminProject({ onClick }) {
+  const { id } = useParams();
+
+  const [item, setItem] = useState({});
+  useEffect(() => {
+    getItemInfo('projects', id).then((newItem) => setItem(newItem));
+  }, [item]);
   return (
     <AdminSection
       className="project"
       id="project"
       modifier="project"
-      title={`Редактирование проекта "${project.title}"`}>
+      title={`Редактирование проекта "${item.title}"`}>
       <AdminFormImage>
         <fieldset className="admin-form__fieldset">
           <legend className="admin-form__legend">
@@ -24,28 +33,28 @@ function AdminProject({ onClick, project }) {
             placeholder="Название проекта"
             required={true}
             type="text"
-            value={project.title}
+            value={item.title}
           />
           <AdminFormInput
             name="alias"
             placeholder="Алиас проекта"
             required={true}
             type="text"
-            value={project.name}
+            value={item.name}
           />
           <AdminFormInput
             name="site"
             placeholder="Ссылка на сайт"
             required={false}
             type="url"
-            value={project.url}
+            value={item.url}
           />
           <AdminFormInput
             name="github"
             placeholder="Ссылка на GitHub"
             required={false}
             type="url"
-            value={project.githubUrl}
+            value={item.githubUrl}
           />
           <div className="admin-form__wrapper">
             <AdminFormInput
@@ -54,31 +63,32 @@ function AdminProject({ onClick, project }) {
               type="text"
             />
             <List className="admin-form__tags">
-              {project.stack.map((stack) => (
-                <ListItem
-                  key={stack}
-                  className="admin-form__tags-item">
-                  <Button
-                    aria-label="Edit button"
-                    className="admin-form__button admin-form__button_tag"
-                    name="button-edit"
-                    type="submit"
-                    onClick={onClick}>
-                    {stack}
-                    <Icon
-                      className="delete icon__delete_tag"
-                      name="trash"
-                    />
-                  </Button>
-                </ListItem>
-              ))}
+              {item.stack &&
+                item.stack.map((stack, i) => (
+                  <ListItem
+                    key={i}
+                    className="admin-form__tags-item">
+                    <Button
+                      aria-label="Edit button"
+                      className="admin-form__button admin-form__button_tag"
+                      name="button-edit"
+                      type="submit"
+                      onClick={onClick}>
+                      {stack}
+                      <Icon
+                        className="delete icon__delete_tag"
+                        name="trash"
+                      />
+                    </Button>
+                  </ListItem>
+                ))}
             </List>
           </div>
           <AdminFormTextarea
             name="description"
             placeholder="Добавить описание"
             required={true}
-            value={project.description}
+            value={item.description}
           />
         </fieldset>
       </AdminFormImage>
