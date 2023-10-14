@@ -33,7 +33,7 @@
     &_delete-item {
       @include buttonColor();
       max-width: max-content;
-      padding: 10px;
+      padding: $padding-s;
     }
 
     &_save {

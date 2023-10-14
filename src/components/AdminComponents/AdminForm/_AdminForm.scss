@@ -5,7 +5,7 @@
   @include flexible();
   flex-direction: column;
   box-sizing: border-box;
-  padding: 10px;
+  padding: $padding-s;
   font-size: $font-size-xs;
   color: $color-gray;
   gap: 16px;
@@ -18,7 +18,7 @@
     @include flexible();
     flex-direction: column;
     margin: 0;
-    padding: 0;
+    padding: $padding-z;
     border: none;
     gap: 12px;
     align-items: center;
@@ -42,7 +42,7 @@
 
     &_tag {
       width: max-content;
-      padding: 10px;
+      padding: $padding-s;
       background-color: $color-gray;
       gap: 8px;
     }
@@ -92,7 +92,7 @@
 
   &__legend {
     display: block;
-    padding: 12px 0;
+    padding: $padding-m $padding-z;
     font-size: $font-size-s;
     color: $color-gray;
   }

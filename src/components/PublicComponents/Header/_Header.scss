@@ -31,7 +31,7 @@
     align-items: center;
     box-sizing: border-box;
     max-width: $max-width;
-    padding: 10px 20px;
+    padding: $padding-s $padding-l;
     gap: 20px;
 
     &_admin {
@@ -69,7 +69,7 @@
       position: relative;
       z-index: 20;
       height: 32px;
-      padding: 0;
+      padding: $padding-z;
       background-color: transparent;
       background-size: contain;
       border: none;

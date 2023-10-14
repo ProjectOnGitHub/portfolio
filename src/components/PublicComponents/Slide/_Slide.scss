@@ -24,15 +24,15 @@
     box-sizing: border-box;
     width: 100%;
     margin: 0;
-    padding: 10px;
+    padding: $padding-s;
     font-weight: 400;
-    font-size: 38px;
+    font-size: $font-size-xxl;
     text-align: center;
     color: $color-light;
     background-color: rgba($color-dark, 0.2);
     @media screen and (max-width: $tablet-small) {
-      padding: 5px;
-      font-size: 24px;
+      padding: $padding-xs;
+      font-size: $font-size-xl;
     }
     @media screen and (max-width: $smartphone) {
       font-size: $font-size-m;
