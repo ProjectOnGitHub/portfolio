@@ -32,33 +32,33 @@
     align-self: end;
     margin: 0;
     font-weight: 400;
-    font-size: 80px;
+    font-size: $font-size-xxxl;
     line-height: 1;
     color: $color-light;
 
     @media screen and (max-width: $tablet-small) {
-      font-size: 60px;
+      font-size: $font-size-xxxl;
     }
 
     @media screen and (max-width: $smartphone) {
-      font-size: 45px;
+      font-size: $font-size-xxl;
     }
   }
 
   &__subtitle {
     margin: 0;
     font-weight: 500;
-    font-size: 27px;
+    font-size: $font-size-xl;
     line-height: 1;
     color: $color-light;
     text-align: center;
 
     @media screen and (max-width: $tablet-small) {
-      font-size: 21px;
+      font-size: $font-size-l;
     }
 
     @media screen and (max-width: $smartphone) {
-      font-size: 15px;
+      font-size: $font-size-s;
     }
   }
 
@@ -69,11 +69,11 @@
     max-width: 600px;
     padding-right: 20px;
     padding-left: 20px;
-    font-size: 16px;
+    font-size: $font-size-default;
     color: $color-light;
 
     @media screen and (max-width: $smartphone) {
-      font-size: 14px;
+      font-size: $font-size-s;
     }
   }
 

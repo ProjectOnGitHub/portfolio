@@ -63,7 +63,7 @@
     @include gridable();
     align-content: start;
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: $font-size-default;
     gap: 10px;
 
     @media screen and (max-width: $tablet-large) {
@@ -80,7 +80,7 @@
     @include flexible();
     @include unmarkedList;
     flex-wrap: wrap;
-    font-size: 12px;
+    font-size: $font-size-xs;
     gap: 7px 15px;
   }
 
@@ -101,7 +101,7 @@
 
   &__link {
     width: max-content;
-    font-size: 14px;
+    font-size: $font-size-s;
 
     &_text {
       @include defaultLink;

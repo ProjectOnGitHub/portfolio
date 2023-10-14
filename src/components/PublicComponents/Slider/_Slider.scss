@@ -42,7 +42,7 @@
     @media screen and (max-width: $tablet-small) {
       width: 48px;
       height: 48px;
-      font-size: 18px;
+      font-size: $font-size-m;
     }
     &_left {
       justify-self: left;
@@ -59,16 +59,16 @@
     margin: 0;
     padding: 10px;
     font-weight: 400;
-    font-size: 38px;
+    font-size: $font-size-xxl;
     text-align: center;
     color: $color-light;
     background-color: rgba($color-dark, 0.2);
     @media screen and (max-width: $tablet-small) {
       padding: 5px;
-      font-size: 24px;
+      font-size: $font-size-l;
     }
     @media screen and (max-width: $smartphone) {
-      font-size: 18px;
+      font-size: $font-size-m;
     }
   }
   &__link {

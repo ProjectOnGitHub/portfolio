@@ -7,7 +7,7 @@
   box-sizing: border-box;
   max-width: 400px;
   padding: 10px;
-  font-size: 12px;
+  font-size: $font-size-xs;
   color: $color-gray;
   gap: 16px;
 
@@ -35,7 +35,7 @@
     height: 46px;
     padding: 0 15px;
     font-weight: normal;
-    font-size: 14px;
+    font-size: $font-size-s;
     color: $color-dark;
     background-color: $color-bg-input;
     border: none;
