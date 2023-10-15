@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import './_Header.scss';
-import Logo from '../../BaseComponents/Logo/Logo.jsx';
-import Nav from '../../BaseComponents/Nav/Nav.jsx';
-import HeaderMenu from '../HeaderMenu/HeaderMenu.jsx';
-import HeaderSwitcher from '../HeaderSwitcher/HeaderSwitcher.jsx';
+import Logo from '../../BaseComponents/Logo/Logo';
+import Nav from '../../BaseComponents/Nav/Nav';
+import HeaderMenu from '../HeaderMenu/HeaderMenu';
+import HeaderSwitcher from '../HeaderSwitcher/HeaderSwitcher';
 
 function Header({ isAdminPath, pages }) {
   const [color, setColor] = useState(false);

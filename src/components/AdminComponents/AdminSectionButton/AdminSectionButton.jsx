@@ -1,4 +1,4 @@
-import Button from '../../BaseComponents/Button/Button.jsx';
+import Button from '../../BaseComponents/Button/Button';
 
 function AdminSectionButton({
   onClick,

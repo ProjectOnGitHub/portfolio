@@ -1,7 +1,7 @@
 import './_Projects.scss';
-import Project from '../Project/Project.jsx';
-import List from '../../BaseComponents/List/List.jsx';
-import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
+import Project from '../Project/Project';
+import List from '../../BaseComponents/List/List';
+import ListItem from '../../BaseComponents/ListItem/ListItem';
 
 function Projects({ projects, title }) {
   return (

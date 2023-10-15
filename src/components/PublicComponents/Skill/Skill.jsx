@@ -1,4 +1,4 @@
-import Icon from '../../BaseComponents/Icon/Icon.jsx';
+import Icon from '../../BaseComponents/Icon/Icon';
 
 function Skill({ className, name, title }) {
   return (

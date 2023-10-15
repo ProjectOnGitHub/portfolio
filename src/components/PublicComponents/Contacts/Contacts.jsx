@@ -1,7 +1,7 @@
 import './_Contacts.scss';
-import Contact from '../Contact/Contact.jsx';
-import List from '../../BaseComponents/List/List.jsx';
-import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
+import Contact from '../Contact/Contact';
+import List from '../../BaseComponents/List/List';
+import ListItem from '../../BaseComponents/ListItem/ListItem';
 
 function Contacts({ contacts, title }) {
   return (

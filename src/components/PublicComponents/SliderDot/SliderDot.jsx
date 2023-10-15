@@ -1,5 +1,5 @@
 import './_SliderDot.scss';
-import Button from '../Button/Button.jsx';
+import Button from 'components/BaseComponents/Button/Button';
 
 function SliderDot(props) {
   return (

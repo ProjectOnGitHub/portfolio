@@ -1,6 +1,6 @@
-import Header from '../Header/Header.jsx';
-import Footer from '../Footer/Footer.jsx';
-import Main from '../Main/Main.jsx';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
+import Main from '../Main/Main';
 
 function Layout({ children, isAdminPath, pages }) {
   return (

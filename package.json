@@ -29,12 +29,6 @@
     "deploy": "npm run add-domain && gh-pages -d build",
     "format": "npx prettier --write ."
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",

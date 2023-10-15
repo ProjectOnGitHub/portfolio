@@ -1,4 +1,4 @@
-import AdminList from '../AdminList/AdminList.jsx';
+import AdminList from '../AdminList/AdminList';
 
 function AdminSkillsList({ children, title }) {
   return (

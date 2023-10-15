@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
-import DarkThemeContext from '../../contexts/DarkThemeContext.jsx';
-import AdminMain from '../AdminComponents/AdminMain/AdminMain.jsx';
-import Layout from '../PublicComponents/Layout/Layout.jsx';
-import Login from '../PublicComponents/Login/Login.jsx';
-import MainStart from '../PublicComponents/MainStart/MainStart.jsx';
-import Register from '../PublicComponents/Register/Register.jsx';
-import Popup from '../BaseComponents/Popup/Popup.jsx';
+import MainStart from '../PublicComponents/MainStart/MainStart';
+import DarkThemeContext from '../../contexts/DarkThemeContext';
+import AdminMain from '../AdminComponents/AdminMain/AdminMain';
+import Layout from '../PublicComponents/Layout/Layout';
+import Login from '../PublicComponents/Login/Login';
+import Register from '../PublicComponents/Register/Register';
+import Popup from '../BaseComponents/Popup/Popup';
 import * as api from '../../utils/api';
 import './_App.scss';
 

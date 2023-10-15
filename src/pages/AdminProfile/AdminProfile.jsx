@@ -1,8 +1,8 @@
-import AdminForm from '../../components/AdminComponents/AdminForm/AdminForm.jsx';
-import AdminFormInput from '../../components/AdminComponents/AdminFormInput/AdminFormInput.jsx';
-import AdminFormTextarea from '../../components/AdminComponents/AdminFormTextarea/AdminFormTextarea.jsx';
-import AdminSectionButton from '../../components/AdminComponents/AdminSectionButton/AdminSectionButton.jsx';
-import AdminSection from '../../components/AdminComponents/AdminSection/AdminSection.jsx';
+import AdminForm from '../../components/AdminComponents/AdminForm/AdminForm';
+import AdminFormInput from '../../components/AdminComponents/AdminFormInput/AdminFormInput';
+import AdminFormTextarea from '../../components/AdminComponents/AdminFormTextarea/AdminFormTextarea';
+import AdminSectionButton from '../../components/AdminComponents/AdminSectionButton/AdminSectionButton';
+import AdminSection from '../../components/AdminComponents/AdminSection/AdminSection';
 
 function AdminProfile({ name, position, description, openPopup }) {
   function handleClickSaveButton() {

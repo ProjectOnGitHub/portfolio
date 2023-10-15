@@ -1,9 +1,9 @@
 import { Fragment, useState } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import './_HeaderMenu.scss';
-import Button from '../../BaseComponents/Button/Button.jsx';
-import List from '../../BaseComponents/List/List.jsx';
-import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
+import Button from '../../BaseComponents/Button/Button';
+import List from '../../BaseComponents/List/List';
+import ListItem from '../../BaseComponents/ListItem/ListItem';
 
 function HeaderMenu({ pages, className, isAdminPath }) {
   const [isOpenMenu, setIsOpenMenu] = useState(false);

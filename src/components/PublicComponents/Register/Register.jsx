@@ -1,4 +1,4 @@
-import SectionForm from '../SectionForm/SectionForm.jsx';
+import SectionForm from '../SectionForm/SectionForm';
 
 function Register() {
   return (

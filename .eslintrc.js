@@ -16,11 +16,27 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
+  settings: {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx"]
+      }
+    }
+  },
   plugins: [
     'react',
+    'import'
   ],
   rules: {
-    'import/no-unresolved': 'error',
+    "import/no-unresolved": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never"
+      }
+    ],
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 0,
@@ -40,6 +56,7 @@ module.exports = {
       noSortAlphabetically: false,
       reservedFirst: true,
     }],
+
     'react/jsx-curly-newline': [2, { multiline: 'consistent', singleline: 'consistent' }],
   },
 };

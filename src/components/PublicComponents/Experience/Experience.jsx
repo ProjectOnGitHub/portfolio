@@ -1,7 +1,7 @@
 import './_Experience.scss';
-import List from '../../BaseComponents/List/List.jsx';
-import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
-import ExperienceItem from '../ExperienceItem/ExperienceItem.jsx';
+import List from '../../BaseComponents/List/List';
+import ListItem from '../../BaseComponents/ListItem/ListItem';
+import ExperienceItem from '../ExperienceItem/ExperienceItem';
 
 function Experience({ title, experience }) {
   const reversedExperience = [...experience].reverse();

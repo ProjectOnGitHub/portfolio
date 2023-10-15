@@ -1,5 +1,5 @@
 import './_Popup.scss';
-import AdminSectionButtonsChoice from '../../AdminComponents/AdminSectionButtonsChoice/AdminSectionButtonsChoice.jsx';
+import AdminSectionButtonsChoice from '../../AdminComponents/AdminSectionButtonsChoice/AdminSectionButtonsChoice';
 
 function Popup({ popupIsOpen, title, confirmAction }) {
   function handleClickSaveButton() {

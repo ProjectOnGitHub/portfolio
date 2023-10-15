@@ -1,7 +1,7 @@
 import './_Skills.scss';
-import SkillsList from '../SkillsList/SkillsList.jsx';
-import Skill from '../Skill/Skill.jsx';
-import ListItem from '../../BaseComponents/ListItem/ListItem.jsx';
+import SkillsList from '../SkillsList/SkillsList';
+import Skill from '../Skill/Skill';
+import ListItem from '../../BaseComponents/ListItem/ListItem';
 
 function Skills({ title, skillsByType, skillsText }) {
   return (
