@@ -1,5 +1,5 @@
 import './_SkillsList.scss';
-import List from '../../BaseComponents/List/List';
+import List from 'components/BaseComponents/List/List';
 
 function SkillsList({ children, type, title }) {
   return (

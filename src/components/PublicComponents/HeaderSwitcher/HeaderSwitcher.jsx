@@ -1,8 +1,8 @@
 import { useContext } from 'react';
 import './_HeaderSwitcher.scss';
-import DarkThemeContext from '../../../contexts/DarkThemeContext';
-import Button from '../../BaseComponents/Button/Button';
-import Icon from '../../BaseComponents/Icon/Icon';
+import DarkThemeContext from 'contexts/DarkThemeContext';
+import Button from 'components/BaseComponents/Button/Button';
+import Icon from 'components/BaseComponents/Icon/Icon';
 
 function HeaderSwitcher() {
   const { isDarkTheme, setIsDarkTheme } = useContext(DarkThemeContext);

@@ -1,10 +1,10 @@
 import { Fragment } from 'react';
-import Section from '../Section/Section';
-import Profile from '../Profile/Profile';
-import Projects from '../Projects/Projects';
-import Contacts from '../Contacts/Contacts';
-import Skills from '../Skills/Skills';
-import Experience from '../Experience/Experience';
+import Section from 'components/PublicComponents/Section/Section';
+import Profile from 'components/PublicComponents/Profile/Profile';
+import Projects from 'components/PublicComponents/Projects/Projects';
+import Contacts from 'components/PublicComponents/Contacts/Contacts';
+import Skills from 'components/PublicComponents/Skills/Skills';
+import Experience from 'components/PublicComponents/Experience/Experience';
 
 function MainStart({
   contacts,

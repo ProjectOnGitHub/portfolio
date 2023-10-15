@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import Logo from '../../BaseComponents/Logo/Logo';
+import Logo from 'components/BaseComponents/Logo/Logo';
 import './_Footer.scss';
 
 function Footer() {

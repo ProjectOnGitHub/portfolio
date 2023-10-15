@@ -1,4 +1,4 @@
-import AdminList from '../AdminList/AdminList';
+import AdminList from 'components/AdminComponents/AdminList/AdminList';
 
 function AdminSkillsList({ children, title }) {
   return (

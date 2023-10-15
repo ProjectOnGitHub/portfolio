@@ -1,4 +1,4 @@
-import ListItem from '../../BaseComponents/ListItem/ListItem';
+import ListItem from 'components/BaseComponents/ListItem/ListItem';
 import './_AdminListItem.scss';
 
 function AdminListItem({ modifier, children }) {

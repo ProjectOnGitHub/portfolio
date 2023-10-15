@@ -1,6 +1,6 @@
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
-import Main from '../Main/Main';
+import Header from 'components/PublicComponents/Header/Header';
+import Footer from 'components/PublicComponents/Footer/Footer';
+import Main from 'components/PublicComponents/Main/Main';
 
 function Layout({ children, isAdminPath, pages }) {
   return (

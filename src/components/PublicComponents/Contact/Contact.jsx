@@ -1,6 +1,6 @@
 import { useContext } from 'react';
-import Icon from '../../BaseComponents/Icon/Icon';
-import DarkThemeContext from '../../../contexts/DarkThemeContext';
+import Icon from 'components/BaseComponents/Icon/Icon';
+import DarkThemeContext from 'contexts/DarkThemeContext';
 
 function Contact({ className, name, title, url }) {
   const { isDarkTheme } = useContext(DarkThemeContext);

@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom';
-import Icon from '../../BaseComponents/Icon/Icon';
-import AdminList from '../AdminList/AdminList';
-import AdminListItem from '../AdminListItem/AdminListItem';
-import AdminSectionButton from '../AdminSectionButton/AdminSectionButton';
+import Icon from 'components/BaseComponents/Icon/Icon';
+import AdminList from 'components/AdminComponents/AdminList/AdminList';
+import AdminListItem from 'components/AdminComponents/AdminListItem/AdminListItem';
+import AdminSectionButton from 'components/AdminComponents/AdminSectionButton/AdminSectionButton';
 
 function AdminSectionButtonsAction({
   endpoint,

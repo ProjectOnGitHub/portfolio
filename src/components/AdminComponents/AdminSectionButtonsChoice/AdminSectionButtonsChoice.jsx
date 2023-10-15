@@ -1,6 +1,6 @@
-import AdminList from '../AdminList/AdminList';
-import AdminListItem from '../AdminListItem/AdminListItem';
-import AdminSectionButton from '../AdminSectionButton/AdminSectionButton';
+import AdminList from 'components/AdminComponents/AdminList/AdminList';
+import AdminListItem from 'components/AdminComponents/AdminListItem/AdminListItem';
+import AdminSectionButton from 'components/AdminComponents/AdminSectionButton/AdminSectionButton';
 
 function AdminSectionButtonsChoice({
   handleClickResetButton,

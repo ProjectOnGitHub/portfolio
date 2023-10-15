@@ -1,4 +1,4 @@
-import SectionForm from '../SectionForm/SectionForm';
+import SectionForm from 'components/PublicComponents/SectionForm/SectionForm';
 
 function Login() {
   return (

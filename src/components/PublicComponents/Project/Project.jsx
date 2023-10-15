@@ -1,10 +1,10 @@
 import { useContext } from 'react';
-import Icon from '../../BaseComponents/Icon/Icon';
-import List from '../../BaseComponents/List/List';
-import ListItem from '../../BaseComponents/ListItem/ListItem';
-import imagesMap from '../../../utils/images';
+import Icon from 'components/BaseComponents/Icon/Icon';
+import List from 'components/BaseComponents/List/List';
+import ListItem from 'components/BaseComponents/ListItem/ListItem';
+import imagesMap from 'utils/images';
 import './_Project.scss';
-import DarkThemeContext from '../../../contexts/DarkThemeContext';
+import DarkThemeContext from 'contexts/DarkThemeContext';
 
 function Project(props) {
   const { isDarkTheme } = useContext(DarkThemeContext);

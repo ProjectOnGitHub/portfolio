@@ -1,6 +1,6 @@
 import './_SectionForm.scss';
 import { Link } from 'react-router-dom';
-import Button from '../../BaseComponents/Button/Button';
+import Button from 'components/BaseComponents/Button/Button';
 
 function SectionForm(props) {
   return (

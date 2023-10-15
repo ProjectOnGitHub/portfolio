@@ -1,14 +1,14 @@
 import { Route, Routes } from 'react-router-dom';
-import AdminContact from '../../../pages/AdminContact/AdminContact';
-import AdminContacts from '../../../pages/AdminContacts/AdminContacts';
-import AdminExperience from '../../../pages/AdminExperience/AdminExperience';
-import AdminExperienceItem from '../../../pages/AdminExperienceItem/AdminExperienceItem';
-import AdminPages from '../../../pages/AdminPages/AdminPages';
-import AdminProfile from '../../../pages/AdminProfile/AdminProfile';
-import AdminProject from '../../../pages/AdminProject/AdminProject';
-import AdminProjects from '../../../pages/AdminProjects/AdminProjects';
-import AdminSkill from '../../../pages/AdminSkill/AdminSkill';
-import AdminSkills from '../../../pages/AdminSkills/AdminSkills';
+import AdminContact from 'pages/AdminContact/AdminContact';
+import AdminContacts from 'pages/AdminContacts/AdminContacts';
+import AdminExperience from 'pages/AdminExperience/AdminExperience';
+import AdminExperienceItem from 'pages/AdminExperienceItem/AdminExperienceItem';
+import AdminPages from 'pages/AdminPages/AdminPages';
+import AdminProfile from 'pages/AdminProfile/AdminProfile';
+import AdminProject from 'pages/AdminProject/AdminProject';
+import AdminProjects from 'pages/AdminProjects/AdminProjects';
+import AdminSkill from 'pages/AdminSkill/AdminSkill';
+import AdminSkills from 'pages/AdminSkills/AdminSkills';
 
 function MainAdmin({
   contacts,

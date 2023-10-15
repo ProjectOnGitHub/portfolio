@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import './_Slider.scss';
-import SliderDot from '../SliderDot/SliderDot';
-import Icon from '../../BaseComponents/Icon/Icon';
-import Button from '../../BaseComponents/Button/Button';
-import Slide from '../Slide/Slide';
+import SliderDot from 'components/PublicComponents/SliderDot/SliderDot';
+import Icon from 'components/BaseComponents/Icon/Icon';
+import Button from 'components/BaseComponents/Button/Button';
+import Slide from 'components/PublicComponents//Slide/Slide';
 
 function Slider(props) {
   const [count, setCount] = useState(0);

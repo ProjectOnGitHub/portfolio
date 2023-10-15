@@ -1,7 +1,7 @@
-import AdminForm from '../AdminForm/AdminForm';
-import AdminFormDropzone from '../AdminFormDropzone/AdminFormDropzone';
-import Icon from '../../BaseComponents/Icon/Icon';
-import Button from '../../BaseComponents/Button/Button';
+import AdminForm from 'components/AdminComponents/AdminForm/AdminForm';
+import AdminFormDropzone from 'components/AdminComponents/AdminFormDropzone/AdminFormDropzone';
+import Icon from 'components//BaseComponents/Icon/Icon';
+import Button from 'components//BaseComponents/Button/Button';
 
 function AdminFormImage({ onClick, children }) {
   return (

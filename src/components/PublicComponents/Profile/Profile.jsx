@@ -1,6 +1,6 @@
 import { HashLink as Link } from 'react-router-hash-link';
 import './_Profile.scss';
-import Icon from '../../BaseComponents/Icon/Icon';
+import Icon from 'components/BaseComponents/Icon/Icon';
 
 function Profile({ name, position, description }) {
   return (
