@@ -1,14 +1,14 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { getItemInfo } from '../../utils/api';
-import AdminFormImage from '../../components/AdminComponents/AdminFormImage/AdminFormImage';
-import AdminFormInput from '../../components/AdminComponents/AdminFormInput/AdminFormInput';
-import AdminFormTextarea from '../../components/AdminComponents/AdminFormTextarea/AdminFormTextarea';
-import List from '../../components/BaseComponents/List/List';
-import ListItem from '../../components/BaseComponents/ListItem/ListItem';
-import Icon from '../../components/BaseComponents/Icon/Icon';
-import Button from '../../components/BaseComponents/Button/Button';
-import AdminSection from '../../components/AdminComponents/AdminSection/AdminSection';
+import { getItemInfo } from 'utils/api';
+import AdminFormImage from 'components/AdminComponents/AdminFormImage/AdminFormImage';
+import AdminFormInput from 'components/AdminComponents/AdminFormInput/AdminFormInput';
+import AdminFormTextarea from 'components/AdminComponents/AdminFormTextarea/AdminFormTextarea';
+import List from 'components/BaseComponents/List/List';
+import ListItem from 'components/BaseComponents/ListItem/ListItem';
+import Icon from 'components/BaseComponents/Icon/Icon';
+import Button from 'components/BaseComponents/Button/Button';
+import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
 
 function AdminProject({ onClick }) {
   const { id } = useParams();

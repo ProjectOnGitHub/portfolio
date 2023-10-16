@@ -1,9 +1,9 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { getItemInfo } from '../../utils/api';
-import AdminFormImage from '../../components/AdminComponents/AdminFormImage/AdminFormImage';
-import AdminFormInput from '../../components/AdminComponents/AdminFormInput/AdminFormInput';
-import AdminSection from '../../components/AdminComponents/AdminSection/AdminSection';
+import { getItemInfo } from 'utils/api';
+import AdminFormImage from 'components/AdminComponents/AdminFormImage/AdminFormImage';
+import AdminFormInput from 'components/AdminComponents/AdminFormInput/AdminFormInput';
+import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
 
 function AdminSkill() {
   const { id } = useParams();

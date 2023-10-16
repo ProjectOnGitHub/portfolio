@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
-import AdminList from '../../components/AdminComponents/AdminList/AdminList';
-import AdminListItem from '../../components/AdminComponents/AdminListItem/AdminListItem';
-import Icon from '../../components/BaseComponents/Icon/Icon';
-import Switcher from '../../components/BaseComponents/Switcher/Switcher';
-import AdminSection from '../../components/AdminComponents/AdminSection/AdminSection';
+import AdminList from 'components/AdminComponents/AdminList/AdminList';
+import AdminListItem from 'components/AdminComponents/AdminListItem/AdminListItem';
+import Icon from 'components/BaseComponents/Icon/Icon';
+import Switcher from 'components/BaseComponents/Switcher/Switcher';
+import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
 
 function AdminPages({ pages, togglePageVisibility }) {
   return (

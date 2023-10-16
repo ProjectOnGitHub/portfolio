@@ -1,7 +1,7 @@
-import AdminForm from '../../components/AdminComponents/AdminForm/AdminForm';
-import AdminFormInput from '../../components/AdminComponents/AdminFormInput/AdminFormInput';
-import AdminFormTextarea from '../../components/AdminComponents/AdminFormTextarea/AdminFormTextarea';
-import AdminSection from '../../components/AdminComponents/AdminSection/AdminSection';
+import AdminForm from 'components/AdminComponents/AdminForm/AdminForm';
+import AdminFormInput from 'components/AdminComponents/AdminFormInput/AdminFormInput';
+import AdminFormTextarea from 'components/AdminComponents/AdminFormTextarea/AdminFormTextarea';
+import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
 
 function AdminExperienceItem() {
   return (

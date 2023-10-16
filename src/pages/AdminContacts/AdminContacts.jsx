@@ -1,8 +1,8 @@
-import AdminSectionButtonsAction from '../../components/AdminComponents/AdminSectionButtonsAction/AdminSectionButtonsAction';
-import AdminList from '../../components/AdminComponents/AdminList/AdminList';
-import AdminListItem from '../../components/AdminComponents/AdminListItem/AdminListItem';
-import Contact from '../../components/PublicComponents/Contact/Contact';
-import AdminSection from '../../components/AdminComponents/AdminSection/AdminSection';
+import AdminSectionButtonsAction from 'components/AdminComponents/AdminSectionButtonsAction/AdminSectionButtonsAction';
+import AdminList from 'components/AdminComponents/AdminList/AdminList';
+import AdminListItem from 'components/AdminComponents/AdminListItem/AdminListItem';
+import Contact from 'components/PublicComponents/Contact/Contact';
+import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
 
 function AdminContacts({
   contacts,

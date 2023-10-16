@@ -1,6 +1,6 @@
-import AdminFormImage from '../../components/AdminComponents/AdminFormImage/AdminFormImage';
-import AdminFormInput from '../../components/AdminComponents/AdminFormInput/AdminFormInput';
-import AdminSection from '../../components/AdminComponents/AdminSection/AdminSection';
+import AdminFormImage from 'components/AdminComponents/AdminFormImage/AdminFormImage';
+import AdminFormInput from 'components/AdminComponents/AdminFormInput/AdminFormInput';
+import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
 
 function AdminContact() {
   return (
