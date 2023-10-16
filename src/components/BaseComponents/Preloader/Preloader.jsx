@@ -1,11 +1,7 @@
 import './_Preloader.scss';
 
 function Preloader() {
-  <div className="preloader">
-    <div className="preloader__container">
-      <span className="preloader__round"></span>
-    </div>
-  </div>;
+  return <span className="preloader"></span>;
 }
 
 export default Preloader;
