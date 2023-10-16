@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './_Header.scss';
 import Logo from 'components/BaseComponents/Logo/Logo';
 import Nav from 'components/BaseComponents/Nav/Nav';
@@ -10,7 +11,7 @@ function Header({ isAdminPath, pages }) {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', () => setColor(window.pageYOffset > 0));
+      window.addEventListener('scroll', () => setColor(window.scrollY > 0));
     }
   }, []);
 
@@ -20,14 +21,25 @@ function Header({ isAdminPath, pages }) {
         isAdminPath ? 'header_theme-admin' : ''
       }`}>
       <div className="header__container">
-        <a
-          className="header__link"
-          href="/#top">
-          <Logo
-            className="middle"
-            name="my-logo"
-          />
-        </a>
+        {isAdminPath ? (
+          <Link
+            className="header__link"
+            to="/">
+            <Logo
+              className="middle"
+              name="my-logo"
+            />
+          </Link>
+        ) : (
+          <a
+            className="header__link"
+            href="/#top">
+            <Logo
+              className="middle"
+              name="my-logo"
+            />
+          </a>
+        )}
         <Nav className="header">
           <HeaderMenu
             className="header"
