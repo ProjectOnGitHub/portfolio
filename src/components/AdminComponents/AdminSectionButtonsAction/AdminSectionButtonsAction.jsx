@@ -17,8 +17,7 @@ function AdminSectionButtonsAction({
   const navigate = useNavigate();
 
   function handleClickDeleteButton() {
-    const title = 'Удалить элемент?';
-    openPopup(title);
+    openPopup();
     const itemData = {
       endpoint,
       itemId,

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
-import Popup from 'components/BaseComponents/Popup/Popup';
+import AdminPopupDeleteItem from 'components/AdminComponents/AdminPopupDeleteItem/AdminPopupDeleteItem';
 import MainStart from 'components/PublicComponents/MainStart/MainStart';
 import Register from 'components/PublicComponents/Register/Register';
 import DarkThemeContext from 'contexts/DarkThemeContext';
@@ -25,7 +25,6 @@ function App() {
   const [experience, setExperience] = useState([]);
   const [contacts, setContacts] = useState([]);
   const [popupIsOpen, setPopupIsOpen] = useState(false);
-  const [popupTitle, setPopupTitle] = useState('');
 
   const location = useLocation();
   const isAdminPath = location.pathname.startsWith('/admin');
@@ -81,9 +80,8 @@ function App() {
     setSkillsByType(updateSkills);
   }, [skills]);
 
-  function openPopup(currentTitle) {
+  function openPopup() {
     setPopupIsOpen(true);
-    setPopupTitle(currentTitle);
   }
   function closePopup() {
     setPopupIsOpen(false);
@@ -170,10 +168,9 @@ function App() {
                   skillsText={skillsText}
                   togglePageVisibility={togglePageVisibility}
                 />
-                <Popup
-                  confirmAction={confirmDeleteItem}
+                <AdminPopupDeleteItem
+                  confirmDeleteItem={confirmDeleteItem}
                   popupIsOpen={popupIsOpen}
-                  title={popupTitle}
                 />
               </Layout>
             }

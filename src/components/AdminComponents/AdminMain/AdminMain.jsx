@@ -46,7 +46,6 @@ function MainAdmin({
           <AdminProfile
             description={profile.description}
             name={profile.name}
-            openPopup={openPopup}
             position={profile.position}
           />
         }

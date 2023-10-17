@@ -1,13 +1,11 @@
 import AdminForm from 'components/AdminComponents/AdminForm/AdminForm';
 import AdminFormInput from 'components/AdminComponents/AdminFormInput/AdminFormInput';
 import AdminFormTextarea from 'components/AdminComponents/AdminFormTextarea/AdminFormTextarea';
-import AdminSectionButton from 'components/AdminComponents/AdminSectionButton/AdminSectionButton';
 import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
 
 function AdminProfile({ name, position, description, openPopup }) {
   function handleClickSaveButton() {
-    const title = 'Сохранить изменения?';
-    openPopup(title);
+    openPopup();
   }
 
   return (
@@ -16,7 +14,9 @@ function AdminProfile({ name, position, description, openPopup }) {
       id="profile"
       modifier="profile"
       title="Редактирование профиля">
-      <AdminForm modifier="middle">
+      <AdminForm
+        handleClickSaveButton={handleClickSaveButton}
+        modifier="middle">
         <fieldset className="admin-form__fieldset">
           <AdminFormInput
             name="name"
@@ -39,13 +39,6 @@ function AdminProfile({ name, position, description, openPopup }) {
             value={description}
           />
         </fieldset>
-        <AdminSectionButton
-          modifier="save"
-          name="save"
-          type="button"
-          onClick={handleClickSaveButton}>
-          Сохранить
-        </AdminSectionButton>
       </AdminForm>
     </AdminSection>
   );
