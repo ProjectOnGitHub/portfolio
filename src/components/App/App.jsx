@@ -24,7 +24,7 @@ function App() {
   const [skillsByType, setSkillsByType] = useState({});
   const [experience, setExperience] = useState([]);
   const [contacts, setContacts] = useState([]);
-  const [popupIsOpen, setPopupIsOpen] = useState(false);
+  const [popupDeleteItemIsOpen, setPopupDeleteItemIsOpen] = useState(false);
 
   const location = useLocation();
   const isAdminPath = location.pathname.startsWith('/admin');
@@ -81,10 +81,10 @@ function App() {
   }, [skills]);
 
   function openPopupDeleteItem() {
-    setPopupIsOpen(true);
+    setPopupDeleteItemIsOpen(true);
   }
   function closePopupDeleteItem() {
-    setPopupIsOpen(false);
+    setPopupDeleteItemIsOpen(false);
   }
 
   function saveSelectedItemData(data) {
@@ -154,7 +154,7 @@ function App() {
                   experience={experience}
                   openPopupDeleteItem={openPopupDeleteItem}
                   pages={pages}
-                  popupIsOpen={popupIsOpen}
+                  popupDeleteItemIsOpen={popupDeleteItemIsOpen}
                   profile={profile}
                   projects={projects}
                   saveSelectedItemData={saveSelectedItemData}
@@ -170,7 +170,7 @@ function App() {
                 />
                 <AdminPopupDeleteItem
                   confirmDeleteItem={confirmDeleteItem}
-                  popupIsOpen={popupIsOpen}
+                  popupDeleteIsOpen={popupDeleteItemIsOpen}
                 />
               </Layout>
             }
