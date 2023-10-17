@@ -3,9 +3,9 @@ import AdminFormInput from 'components/AdminComponents/AdminFormInput/AdminFormI
 import AdminFormTextarea from 'components/AdminComponents/AdminFormTextarea/AdminFormTextarea';
 import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
 
-function AdminProfile({ name, position, description, openPopup }) {
+function AdminProfile({ name, position, description, openPopupDeleteItem }) {
   function handleClickSaveButton() {
-    openPopup();
+    openPopupDeleteItem();
   }
 
   return (

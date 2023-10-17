@@ -16,7 +16,7 @@ function AdminSkills({
   setSkillsText,
   skills,
   setSkills,
-  openPopup,
+  openPopupDeleteItem,
   saveSelectedItemData,
 }) {
   return (
@@ -44,7 +44,7 @@ function AdminSkills({
                   endpoint="skillsText"
                   isEditHide={true}
                   itemId={item.id}
-                  openPopup={openPopup}
+                  openPopupDeleteItem={openPopupDeleteItem}
                   saveSelectedItemData={saveSelectedItemData}
                   setState={setSkillsText}
                 />
@@ -73,7 +73,7 @@ function AdminSkills({
                   editItem={editItem}
                   endpoint="skills"
                   itemId={skill.id}
-                  openPopup={openPopup}
+                  openPopupDeleteItem={openPopupDeleteItem}
                   saveSelectedItemData={saveSelectedItemData}
                   setState={setSkills}
                 />

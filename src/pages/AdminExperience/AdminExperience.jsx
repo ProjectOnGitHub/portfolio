@@ -7,7 +7,7 @@ import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
 function AdminExperience({
   experience,
   setExperience,
-  openPopup,
+  openPopupDeleteItem,
   saveSelectedItemData,
 }) {
   const reversedExperience = [...experience].reverse();
@@ -34,7 +34,7 @@ function AdminExperience({
               currentArray={experience}
               endpoint="experience"
               itemId={exp.id}
-              openPopup={openPopup}
+              openPopupDeleteItem={openPopupDeleteItem}
               saveSelectedItemData={saveSelectedItemData}
               setState={setExperience}
             />

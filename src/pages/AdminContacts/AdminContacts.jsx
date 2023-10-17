@@ -7,7 +7,7 @@ import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
 function AdminContacts({
   contacts,
   setContacts,
-  openPopup,
+  openPopupDeleteItem,
   saveSelectedItemData,
 }) {
   return (
@@ -33,7 +33,7 @@ function AdminContacts({
               currentArray={contacts}
               endpoint="contacts"
               itemId={contact.id}
-              openPopup={openPopup}
+              openPopupDeleteItem={openPopupDeleteItem}
               saveSelectedItemData={saveSelectedItemData}
               setState={setContacts}
             />

@@ -9,7 +9,7 @@ import './_AdminProjects.scss';
 function AdminProjects({
   projects,
   setProjects,
-  openPopup,
+  openPopupDeleteItem,
   saveSelectedItemData,
 }) {
   return (
@@ -38,7 +38,7 @@ function AdminProjects({
               currentArray={projects}
               endpoint="projects"
               itemId={project.id}
-              openPopup={openPopup}
+              openPopupDeleteItem={openPopupDeleteItem}
               saveSelectedItemData={saveSelectedItemData}
               setState={setProjects}
             />

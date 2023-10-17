@@ -80,10 +80,10 @@ function App() {
     setSkillsByType(updateSkills);
   }, [skills]);
 
-  function openPopup() {
+  function openPopupDeleteItem() {
     setPopupIsOpen(true);
   }
-  function closePopup() {
+  function closePopupDeleteItem() {
     setPopupIsOpen(false);
   }
 
@@ -103,7 +103,7 @@ function App() {
     if (state) {
       removeItem(selectedItem);
     }
-    closePopup();
+    closePopupDeleteItem();
   }
 
   function togglePageVisibility({ id, isEnabled }) {
@@ -152,7 +152,7 @@ function App() {
                   confirmDeleteItem={confirmDeleteItem}
                   contacts={contacts}
                   experience={experience}
-                  openPopup={openPopup}
+                  openPopupDeleteItem={openPopupDeleteItem}
                   pages={pages}
                   popupIsOpen={popupIsOpen}
                   profile={profile}

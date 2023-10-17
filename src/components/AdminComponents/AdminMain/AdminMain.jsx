@@ -24,7 +24,7 @@ function MainAdmin({
   setProjects,
   setSkills,
   setSkillsText,
-  openPopup,
+  openPopupDeleteItem,
   saveSelectedItemData,
   togglePageVisibility,
 }) {
@@ -55,7 +55,7 @@ function MainAdmin({
         path="projects"
         element={
           <AdminProjects
-            openPopup={openPopup}
+            openPopupDeleteItem={openPopupDeleteItem}
             projects={projects}
             saveSelectedItemData={saveSelectedItemData}
             setProjects={setProjects}
@@ -67,7 +67,7 @@ function MainAdmin({
         path="skills"
         element={
           <AdminSkills
-            openPopup={openPopup}
+            openPopupDeleteItem={openPopupDeleteItem}
             saveSelectedItemData={saveSelectedItemData}
             setSkills={setSkills}
             setSkillsText={setSkillsText}
@@ -83,7 +83,7 @@ function MainAdmin({
         element={
           <AdminExperience
             experience={experience}
-            openPopup={openPopup}
+            openPopupDeleteItem={openPopupDeleteItem}
             saveSelectedItemData={saveSelectedItemData}
             setExperience={setExperience}
           />
@@ -95,7 +95,7 @@ function MainAdmin({
         element={
           <AdminContacts
             contacts={contacts}
-            openPopup={openPopup}
+            openPopupDeleteItem={openPopupDeleteItem}
             saveSelectedItemData={saveSelectedItemData}
             setContacts={setContacts}
           />
