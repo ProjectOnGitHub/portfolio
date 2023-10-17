@@ -3,14 +3,16 @@ import AdminFormInput from 'components/AdminComponents/AdminFormInput/AdminFormI
 import AdminFormTextarea from 'components/AdminComponents/AdminFormTextarea/AdminFormTextarea';
 import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
 
-function AdminExperienceItem() {
+function AdminExperienceItem({ openPopupSaveData }) {
   return (
     <AdminSection
       className="experience"
       id="experience"
       modifier="experience"
       title="Редактирование опыта работы">
-      <AdminForm modifier="middle">
+      <AdminForm
+        modifier="middle"
+        openPopup={openPopupSaveData}>
         <fieldset className="admin-form__fieldset">
           <legend className="admin-form__legend">
             Редактировать опыт работы

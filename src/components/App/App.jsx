@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import AdminPopupDeleteItem from 'components/AdminComponents/AdminPopupDeleteItem/AdminPopupDeleteItem';
+import AdminPopupSaveData from 'components/AdminComponents/AdminPopupSaveData/AdminPopupSaveData';
 import MainStart from 'components/PublicComponents/MainStart/MainStart';
 import Register from 'components/PublicComponents/Register/Register';
 import DarkThemeContext from 'contexts/DarkThemeContext';
@@ -25,6 +26,7 @@ function App() {
   const [experience, setExperience] = useState([]);
   const [contacts, setContacts] = useState([]);
   const [popupDeleteItemIsOpen, setPopupDeleteItemIsOpen] = useState(false);
+  const [popupSaveDataIsOpen, setPopupSaveDataIsOpen] = useState(false);
 
   const location = useLocation();
   const isAdminPath = location.pathname.startsWith('/admin');
@@ -87,6 +89,13 @@ function App() {
     setPopupDeleteItemIsOpen(false);
   }
 
+  function openPopupSaveData() {
+    setPopupSaveDataIsOpen(true);
+  }
+  function closePopupSaveData() {
+    setPopupSaveDataIsOpen(false);
+  }
+
   function saveSelectedItemData(data) {
     setSelectedItem(data);
   }
@@ -104,6 +113,13 @@ function App() {
       removeItem(selectedItem);
     }
     closePopupDeleteItem();
+  }
+
+  function confirmSaveData(state) {
+    if (state) {
+      console.log('save');
+    }
+    closePopupSaveData();
   }
 
   function togglePageVisibility({ id, isEnabled }) {
@@ -149,12 +165,13 @@ function App() {
                 isAdminPath={isAdminPath}
                 pages={pages}>
                 <AdminMain
-                  confirmDeleteItem={confirmDeleteItem}
                   contacts={contacts}
                   experience={experience}
                   openPopupDeleteItem={openPopupDeleteItem}
+                  openPopupSaveData={openPopupSaveData}
                   pages={pages}
                   popupDeleteItemIsOpen={popupDeleteItemIsOpen}
+                  popupSaveDataIsOpen={popupSaveDataIsOpen}
                   profile={profile}
                   projects={projects}
                   saveSelectedItemData={saveSelectedItemData}
@@ -171,6 +188,10 @@ function App() {
                 <AdminPopupDeleteItem
                   confirmDeleteItem={confirmDeleteItem}
                   popupDeleteIsOpen={popupDeleteItemIsOpen}
+                />
+                <AdminPopupSaveData
+                  confirmSaveData={confirmSaveData}
+                  popupSaveDataIsOpen={popupSaveDataIsOpen}
                 />
               </Layout>
             }

@@ -10,7 +10,7 @@ import Icon from 'components/BaseComponents/Icon/Icon';
 import Button from 'components/BaseComponents/Button/Button';
 import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
 
-function AdminProject({ onClick }) {
+function AdminProject({ onClick, openPopupSaveData }) {
   const { id } = useParams();
 
   const [item, setItem] = useState({});
@@ -23,7 +23,7 @@ function AdminProject({ onClick }) {
       id="project"
       modifier="project"
       title={`Редактирование проекта "${item.title}"`}>
-      <AdminFormImage>
+      <AdminFormImage openPopup={openPopupSaveData}>
         <fieldset className="admin-form__fieldset">
           <legend className="admin-form__legend">
             Редактировать данные проекта

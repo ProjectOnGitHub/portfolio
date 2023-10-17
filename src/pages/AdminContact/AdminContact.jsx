@@ -2,14 +2,14 @@ import AdminFormImage from 'components/AdminComponents/AdminFormImage/AdminFormI
 import AdminFormInput from 'components/AdminComponents/AdminFormInput/AdminFormInput';
 import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
 
-function AdminContact() {
+function AdminContact({ openPopupSaveData }) {
   return (
     <AdminSection
       className="contact"
       id="contact"
       modifier="contact"
       title="Редактирование контакта">
-      <AdminFormImage>
+      <AdminFormImage openPopup={openPopupSaveData}>
         <fieldset className="admin-form__fieldset">
           <legend className="admin-form__legend">Редактировать контакт</legend>
           <AdminFormInput

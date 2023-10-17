@@ -5,7 +5,7 @@ import AdminFormImage from 'components/AdminComponents/AdminFormImage/AdminFormI
 import AdminFormInput from 'components/AdminComponents/AdminFormInput/AdminFormInput';
 import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
 
-function AdminSkill() {
+function AdminSkill({ openPopupSaveData }) {
   const { id } = useParams();
   const [item, setItem] = useState({});
   useEffect(() => {
@@ -18,7 +18,7 @@ function AdminSkill() {
       id="skill"
       modifier="skill"
       title={`Редактирование навыка ${item.title}`}>
-      <AdminFormImage>
+      <AdminFormImage openPopup={openPopupSaveData}>
         <fieldset className="admin-form__fieldset">
           <legend className="admin-form__legend">Редактировать навык</legend>
           <AdminFormInput

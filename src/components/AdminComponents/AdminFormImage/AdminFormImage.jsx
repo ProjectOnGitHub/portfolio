@@ -3,9 +3,11 @@ import AdminFormDropzone from 'components/AdminComponents/AdminFormDropzone/Admi
 import Icon from 'components//BaseComponents/Icon/Icon';
 import Button from 'components//BaseComponents/Button/Button';
 
-function AdminFormImage({ onClick, children }) {
+function AdminFormImage({ onClick, children, openPopup }) {
   return (
-    <AdminForm modifier="middle">
+    <AdminForm
+      modifier="middle"
+      openPopup={openPopup}>
       <fieldset className="admin-form__fieldset">
         <legend className="admin-form__legend">Добавить изображение</legend>
         <AdminFormDropzone className="AdminFormDropzone">

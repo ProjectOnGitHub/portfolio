@@ -1,9 +1,11 @@
 import './_AdminForm.scss';
 import AdminSectionButtonSave from 'components/AdminComponents/AdminSectionButtonSave/AdminSectionButtonSave';
 
-function AdminForm({ name, children, modifier, handleClickSaveButton }) {
+function AdminForm({ name, children, modifier, openPopup }) {
   const classes = modifier ? `admin-form admin-form_${modifier}` : `admin-form`;
-
+  function handleClickSaveButton() {
+    openPopup();
+  }
   return (
     <>
       <form

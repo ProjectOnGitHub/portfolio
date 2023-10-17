@@ -25,6 +25,7 @@ function MainAdmin({
   setSkills,
   setSkillsText,
   openPopupDeleteItem,
+  openPopupSaveData,
   saveSelectedItemData,
   togglePageVisibility,
 }) {
@@ -46,6 +47,7 @@ function MainAdmin({
           <AdminProfile
             description={profile.description}
             name={profile.name}
+            openPopupSaveData={openPopupSaveData}
             position={profile.position}
           />
         }
@@ -103,23 +105,23 @@ function MainAdmin({
         exact
       />
       <Route
-        element={<AdminProject />}
+        element={<AdminProject openPopupSaveData={openPopupSaveData} />}
         path="projects/:id"
         exact
       />
 
       <Route
-        element={<AdminSkill />}
+        element={<AdminSkill openPopupSaveData={openPopupSaveData} />}
         path="skills/:id"
         exact
       />
       <Route
-        element={<AdminExperienceItem />}
+        element={<AdminExperienceItem openPopupSaveData={openPopupSaveData} />}
         path="experience/:id"
         exact
       />
       <Route
-        element={<AdminContact />}
+        element={<AdminContact openPopupSaveData={openPopupSaveData} />}
         path="contacts/:id"
         exact
       />

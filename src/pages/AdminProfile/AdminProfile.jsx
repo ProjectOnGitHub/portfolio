@@ -3,11 +3,7 @@ import AdminFormInput from 'components/AdminComponents/AdminFormInput/AdminFormI
 import AdminFormTextarea from 'components/AdminComponents/AdminFormTextarea/AdminFormTextarea';
 import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
 
-function AdminProfile({ name, position, description, openPopupDeleteItem }) {
-  function handleClickSaveButton() {
-    openPopupDeleteItem();
-  }
-
+function AdminProfile({ name, position, description, openPopupSaveData }) {
   return (
     <AdminSection
       className="profile"
@@ -15,8 +11,8 @@ function AdminProfile({ name, position, description, openPopupDeleteItem }) {
       modifier="profile"
       title="Редактирование профиля">
       <AdminForm
-        handleClickSaveButton={handleClickSaveButton}
-        modifier="middle">
+        modifier="middle"
+        openPopup={openPopupSaveData}>
         <fieldset className="admin-form__fieldset">
           <AdminFormInput
             name="name"
