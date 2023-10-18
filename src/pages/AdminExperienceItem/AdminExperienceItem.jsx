@@ -3,9 +3,12 @@ import AdminFormInput from 'components/AdminComponents/AdminFormInput/AdminFormI
 import AdminFormTextarea from 'components/AdminComponents/AdminFormTextarea/AdminFormTextarea';
 import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
 import useItemInfo from 'hooks/useItemInfo';
+import useNewItem from 'hooks/useNewItem';
 
 function AdminExperienceItem({ openPopupSaveData }) {
   const item = useItemInfo();
+  const { newItem, handleChangeInput } = useNewItem(item);
+  console.log(newItem);
   return (
     <AdminSection
       className="experience"
@@ -18,18 +21,21 @@ function AdminExperienceItem({ openPopupSaveData }) {
         <fieldset className="admin-form__fieldset">
           <AdminFormInput
             label="Должность"
+            name="position"
             placeholder="Должность"
             required={true}
             type="text"
-            value={item.position}
+            value={newItem.position || ''}
+            onChange={handleChangeInput}
           />
           <AdminFormInput
             label="Место работы"
-            name="place"
+            name="name"
             placeholder="Место работы"
             required={true}
             type="text"
-            value={item.name}
+            value={newItem.name || ''}
+            onChange={handleChangeInput}
           />
           <AdminFormInput
             label="Начало работы"
@@ -37,7 +43,8 @@ function AdminExperienceItem({ openPopupSaveData }) {
             placeholder="Начало работы"
             required={true}
             type="text"
-            value={item.start}
+            value={newItem.start || ''}
+            onChange={handleChangeInput}
           />
           <AdminFormInput
             label="Конец работы"
@@ -45,18 +52,20 @@ function AdminExperienceItem({ openPopupSaveData }) {
             placeholder="Конец работы"
             required={true}
             type="text"
-            value={item.end}
+            value={newItem.end || ''}
+            onChange={handleChangeInput}
           />
           <label className="admin-form__label">
             Добавить описание
-            {item.text &&
-              item.text.map((element) => (
+            {newItem.text &&
+              newItem.text.map((element) => (
                 <AdminFormTextarea
                   key={element.id}
-                  name="description"
+                  name="text"
                   placeholder="Добавить описание"
                   required={true}
-                  value={element.paragraph}
+                  value={element.paragraph || ''}
+                  onChange={handleChangeInput}
                 />
               ))}
           </label>
