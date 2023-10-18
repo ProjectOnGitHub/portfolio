@@ -1,6 +1,3 @@
-import { useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import { getItemInfo } from 'utils/api';
 import AdminFormImage from 'components/AdminComponents/AdminFormImage/AdminFormImage';
 import AdminFormInput from 'components/AdminComponents/AdminFormInput/AdminFormInput';
 import AdminFormTextarea from 'components/AdminComponents/AdminFormTextarea/AdminFormTextarea';
@@ -9,14 +6,10 @@ import ListItem from 'components/BaseComponents/ListItem/ListItem';
 import Icon from 'components/BaseComponents/Icon/Icon';
 import Button from 'components/BaseComponents/Button/Button';
 import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
+import useItemInfo from 'hooks/useItemInfo';
 
 function AdminProject({ onClick, openPopupSaveData }) {
-  const { id } = useParams();
-
-  const [item, setItem] = useState({});
-  useEffect(() => {
-    getItemInfo('projects', id).then((newItem) => setItem(newItem));
-  }, [item]);
+  const item = useItemInfo();
 
   return (
     <AdminSection
@@ -26,10 +19,8 @@ function AdminProject({ onClick, openPopupSaveData }) {
       title={`Редактирование проекта "${item.title}"`}>
       <AdminFormImage openPopup={openPopupSaveData}>
         <fieldset className="admin-form__fieldset">
-          <legend className="admin-form__legend">
-            Редактировать данные проекта
-          </legend>
           <AdminFormInput
+            label="Название проекта"
             name="name"
             placeholder="Название проекта"
             required={true}
@@ -37,6 +28,7 @@ function AdminProject({ onClick, openPopupSaveData }) {
             value={item.title}
           />
           <AdminFormInput
+            label="Алиас проекта"
             name="alias"
             placeholder="Алиас проекта"
             required={true}
@@ -44,6 +36,7 @@ function AdminProject({ onClick, openPopupSaveData }) {
             value={item.name}
           />
           <AdminFormInput
+            label="Ссылка на сайт"
             name="site"
             placeholder="Ссылка на сайт"
             required={false}
@@ -51,6 +44,7 @@ function AdminProject({ onClick, openPopupSaveData }) {
             value={item.url}
           />
           <AdminFormInput
+            label="Ссылка на GitHub"
             name="github"
             placeholder="Ссылка на GitHub"
             required={false}
@@ -59,6 +53,7 @@ function AdminProject({ onClick, openPopupSaveData }) {
           />
           <div className="admin-form__wrapper">
             <AdminFormInput
+              label="Добавить технологии"
               placeholder="Добавить технологии"
               required={true}
               type="text"
@@ -86,6 +81,7 @@ function AdminProject({ onClick, openPopupSaveData }) {
             </List>
           </div>
           <AdminFormTextarea
+            label="Добавить описание"
             name="description"
             placeholder="Добавить описание"
             required={true}

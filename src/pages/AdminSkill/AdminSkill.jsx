@@ -1,16 +1,10 @@
-import { useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import { getItemInfo } from 'utils/api';
 import AdminFormImage from 'components/AdminComponents/AdminFormImage/AdminFormImage';
 import AdminFormInput from 'components/AdminComponents/AdminFormInput/AdminFormInput';
 import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
+import useItemInfo from 'hooks/useItemInfo';
 
 function AdminSkill({ openPopupSaveData }) {
-  const { id } = useParams();
-  const [item, setItem] = useState({});
-  useEffect(() => {
-    getItemInfo('skills', id).then((newItem) => setItem(newItem));
-  }, [item]);
+  const item = useItemInfo();
 
   return (
     <AdminSection
@@ -20,8 +14,8 @@ function AdminSkill({ openPopupSaveData }) {
       title={`Редактирование навыка ${item.title}`}>
       <AdminFormImage openPopup={openPopupSaveData}>
         <fieldset className="admin-form__fieldset">
-          <legend className="admin-form__legend">Редактировать навык</legend>
           <AdminFormInput
+            label="Название навыка"
             name="title"
             placeholder="Название навыка"
             required={true}
@@ -29,6 +23,7 @@ function AdminSkill({ openPopupSaveData }) {
             value={item.title}
           />
           <AdminFormInput
+            label="Тип навыка"
             name="type"
             placeholder="Тип навыка"
             required={true}
@@ -36,6 +31,7 @@ function AdminSkill({ openPopupSaveData }) {
             value={item.type}
           />
           <AdminFormInput
+            label="Название иконки навыка"
             name="name"
             placeholder="Название иконки навыка"
             required={true}

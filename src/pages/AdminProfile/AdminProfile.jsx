@@ -39,27 +39,27 @@ function AdminProfile({
         setState={setProfile}>
         <fieldset className="admin-form__fieldset">
           <AdminFormInput
-            label="Редактировать имя"
+            label="Имя"
             name="name"
-            placeholder="Редактировать имя"
+            placeholder="Имя"
             required={true}
             type="text"
             value={newItem.name || ''}
             onChange={handleChangeInput}
           />
           <AdminFormInput
-            label="Редактировать должность"
+            label="Должность"
             name="position"
-            placeholder="Редактировать должность"
+            placeholder="Должность"
             required={true}
             type="text"
             value={newItem.position || ''}
             onChange={handleChangeInput}
           />
           <AdminFormTextarea
-            label="Редактировать описание"
+            label="Описание"
             name="description"
-            placeholder="Редактировать описание"
+            placeholder="Описание"
             required={true}
             value={newItem.description || ''}
             onChange={handleChangeInput}

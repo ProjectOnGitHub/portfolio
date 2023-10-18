@@ -5,6 +5,7 @@ import Contact from 'components/PublicComponents/Contact/Contact';
 import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
 
 function AdminContacts({
+  endpoint,
   contacts,
   setContacts,
   openPopupDeleteItem,
@@ -31,7 +32,7 @@ function AdminContacts({
             </div>
             <AdminSectionButtonsAction
               currentArray={contacts}
-              endpoint="contacts"
+              endpoint={endpoint}
               itemId={contact.id}
               openPopupDeleteItem={openPopupDeleteItem}
               saveSelectedItemData={saveSelectedItemData}

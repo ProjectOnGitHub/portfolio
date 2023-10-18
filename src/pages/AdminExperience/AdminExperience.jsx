@@ -5,6 +5,7 @@ import AdminListItem from 'components/AdminComponents/AdminListItem/AdminListIte
 import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
 
 function AdminExperience({
+  endpoint,
   experience,
   setExperience,
   openPopupDeleteItem,
@@ -25,14 +26,14 @@ function AdminExperience({
                 className="admin-section"
                 end={exp.end}
                 name={exp.name}
+                position={exp.position}
                 start={exp.start}
                 text={exp.text}
-                title={exp.title}
               />
             </div>
             <AdminSectionButtonsAction
               currentArray={experience}
-              endpoint="experience"
+              endpoint={endpoint}
               itemId={exp.id}
               openPopupDeleteItem={openPopupDeleteItem}
               saveSelectedItemData={saveSelectedItemData}

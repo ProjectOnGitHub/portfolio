@@ -10,6 +10,7 @@ import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
 import './_AdminSkills.scss';
 
 function AdminSkills({
+  endpoint,
   skillsByType,
   editItem,
   skillsText,
@@ -71,7 +72,7 @@ function AdminSkills({
                 <AdminSectionButtonsAction
                   currentArray={skills}
                   editItem={editItem}
-                  endpoint="skills"
+                  endpoint={endpoint}
                   itemId={skill.id}
                   openPopupDeleteItem={openPopupDeleteItem}
                   saveSelectedItemData={saveSelectedItemData}

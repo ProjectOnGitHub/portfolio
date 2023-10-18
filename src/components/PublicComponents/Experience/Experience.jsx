@@ -17,9 +17,9 @@ function Experience({ title, experience }) {
               className="experience"
               end={item.end}
               name={item.name}
+              position={item.position}
               start={item.start}
               text={item.text}
-              title={item.title}
             />
           </ListItem>
         ))}

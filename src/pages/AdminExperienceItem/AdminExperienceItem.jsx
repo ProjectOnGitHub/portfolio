@@ -2,8 +2,10 @@ import AdminForm from 'components/AdminComponents/AdminForm/AdminForm';
 import AdminFormInput from 'components/AdminComponents/AdminFormInput/AdminFormInput';
 import AdminFormTextarea from 'components/AdminComponents/AdminFormTextarea/AdminFormTextarea';
 import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
+import useItemInfo from 'hooks/useItemInfo';
 
 function AdminExperienceItem({ openPopupSaveData }) {
+  const item = useItemInfo();
   return (
     <AdminSection
       className="experience"
@@ -14,39 +16,50 @@ function AdminExperienceItem({ openPopupSaveData }) {
         modifier="middle"
         openPopup={openPopupSaveData}>
         <fieldset className="admin-form__fieldset">
-          <legend className="admin-form__legend">
-            Редактировать опыт работы
-          </legend>
           <AdminFormInput
-            name="position"
-            placeholder="Название должности"
+            label="Должность"
+            placeholder="Должность"
             required={true}
             type="text"
+            value={item.position}
           />
           <AdminFormInput
+            label="Место работы"
             name="place"
             placeholder="Место работы"
             required={true}
             type="text"
+            value={item.name}
           />
           <AdminFormInput
-            name="date-start"
+            label="Начало работы"
+            name="start"
             placeholder="Начало работы"
             required={true}
-            type="date"
+            type="text"
+            value={item.start}
           />
           <AdminFormInput
-            name="date-end"
+            label="Конец работы"
+            name="end"
             placeholder="Конец работы"
             required={true}
-            type="date"
+            type="text"
+            value={item.end}
           />
-
-          <AdminFormTextarea
-            name="description"
-            placeholder="Добавить описание"
-            required={true}
-          />
+          <label className="admin-form__label">
+            Добавить описание
+            {item.text &&
+              item.text.map((element) => (
+                <AdminFormTextarea
+                  key={element.id}
+                  name="description"
+                  placeholder="Добавить описание"
+                  required={true}
+                  value={element.paragraph}
+                />
+              ))}
+          </label>
         </fieldset>
       </AdminForm>
     </AdminSection>

@@ -97,8 +97,8 @@ export function changePageVisibility(id, isEnabled) {
   }).then(getResponse);
 }
 
-export function getItemInfo(endpoint, itemId) {
-  return fetch(`${API_URL}/${endpoint}/${itemId}`, {
+export function getItemInfo(endpoint) {
+  return fetch(`${API_URL}/${endpoint}`, {
     method: 'GET',
     headers: {
       Accept: 'application/json',

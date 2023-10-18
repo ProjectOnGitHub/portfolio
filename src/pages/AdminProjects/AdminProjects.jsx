@@ -7,6 +7,7 @@ import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
 import './_AdminProjects.scss';
 
 function AdminProjects({
+  endpoint,
   projects,
   setProjects,
   openPopupDeleteItem,
@@ -36,7 +37,7 @@ function AdminProjects({
 
             <AdminSectionButtonsAction
               currentArray={projects}
-              endpoint="projects"
+              endpoint={endpoint}
               itemId={project.id}
               openPopupDeleteItem={openPopupDeleteItem}
               saveSelectedItemData={saveSelectedItemData}

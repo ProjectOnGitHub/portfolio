@@ -1,7 +1,7 @@
-function ExperienceItem({ className, title, name, start, text, end }) {
+function ExperienceItem({ className, name, position, start, text, end }) {
   return (
     <>
-      <h3 className={`${className}__subtitle`}>{title}</h3>
+      <h3 className={`${className}__subtitle`}>{position}</h3>
       <span className={`${className}__name`}>{name}</span>
       <div className={`${className}__date`}>
         <span className={`${className}__date-start`}>{start}</span>
@@ -9,11 +9,11 @@ function ExperienceItem({ className, title, name, start, text, end }) {
         <span className={`${className}__date-end`}>{end}</span>
       </div>
       <div className={`${className}__text`}>
-        {text.map((paragraph, i) => (
+        {text.map((item) => (
           <p
-            key={i}
+            key={item.id}
             className={`${className}__paragraph`}>
-            {paragraph}
+            {item.paragraph}
           </p>
         ))}
       </div>

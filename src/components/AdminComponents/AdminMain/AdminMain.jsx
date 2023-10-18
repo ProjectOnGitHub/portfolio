@@ -61,6 +61,7 @@ function MainAdmin({
         path="projects"
         element={
           <AdminProjects
+            endpoint={endpoint}
             openPopupDeleteItem={openPopupDeleteItem}
             projects={projects}
             saveSelectedItemData={saveSelectedItemData}
@@ -73,6 +74,7 @@ function MainAdmin({
         path="skills"
         element={
           <AdminSkills
+            endpoint={endpoint}
             openPopupDeleteItem={openPopupDeleteItem}
             saveSelectedItemData={saveSelectedItemData}
             setSkills={setSkills}
@@ -88,6 +90,7 @@ function MainAdmin({
         path="experience"
         element={
           <AdminExperience
+            endpoint={endpoint}
             experience={experience}
             openPopupDeleteItem={openPopupDeleteItem}
             saveSelectedItemData={saveSelectedItemData}
@@ -101,6 +104,7 @@ function MainAdmin({
         element={
           <AdminContacts
             contacts={contacts}
+            endpoint={endpoint}
             openPopupDeleteItem={openPopupDeleteItem}
             saveSelectedItemData={saveSelectedItemData}
             setContacts={setContacts}
@@ -109,24 +113,44 @@ function MainAdmin({
         exact
       />
       <Route
-        element={<AdminProject openPopupSaveData={openPopupSaveData} />}
         path="projects/:id"
+        element={
+          <AdminProject
+            endpoint={endpoint}
+            openPopupSaveData={openPopupSaveData}
+          />
+        }
         exact
       />
 
       <Route
-        element={<AdminSkill openPopupSaveData={openPopupSaveData} />}
         path="skills/:id"
+        element={
+          <AdminSkill
+            endpoint={endpoint}
+            openPopupSaveData={openPopupSaveData}
+          />
+        }
         exact
       />
       <Route
-        element={<AdminExperienceItem openPopupSaveData={openPopupSaveData} />}
         path="experience/:id"
+        element={
+          <AdminExperienceItem
+            endpoint={endpoint}
+            openPopupSaveData={openPopupSaveData}
+          />
+        }
         exact
       />
       <Route
-        element={<AdminContact openPopupSaveData={openPopupSaveData} />}
         path="contacts/:id"
+        element={
+          <AdminContact
+            endpoint={endpoint}
+            openPopupSaveData={openPopupSaveData}
+          />
+        }
         exact
       />
     </Routes>
