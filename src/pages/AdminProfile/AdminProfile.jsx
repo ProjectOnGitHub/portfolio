@@ -2,7 +2,7 @@ import AdminForm from 'components/AdminComponents/AdminForm/AdminForm';
 import AdminFormInput from 'components/AdminComponents/AdminFormInput/AdminFormInput';
 import AdminFormTextarea from 'components/AdminComponents/AdminFormTextarea/AdminFormTextarea';
 import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
-import { useEffect, useState } from 'react';
+import useNewItem from 'hooks/useNewItem';
 
 function AdminProfile({
   endpoint,
@@ -11,18 +11,8 @@ function AdminProfile({
   openPopupSaveData,
   saveSelectedItemData,
 }) {
-  const [newItem, setNewItem] = useState({});
-  useEffect(() => {
-    setNewItem(profile);
-  }, [profile]);
-  function handleChangeInput(e) {
-    const { name, value } = e.target;
+  const { newItem, handleChangeInput } = useNewItem(profile);
 
-    setNewItem((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  }
   return (
     <AdminSection
       className="profile"

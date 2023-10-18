@@ -7,9 +7,11 @@ import Icon from 'components/BaseComponents/Icon/Icon';
 import Button from 'components/BaseComponents/Button/Button';
 import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
 import useItemInfo from 'hooks/useItemInfo';
+import useNewItem from 'hooks/useNewItem';
 
 function AdminProject({ onClick, openPopupSaveData }) {
   const item = useItemInfo();
+  const { newItem, handleChangeInput } = useNewItem(item);
 
   return (
     <AdminSection
@@ -21,35 +23,39 @@ function AdminProject({ onClick, openPopupSaveData }) {
         <fieldset className="admin-form__fieldset">
           <AdminFormInput
             label="Название проекта"
-            name="name"
+            name="title"
             placeholder="Название проекта"
             required={true}
             type="text"
-            value={item.title}
+            value={newItem.title || ''}
+            onChange={handleChangeInput}
           />
           <AdminFormInput
             label="Алиас проекта"
-            name="alias"
+            name="name"
             placeholder="Алиас проекта"
             required={true}
             type="text"
-            value={item.name}
+            value={newItem.name || ''}
+            onChange={handleChangeInput}
           />
           <AdminFormInput
             label="Ссылка на сайт"
-            name="site"
+            name="url"
             placeholder="Ссылка на сайт"
             required={false}
             type="url"
-            value={item.url}
+            value={newItem.url || ''}
+            onChange={handleChangeInput}
           />
           <AdminFormInput
             label="Ссылка на GitHub"
-            name="github"
+            name="githubUrl"
             placeholder="Ссылка на GitHub"
             required={false}
             type="url"
-            value={item.githubUrl}
+            value={newItem.githubUrl || ''}
+            onChange={handleChangeInput}
           />
           <div className="admin-form__wrapper">
             <AdminFormInput
@@ -85,7 +91,8 @@ function AdminProject({ onClick, openPopupSaveData }) {
             name="description"
             placeholder="Добавить описание"
             required={true}
-            value={item.description}
+            value={newItem.description || ''}
+            onChange={handleChangeInput}
           />
         </fieldset>
       </AdminFormImage>
