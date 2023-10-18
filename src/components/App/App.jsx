@@ -115,7 +115,6 @@ function App() {
   }
   function changeData(currentData) {
     const { endpoint, item, setState } = currentData;
-    console.log();
     api.changeInfo(endpoint, item).then((newItem) => setState(newItem));
   }
 

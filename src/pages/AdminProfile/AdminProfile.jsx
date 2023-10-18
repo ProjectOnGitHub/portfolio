@@ -5,6 +5,7 @@ import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
 import { useEffect, useState } from 'react';
 
 function AdminProfile({
+  endpoint,
   profile,
   setProfile,
   openPopupSaveData,
@@ -30,7 +31,7 @@ function AdminProfile({
       title="Редактирование профиля">
       <AdminForm
         currentItem={profile}
-        endpoint="profile"
+        endpoint={endpoint}
         item={newItem}
         modifier="middle"
         openPopup={openPopupSaveData}

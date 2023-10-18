@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useParams } from 'react-router-dom';
 import AdminContact from 'pages/AdminContact/AdminContact';
 import AdminContacts from 'pages/AdminContacts/AdminContacts';
 import AdminExperience from 'pages/AdminExperience/AdminExperience';
@@ -30,6 +30,8 @@ function MainAdmin({
   saveSelectedItemData,
   togglePageVisibility,
 }) {
+  const { '*': endpoint } = useParams();
+
   return (
     <Routes>
       <Route
@@ -46,6 +48,7 @@ function MainAdmin({
         path="profile"
         element={
           <AdminProfile
+            endpoint={endpoint}
             openPopupSaveData={openPopupSaveData}
             profile={profile}
             saveSelectedItemData={saveSelectedItemData}
