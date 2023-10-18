@@ -2,8 +2,24 @@ import AdminForm from 'components/AdminComponents/AdminForm/AdminForm';
 import AdminFormInput from 'components/AdminComponents/AdminFormInput/AdminFormInput';
 import AdminFormTextarea from 'components/AdminComponents/AdminFormTextarea/AdminFormTextarea';
 import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
+import { useState } from 'react';
 
-function AdminProfile({ name, position, description, openPopupSaveData }) {
+function AdminProfile({
+  profile,
+  setProfile,
+  openPopupSaveData,
+  saveSelectedItemData,
+}) {
+  const [newItem, setNewItem] = useState('');
+
+  function handleChangeInput(e) {
+    const { name, value } = e.target;
+
+    setNewItem((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  }
   return (
     <AdminSection
       className="profile"
@@ -11,28 +27,37 @@ function AdminProfile({ name, position, description, openPopupSaveData }) {
       modifier="profile"
       title="Редактирование профиля">
       <AdminForm
+        item={newItem}
         modifier="middle"
-        openPopup={openPopupSaveData}>
+        openPopup={openPopupSaveData}
+        saveSelectedItemData={saveSelectedItemData}
+        setState={setProfile}>
         <fieldset className="admin-form__fieldset">
           <AdminFormInput
+            label="Редактировать имя"
             name="name"
-            placeholder="Редактировать имя"
+            placeholder={profile.name}
             required={true}
             type="text"
-            value={name}
+            value={newItem.name}
+            onChange={handleChangeInput}
           />
           <AdminFormInput
-            name="spec"
-            placeholder="Редактировать специальность"
+            label="Редактировать должность"
+            name="position"
+            placeholder={profile.position}
             required={true}
             type="text"
-            value={position}
+            value={newItem.position}
+            onChange={handleChangeInput}
           />
           <AdminFormTextarea
+            label="Редактировать описание"
             name="description"
-            placeholder="Добавить описание"
+            placeholder={profile.description}
             required={true}
-            value={description}
+            value={newItem.description}
+            onChange={handleChangeInput}
           />
         </fieldset>
       </AdminForm>

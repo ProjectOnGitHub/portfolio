@@ -106,3 +106,14 @@ export function getItemInfo(endpoint, itemId) {
     },
   }).then(getResponse);
 }
+
+export function changeProfileInfo(info) {
+  return fetch(`${API_URL}/profile`, {
+    method: 'PATCH',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(info),
+  }).then(getResponse);
+}

@@ -1,18 +1,27 @@
 import './_AdminFormInput.scss';
 
-function AdminFormInput({ placeholder, required, type, name, value }) {
+function AdminFormInput({
+  placeholder,
+  required,
+  type,
+  name,
+  value,
+  onChange,
+  label,
+}) {
   return (
     <label className="admin-form__label">
-      {placeholder}
+      {label}
       <input
         className="admin-form__input"
         maxLength="250"
         minLength="2"
-        name={`input-${type}-${name}`}
+        name={name}
         placeholder={placeholder}
         required={required}
         type={type}
         value={value}
+        onChange={onChange}
       />
     </label>
   );

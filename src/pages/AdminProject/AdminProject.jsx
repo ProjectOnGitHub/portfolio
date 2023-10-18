@@ -17,6 +17,7 @@ function AdminProject({ onClick, openPopupSaveData }) {
   useEffect(() => {
     getItemInfo('projects', id).then((newItem) => setItem(newItem));
   }, [item]);
+
   return (
     <AdminSection
       className="project"

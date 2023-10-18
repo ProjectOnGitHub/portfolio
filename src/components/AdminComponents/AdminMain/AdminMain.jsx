@@ -21,6 +21,7 @@ function MainAdmin({
   skillsText,
   setContacts,
   setExperience,
+  setProfile,
   setProjects,
   setSkills,
   setSkillsText,
@@ -45,10 +46,10 @@ function MainAdmin({
         path="profile"
         element={
           <AdminProfile
-            description={profile.description}
-            name={profile.name}
             openPopupSaveData={openPopupSaveData}
-            position={profile.position}
+            profile={profile}
+            saveSelectedItemData={saveSelectedItemData}
+            setProfile={setProfile}
           />
         }
         exact

@@ -54,8 +54,7 @@ function App() {
         api.getExperience(),
         api.getContacts(),
       ]);
-
-      setProfile(...profileInfo);
+      setProfile(profileInfo);
       setProjects(allProjects);
       setPages(allPages);
       setSkillsText(skillsInfo);
@@ -114,10 +113,13 @@ function App() {
     }
     closePopupDeleteItem();
   }
+  function changeData(currentItem) {
+    api.changeProfileInfo(currentItem).then((newItem) => setProfile(newItem));
+  }
 
   function confirmSaveData(state) {
     if (state) {
-      console.log('save');
+      changeData(selectedItem);
     }
     closePopupSaveData();
   }
@@ -177,6 +179,7 @@ function App() {
                   saveSelectedItemData={saveSelectedItemData}
                   setContacts={setContacts}
                   setExperience={setExperience}
+                  setProfile={setProfile}
                   setProjects={setProjects}
                   setSkills={setSkills}
                   setSkillsText={setSkillsText}
