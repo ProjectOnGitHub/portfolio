@@ -2,7 +2,7 @@ import AdminForm from 'components/AdminComponents/AdminForm/AdminForm';
 import AdminFormInput from 'components/AdminComponents/AdminFormInput/AdminFormInput';
 import AdminFormTextarea from 'components/AdminComponents/AdminFormTextarea/AdminFormTextarea';
 import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function AdminProfile({
   profile,
@@ -10,8 +10,10 @@ function AdminProfile({
   openPopupSaveData,
   saveSelectedItemData,
 }) {
-  const [newItem, setNewItem] = useState('');
-
+  const [newItem, setNewItem] = useState({});
+  useEffect(() => {
+    setNewItem(profile);
+  }, [profile]);
   function handleChangeInput(e) {
     const { name, value } = e.target;
 
@@ -27,6 +29,8 @@ function AdminProfile({
       modifier="profile"
       title="Редактирование профиля">
       <AdminForm
+        currentItem={profile}
+        endpoint="profile"
         item={newItem}
         modifier="middle"
         openPopup={openPopupSaveData}
@@ -36,27 +40,27 @@ function AdminProfile({
           <AdminFormInput
             label="Редактировать имя"
             name="name"
-            placeholder={profile.name}
+            placeholder="Редактировать имя"
             required={true}
             type="text"
-            value={newItem.name}
+            value={newItem.name || ''}
             onChange={handleChangeInput}
           />
           <AdminFormInput
             label="Редактировать должность"
             name="position"
-            placeholder={profile.position}
+            placeholder="Редактировать должность"
             required={true}
             type="text"
-            value={newItem.position}
+            value={newItem.position || ''}
             onChange={handleChangeInput}
           />
           <AdminFormTextarea
             label="Редактировать описание"
             name="description"
-            placeholder={profile.description}
+            placeholder="Редактировать описание"
             required={true}
-            value={newItem.description}
+            value={newItem.description || ''}
             onChange={handleChangeInput}
           />
         </fieldset>

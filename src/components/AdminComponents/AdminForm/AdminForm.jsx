@@ -4,17 +4,26 @@ import AdminSectionButtonSave from 'components/AdminComponents/AdminSectionButto
 function AdminForm({
   name,
   children,
+  endpoint,
   modifier,
   openPopup,
   item,
-
+  currentItem,
+  setState,
   saveSelectedItemData,
 }) {
   const classes = modifier ? `admin-form admin-form_${modifier}` : `admin-form`;
   function handleClickSaveButton() {
     openPopup();
-    saveSelectedItemData(item);
+    const data = {
+      currentItem,
+      item,
+      setState,
+      endpoint,
+    };
+    saveSelectedItemData(data);
   }
+
   return (
     <>
       <form

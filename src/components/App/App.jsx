@@ -113,8 +113,10 @@ function App() {
     }
     closePopupDeleteItem();
   }
-  function changeData(currentItem) {
-    api.changeProfileInfo(currentItem).then((newItem) => setProfile(newItem));
+  function changeData(currentData) {
+    const { endpoint, item, setState } = currentData;
+    console.log();
+    api.changeInfo(endpoint, item).then((newItem) => setState(newItem));
   }
 
   function confirmSaveData(state) {

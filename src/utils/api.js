@@ -107,8 +107,8 @@ export function getItemInfo(endpoint, itemId) {
   }).then(getResponse);
 }
 
-export function changeProfileInfo(info) {
-  return fetch(`${API_URL}/profile`, {
+export function changeInfo(endpoint, info) {
+  return fetch(`${API_URL}/${endpoint}`, {
     method: 'PATCH',
     headers: {
       Accept: 'application/json',
