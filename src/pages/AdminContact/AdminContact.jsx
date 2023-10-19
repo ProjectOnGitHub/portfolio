@@ -2,9 +2,13 @@ import AdminFormImage from 'components/AdminComponents/AdminFormImage/AdminFormI
 import AdminFormInput from 'components/AdminComponents/AdminFormInput/AdminFormInput';
 import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
 import useItemInfo from 'hooks/useItemInfo';
+import useNewItem from 'hooks/useNewItem';
 
 function AdminContact({ openPopupSaveData }) {
   const item = useItemInfo();
+
+  const { newItem, handleChangeInput } = useNewItem(item);
+
   return (
     <AdminSection
       className="contact"
@@ -19,15 +23,17 @@ function AdminContact({ openPopupSaveData }) {
             placeholder="Название"
             required={true}
             type="text"
-            value={item.title}
+            value={newItem.title || ''}
+            onChange={handleChangeInput}
           />
           <AdminFormInput
             label="Редактировать ссылку"
-            name="type"
+            name="url"
             placeholder="Ссылка"
             required={true}
             type="url"
-            value={item.url}
+            value={newItem.url || ''}
+            onChange={handleChangeInput}
           />
           <AdminFormInput
             label="Редактировать название иконки контакта"
@@ -35,7 +41,8 @@ function AdminContact({ openPopupSaveData }) {
             placeholder="Название иконки контакта"
             required={true}
             type="text"
-            value={item.name}
+            value={newItem.name || ''}
+            onChange={handleChangeInput}
           />
         </fieldset>
       </AdminFormImage>

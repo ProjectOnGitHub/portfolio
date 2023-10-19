@@ -101,7 +101,7 @@ function App() {
 
   function removeItem(currentItem) {
     const { endpoint, itemId, currentArray, setState } = currentItem;
-    api.deleteItem(endpoint).then(() => {
+    api.deleteItem(endpoint, itemId).then(() => {
       const newArr = currentArray.filter((item) => item.id !== itemId);
       setState(newArr);
     });
