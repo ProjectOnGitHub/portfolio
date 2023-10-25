@@ -3,7 +3,7 @@
 
 .admin-form {
   &__input {
-    @include inputDefault;
+    @include defaultInput;
 
     &_hidden {
       display: none;

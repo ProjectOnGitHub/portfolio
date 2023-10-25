@@ -1,7 +1,7 @@
 import AdminForm from 'components/AdminComponents/AdminForm/AdminForm';
 import AdminFormInput from 'components/AdminComponents/AdminFormInput/AdminFormInput';
-import AdminFormTextarea from 'components/AdminComponents/AdminFormTextarea/AdminFormTextarea';
 import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
+import Editor from 'components/BaseComponents/Editor/Editor';
 import useNewItem from 'hooks/useNewItem';
 
 function AdminProfile({
@@ -46,14 +46,10 @@ function AdminProfile({
             value={newItem.position || ''}
             onChange={handleChangeInput}
           />
-          <AdminFormTextarea
-            label="Описание"
-            name="description"
-            placeholder="Описание"
-            required={true}
-            value={newItem.description || ''}
-            onChange={handleChangeInput}
-          />
+          <label className="admin-form__label">
+            Описание
+            <Editor currentValue={newItem.description} />
+          </label>
         </fieldset>
       </AdminForm>
     </AdminSection>

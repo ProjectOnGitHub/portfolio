@@ -3,7 +3,7 @@
 
 .admin-form {
   &__textarea {
-    @include inputDefault;
+    @include defaultInput;
     padding-top: 15px;
     padding-bottom: 15px;
   }

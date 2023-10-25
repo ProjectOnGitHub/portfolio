@@ -1,0 +1,72 @@
+@import '../../../scss/mixins';
+@import '../../../scss/variables';
+
+.editor {
+  width: 100%;
+
+  .ql-toolbar {
+    box-sizing: border-box;
+    background-color: $color-bg-input;
+    border: 1px solid $color-gray;
+  }
+
+  .ql-container {
+    border: none;
+  }
+
+  .ql-editor {
+    @include flexible();
+    @include defaultInput;
+    flex-direction: column;
+    box-sizing: border-box;
+    min-height: 150px;
+    gap: 8px;
+
+    ::placeholder {
+      font-weight: normal;
+    }
+
+    h1 {
+      @include defaultSubtitle(24px);
+      text-align: center;
+    }
+
+    h2 {
+      @include defaultSubtitle(20px);
+      text-align: center;
+    }
+
+    h3 {
+      @include defaultSubtitle(18px);
+      text-align: center;
+    }
+
+    ul,
+    ol {
+      @include flexible();
+      @include unmarkedList;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    blockquote {
+      margin: 0;
+      padding: $padding-xs;
+      border-left: 4px solid $color-bg-dot;
+    }
+
+    a {
+      @include defaultLink;
+      color: $color-decorate-link;
+    }
+
+    pre,
+    pre.ql-syntax {
+      margin: 0;
+      padding: $padding-s;
+      color: $color-dark;
+      background-color: $color-bg-dot;
+      border-radius: $borderRadiusDefault;
+    }
+  }
+}
