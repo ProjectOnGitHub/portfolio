@@ -29,6 +29,11 @@ module.exports = {
   ],
   rules: {
     "import/no-unresolved": "off",
+    'import/no-extraneous-dependencies': ['error', {
+      devDependencies: true,
+      optionalDependencies: false,
+      peerDependencies: false,
+    }],
     "import/extensions": [
       "error",
       "ignorePackages",

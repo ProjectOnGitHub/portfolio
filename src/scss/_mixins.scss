@@ -46,6 +46,15 @@
   }
 }
 
+@mixin defaultText($fontSize: $font-size-default) {
+  font-weight: 400;
+  font-size: $fontSize;
+  line-height: 1.21;
+  font-family: $font-family;
+  color: $color-dark;
+  font-style: normal;
+}
+
 @mixin defaultTitle {
   margin: 0;
   font-weight: 700;

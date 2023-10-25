@@ -3,6 +3,7 @@
 
 .app {
   @include gridable();
+  @include defaultText();
   grid-template-areas:
     'block'
     'footer';
@@ -11,11 +12,7 @@
   align-content: space-between;
   box-sizing: border-box;
   height: 100%;
-  font-weight: 400;
-  line-height: 1.21;
-  font-family: 'Inter', Arial, sans-serif;
-  color: $color-dark;
-  font-style: normal;
+
   background-color: $color-light;
   transition: 0.5s ease-in-out;
 
