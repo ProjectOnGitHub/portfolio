@@ -48,7 +48,11 @@ function AdminProfile({
           />
           <label className="admin-form__label">
             Описание
-            <Editor currentValue={newItem.description} />
+            <Editor
+              currentValue={newItem.description}
+              handleChangeInput={handleChangeInput}
+              name="description"
+            />
           </label>
         </fieldset>
       </AdminForm>

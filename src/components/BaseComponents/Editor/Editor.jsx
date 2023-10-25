@@ -1,10 +1,16 @@
-import { useState } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import './_Editor.scss';
 
-function Editor({ currentValue }) {
-  const [newValue, setNewValue] = useState('');
+function Editor({ currentValue, name, handleChangeInput }) {
+  function handleEditorChange(value) {
+    handleChangeInput({
+      target: {
+        name,
+        value,
+      },
+    });
+  }
   const modules = {
     toolbar: [
       [{ header: [1, 2, 3, false] }],
@@ -22,8 +28,8 @@ function Editor({ currentValue }) {
       modules={modules}
       placeholder="Введите описание..."
       theme="snow"
-      value={currentValue || newValue}
-      onChange={setNewValue}
+      value={currentValue || ''}
+      onChange={handleEditorChange}
     />
   );
 }
