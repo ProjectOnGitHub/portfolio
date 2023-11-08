@@ -2,8 +2,15 @@ import { useState, useEffect } from 'react';
 import { getItemInfo } from 'utils/api';
 import { useParams } from 'react-router-dom';
 
-function useItemInfo() {
-  const { '*': endpoint } = useParams();
+function useItemInfo(outerEndpoint) {
+  const { '*': innerEndpoint } = useParams();
+  let endpoint;
+
+  if (outerEndpoint) {
+    endpoint = outerEndpoint;
+  } else {
+    endpoint = innerEndpoint;
+  }
 
   const [item, setItem] = useState({});
 
