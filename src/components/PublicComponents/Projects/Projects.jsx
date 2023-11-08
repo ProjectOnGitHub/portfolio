@@ -1,12 +1,16 @@
-import './_Projects.scss';
 import Project from 'components/PublicComponents/Project/Project';
 import List from 'components/BaseComponents/List/List';
 import ListItem from 'components/BaseComponents/ListItem/ListItem';
+import Section from 'components/PublicComponents/Section/Section';
 
-function Projects({ projects, title }) {
+import './_Projects.scss';
+
+function Projects({ projects }) {
   return (
-    <>
-      <h2 className="projects__title">{title}</h2>
+    <Section
+      className="projects"
+      id="projects">
+      <h2 className="projects__title">Проекты</h2>
       <List className="projects__list">
         {projects.map((item) => (
           <ListItem
@@ -23,7 +27,7 @@ function Projects({ projects, title }) {
           </ListItem>
         ))}
       </List>
-    </>
+    </Section>
   );
 }
 

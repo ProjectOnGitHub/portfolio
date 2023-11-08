@@ -1,13 +1,17 @@
 import { HashLink as Link } from 'react-router-hash-link';
-import './_Profile.scss';
 import Icon from 'components/BaseComponents/Icon/Icon';
 import useParsedHTML from 'hooks/useParsedHTML';
+import Section from 'components/PublicComponents/Section/Section';
+
+import './_Profile.scss';
 
 function Profile({ name, position, description }) {
   const parsedHTML = useParsedHTML(description, 'profile-text');
 
   return (
-    <>
+    <Section
+      className="profile"
+      id="profile">
       <div className="profile__info">
         <h1 className="profile__title">{name}</h1>
         <h2 className="profile__subtitle">{position}</h2>
@@ -22,7 +26,7 @@ function Profile({ name, position, description }) {
           name="arrow-down"
         />
       </Link>
-    </>
+    </Section>
   );
 }
 

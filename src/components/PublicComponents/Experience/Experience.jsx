@@ -1,13 +1,17 @@
-import './_Experience.scss';
 import List from 'components/BaseComponents/List/List';
 import ListItem from 'components/BaseComponents/ListItem/ListItem';
 import ExperienceItem from 'components/PublicComponents/ExperienceItem/ExperienceItem';
+import Section from 'components/PublicComponents/Section/Section';
 
-function Experience({ title, experience }) {
+import './_Experience.scss';
+
+function Experience({ experience }) {
   const reversedExperience = [...experience].reverse();
   return (
-    <>
-      <h2 className="experience__title">{title}</h2>
+    <Section
+      className="experience"
+      id="experience">
+      <h2 className="experience__title">Опыт работы</h2>
       <List className="experience__list">
         {[...reversedExperience].map((item) => (
           <ListItem
@@ -24,7 +28,7 @@ function Experience({ title, experience }) {
           </ListItem>
         ))}
       </List>
-    </>
+    </Section>
   );
 }
 

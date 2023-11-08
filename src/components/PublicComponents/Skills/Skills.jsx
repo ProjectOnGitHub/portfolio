@@ -1,12 +1,16 @@
-import './_Skills.scss';
 import ListItem from 'components/BaseComponents/ListItem/ListItem';
 import SkillsList from 'components/PublicComponents/SkillsList/SkillsList';
 import Skill from 'components/PublicComponents/Skill/Skill';
+import Section from 'components/PublicComponents/Section/Section';
 
-function Skills({ title, skillsByType, skillsText }) {
+import './_Skills.scss';
+
+function Skills({ skillsByType, skillsText }) {
   return (
-    <>
-      <h2 className="skills__title">{title}</h2>
+    <Section
+      className="skills"
+      id="skills">
+      <h2 className="skills__title">Навыки</h2>
       <div className="skills__text">
         {skillsText.map((item) => (
           <p
@@ -16,7 +20,6 @@ function Skills({ title, skillsByType, skillsText }) {
           </p>
         ))}
       </div>
-
       {Object.values(skillsByType).map((group) => (
         <SkillsList
           key={group.type}
@@ -35,7 +38,7 @@ function Skills({ title, skillsByType, skillsText }) {
           ))}
         </SkillsList>
       ))}
-    </>
+    </Section>
   );
 }
 

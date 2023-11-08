@@ -1,12 +1,16 @@
-import './_Contacts.scss';
 import Contact from 'components/PublicComponents/Contact/Contact';
 import List from 'components/BaseComponents/List/List';
 import ListItem from 'components/BaseComponents/ListItem/ListItem';
+import Section from 'components/PublicComponents/Section/Section';
 
-function Contacts({ contacts, title }) {
+import './_Contacts.scss';
+
+function Contacts({ contacts }) {
   return (
-    <>
-      <h2 className="contacts__title">{title}</h2>
+    <Section
+      className="contacts"
+      id="contacts">
+      <h2 className="contacts__title">Контакты</h2>
       <List className="contacts__list">
         {contacts.map((item) => (
           <ListItem
@@ -21,7 +25,7 @@ function Contacts({ contacts, title }) {
           </ListItem>
         ))}
       </List>
-    </>
+    </Section>
   );
 }
 
