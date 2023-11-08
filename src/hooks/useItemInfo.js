@@ -15,10 +15,13 @@ function useItemInfo(outerEndpoint) {
   const [item, setItem] = useState({});
 
   useEffect(() => {
-    getItemInfo(endpoint).then((newItem) => {
+    async function fetchData() {
+      const newItem = await getItemInfo(endpoint);
       setItem(newItem);
-    });
+    }
+    fetchData();
   }, [endpoint]);
+
   return item;
 }
 
