@@ -1,3 +1,5 @@
+import Section from 'components/PublicComponents/Section/Section';
+
 import './_AdminSection.scss';
 
 function AdminSection({ className, id, title, modifier, children }) {
@@ -6,12 +8,12 @@ function AdminSection({ className, id, title, modifier, children }) {
     : `admin-section__container`;
 
   return (
-    <section
-      className={`section admin-section admin-${className}`}
+    <Section
+      className={`admin-section admin-${className}`}
       id={`admin-${id}`}>
       <h1 className="admin-section__title">{title}</h1>
       <div className={sectionContainerClass}>{children}</div>
-    </section>
+    </Section>
   );
 }
 

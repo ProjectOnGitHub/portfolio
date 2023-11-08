@@ -5,16 +5,16 @@ import Section from 'components/PublicComponents/Section/Section';
 
 import './_Profile.scss';
 
-function Profile({ name, position, description }) {
-  const parsedHTML = useParsedHTML(description, 'profile-text');
+function Profile({ profile }) {
+  const parsedHTML = useParsedHTML(profile.description, 'profile-text');
 
   return (
     <Section
       className="profile"
       id="profile">
       <div className="profile__info">
-        <h1 className="profile__title">{name}</h1>
-        <h2 className="profile__subtitle">{position}</h2>
+        <h1 className="profile__title">{profile.name}</h1>
+        <h2 className="profile__subtitle">{profile.position}</h2>
       </div>
       <div className="profile-text">{parsedHTML}</div>
       <Link

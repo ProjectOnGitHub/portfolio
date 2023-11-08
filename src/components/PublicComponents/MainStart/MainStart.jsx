@@ -14,28 +14,14 @@ function MainStart({
 }) {
   return (
     <>
-      <Profile
-        description={profile.description}
-        name={profile.name}
-        position={profile.position}
-      />
-      <Projects
-        projects={projects}
-        title="Проекты"
-      />
+      <Profile profile={profile} />
+      <Projects projects={projects} />
       <Skills
         skillsByType={skillsByType}
         skillsText={skillsText}
-        title="Навыки"
       />
-      <Experience
-        experience={experience}
-        title="Опыт работы"
-      />
-      <Contacts
-        contacts={contacts}
-        title="Контакты"
-      />
+      <Experience experience={experience} />
+      <Contacts contacts={contacts} />
     </>
   );
 }

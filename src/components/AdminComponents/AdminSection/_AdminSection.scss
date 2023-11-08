@@ -2,6 +2,8 @@
 @import '../../../scss/_variables';
 
 .admin-section {
+  padding-top: 75px;
+
   &__title {
     @include defaultSubtitle(24px);
     text-align: center;
