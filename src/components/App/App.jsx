@@ -152,7 +152,6 @@ function App() {
                 isAdminPath={isAdminPath}
                 pages={pages}>
                 <MainStart
-                  contacts={contacts}
                   experience={experience}
                   pages={pages}
                   skillsByType={skillsByType}
