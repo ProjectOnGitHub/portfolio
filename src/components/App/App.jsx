@@ -151,12 +151,7 @@ function App() {
               <Layout
                 isAdminPath={isAdminPath}
                 pages={pages}>
-                <MainStart
-                  experience={experience}
-                  pages={pages}
-                  skillsByType={skillsByType}
-                  skillsText={skillsText}
-                />
+                <MainStart pages={pages} />
               </Layout>
             }
           />

@@ -4,16 +4,13 @@ import Contacts from 'components/PublicComponents/Contacts/Contacts';
 import Skills from 'components/PublicComponents/Skills/Skills';
 import Experience from 'components/PublicComponents/Experience/Experience';
 
-function MainStart({ experience, skillsByType, skillsText }) {
+function MainStart() {
   return (
     <>
       <Profile />
       <Projects />
-      <Skills
-        skillsByType={skillsByType}
-        skillsText={skillsText}
-      />
-      <Experience experience={experience} />
+      <Skills />
+      <Experience />
       <Contacts />
     </>
   );
