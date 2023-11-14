@@ -2,24 +2,27 @@ import { Fragment } from 'react';
 import AdminSectionButtonsAction from 'components/AdminComponents/AdminSectionButtonsAction/AdminSectionButtonsAction';
 import Skill from 'components/PublicComponents/Skill/Skill';
 import AdminForm from 'components/AdminComponents/AdminForm/AdminForm';
-import AdminFormTextarea from 'components/AdminComponents/AdminFormTextarea/AdminFormTextarea';
-import AdminList from 'components/AdminComponents/AdminList/AdminList';
 import AdminListItem from 'components/AdminComponents/AdminListItem/AdminListItem';
 import AdminSkillsList from 'components/AdminComponents/AdminSkillsList/AdminSkillsList';
 import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
+import useItemInfo from 'hooks/useItemInfo';
+import useSortedSkills from 'hooks/useSortedSkills';
+import Editor from 'components/BaseComponents/Editor/Editor';
+import useNewItem from 'hooks/useNewItem';
+
 import './_AdminSkills.scss';
 
 function AdminSkills({
   endpoint,
-  skillsByType,
   editItem,
-  skillsText,
-  setSkillsText,
-  skills,
   setSkills,
   openPopupDeleteItem,
   saveSelectedItemData,
 }) {
+  const skills = useItemInfo('skills');
+  const sortedSkills = useSortedSkills(skills.items);
+  const { newItem, handleChangeInput } = useNewItem(skills);
+
   return (
     <AdminSection
       className="skills"
@@ -31,31 +34,15 @@ function AdminSkills({
           <legend className="admin-form__legend">
             Редактировать описание раздела Навыки
           </legend>
-          <AdminList modifier="skills">
-            {skillsText.map((item) => (
-              <AdminListItem key={item.id}>
-                <AdminFormTextarea
-                  name="description"
-                  placeholder="Добавить описание"
-                  required={true}
-                  value={item.text}
-                />
-                <AdminSectionButtonsAction
-                  currentArray={skillsText}
-                  endpoint="skillsText"
-                  isEditHide={true}
-                  itemId={item.id}
-                  openPopupDeleteItem={openPopupDeleteItem}
-                  saveSelectedItemData={saveSelectedItemData}
-                  setState={setSkillsText}
-                />
-              </AdminListItem>
-            ))}
-          </AdminList>
+          <Editor
+            currentValue={newItem.description}
+            handleChangeInput={handleChangeInput}
+            name="description"
+          />
         </fieldset>
       </AdminForm>
 
-      {Object.values(skillsByType).map((group) => (
+      {Object.values(sortedSkills).map((group) => (
         <Fragment key={group.type}>
           <AdminSkillsList
             key={group.type}
@@ -70,7 +57,7 @@ function AdminSkills({
                   name={skill.name}
                 />
                 <AdminSectionButtonsAction
-                  currentArray={skills}
+                  currentArray={skills.items}
                   editItem={editItem}
                   endpoint={endpoint}
                   itemId={skill.id}

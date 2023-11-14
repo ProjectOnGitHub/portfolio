@@ -49,7 +49,6 @@ function App() {
         api.getProfileInfo(),
         api.getProjects(),
         api.getPages(),
-        api.getSkillsText(),
         api.getSkills(),
         api.getExperience(),
         api.getContacts(),

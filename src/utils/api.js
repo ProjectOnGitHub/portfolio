@@ -33,16 +33,6 @@ export function getPages() {
   }).then(getResponse);
 }
 
-export function getSkillsText() {
-  return fetch(`${API_URL}/skillsText`, {
-    method: 'GET',
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-    },
-  }).then(getResponse);
-}
-
 export function getSkills() {
   return fetch(`${API_URL}/skills`, {
     method: 'GET',

@@ -7,7 +7,7 @@ import useSortedSkills from 'hooks/useSortedSkills';
 import './_Skills.scss';
 
 function Skills() {
-  const { items, info } = useItemInfo('skillstest');
+  const { items, description } = useItemInfo('skills');
   const sortedSkills = useSortedSkills(items);
 
   return (
@@ -16,7 +16,7 @@ function Skills() {
       id="skills">
       <h2 className="skills__title">Навыки</h2>
       <div className="skills__text">
-        <p className="skills__paragraph">{info}</p>
+        <p className="skills__paragraph">{description}</p>
       </div>
       {sortedSkills &&
         Object.values(sortedSkills).map((group) => (
