@@ -18,7 +18,7 @@ function AdminSkills({
   openPopupDeleteItem,
   saveSelectedItemData,
 }) {
-  const skills = useItemInfo('skills');
+  const skills = useItemInfo(endpoint);
   const sortedSkills = useSortedSkills(skills.items);
   const { newItem, handleChangeInput } = useNewItem(skills);
 

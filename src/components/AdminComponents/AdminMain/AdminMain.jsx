@@ -14,8 +14,6 @@ function MainAdmin({
   contacts,
   experience,
   pages,
-  profile,
-  projects,
   setContacts,
   setExperience,
   setProfile,
@@ -39,7 +37,6 @@ function MainAdmin({
           <AdminProfile
             endpoint={endpoint}
             openPopupSaveData={openPopupSaveData}
-            profile={profile}
             saveSelectedItemData={saveSelectedItemData}
             setProfile={setProfile}
           />
@@ -52,7 +49,6 @@ function MainAdmin({
           <AdminProjects
             endpoint={endpoint}
             openPopupDeleteItem={openPopupDeleteItem}
-            projects={projects}
             saveSelectedItemData={saveSelectedItemData}
             setProjects={setProjects}
           />

@@ -11,7 +11,7 @@ function AdminExperience({
   openPopupDeleteItem,
   saveSelectedItemData,
 }) {
-  const experience = useItemInfo('experience');
+  const experience = useItemInfo(endpoint);
 
   return (
     <AdminSection

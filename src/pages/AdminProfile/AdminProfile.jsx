@@ -11,7 +11,7 @@ function AdminProfile({
   openPopupSaveData,
   saveSelectedItemData,
 }) {
-  const profile = useItemInfo();
+  const profile = useItemInfo(endpoint);
 
   const { newItem, handleChangeInput } = useNewItem(profile);
 

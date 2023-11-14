@@ -7,12 +7,11 @@ import useItemInfo from 'hooks/useItemInfo';
 
 function AdminContacts({
   endpoint,
-
   setContacts,
   openPopupDeleteItem,
   saveSelectedItemData,
 }) {
-  const contacts = useItemInfo();
+  const contacts = useItemInfo(endpoint);
   return (
     <AdminSection
       className="contacts"

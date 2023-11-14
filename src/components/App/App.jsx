@@ -17,13 +17,13 @@ function App() {
     return storedTheme ? JSON.parse(storedTheme) : false;
   });
   const [selectedItem, setSelectedItem] = useState({});
-  const [profile, setProfile] = useState([]);
-  const [projects, setProjects] = useState([]);
-  const [skills, setSkills] = useState([]);
-  const [skillsText, setSkillsText] = useState([]);
+  const [, setProfile] = useState([]);
+  const [, setProjects] = useState([]);
+  const [, setSkills] = useState([]);
+  const [, setSkillsText] = useState([]);
   const [pages, setPages] = useState([]);
-  const [experience, setExperience] = useState([]);
-  const [contacts, setContacts] = useState([]);
+  const [, setExperience] = useState([]);
+  const [, setContacts] = useState([]);
   const [popupDeleteItemIsOpen, setPopupDeleteItemIsOpen] = useState(false);
   const [popupSaveDataIsOpen, setPopupSaveDataIsOpen] = useState(false);
 
@@ -36,29 +36,8 @@ function App() {
 
   useEffect(() => {
     async function fetchData() {
-      const [
-        profileInfo,
-        allProjects,
-        allPages,
-        skillsInfo,
-        allSkills,
-        allExperience,
-        allContacts,
-      ] = await Promise.all([
-        api.getProfileInfo(),
-        api.getProjects(),
-        api.getPages(),
-        api.getSkills(),
-        api.getExperience(),
-        api.getContacts(),
-      ]);
-      setProfile(profileInfo);
-      setProjects(allProjects);
+      const allPages = await api.getItemInfo('pages');
       setPages(allPages);
-      setSkillsText(skillsInfo);
-      setSkills(allSkills);
-      setExperience(allExperience);
-      setContacts(allContacts);
     }
 
     fetchData();
@@ -134,15 +113,11 @@ function App() {
                 isAdminPath={isAdminPath}
                 pages={pages}>
                 <AdminMain
-                  contacts={contacts}
-                  experience={experience}
                   openPopupDeleteItem={openPopupDeleteItem}
                   openPopupSaveData={openPopupSaveData}
                   pages={pages}
                   popupDeleteItemIsOpen={popupDeleteItemIsOpen}
                   popupSaveDataIsOpen={popupSaveDataIsOpen}
-                  profile={profile}
-                  projects={projects}
                   saveSelectedItemData={saveSelectedItemData}
                   setContacts={setContacts}
                   setExperience={setExperience}
@@ -150,8 +125,6 @@ function App() {
                   setProjects={setProjects}
                   setSkills={setSkills}
                   setSkillsText={setSkillsText}
-                  skills={skills}
-                  skillsText={skillsText}
                 />
                 <AdminPopupDeleteItem
                   confirmDeleteItem={confirmDeleteItem}
