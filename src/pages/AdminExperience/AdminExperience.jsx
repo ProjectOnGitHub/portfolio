@@ -3,15 +3,16 @@ import ExperienceItem from 'components/PublicComponents/ExperienceItem/Experienc
 import AdminList from 'components/AdminComponents/AdminList/AdminList';
 import AdminListItem from 'components/AdminComponents/AdminListItem/AdminListItem';
 import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
+import useItemInfo from 'hooks/useItemInfo';
 
 function AdminExperience({
   endpoint,
-  experience,
   setExperience,
   openPopupDeleteItem,
   saveSelectedItemData,
 }) {
-  const reversedExperience = [...experience].reverse();
+  const experience = useItemInfo('experience');
+
   return (
     <AdminSection
       className="experience"
@@ -19,28 +20,29 @@ function AdminExperience({
       modifier="experience"
       title="Редактирование опыта работы">
       <AdminList modifier="experience">
-        {[...reversedExperience].map((exp) => (
-          <AdminListItem key={exp.id}>
-            <div className="admin-section__wrapper admin-section__wrapper_experience">
-              <ExperienceItem
-                className="admin-section"
-                end={exp.end}
-                name={exp.name}
-                position={exp.position}
-                start={exp.start}
-                text={exp.text}
+        {experience?.length > 0 &&
+          [...experience].reverse().map((exp) => (
+            <AdminListItem key={exp.id}>
+              <div className="admin-section__wrapper admin-section__wrapper_experience">
+                <ExperienceItem
+                  className="admin-section"
+                  end={exp.end}
+                  name={exp.name}
+                  position={exp.position}
+                  start={exp.start}
+                  text={exp.text}
+                />
+              </div>
+              <AdminSectionButtonsAction
+                currentArray={experience}
+                endpoint={endpoint}
+                itemId={exp.id}
+                openPopupDeleteItem={openPopupDeleteItem}
+                saveSelectedItemData={saveSelectedItemData}
+                setState={setExperience}
               />
-            </div>
-            <AdminSectionButtonsAction
-              currentArray={experience}
-              endpoint={endpoint}
-              itemId={exp.id}
-              openPopupDeleteItem={openPopupDeleteItem}
-              saveSelectedItemData={saveSelectedItemData}
-              setState={setExperience}
-            />
-          </AdminListItem>
-        ))}
+            </AdminListItem>
+          ))}
       </AdminList>
     </AdminSection>
   );

@@ -3,14 +3,16 @@ import AdminList from 'components/AdminComponents/AdminList/AdminList';
 import AdminListItem from 'components/AdminComponents/AdminListItem/AdminListItem';
 import Contact from 'components/PublicComponents/Contact/Contact';
 import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
+import useItemInfo from 'hooks/useItemInfo';
 
 function AdminContacts({
   endpoint,
-  contacts,
+
   setContacts,
   openPopupDeleteItem,
   saveSelectedItemData,
 }) {
+  const contacts = useItemInfo();
   return (
     <AdminSection
       className="contacts"
@@ -18,28 +20,29 @@ function AdminContacts({
       modifier="contacts"
       title="Редактирование контактов">
       <AdminList modifier="contacts">
-        {contacts.map((contact) => (
-          <AdminListItem
-            key={contact.id}
-            modifier="contacts">
-            <div className="admin-section__wrapper admin-section__wrapper_contacts">
-              <Contact
-                className="contact"
-                name={contact.name}
-                title={contact.title}
-                url={contact.url}
+        {contacts?.length > 0 &&
+          contacts.map((contact) => (
+            <AdminListItem
+              key={contact.id}
+              modifier="contacts">
+              <div className="admin-section__wrapper admin-section__wrapper_contacts">
+                <Contact
+                  className="contact"
+                  name={contact.name}
+                  title={contact.title}
+                  url={contact.url}
+                />
+              </div>
+              <AdminSectionButtonsAction
+                currentArray={contacts}
+                endpoint={endpoint}
+                itemId={contact.id}
+                openPopupDeleteItem={openPopupDeleteItem}
+                saveSelectedItemData={saveSelectedItemData}
+                setState={setContacts}
               />
-            </div>
-            <AdminSectionButtonsAction
-              currentArray={contacts}
-              endpoint={endpoint}
-              itemId={contact.id}
-              openPopupDeleteItem={openPopupDeleteItem}
-              saveSelectedItemData={saveSelectedItemData}
-              setState={setContacts}
-            />
-          </AdminListItem>
-        ))}
+            </AdminListItem>
+          ))}
       </AdminList>
     </AdminSection>
   );
