@@ -4,8 +4,27 @@ import AdminListItem from 'components/AdminComponents/AdminListItem/AdminListIte
 import Icon from 'components/BaseComponents/Icon/Icon';
 import Switcher from 'components/BaseComponents/Switcher/Switcher';
 import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
+import * as api from 'utils/api';
+import { useEffect, useState } from 'react';
 
-function AdminPages({ pages, togglePageVisibility }) {
+function AdminPages({ pages }) {
+  const [items, setItems] = useState(pages);
+
+  useEffect(() => {
+    setItems(pages);
+  }, [pages]);
+
+  function togglePageVisibility({ id, isEnabled }) {
+    api.changePageVisibility(id, !isEnabled).then((updatedPage) => {
+      const updatedPages = [...pages];
+      const pageIndex = updatedPages.findIndex((page) => page.id === id);
+      if (pageIndex !== -1) {
+        updatedPages[pageIndex].isEnabled = updatedPage.isEnabled;
+        setItems(updatedPages);
+      }
+    });
+  }
+
   return (
     <AdminSection
       className="pages"
@@ -13,7 +32,7 @@ function AdminPages({ pages, togglePageVisibility }) {
       modifier="pages"
       title="Редактирование списка страниц">
       <AdminList modifier="pages">
-        {pages.map((page) => (
+        {items.map((page) => (
           <AdminListItem
             key={page.id}
             modifier="pages">

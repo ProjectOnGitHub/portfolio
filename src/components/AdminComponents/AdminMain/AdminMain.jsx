@@ -23,20 +23,14 @@ function MainAdmin({
   openPopupDeleteItem,
   openPopupSaveData,
   saveSelectedItemData,
-  togglePageVisibility,
 }) {
   const { '*': endpoint } = useParams();
 
   return (
     <Routes>
       <Route
+        element={<AdminPages pages={pages} />}
         path="/"
-        element={
-          <AdminPages
-            pages={pages}
-            togglePageVisibility={togglePageVisibility}
-          />
-        }
         exact
       />
       <Route

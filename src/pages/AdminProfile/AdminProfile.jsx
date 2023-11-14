@@ -3,14 +3,16 @@ import AdminFormInput from 'components/AdminComponents/AdminFormInput/AdminFormI
 import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
 import Editor from 'components/BaseComponents/Editor/Editor';
 import useNewItem from 'hooks/useNewItem';
+import useItemInfo from 'hooks/useItemInfo';
 
 function AdminProfile({
   endpoint,
-  profile,
   setProfile,
   openPopupSaveData,
   saveSelectedItemData,
 }) {
+  const profile = useItemInfo();
+
   const { newItem, handleChangeInput } = useNewItem(profile);
 
   return (
