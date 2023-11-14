@@ -3,29 +3,12 @@ import SkillsList from 'components/PublicComponents/SkillsList/SkillsList';
 import Skill from 'components/PublicComponents/Skill/Skill';
 import Section from 'components/PublicComponents/Section/Section';
 import useItemInfo from 'hooks/useItemInfo';
-import { useEffect, useState } from 'react';
+import useSortedSkills from 'hooks/useSortedSkills';
 import './_Skills.scss';
 
 function Skills() {
   const { items, info } = useItemInfo('skillstest');
-  const [sortedItems, setSortedItems] = useState([]);
-
-  useEffect(() => {
-    if (items?.length) {
-      const updateSkills = {};
-      items.forEach((skill) => {
-        if (!updateSkills[skill.type]) {
-          updateSkills[skill.type] = {
-            type: skill.type,
-            sectionTitle: skill.sectionTitle,
-            skills: [],
-          };
-        }
-        updateSkills[skill.type].skills.push(skill);
-      });
-      setSortedItems(updateSkills);
-    }
-  }, [items]);
+  const sortedSkills = useSortedSkills(items);
 
   return (
     <Section
@@ -35,8 +18,8 @@ function Skills() {
       <div className="skills__text">
         <p className="skills__paragraph">{info}</p>
       </div>
-      {sortedItems &&
-        Object.values(sortedItems).map((group) => (
+      {sortedSkills &&
+        Object.values(sortedSkills).map((group) => (
           <SkillsList
             key={group.type}
             title={group.sectionTitle}>
