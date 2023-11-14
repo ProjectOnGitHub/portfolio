@@ -22,7 +22,6 @@ function App() {
   const [skills, setSkills] = useState([]);
   const [skillsText, setSkillsText] = useState([]);
   const [pages, setPages] = useState([]);
-  const [skillsByType, setSkillsByType] = useState({});
   const [experience, setExperience] = useState([]);
   const [contacts, setContacts] = useState([]);
   const [popupDeleteItemIsOpen, setPopupDeleteItemIsOpen] = useState(false);
@@ -64,21 +63,6 @@ function App() {
 
     fetchData();
   }, []);
-
-  useEffect(() => {
-    const updateSkills = {};
-    skills.forEach((skill) => {
-      if (!updateSkills[skill.type]) {
-        updateSkills[skill.type] = {
-          type: skill.type,
-          sectionTitle: skill.sectionTitle,
-          skills: [],
-        };
-      }
-      updateSkills[skill.type].skills.push(skill);
-    });
-    setSkillsByType(updateSkills);
-  }, [skills]);
 
   function openPopupDeleteItem() {
     setPopupDeleteItemIsOpen(true);
@@ -178,7 +162,6 @@ function App() {
                   setSkills={setSkills}
                   setSkillsText={setSkillsText}
                   skills={skills}
-                  skillsByType={skillsByType}
                   skillsText={skillsText}
                   togglePageVisibility={togglePageVisibility}
                 />

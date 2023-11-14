@@ -15,7 +15,6 @@ import './_AdminSkills.scss';
 function AdminSkills({
   endpoint,
   editItem,
-  setSkills,
   openPopupDeleteItem,
   saveSelectedItemData,
 }) {
@@ -63,7 +62,6 @@ function AdminSkills({
                   itemId={skill.id}
                   openPopupDeleteItem={openPopupDeleteItem}
                   saveSelectedItemData={saveSelectedItemData}
-                  setState={setSkills}
                 />
               </AdminListItem>
             ))}

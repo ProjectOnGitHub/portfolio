@@ -21,6 +21,8 @@ function AdminForm({
       setState,
       endpoint,
     };
+
+    console.log(data);
     saveSelectedItemData(data);
   }
 

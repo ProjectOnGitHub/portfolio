@@ -16,15 +16,10 @@ function MainAdmin({
   pages,
   profile,
   projects,
-  skills,
-  skillsByType,
-  skillsText,
   setContacts,
   setExperience,
   setProfile,
   setProjects,
-  setSkills,
-  setSkillsText,
   openPopupDeleteItem,
   openPopupSaveData,
   saveSelectedItemData,
@@ -77,11 +72,6 @@ function MainAdmin({
             endpoint={endpoint}
             openPopupDeleteItem={openPopupDeleteItem}
             saveSelectedItemData={saveSelectedItemData}
-            setSkills={setSkills}
-            setSkillsText={setSkillsText}
-            skills={skills}
-            skillsByType={skillsByType}
-            skillsText={skillsText}
           />
         }
         exact
