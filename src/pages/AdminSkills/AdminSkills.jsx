@@ -15,12 +15,15 @@ import './_AdminSkills.scss';
 function AdminSkills({
   endpoint,
   editItem,
+  setSkills,
   openPopupDeleteItem,
   saveSelectedItemData,
 }) {
-  const skills = useItemInfo(endpoint);
-  const sortedSkills = useSortedSkills(skills.items);
-  const { newItem, handleChangeInput } = useNewItem(skills);
+  const skills = useItemInfo();
+  const info = useItemInfo('skills-info');
+
+  const sortedSkills = useSortedSkills(skills);
+  const { newItem, handleChangeInput } = useNewItem(info);
 
   return (
     <AdminSection
@@ -56,12 +59,13 @@ function AdminSkills({
                   name={skill.name}
                 />
                 <AdminSectionButtonsAction
-                  currentArray={skills.items}
+                  currentArray={skills}
                   editItem={editItem}
                   endpoint={endpoint}
                   itemId={skill.id}
                   openPopupDeleteItem={openPopupDeleteItem}
                   saveSelectedItemData={saveSelectedItemData}
+                  setState={setSkills}
                 />
               </AdminListItem>
             ))}

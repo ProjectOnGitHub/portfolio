@@ -7,8 +7,10 @@ import useSortedSkills from 'hooks/useSortedSkills';
 import './_Skills.scss';
 
 function Skills() {
-  const { items, description } = useItemInfo('skills');
-  const sortedSkills = useSortedSkills(items);
+  const skills = useItemInfo('skills');
+  const { description } = useItemInfo('skills-info');
+
+  const sortedSkills = useSortedSkills(skills);
 
   return (
     <Section

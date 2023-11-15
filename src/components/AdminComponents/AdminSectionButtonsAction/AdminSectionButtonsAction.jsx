@@ -24,6 +24,7 @@ function AdminSectionButtonsAction({
       currentArray,
       setState,
     };
+    console.log(itemData);
     saveSelectedItemData(itemData);
   }
 

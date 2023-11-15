@@ -16,6 +16,7 @@ function MainAdmin({
   pages,
   setContacts,
   setExperience,
+  setSkills,
   setProfile,
   setProjects,
   openPopupDeleteItem,
@@ -62,6 +63,7 @@ function MainAdmin({
             endpoint={endpoint}
             openPopupDeleteItem={openPopupDeleteItem}
             saveSelectedItemData={saveSelectedItemData}
+            setSkills={setSkills}
           />
         }
         exact
