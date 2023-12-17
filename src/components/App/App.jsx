@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
-import AdminPopupDeleteItem from 'components/AdminComponents/AdminPopupDeleteItem/AdminPopupDeleteItem';
-import AdminPopupSaveData from 'components/AdminComponents/AdminPopupSaveData/AdminPopupSaveData';
+
 import MainStart from 'components/PublicComponents/MainStart/MainStart';
 import Register from 'components/PublicComponents/Register/Register';
 import DarkThemeContext from 'contexts/DarkThemeContext';
@@ -44,6 +43,7 @@ function App() {
   }, []);
 
   function openPopupDeleteItem() {
+    console.log('openPopupDeleteItem');
     setPopupDeleteItemIsOpen(true);
   }
   function closePopupDeleteItem() {
@@ -51,6 +51,7 @@ function App() {
   }
 
   function openPopupSaveData() {
+    console.log('openPopupSaveData');
     setPopupSaveDataIsOpen(true);
   }
   function closePopupSaveData() {
@@ -81,6 +82,7 @@ function App() {
       setState(newItem);
     });
   }
+  console.log(confirmDeleteItem);
 
   function confirmSaveData(state) {
     if (state) {
@@ -88,6 +90,7 @@ function App() {
     }
     closePopupSaveData();
   }
+  console.log(confirmSaveData);
 
   return (
     <div
@@ -125,14 +128,6 @@ function App() {
                   setProjects={setProjects}
                   setSkills={setSkills}
                   setSkillsText={setSkillsText}
-                />
-                <AdminPopupDeleteItem
-                  confirmDeleteItem={confirmDeleteItem}
-                  popupDeleteIsOpen={popupDeleteItemIsOpen}
-                />
-                <AdminPopupSaveData
-                  confirmSaveData={confirmSaveData}
-                  popupSaveDataIsOpen={popupSaveDataIsOpen}
                 />
               </Layout>
             }

@@ -5,10 +5,8 @@ import AdminListItem from 'components/AdminComponents/AdminListItem/AdminListIte
 import AdminSectionButton from 'components/AdminComponents/AdminSectionButton/AdminSectionButton';
 
 function AdminSectionButtonsAction({
-  endpoint,
   currentArray,
   itemId,
-  setState,
   isDeleteHide,
   isEditHide,
   openPopupDeleteItem,
@@ -17,14 +15,11 @@ function AdminSectionButtonsAction({
   const navigate = useNavigate();
 
   function handleClickDeleteButton() {
-    openPopupDeleteItem();
+    openPopupDeleteItem('delete');
     const itemData = {
-      endpoint,
       itemId,
       currentArray,
-      setState,
     };
-    console.log(itemData);
     saveSelectedItemData(itemData);
   }
 

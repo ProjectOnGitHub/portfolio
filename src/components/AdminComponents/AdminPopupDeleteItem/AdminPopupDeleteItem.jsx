@@ -1,10 +1,9 @@
 import Popup from 'components/BaseComponents/Popup/Popup';
 
-function AdminPopupDeleteItem({ popupDeleteIsOpen, confirmDeleteItem }) {
+function AdminPopupDeleteItem({ confirmAction }) {
   return (
     <Popup
-      confirmAction={confirmDeleteItem}
-      popupIsOpen={popupDeleteIsOpen}
+      confirmAction={confirmAction}
       title="Удалить элемент?"
     />
   );

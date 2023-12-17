@@ -18,7 +18,6 @@ function MainAdmin({
   setExperience,
   setSkills,
   setProfile,
-  setProjects,
   openPopupDeleteItem,
   openPopupSaveData,
   saveSelectedItemData,
@@ -45,15 +44,8 @@ function MainAdmin({
         exact
       />
       <Route
+        element={<AdminProjects endpoint={endpoint} />}
         path="projects"
-        element={
-          <AdminProjects
-            endpoint={endpoint}
-            openPopupDeleteItem={openPopupDeleteItem}
-            saveSelectedItemData={saveSelectedItemData}
-            setProjects={setProjects}
-          />
-        }
         exact
       />
       <Route
