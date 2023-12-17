@@ -4,25 +4,26 @@ import AdminListItem from 'components/AdminComponents/AdminListItem/AdminListIte
 import AdminSectionButtonsAction from 'components/AdminComponents/AdminSectionButtonsAction/AdminSectionButtonsAction';
 import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
 import useItemInfo from 'hooks/useItemInfo';
+import usePopup from 'hooks/usePopup';
+
 import './_AdminProjects.scss';
 
-function AdminProjects({
-  endpoint,
-  setProjects,
-  openPopupDeleteItem,
-  saveSelectedItemData,
-}) {
+function AdminProjects({ endpoint }) {
   const projects = useItemInfo(endpoint);
+  const { currentPopup, items, openPopup, confirmRemoveItem, setSelectedItem } =
+    usePopup(endpoint, projects);
 
   return (
     <AdminSection
       className="projects"
+      confirmAction={confirmRemoveItem}
+      currentPopup={currentPopup}
       id="projects"
       modifier="projects"
       title="Редактирование списка проектов">
       <AdminList modifier="projects">
-        {projects?.length > 0 &&
-          projects.map((project) => (
+        {items?.length > 0 &&
+          items.map((project) => (
             <AdminListItem
               key={project.id}
               modifier="projects">
@@ -37,12 +38,10 @@ function AdminProjects({
                 </figcaption>
               </figure>
               <AdminSectionButtonsAction
-                currentArray={projects}
-                endpoint={endpoint}
+                currentArray={items}
                 itemId={project.id}
-                openPopupDeleteItem={openPopupDeleteItem}
-                saveSelectedItemData={saveSelectedItemData}
-                setState={setProjects}
+                openPopupDeleteItem={openPopup}
+                saveSelectedItemData={setSelectedItem}
               />
             </AdminListItem>
           ))}
