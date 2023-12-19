@@ -8,11 +8,9 @@ function usePopup(endpoint, data) {
 
   useEffect(() => {
     setItems(data);
-    console.log(data);
   }, [data]);
 
   function openPopup(popupName) {
-    console.log(popupName);
     setCurrentPopup(popupName);
   }
 
@@ -25,9 +23,10 @@ function usePopup(endpoint, data) {
   }
 
   function changeData(currentData) {
-    const { itemId, setState } = currentData;
+    const { itemId } = currentData;
     api.changeInfo(endpoint, itemId).then((newItem) => {
-      setState(newItem);
+      setItems(newItem);
+      console.log(newItem);
     });
   }
 

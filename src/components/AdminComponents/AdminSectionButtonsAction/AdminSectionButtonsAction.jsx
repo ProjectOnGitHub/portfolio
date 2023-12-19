@@ -9,13 +9,13 @@ function AdminSectionButtonsAction({
   itemId,
   isDeleteHide,
   isEditHide,
-  openPopupDeleteItem,
+  openPopup,
   saveSelectedItemData,
 }) {
   const navigate = useNavigate();
 
   function handleClickDeleteButton() {
-    openPopupDeleteItem('delete');
+    openPopup('delete');
     const itemData = {
       itemId,
       currentArray,

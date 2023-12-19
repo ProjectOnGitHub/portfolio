@@ -40,7 +40,7 @@ function AdminProjects({ endpoint }) {
               <AdminSectionButtonsAction
                 currentArray={items}
                 itemId={project.id}
-                openPopupDeleteItem={openPopup}
+                openPopup={openPopup}
                 saveSelectedItemData={setSelectedItem}
               />
             </AdminListItem>

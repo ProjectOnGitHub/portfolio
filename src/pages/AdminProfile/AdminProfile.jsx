@@ -4,20 +4,18 @@ import AdminSection from 'components/AdminComponents/AdminSection/AdminSection';
 import Editor from 'components/BaseComponents/Editor/Editor';
 import useNewItem from 'hooks/useNewItem';
 import useItemInfo from 'hooks/useItemInfo';
+import usePopup from 'hooks/usePopup';
 
-function AdminProfile({
-  endpoint,
-  setProfile,
-  openPopupSaveData,
-  saveSelectedItemData,
-}) {
+function AdminProfile({ endpoint }) {
   const profile = useItemInfo(endpoint);
-
-  const { newItem, handleChangeInput } = useNewItem(profile);
-
+  const { currentPopup, openPopup, items, confirmSaveItem, setSelectedItem } =
+    usePopup(endpoint, profile);
+  const { newItem, handleChangeInput } = useNewItem(items);
   return (
     <AdminSection
       className="profile"
+      confirmAction={confirmSaveItem}
+      currentPopup={currentPopup}
       id="profile"
       modifier="profile"
       title="Редактирование профиля">
@@ -26,9 +24,8 @@ function AdminProfile({
         endpoint={endpoint}
         item={newItem}
         modifier="middle"
-        openPopup={openPopupSaveData}
-        saveSelectedItemData={saveSelectedItemData}
-        setState={setProfile}>
+        openPopup={openPopup}
+        saveSelectedItemData={setSelectedItem}>
         <fieldset className="admin-form__fieldset">
           <AdminFormInput
             label="Имя"

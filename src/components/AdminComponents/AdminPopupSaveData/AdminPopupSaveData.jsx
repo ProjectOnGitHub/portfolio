@@ -1,9 +1,9 @@
 import Popup from 'components/BaseComponents/Popup/Popup';
 
-function AdminPopupSaveData({ popupSaveDataIsOpen, confirmSaveData }) {
+function AdminPopupSaveData({ popupSaveDataIsOpen, confirmAction }) {
   return (
     <Popup
-      confirmAction={confirmSaveData}
+      confirmAction={confirmAction}
       popupIsOpen={popupSaveDataIsOpen}
       title="Сохранить изменения?"
     />
