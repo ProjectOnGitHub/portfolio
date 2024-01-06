@@ -9,6 +9,7 @@ import useItemInfo from 'hooks/useItemInfo';
 import useSortedSkills from 'hooks/useSortedSkills';
 import Editor from 'components/BaseComponents/Editor/Editor';
 import useNewItem from 'hooks/useNewItem';
+import usePopup from 'hooks/usePopup';
 
 import './_AdminSkills.scss';
 
@@ -19,19 +20,29 @@ function AdminSkills({
   openPopupDeleteItem,
   saveSelectedItemData,
 }) {
-  const skills = useItemInfo();
   const info = useItemInfo('skills-info');
+  const { currentPopup, openPopup, items, confirmSaveItem, setSelectedItem } =
+    usePopup('skills-info', info);
+  const skills = useItemInfo(endpoint);
 
   const sortedSkills = useSortedSkills(skills);
-  const { newItem, handleChangeInput } = useNewItem(info);
+  const { newItem, handleChangeInput } = useNewItem(items);
 
   return (
     <AdminSection
       className="skills"
+      confirmAction={confirmSaveItem}
+      currentPopup={currentPopup}
       id="skills"
       modifier="skills"
       title="Редактирование навыков">
-      <AdminForm modifier="middle">
+      <AdminForm
+        currentItem={info}
+        endpoint={endpoint}
+        item={newItem}
+        modifier="middle"
+        openPopup={openPopup}
+        saveSelectedItemData={setSelectedItem}>
         <fieldset className="admin-form__fieldset">
           <legend className="admin-form__legend">
             Редактировать описание раздела Навыки

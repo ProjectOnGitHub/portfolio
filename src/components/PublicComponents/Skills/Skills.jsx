@@ -4,11 +4,14 @@ import Skill from 'components/PublicComponents/Skill/Skill';
 import Section from 'components/PublicComponents/Section/Section';
 import useItemInfo from 'hooks/useItemInfo';
 import useSortedSkills from 'hooks/useSortedSkills';
+import useParsedHTML from 'hooks/useParsedHTML';
+
 import './_Skills.scss';
 
 function Skills() {
   const skills = useItemInfo('skills');
   const { description } = useItemInfo('skills-info');
+  const parsedHTML = useParsedHTML(description, 'skills-text');
 
   const sortedSkills = useSortedSkills(skills);
 
@@ -17,9 +20,7 @@ function Skills() {
       className="skills"
       id="skills">
       <h2 className="skills__title">Навыки</h2>
-      <div className="skills__text">
-        <p className="skills__paragraph">{description}</p>
-      </div>
+      <div className="skills-text">{parsedHTML}</div>
       {sortedSkills &&
         Object.values(sortedSkills).map((group) => (
           <SkillsList
