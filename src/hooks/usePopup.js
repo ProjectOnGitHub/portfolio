@@ -16,6 +16,7 @@ function usePopup(endpoint, data) {
 
   function removeItem(currentData) {
     const { itemId, currentArray } = currentData;
+
     api.deleteItem(endpoint, itemId).then(() => {
       const newArr = currentArray.filter((item) => item.id !== itemId);
       setItems(newArr);
@@ -23,10 +24,10 @@ function usePopup(endpoint, data) {
   }
 
   function changeData(currentData) {
-    const { itemId } = currentData;
-    api.changeInfo(endpoint, itemId).then((newItem) => {
+    const { item } = currentData;
+
+    api.changeInfo(endpoint, item).then((newItem) => {
       setItems(newItem);
-      console.log(newItem);
     });
   }
 
